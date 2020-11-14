@@ -1,5 +1,5 @@
 ---
-title: '部署 &#8211; Capistrano'
+title: 'Capistrano 尝试'
 date: '2019-08-04T03:22:58+08:00'
 status: publish
 permalink: /deploying-with-capistrano

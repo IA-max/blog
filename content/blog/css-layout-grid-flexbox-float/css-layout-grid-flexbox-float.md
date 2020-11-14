@@ -1,5 +1,5 @@
 ---
-title: 'CSS layout &#8211; Grid Flexbox Float'
+title: 'CSS layout & Grid Flexbox Float'
 date: '2019-11-27T05:36:21+08:00'
 status: publish
 permalink: /css-layout-grid-flexbox-float

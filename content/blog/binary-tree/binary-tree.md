@@ -1,5 +1,5 @@
 ---
-title: '数据算法 &#8211; 二叉树'
+title: '数据算法 & 二叉树'
 date: '2019-09-09T23:23:42+08:00'
 status: publish
 permalink: /binary-tree

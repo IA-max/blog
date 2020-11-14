@@ -1,5 +1,5 @@
 ---
-title: 'CSS-in-JS &amp; SMACSS'
+title: 'CSS-in-JS & SMACSS'
 date: '2019-12-10T15:55:15+08:00'
 status: publish
 permalink: /css-in-js-smacss
