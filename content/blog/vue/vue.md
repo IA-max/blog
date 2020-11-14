@@ -1,0 +1,1015 @@
+---
+title: Vue
+date: '2019-11-24T15:04:12+08:00'
+status: publish
+permalink: /vue
+author: admin
+excerpt: ''
+type: post
+id: 2343
+category:
+    - Vue
+tag:
+    - js
+    - vue
+    - 设计模式
+post_format: []
+php_everywhere_code:
+    - 'Just put [php_everywhere] where you want the code to be executed.'
+    - 'Just put [php_everywhere] where you want the code to be executed.'
+---
+安装
+--
+
+#### 引入
+
+直接下载并用 `<script>` 标签引入，`Vue` 会被注册为一个全局变量。
+
+##### 开发:
+
+```
+<pre class="wp-block-code">```
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+```
+
+##### 生产环境: 推荐链接到一个明确的版本号和构建文件
+
+```
+<pre class="wp-block-code">```
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+```
+```
+
+#####  Vue 构建大型应用时推荐使用 NPM 安装
+
+```
+<pre class="wp-block-code">```
+npm install vue
+```
+```
+
+##### [官方 CLI](https://github.com/vuejs/vue-cli)
+
+单页面应用 (SPA) 快速搭建繁杂的脚手架.  
+只需要几分钟的时间就可以运行起来并带有热重载、保存时 lint 校验，以及生产环境可用的构建版本.
+
+##### 开发环境 vs. 生产环境模式
+
+webpack 4+ 中，可使用 mode 选项
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="js" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">module.exports = {
+  mode: 'production'
+}
+```
+
+##### 兼容性
+
+Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。
+
+> 当你把一个普通的 JavaScript 对象传入 Vue 实例作为 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 把这些属性全部转为 getter/setter。Object.defineProperty 是 ES5 中一个无法 shim 的特性，这也就是 Vue 不支持 IE8 以及更低版本浏览器的原因。
+
+Internet Explorer 8 实现了 [Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 方法，但 只能在 DOM 对象上使用。 需要注意的一些事情：
+
+- 尝试在原生对象上使用 Object.defineProperty()会报错。
+- 属性特性必须设置一些特定的值。对于数据属性描述符，configurable, enumerable 和 writable 特性必须全部设置为 true；对于访问器属性描述符，configurable 必须设置为 true，enumerable 必须设置为 false。(?) 任何试图提供其他值(?)将导致一个错误抛出。
+- 重新配置一个属性首先需要删除该属性。如果属性没有删除，就如同重新配置前的尝试。
+
+#### 插值
+
+##### 声明式渲染
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="app">
+  {{ message }}
+</div>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+```
+<pre class="wp-block-code">```
+ Hello Vue!
+```
+```
+
+##### 指令 v-once 
+
+执行一次性地插值，当数据改变时，插值处的内容不会更新
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><span v-once>这个将不会改变: {{ msg }}</span>
+```
+
+##### 渲染原始 HTML
+
+双大括号会将数据解释为普通文本，而非 HTML 代码。  
+为了输出真正的 HTML，你需要使用 v-html 指令：
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><span v-html="rawHtml"></span>
+```
+
+##### 绑定 HTML 属性
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-bind:id="dynamicId"></div>
+```
+
+##### 布尔特性
+
+如果 isButtonDisabled 的值是 null、undefined 或 false，则 disabled 特性甚至不会被包含在渲染出来的 元素中
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><button v-bind:disabled="isButtonDisabled">Button</button>
+```
+
+##### JS 表达式
+
+限制就是，每个绑定都只能包含**单个表达式**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">{{ number + 1 }}
+{{ ok ? 'YES' : 'NO' }}
+{{ message.split('').reverse().join('') }}
+<div v-bind:id="'list-' + id"></div>
+```
+
+以下不生效
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><!-- 这是语句，不是表达式 -->
+{{ var a = 1 }}
+<!-- 流控制也不会生效，请使用三元表达式 -->
+{{ if (ok) { return message } }}
+```
+
+#### 指令
+
+指令特性的值预期是单个 JavaScript 表达式 (v-for 是例外情况)  
+其职责是，当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><a v-bind:[attributeName]="url"> ... </a>
+```
+
+> **这里有待扩展研究**
+
+##### 修饰符
+
+以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><form v-on:submit.prevent="onSubmit">...</form>
+```
+
+##### 缩写
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><!-- 完整语法 -->
+<a v-bind:href="url">...</a>
+<!-- 缩写 -->
+<a :href="url">...</a>
+```
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><!-- 完整语法 -->
+<a v-on:click="doSomething">...</a>
+<!-- 缩写 -->
+<a @click="doSomething">...</a>
+```
+
+##### 计算属性和侦听器
+
+ 对于任何复杂逻辑，你都应当使用**计算属性**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="example">
+  <p>Original message: "{{ message }}"</p>
+  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+var vm = new Vue({
+  el: '#example',
+  data: {
+    message: 'Hello'
+  },
+  computed: {
+    // 计算属性的 getter
+    reversedMessage: function () {
+      // `this` 指向 vm 实例
+      return this.message.split('').reverse().join('')
+    }
+  }
+});
+```
+
+##### computed vs methods
+
+通过在表达式中调用方法来达到同样的效果
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><p>Reversed message: "{{ reversedMessage() }}"</p>
+// 在组件中
+methods: {
+  reversedMessage: function () {
+    return this.message.split('').reverse().join('')
+  }
+}
+```
+
+> 计算属性是基于它们的响应式依赖进行缓存的  
+> Date.now() 不是响应式依赖
+
+##### 计算属性
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">var vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar'
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
+```
+
+侦听器
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="watch-example">
+  <p>
+    Ask a yes/no question:
+    <input v-model="question">
+  </p>
+  <p>{{ answer }}</p>
+</div>
+<!-- 因为 AJAX 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 -->
+<!-- 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 -->
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<script>
+var watchExampleVM = new Vue({
+  el: '#watch-example',
+  data: {
+    question: '',
+    answer: 'I cannot give you an answer until you ask a question!'
+  },
+  watch: {
+    // 如果 `question` 发生改变，这个函数就会运行
+    question: function (newQuestion, oldQuestion) {
+      this.answer = 'Waiting for you to stop typing...'
+      this.debouncedGetAnswer()
+    }
+  },
+  created: function () {
+    // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
+    // 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率
+    // AJAX 请求直到用户输入完毕才会发出。想要了解更多关于
+    // `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，
+    // 请参考：https://lodash.com/docs#debounce
+    this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+  },
+  methods: {
+    getAnswer: function () {
+      if (this.question.indexOf('?') === -1) {
+        this.answer = 'Questions usually contain a question mark. ;-)'
+        return
+      }
+      this.answer = 'Thinking...'
+      var vm = this
+      axios.get('https://yesno.wtf/api')
+        .then(function (response) {
+          vm.answer = _.capitalize(response.data.answer)
+        })
+        .catch(function (error) {
+          vm.answer = 'Error! Could not reach the API. ' + error
+        })
+    }
+  }
+})
+</script>
+```
+
+除了 `watch` 选项之外，您还可以使用命令式的 [vm.$watch API](https://cn.vuejs.org/v2/api/#vm-watch)。
+
+#### Class 与 Style 绑定
+
+##### 绑定 HTML Class
+
+传给 v-bind:class 一个对象，以动态地切换 class
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-bind:class="{ active: isActive }"></div>
+```
+
+active 这个 class 存在与否将取决于数据属性 isActive 的 truthiness。  
+多值如下:
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div
+  class="static"
+  v-bind:class="{ active: isActive, 'text-danger': hasError }"
+></div>
+```
+
+**以对象形式:**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-bind:class="classObject"></div>
+data: {
+  classObject: {
+    active: true,
+    'text-danger': false
+  }
+}
+```
+
+**数组语法**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-bind:class="[activeClass, errorClass]"></div>
+data: {
+  activeClass: 'active',
+  errorClass: 'text-danger'
+}
+```
+
+**用在组件上**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><my-component v-bind:class="{ active: isActive }"></my-component>
+```
+
+#### 绑定内联样式
+
+###### v-bind:style
+
+传递一个 JavaScript 对象。  
+CSS 属性名可以用驼峰式或短横线分隔 (kebab-case，记得用引号括起来) 来命名
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+//或直接绑定一个对象
+<div v-bind:style="styleObject"></div>
+//数组语法
+<div v-bind:style="[baseStyles, overridingStyles]"></div>
+```
+
+#### 条件渲染
+
+**v-if**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><h1 v-if="awesome">Vue is awesome!</h1>
+<h1 v-else>Oh no 😢</h1>
+```
+
+在 `<template>` 元素上使用 `v-if` 条件渲染分组
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><template v-if="ok">
+  <h1>Title</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</template>
+```
+
+**v-else**
+
+你可以使用 v-else 指令来表示 v-if 的“else 块”：
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-if="Math.random() > 0.5">
+  Now you see me
+</div>
+<div v-else>
+  Now you don't
+</div>
+```
+
+**v-else-if**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div v-if="type === 'A'">
+  A
+</div>
+<div v-else-if="type === 'B'">
+  B
+</div>
+<div v-else-if="type === 'C'">
+  C
+</div>
+<div v-else>
+  Not A/B/C
+</div>
+```
+
+用 **key** 管理可复用的元素
+
+Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染.  
+因此Vue 同时为你提供了一种方式来表达“这两个元素是完全独立的，不要复用它们”。  
+只需添加一个具有唯一值的 key 属性.
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username" key="username-input">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address" key="email-input">
+</template>
+```
+
+注， `label`元素仍然会被高效地复用，因为它们没有添加 key 属性
+
+v-show
+
+另一个用于根据条件展示元素的选项是 v-show 指令
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><h1 v-show="ok">Hello!</h1>
+```
+
+> 不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中
+> 
+> <cite> `v-show` 不支持 `<template>` 元素，也不支持 `v-else` </cite>
+
+一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。  
+因此，如果需要非常频繁地切换，则使用 v-show 较好；  
+如果在运行时条件很少改变，则使用 v-if 较好.
+
+##### v-if 与 v-for 一起使用
+
+不推荐同时使用 v-if 和 v-for.  
+当 `v-if` 与 `v-for` 一起使用时，`v-for` 具有比 `v-if` 更高的优先级
+
+#### 列表渲染
+
+在 v-for 块中，我们可以访问所有父作用域的属性
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><ul id="example-1">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  </li>
+</ul>
+ data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+//也可以用 of 替代 in 作为分隔符
+<div v-for="item of items"></div>
+```
+
+##### 在 v-for 里使用对象
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div :key="index" v-for="(value, name, index) in object">
+  {{ index }}. {{ name }}: {{ value }}
+</div>
+```
+
+> 在遍历对象时，会按 Object.keys() 的结果遍历，但是不能保证它的结果在不同的 JavaScript 引擎下都一致
+
+#### 数组更新检测
+
+##### 变异方法 (mutation method)
+
+Vue 将被侦听的数组的变异方法进行了包裹，所以它们也将会触发视图更新
+
+- push()
+- pop()
+- shift()
+- unshift()
+- splice()
+- sort()
+- reverse()
+
+替换数组
+
+变异方法，顾名思义，会改变调用了这些方法的原始数组。  
+相比之下，也有非变异 (non-mutating method) 方法，例如
+
+- filter()
+- concat()
+- slice()
+
+它们不会改变原始数组，而总是返回一个新数组.
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">example1.items = example1.items.filter(function (item) {
+  return item.message.match(/Foo/)
+});
+```
+
+##### 注意事项
+
+由于 JavaScript 的限制，Vue 不能检测以下数组的变动：
+
+1. 当你利用索引直接设置一个数组项时，例如：`vm.items[indexOfItem] = newValue`
+2. 当你修改数组的长度时，例如：`vm.items.length = newLength`
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">var vm = new Vue({
+  data: {
+    items: ['a', 'b', 'c']
+  }
+})
+vm.items[1] = 'x' // 不是响应性的
+vm.items.length = 2 // 不是响应性的
+```
+
+**解决第一类问题**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">// Vue.set
+Vue.set(vm.items, indexOfItem, newValue)
+//或
+// Array.prototype.splice
+vm.items.splice(indexOfItem, 1, newValue)
+//或
+vm.$set(vm.items, indexOfItem, newValue)
+```
+
+**解决第二类问题**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">vm.items.splice(newLength)
+```
+
+##### 对象变更检测注意事项
+
+Vue 不能检测对象属性的添加或删除
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">var vm = new Vue({
+  data: {
+    a: 1
+  }
+})
+// `vm.a` 现在是响应式的
+vm.b = 2
+// `vm.b` 不是响应式的
+```
+
+对于已经创建的实例，Vue 不允许动态添加根级别的响应式属性。  
+但可使用 Vue.set(object, propertyName, value) 方法向嵌套对象添加响应式属性.
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">var vm = new Vue({
+  data: {
+    userProfile: {
+      name: 'Anika'
+    }
+  }
+});
+Vue.set(vm.userProfile, 'age', 27);
+```
+
+有时你可能需要为已有对象赋值多个新属性, 应该这样做：
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">vm.userProfile = Object.assign({}, vm.userProfile, {
+  age: 27,
+  favoriteColor: 'Vue Green'
+});
+```
+
+在组件上使用 v-for
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="todo-list-example">
+  <form v-on:submit.prevent="addNewTodo">
+    <label for="new-todo">Add a todo</label>
+    <input
+      v-model="newTodoText"
+      id="new-todo"
+      placeholder="E.g. Feed the cat"
+    >
+    <button>Add</button>
+  </form>
+  <ul>
+    <li
+      is="todo-item"
+      v-for="(todo, index) in todos"
+      v-bind:key="todo.id"
+      v-bind:title="todo.title"
+      v-on:remove="todos.splice(index, 1)"
+    ></li>
+  </ul>
+</div>
+//
+Vue.component('todo-item', {
+  template: '\
+    <li>\
+      {{ title }}\
+      <button v-on:click="$emit(\'remove\')">Remove</button>\
+    </li>\
+  ',
+  props: ['title']
+})
+new Vue({
+  el: '#todo-list-example',
+  data: {
+    newTodoText: '',
+    todos: [
+      {
+        id: 1,
+        title: 'Do the dishes',
+      },
+      {
+        id: 2,
+        title: 'Take out the trash',
+      },
+      {
+        id: 3,
+        title: 'Mow the lawn'
+      }
+    ],
+    nextTodoId: 4
+  },
+  methods: {
+    addNewTodo: function () {
+      this.todos.push({
+        id: this.nextTodoId++,
+        title: this.newTodoText
+      })
+      this.newTodoText = ''
+    }
+  }
+})
+```
+
+注意这里的 is=”todo-item” 属性。这种做法在使用 DOM 模板时是十分必要的，因为在 &lt;ul&gt; 元素内只有 &lt;li&gt; 元素会被看作有效内容。  
+这样做实现的效果与 &lt;todo-item&gt; 相同，但是可以避开一些潜在的浏览器解析错误
+
+##### 事件处理
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="example-1">
+  <button v-on:click="counter += 1">Add 1</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+</div>
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    counter: 0
+  }
+});
+```
+
+##### 事件处理方法
+
+v-on 还可以接收一个需要调用的方法名称
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="example-2">
+  <!-- `greet` 是在下面定义的方法名 -->
+  <button v-on:click="greet">Greet</button>
+</div>
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    name: 'Vue.js'
+  },
+  // 在 `methods` 对象中定义方法
+  methods: {
+    greet: function (event) {
+      // `this` 在方法里指向当前 Vue 实例
+      alert('Hello ' + this.name + '!')
+      // `event` 是原生 DOM 事件
+      if (event) {
+        alert(event.target.tagName)
+      }
+    }
+  }
+})
+// 也可以用 JavaScript 直接调用方法
+example2.greet() // => 'Hello Vue.js!'
+```
+
+##### 内联处理器中的方法
+
+内联 JavaScript 语句中调用方法
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="example-3">
+  <button v-on:click="say('hi')">Say hi</button>
+  <button v-on:click="say('what')">Say what</button>
+</div>
+new Vue({
+  el: '#example-3',
+  methods: {
+    say: function (message) {
+      alert(message)
+    }
+  }
+})
+```
+
+内联语句处理器中访问原始的 DOM 事件, 用特殊变量 `$event` 把它传入方法
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><button v-on:click="warn('Form cannot be submitted yet.', $event)">
+  Submit
+</button>
+methods: {
+  warn: function (message, event) {
+    // 现在我们可以访问原生事件对象
+    if (event) {
+      event.preventDefault()
+    }
+    alert(message)
+  }
+}
+```
+
+#### 事件修饰符
+
+- .stop 阻止单击事件继续传播
+- .prevent 提交事件不再重载页面
+- .capture
+- .self
+- .once 点击事件将只会触发一次
+- .passive
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><!-- 阻止单击事件继续传播 -->
+<a v-on:click.stop="doThis"></a>
+<!-- 提交事件不再重载页面 -->
+<form v-on:submit.prevent="onSubmit"></form>
+<!-- 修饰符可以串联 -->
+<a v-on:click.stop.prevent="doThat"></a>
+<!-- 只有修饰符 -->
+<form v-on:submit.prevent></form>
+<!-- 添加事件监听器时使用事件捕获模式 -->
+<!-- 即内部元素触发的事件先在此处理，然后才交由内部元素进行处理 -->
+<div v-on:click.capture="doThis">...</div>
+<!-- 只当在 event.target 是当前元素自身时触发处理函数 -->
+<!-- 即事件不是从内部元素触发的 -->
+<div v-on:click.self="doThat">...</div>
+```
+
+为了在必要的情况下支持旧浏览器，Vue 提供了绝大多数常用的按键码的别名：
+
+- .enter
+- .tab
+- .delete (捕获“删除”和“退格”键)
+- .esc
+- .space
+- .up
+- .down
+- .left
+- .right
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><input v-on:keyup.13="submit">
+```
+
+如下修饰符来实现仅在按下相应按键时才触发鼠标或键盘事件的监听器
+
+- .ctrl
+- .alt
+- .shift
+- .meta
+
+.exact 修饰符
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><!-- 即使 Alt 或 Shift 被一同按下时也会触发 -->
+<button @click.ctrl="onClick">A</button>
+<!-- 有且只有 Ctrl 被按下的时候才触发 -->
+<button @click.ctrl.exact="onCtrlClick">A</button>
+<!-- 没有任何系统修饰符被按下的时候才触发 -->
+<button @click.exact="onClick">A</button>
+```
+
+限制处理函数仅响应特定的鼠标按钮
+
+- .left
+- .right
+- .middle
+
+- - - - - -
+
+#### 表单输入绑定
+
+ `<strong>v-model</strong>` 指令在表单 `<input>`、`<textarea>` 及 `<select>` 元素上创建双向数据绑
+
+> 你应该通过 JavaScript 在组件的 `data` 选项中声明**初始值**。
+> 
+> <cite>`v-model` 会忽略所有表单元素的 `value`、`checked`、`selected` 特性的初始值而总是将 Vue 实例的数据作为数据来源。 </cite>
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><div id="example-5">
+  <select v-model="selected">
+    <option disabled value="">请选择</option>
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <span>Selected: {{ selected }}</span>
+</div>
+new Vue({
+  el: '...',
+  data: {
+    selected: ''
+  }
+})
+```
+
+如果 v-model 表达式的初始值未能匹配任何选项， 元素将被渲染为“未选中”状态。  
+在 iOS 中，这会使用户无法选择第一个选项。  
+因为这样的情况下，iOS 不会触发 change 事件。  
+因此，更推荐像上面这样提供一个值为空的禁用选项。
+
+.lazy
+
+v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转变**为使用 change 事件进行同步**
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><!-- 在“change”时而非“input”时更新 -->
+<input v-model.lazy="msg" >
+```
+
+**.number**  
+如果想自动将用户的输入值转为数值类型，可以给 `v-model` 添加 `number` 修饰符：
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><input v-model.number="age" type="number">
+```
+
+##### `.trim`
+
+如果要自动过滤用户输入的首尾空白字符，可以给 `v-model` 添加 `trim` 修饰符：
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><input v-model.trim="msg">
+```
+
+### 组件
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">// 定义一个名为 button-counter 的新组件
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+});
+<div id="components-demo">
+  <button-counter></button-counter>
+</div>
+new Vue({ el: '#components-demo' })
+```
+
+> 组件是可复用的 Vue 实例，所以它们与 new Vue 接收相同的选项
+
+#### 组件的复用
+
+```
+<pre class="wp-block-code">```
+<div id="components-demo">
+  <button-counter></button-counter>
+  <button-counter></button-counter>
+  <button-counter></button-counter>
+</div>
+```
+```
+
+每个组件都会各自独立维护。  
+每用一次组件，就会有一个它的新实例被创建。
+
+**data 必须是一个函数**
+
+> 一个组件的 data 选项必须是一个函数，因此每个实例可以维护一份被返回对象的独立的拷贝：
+> 
+> <cite> data: function () { return { count: 0 } } </cite>
+
+如果 Vue 没有这条规则，点击一个按钮就可能会影响到其它所有实例
+
+####  组件的注册类型：**全局注册**和**局部注册** 
+
+> 全局注册的
+> 
+> <cite> Vue.component(‘my-component-name’, { // … options … }) </cite>
+
+#### 通过 Prop 向子组件传递数据
+
+Prop 是你可以在组件上注册的一些自定义特性。  
+当一个值传递给一个 prop 特性的时候，它就变成了那个组件实例的一个属性。
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">Vue.component('blog-post', {
+  props: ['title'],
+  template: '<h3>{{ title }}</h3>'
+})
+```
+
+- 可以拥有任意数量的 prop
+- 任何值都可以传递给任何 prop
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><blog-post title="My journey with Vue"></blog-post>
+<blog-post title="Blogging with Vue"></blog-post>
+<blog-post title="Why Vue is so fun"></blog-post>
+```
+
+传递数组
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">new Vue({
+  el: '#blog-post-demo',
+  data: {
+    posts: [
+      { id: 1, title: 'My journey with Vue' },
+      { id: 2, title: 'Blogging with Vue' },
+      { id: 3, title: 'Why Vue is so fun' }
+    ]
+  }
+});
+<blog-post
+  v-for="post in posts"
+  v-bind:key="post.id"
+  v-bind:title="post.title"
+></blog-post>
+```
+
+##### 在组件上使用 v-model
+
+自定义事件也可以用于创建支持 v-model 的自定义输入组件
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><input v-model="searchText">
+//同价于
+<input
+  v-bind:value="searchText"
+  v-on:input="searchText = $event.target.value"
+>
+```
+
+组件通过这样
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">Vue.component('custom-input', {
+  props: ['value'],
+  template: `
+    <input
+      v-bind:value="value"
+      v-on:input="$emit('input', $event.target.value)"
+    >
+  `
+})
+```
+
+这个组件内的 必须：
+
+将其 value 特性绑定到一个名叫 value 的 prop 上  
+在其 input 事件被触发时，将新的值通过自定义的 input 事件抛出
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><custom-input
+  v-bind:value="searchText"
+  v-on:input="searchText = $event"
+></custom-input>
+//等价于
+<custom-input v-model="searchText"></custom-input>
+```
+
+- - - - - -
+
+#### 通过插槽分发内容
+
+和 HTML 元素一样，向一个组件传递内容
+
+```
+<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""><alert-box>
+  Something bad happened.
+</alert-box>
+Vue.component('alert-box', {
+  template: `
+    <div class="demo-alert-box">
+      <strong>Error!</strong>
+      <slot></slot>
+    </div>
+  `
+})
+```
+
+#### 动态组件
+
+通过 Vue 的 `<component>` 元素加一个特殊的 `is` 特性来实现, 创建不同组件之间进行动态切换.
