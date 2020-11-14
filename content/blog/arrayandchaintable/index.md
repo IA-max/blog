@@ -1,12 +1,6 @@
 ---
-title: '面试官: 既然已经有数组了,为什么还要链表'
+title: '数组与链表'
 date: '2020-02-16T04:32:57+08:00'
-status: private
-permalink: /%e9%9d%a2%e8%af%95%e5%ae%98-%e6%97%a2%e7%84%b6%e5%b7%b2%e7%bb%8f%e6%9c%89%e6%95%b0%e7%bb%84%e4%ba%86%e4%b8%ba%e4%bb%80%e4%b9%88%e8%bf%98%e8%a6%81%e9%93%be%e8%a1%a8
-author: admin
-excerpt: ''
-type: post
-id: 3530
 category:
     - 未分类
 tag: []
@@ -23,14 +17,16 @@ post_format: []
 
 从本质上来讲,链表与数组的确有相似之处,他们的相同点是都是线性数据结构,这与树和图不同,而它们的不同之处在于数组是一块连续的内存,而链表可以不是连续内存,链表的节点与节点之间通过指针来联系.
 
-<figure class="wp-block-image">![链表vs数组](https://user-gold-cdn.xitu.io/2019/9/20/16d4c965b71de8bb?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</figure>当然,链表也有不同的形态,主要分为三种:单向链表、双向链表、循环链表.
+![链表vs数组](./p1.png)
+当然,链表也有不同的形态,主要分为三种:单向链表、双向链表、循环链表.
 
 单向链表
 ----
 
 单向链表的节点通常由两个部分构成,一个是节点储存的值`val`,另一个就是节点的指针`next`.
 
-<figure class="wp-block-image">![单向链表](https://user-gold-cdn.xitu.io/2019/9/20/16d4c965b752cf92?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</figure>链表与数组类似,也可以进行查找、插入、删除、读取等操作,但是由于链表与数组的特性不同,导致不同操作的复杂度也不同.
+![单向链表](./p2.png)
+链表与数组类似,也可以进行查找、插入、删除、读取等操作,但是由于链表与数组的特性不同,导致不同操作的复杂度也不同.
 
 ### 查找性能
 
@@ -52,9 +48,11 @@ post_format: []
 
 链表的插入操作如下:
 
-<figure class="wp-block-image">![插入操作](https://user-gold-cdn.xitu.io/2019/9/20/16d4c965b786cf71?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</figure>链表的删除操作如下:
+![插入操作](./p3.png)
+链表的删除操作如下:
 
-<figure class="wp-block-image">![删除操作](https://user-gold-cdn.xitu.io/2019/9/20/16d4c965b765e4d1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</figure>### 读取性能
+![删除操作](./p4.png)
+### 读取性能
 
 链表相比之下也有劣势，那就是读取操作远不如数组，数组的读取操作之所以高效，是因为它是一块连续内存，数组的读取可以通过寻址公式快速定位，而链表由于非连续内存，所以必须通过指针一个一个节点遍历.
 
@@ -76,7 +74,8 @@ post_format: []
 
 双向链表与单向链表相比有何特殊之处?
 
-<figure class="wp-block-image">![双向链表](https://user-gold-cdn.xitu.io/2019/9/20/16d4c965b7cb63a7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</figure>我们看到双向链表多了一个新的指针`prev`指向节点的前一个节点,当然由于多了一个指针,所以双向链表要更占内存.
+![双向链表](./p5.png)
+我们看到双向链表多了一个新的指针`prev`指向节点的前一个节点,当然由于多了一个指针,所以双向链表要更占内存.
 
 别小看双向链表多了一个前置指针,在很多场景里由于多了这个指针,它的效率更高,也更加实用.
 
@@ -89,7 +88,8 @@ post_format: []
 
 循环链表,顾名思义,他就是将单向链表的尾部指针指向了链表头节点:
 
-<figure class="wp-block-image">![循环链表](https://user-gold-cdn.xitu.io/2019/9/20/16d4c965b86cbbd8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</figure>循环链表一个应用场景就是操作系统的分时问题,比如有一台计算机,但是有多个用户使用,CPU要处理多个用户的请求很可能会出现抢占资源的情况,这个时候计算机会采取分时策略来保证每个用户的使用体验.
+![循环链表](./p6.png)
+循环链表一个应用场景就是操作系统的分时问题,比如有一台计算机,但是有多个用户使用,CPU要处理多个用户的请求很可能会出现抢占资源的情况,这个时候计算机会采取分时策略来保证每个用户的使用体验.
 
 每个用户都可以看成循环链表上的节点,CPU会给每个节点分配一定的处理时间,在一定的处理时间后进入下一个节点,然后无限循环,这样可以保证每个用户的体验,不会出现一个用户抢占CPU而导致其他用户无法响应的情况.
 
@@ -100,13 +100,10 @@ post_format: []
 在Node中有一类场景，没有查询，但是却有大量的插入和删除，这就是Timer模块。 几乎所有的网络I/O请求，都会提供timeout操作控制socket的超时状况，这里就会大量使用到setTimeout，并且这些timeout定时器，绝大部分都是用不到的（数据按时正常响应），那么又会有响应的大量clearTimeout操作，因此node采用了双向循环链表来提高Timer模块的性能,至于其中的细节就不再赘述了.
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">                                           插入！
+                                        插入！
 TimersList <-----> timer1 <-----> timer2 <-----> timer4 <-----> timer3 <-----> ......
                 1000ms后执行     1050ms后执行    1100ms后执行    1200ms后执行
-复制代码
 ```
-
-> [Node.js 核心模块 Timers 详解](https://zhuanlan.zhihu.com/p/30763470)
 
 小结
 --
@@ -116,7 +113,3 @@ TimersList <-----> timer1 <-----> timer2 <-----> timer4 <-----> timer3 <-----> .
 那么，现在有一个非常常见的一个面试向的思考题:
 
 我们平时在用的微信小程序会有最近使用的功能,时间最近的在最上面,按照时间顺序往后排,当用过的小程序大于一定数量后,最不常用的小程序就不会出现了,你会如何设计这个算法?  
-作者：寻找海蓝96  
-链接：https://juejin.im/post/5d843f145188254009776ea5  
-来源：掘金  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

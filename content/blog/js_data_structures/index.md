@@ -1,5 +1,5 @@
 ---
-title: js数据结构-链表
+title: JavaScript 数据结构 - 链表
 date: '2020-02-16T04:31:21+08:00'
 status: publish
 permalink: /js%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84-%e9%93%be%e8%a1%a8
@@ -31,7 +31,7 @@ post_format: []
 
 ### 单向链表
 
-![图片描述](https://segmentfault.com/img/bVblRLN?w=587&h=95)
+![图片描述](./p1.png)
 
 #### 单向链表的特点：
 
@@ -96,7 +96,7 @@ post_format: []
   - 新节点的指针指向原本head所指向的节点
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="generic" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title="">    insert(node) {
+    insert(node) {
         // 如果head有指向的节点
         if(this.head){
            node.next = this.head;
@@ -222,8 +222,11 @@ class List {
 
 如果你把上面介绍的单向列表都看明白了，那么这里介绍的双向列表其实差不多。
 
-![图片描述](https://segmentfault.com/img/bVblSPH?w=641&h=157)
-![图片描述](https://segmentfault.com/img/bVblSPI?w=556&h=164)从上面的图可以很清楚的看到双向链表和单向链表的区别。双向链表多了一个指向上一个节点的指针。
+![图片描述](./p2.png)
+
+![图片描述](./p3.png)
+
+从上面的图可以很清楚的看到双向链表和单向链表的区别。双向链表多了一个指向上一个节点的指针。
 
 #### 初始化节点
 
@@ -304,7 +307,7 @@ class List {
 - 删除的是最后一个节点
   - 要删除的节点的上一个节点的next指向null（也就是指向删除节点的next所指的地址）
 
-![图片描述](https://segmentfault.com/img/bVblSRs?w=896&h=328)
+![图片描述](./p4.png)
 
 ```
     delete(node) {
