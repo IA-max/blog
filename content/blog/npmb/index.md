@@ -36,10 +36,29 @@ yarn config set registry https://registry.yarnpkg.com
 
 ### Windows 终端使用代理
 
-###### 使用 http 类型代理 (临时代理方案, Cmd窗口关闭，则代理失效）
+使用V2ray, 打开本地局域网连接, cmd设置yarn代理
+
+![V2ray Setup](./p1.png)
+![V2ray Setup](./p2.png)
+
+```
+yarn config set proxy http://localhost:9900
+```
+
+###### 使用 http 类型代理 (临时代理方案, Cmd窗口关闭，则代理失效） (SS)
 ```
 set http_proxy=http://127.0.0.1:9899
 set https_proxy=http://127.0.0.1:9899
+```
+
+###### CMD查看代理情况：
+```
+netsh winhttp show proxy
+```
+
+###### CMD取消代理：
+```
+netsh winhttp reset proxy
 ```
 
 ###### cmd永久代理方案
@@ -54,24 +73,13 @@ netsh winhttp show proxy
 netsh winhttp reset proxy
 ```
 
-######  使用 socks 类型代理
-```
-set http_proxy=socks5://127.0.0.1:9899
-set https_proxy=socks5://127.0.0.1:9899
-```
-
 ######  使用 sock5 代理设置
 ```
 set http_proxy=socks5://127.0.0.1:9899
 set https_proxy=socks5://127.0.0.1:9899
 ```
 
-###### CMD查看代理情况：
+用管理员方式打开CMD
 ```
-netsh winhttp show proxy
-```
-
-###### CMD取消代理：
-```
-netsh winhttp reset proxy
+npm install --global --production windows-build-tools
 ```
