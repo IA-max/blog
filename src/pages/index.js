@@ -28,6 +28,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
+        { console.log(posts) }
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -39,11 +40,11 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <h4>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </h2>
+                  </h4>
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>

@@ -8,4 +8,5 @@ import "./src/style.css"
 //import './src/bootstrap.min.css';
 
 // Highlighting for code blocks
-import "prismjs/themes/prism.css"
+//import "prismjs/themes/prism.css"
+require("./src/prism-coldark-dark.css")
