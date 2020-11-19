@@ -1,5 +1,5 @@
 ---
-title: 'Babel 入门'
+title: '入门 - Babel '
 date: '2019-01-14T01:57:50+08:00'
 status: publish
 permalink: /babel-tutorial
