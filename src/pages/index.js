@@ -39,7 +39,10 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
+                <Link to={post.fields.slug} itemProp="url">
+                  <span itemProp="headline">{title}</span>
+                </Link>
+                {/* <header>
                   <h4>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
@@ -54,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
                     }}
                     itemProp="description"
                   />
-                </section>
+                </section> */}
               </article>
             </li>
           )
