@@ -29,9 +29,17 @@ const BlogIndex = ({ data, location }) => {
                     return (
                         <li key={post.fields.slug}>
                             <article className='post-list-item' itemScope itemType='http://schema.org/Article'>
-                                <Link to={post.fields.slug} itemProp='url'>
-                                    <span itemProp='headline'>{title}</span>
-                                </Link>
+                                <div class='row'>
+                                    <div className='col-3 col-md-3'>
+                                        <span>{post.frontmatter.date}</span>
+                                    </div>
+                                    <div className='col-9 col-md-9'>
+                                        <Link to={post.fields.slug} itemProp='url'>
+                                            <span itemProp='headline'>{title}</span>
+                                        </Link>
+                                    </div>
+                                </div>
+
                                 {/* <header>
                                     <h4>
                                         <Link to={post.fields.slug} itemProp='url'>
@@ -61,14 +69,14 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
             nodes {
                 excerpt
                 fields {
                     slug
                 }
                 frontmatter {
-                    date(formatString: "MMMM DD, YYYY")
+                    date(formatString: "YYYY MM-DD")
                     title
                     description
                 }
