@@ -4,9 +4,45 @@ date: 2020-12-10
 ---
 
 
-##### Ubuntu 20.04 安装启用 SSH
+#### Ubuntu 20.04 安装启用 SSH
 
 安装openssh-server软件包
 ```bash
-sudo apt updatesudo apt install openssh-server
+sudo apt update
+sudo apt install openssh-server
+```
+
+校验服务运行状态, 按q退出返回
+```
+sudo systemctl status ssh
+```
+
+如启用了防火墙，请确保打开 SSH 端口
+```
+sudo ufw allow ssh
+```
+
+---
+
+##### Yarn 安装Gatsby 错误解决
+
+
+##### 报错`mozjpeg pre-build test failed`
+
+```bash
+sudo apt-get install autoconf libtool nasm
+```
+
+##### 报错 `pngquant failed to build, make sure that libpng-dev is installed`
+
+Ubuntu
+```bash
+sudo apt update
+sudo apt install -y build-essential gcc make libpng-dev
+```
+
+Centos
+```bash
+sudo yum group install "Development Tools"
+sudo yum -y install libpng-devel
 ```
