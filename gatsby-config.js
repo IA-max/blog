@@ -12,10 +12,34 @@ module.exports = {
         },
     },
     plugins: [
+
+
+
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/content/blog`,
+                name: `blog`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/content/assets`,
+                name: `assets`,
+            },
+        },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
+                    {
+                        resolve: 'gatsby-remark-code-titles',
+                        options: {
+                          className: 'gatsby-remark-code-title',
+                        },
+                      }, // IMPORTANT: this must be ahead of other plugins that use code blocks
+
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
@@ -46,27 +70,7 @@ module.exports = {
                             escapeEntities: {},
                         },
                     },
-                ],
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/blog`,
-                name: `blog`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/assets`,
-                name: `assets`,
-            },
-        },
-        {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-                plugins: [
+                  
                     {
                         resolve: `gatsby-remark-images`,
                         options: {

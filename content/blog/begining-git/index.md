@@ -222,3 +222,9 @@ remote\_branch为远程分支，如果remote\_branch不存在则会自动创建�
 ```bash
 git push origin :remote_branch，local_branch //留空的话则是删除远程remote_branch分支 
 ```
+
+
+
+---
+
+了解更多的 [GitHub知识](https://guides.github.com/)
