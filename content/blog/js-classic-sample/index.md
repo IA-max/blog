@@ -3,17 +3,17 @@ title: 'JavaScript 经典实例收集'
 date: '2019-09-10T07:40:07+08:00'
 status: publish
 permalink: /javascript-%e7%bb%8f%e5%85%b8%e5%ae%9e%e4%be%8b%e6%94%b6%e9%9b%86
-author: admin
-excerpt: ''
-type: post
-id: 1412
-category:
-    - Ecmascript
-tag:
-    - js
-    - 代码片段
-post_format: []
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
+
 跨浏览器事件
 ------
 

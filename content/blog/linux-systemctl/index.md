@@ -3,18 +3,15 @@ title: Linux 命令 - Systemctl
 date: '2019-11-26T04:52:42+08:00'
 status: publish
 permalink: /%e6%9c%8d%e5%8a%a1%e7%ae%a1%e7%90%86-systemctl%e5%91%bd%e4%bb%a4
-author: admin
-excerpt: ''
-type: post
-id: 2545
-category:
-    - Linux
-tag:
-    - centos
-    - cmd
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["linux"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 systemctl 是系统服务管理器命令，它实际上将 service 和 chkconfig 这两个命令组合到一起。
 

@@ -3,18 +3,15 @@ title: 'JavaScript 数据推送'
 date: '2019-11-21T20:02:15+08:00'
 status: publish
 permalink: /javascript-%e6%95%b0%e6%8d%ae%e6%8e%a8%e9%80%81
-author: admin
-excerpt: ''
-type: post
-id: 2205
-category:
-    - Ecmascript
-tag:
-    - js
-    - 数据交互
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 #### **数据推送进化史**
 

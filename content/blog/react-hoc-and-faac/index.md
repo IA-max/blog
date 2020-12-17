@@ -3,14 +3,15 @@ title: React - 函数子组件和高阶组件
 date: '2019-09-09T01:36:40+08:00'
 status: publish
 permalink: /react%e4%b8%ad%e7%9a%84%e5%87%bd%e6%95%b0%e5%ad%90%e7%bb%84%e4%bb%b6facc%e5%92%8c%e9%ab%98%e9%98%b6%e7%bb%84%e4%bb%b6hoc
-author: admin
-excerpt: ''
-type: post
-id: 1296
-category:
-    - React
-tag: []
-post_format: []
+category: ["react"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 在接触过React项目后，大多数人都应该已经了解过或则用过了HOC(High-Order-Components)和FaCC(Functions as Child Components)，因为这两个模式在大多数react的开源库里都存在。比如react-router里面的[withRouter](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/modules/withRouter.js#L9) 就是典型的高阶组件，接受一个组件返回另外一个经过增强后的组件。而react-motion中的[Motion](https://github.com/chenglou/react-motion/blob/master/src/Motion.js#L28)就是典型的FaCC的应用。
 

@@ -3,14 +3,15 @@ title:  Docker 笔记
 date: '2020-03-01T04:31:21+08:00'
 status: publish
 permalink: /dockerNote
-author: admin
-excerpt: ''
-type: post
-id: 31281
-category:
-    - DevOps
-tag: []
-post_format: []
+category: ["flow"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: "cover.png"
+  alt: "Docker"
 ---
 ## 常用命令
 

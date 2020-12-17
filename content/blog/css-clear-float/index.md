@@ -3,15 +3,15 @@ title: CSS - 浮动清除
 date: '2016-11-24T15:28:00+08:00'
 status: publish
 permalink: /%e6%b5%ae%e5%8a%a8%e6%b8%85%e9%99%a4
-author: admin
-excerpt: ''
-type: post
-id: 2356
-category:
-    - CSS
-tag:
-    - css
-    - 代码片段
+category: ["css"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 #### 清除浮动前我们要了解两个重要的定义
 

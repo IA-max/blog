@@ -1,10 +1,15 @@
 ---
 title: '数组与链表'
 date: '2020-02-16T04:32:57+08:00'
-category:
-    - 未分类
-tag: []
-post_format: []
+category: ["algorithm"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 对于不少开发者而言,链表(linked list)这种数据结构既熟悉又陌生,熟悉是因为它确实是非常基础的数据结构,陌生的原因是我们在业务开发中用到它的几率的确不大.
 

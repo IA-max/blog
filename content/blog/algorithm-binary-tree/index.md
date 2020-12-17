@@ -2,14 +2,15 @@
 title: '算法 - 二叉树'
 date: '2019-09-09T23:23:42+08:00'
 status: publish
-permalink: /binary-tree
-author: admin
-excerpt: ''
-type: post
-id: 1338
-category:
-    - 算法
-tag: []
+category: ["algorithm"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.jpg
+featuredimage:
+  src: "p1.jpg"
+  alt: ""
 ---
 
 算法和数据结构是程序的基本功，而且语言都是想通的，只要是掌握了一门语言学习其他语言就如同顺水推舟。

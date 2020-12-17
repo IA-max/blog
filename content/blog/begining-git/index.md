@@ -3,16 +3,15 @@ title: 'Git 入门'
 date: '2019-09-10T07:02:02+08:00'
 status: publish
 permalink: /git-%e5%85%a5%e9%97%a8
-author: admin
-excerpt: ''
-type: post
-id: 1397
-category:
-    - 版本控制
-tag: []
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["flow"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./trees.png
+featuredimage:
+  src: "trees.png"
+  alt: ""
 ---
 
 Git是Linux的缔造者Linus Torvalds为了帮助管理Linux内核源码而开发的一款免费、开源的分布式版本控制系统。  

@@ -3,15 +3,15 @@ title: 'CSS - 布局 Grid Flexbox Float'
 date: '2019-11-27T05:36:21+08:00'
 status: publish
 permalink: /css-layout-grid-flexbox-float
-author: admin
 excerpt: 'Flexbox和Grid提供了创建具有以前不可能的设计的响应式网站的方法。CSS Calc和CSS自定义属性为我们提供了无需编译即可在CSS本身内使用数学和变量的第一个机会。这四个新的CSS模块一起工作，彻底改变了我们使用CSS布置网页的方式！'
-type: post
-id: 2674
-category:
-    - CSS
-tag:
-    - css
-    - layout
+category: ["css"] 
+tag: [""]
+author: "max"
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 CSS在网络上可用于布局网页而不会造成黑客攻击。Flexbox和Grid提供了创建具有以前不可能的设计的响应式网站的方法。CSS Calc和CSS自定义属性为我们提供了无需编译即可在CSS本身内使用数学和变量的第一个机会。这四个新的CSS模块一起工作，彻底改变了我们使用CSS布置网页的方式！  
 将重点介绍创建多列布局的四种不同方式。每种方式各有利弊。为了演示这些布局的行为和外观，我创建了一个使用HTML表，CSS float属性，CSS框架和flexbox 的简单网站。由于网站的不同部分使用了不同的方法，因此可以说它是从不同的部分缝制而成的

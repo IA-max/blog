@@ -3,18 +3,17 @@ title: 'JavaScript 设计模式'
 date: '2019-11-24T15:11:44+08:00'
 status: publish
 permalink: /javascript-%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f
-author: admin
-excerpt: ''
-type: post
-id: 2346
-category:
-    - Ecmascript
-tag:
-    - js
-    - vue
-    - 设计模式
-post_format: []
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
+
 - 工厂模式
 - 桥接模式
 - 组合模式

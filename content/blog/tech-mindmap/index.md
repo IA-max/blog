@@ -3,14 +3,15 @@ title: 转载技能图谱
 date: '2020-01-07T15:08:08+08:00'
 status: publish
 permalink: /tech-mindmap
-author: admin
-excerpt: ''
-type: post
-id: 3427
-category:
-    - 理论
-tag: []
-post_format: []
+category: ["node"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./FE.png
+featuredimage:
+  src: "FE.png"
+  alt: ""
 ---
 
 ![](./language.png)

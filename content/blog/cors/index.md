@@ -3,18 +3,15 @@ title: 跨域实现的多种方式
 date: '2017-06-01T20:49:00+08:00'
 status: publish
 permalink: /cors
-author: admin
-excerpt: ''
-type: post
-id: 2792
-category:
-    - Ecmascript
-tag:
-    - js
-    - 跨域
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 ### 前言
 

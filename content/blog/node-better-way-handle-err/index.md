@@ -3,14 +3,15 @@ title: 'Node 处理错误友好写法'
 date: '2019-12-22T02:45:34+08:00'
 status: publish
 permalink: /node-%e5%a4%84%e7%90%86%e9%94%99%e8%af%af-%e5%8f%8b%e5%a5%bd%e5%86%99%e6%b3%95
-author: admin
-excerpt: ''
-type: post
-id: 3277
-category:
-    - Node
-tag: []
-post_format: []
+category: ["node"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 ```js
 var async = require('async');

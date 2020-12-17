@@ -3,14 +3,15 @@ title: 'CSS - 片段'
 date: '2019-11-24T15:47:50+08:00'
 status: publish
 permalink: /usefuly-css-snippet
-author: admin
-excerpt: ''
-type: post
-id: 2377
-category:
-    - CSS
-tag:
-    - css
+category: ["css"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 常用到的css代码片段，包括了一些hacks技术.
 

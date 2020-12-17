@@ -7,18 +7,14 @@ author: admin
 excerpt: ''
 type: post
 id: 136
-category:
-    - 理论
-tag: []
-post_format: []
-classic-editor-remember:
-    - block-editor
-post_views_count:
-    - '284'
-jnews_social_counter_last_update:
-    - '1564774775'
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+image: 
+category: ["JS"]
+tag: [
+    "js"
+]
+featuredimage:
+  alt: "unobtrusive-programming"
+  src: ""
 ---
 
 #### Web 标准: 分离内容, 展示和脚本
@@ -49,7 +45,7 @@ onclick="document.getElementByID('outBox').value = isPal( document.getElementByI
 <p><button>你好</button></p>
 ```
 
-```html
+```html:title=HTML
 <html lang="en">
     <head>
         <title>unobtrusive js</title>
@@ -64,9 +60,7 @@ onclick="document.getElementByID('outBox').value = isPal( document.getElementByI
 </html>
 ```
 
-##### demo.js
-
-```js
+```js:title=demo.js
 /* File: site/js/demo.js */
 //1. 定义函数
 var handleClick = function () {
@@ -79,9 +73,7 @@ var handleLoad = function (n) {
 //3. 注册事件
 ```
 
-## demo.js (2 步版)
-
-```js
+```js:title=demo.js(2步版)
 //1. 定义事件处理
 var handleClick = function () {
     //response when button is clicked
@@ -94,9 +86,7 @@ window.onload = function (n) {
 };
 ```
 
-## demo.js (prototype 版)
-
-```js
+```js:title=demo.js(prototype版)
 //1. 定义事件处理
 var handleClick = function () {
     $('pMsg').update('Hello, World!'); //Prototype uses update() for innerHTML
@@ -107,9 +97,7 @@ window.onload = function (n) {
 };
 ```
 
-## demo.js (jQuery 版)
-
-```js
+```js:title=demo.js(jQuery版)
 //1. 定义事件处理
 var clickHandler = function () {
     $('pMsg').html('Hello, World!');
@@ -122,9 +110,7 @@ var registerHandlers = function () {
 $(document).ready(registerHandlers);
 ```
 
-## demo.js (jQuery 2 步)
-
-```js
+```js:title=demo.js(jQuery2步)
 //1. 定义事件处理
 var clickHandler = function () {
     $('pMsg').html('Hello, World!');

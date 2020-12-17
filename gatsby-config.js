@@ -12,9 +12,8 @@ module.exports = {
         },
     },
     plugins: [
-
-
-
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -46,7 +45,7 @@ module.exports = {
                             classPrefix: 'language-',
                             inlineCodeMarker: null,
                             aliases: {},
-                            showLineNumbers: true,
+                            showLineNumbers: false,
                             noInlineHighlight: false,
                             languageExtensions: [
                                 {
@@ -89,8 +88,6 @@ module.exports = {
                 ],
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
@@ -111,5 +108,21 @@ module.exports = {
             },
         },
         `gatsby-plugin-react-helmet`,
+        // {
+        //     resolve: `gatsby-plugin-sass`,
+        //     options: {
+        //         implementation: require('sass')
+        //     },
+        // },
+        `gatsby-plugin-postcss`,
+        {
+           resolve: `gatsby-plugin-sass`,
+               options: {
+                   postCssPlugins: [
+                       require("tailwindcss"),
+                       require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+                   ],
+               },
+        },
     ],
 };

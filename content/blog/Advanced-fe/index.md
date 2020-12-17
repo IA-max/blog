@@ -2,15 +2,15 @@
 title: 前端进阶
 date: '2019-09-18T18:16:11+08:00'
 status: publish
-permalink: /frontend-advanced
-author: admin
-excerpt: ''
-type: post
-id: 1491
-category:
-    - Ecmascript
-tag: []
-post_format: []
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 
 React和Vue对比 

@@ -3,14 +3,15 @@ title: Electron  入门
 date: '2019-11-26T17:54:25+08:00'
 status: publish
 permalink: /
-author: admin
-excerpt: ''
-type: post
-id: 26092
-category:
-    - Ecmascript
-tag:
-    - nodejs
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 
 ##### npm 安装 electron 依赖时下载

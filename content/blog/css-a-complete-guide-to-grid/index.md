@@ -2,15 +2,15 @@
 title: 'A Complete Guide to Grid'
 date: '2019-12-20T00:44:19+08:00'
 status: private
-permalink: /a-complete-guide-to-grid
-author: admin
-excerpt: ''
-type: post
-id: 3271
-category:
-    - CSS
-tag: []
-post_format: []
+category: ["css"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) which is largely a 1-dimensional system. You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that element’s children (which become Grid Items).
 

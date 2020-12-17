@@ -3,14 +3,15 @@ title: 'JavaScript - 上下文与堆栈'
 date: '2012-11-11T13:33:51+08:00'
 status: publish
 permalink: /execution-context-in-javascript
-author: admin
-excerpt: ''
-type: post
-id: 3511
-category:
-    - Ecmascript
-tag: []
-post_format: []
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 在本文中，我将深入研究JavaScript的最基本部分之一`Execution Context`。 在这篇文章的最后，您应该对解释器正在尝试做的事情，为什么在声明它们之前可以使用某些函数/变量以及如何真正确定其值有更清楚的了解。
 

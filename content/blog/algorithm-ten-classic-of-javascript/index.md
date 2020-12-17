@@ -3,14 +3,15 @@ title: '算法 - 十大经典排序'
 date: '2019-09-07T00:53:38+08:00'
 status: publish
 permalink: /ten-classic-javascript-algorithm
-author: admin
-excerpt: '排序算法是<数据结构与算法>中最基本的算法之一'
-type: post
-id: 989
-category:
-    - 算法
-tag: []
-post_format: []
+category: ["algorithm"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 排序算法是<数据结构与算法>中最基本的算法之一
 

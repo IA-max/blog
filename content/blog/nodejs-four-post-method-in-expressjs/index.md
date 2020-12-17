@@ -3,15 +3,15 @@ title: 'Express.js Post请求四种格式'
 date: '2019-10-15T22:35:04+08:00'
 status: publish
 permalink: /four-post-method-in-expressjs
-author: admin
-excerpt: ''
-type: post
-id: 1739
-category:
-    - Node
-tag:
-    - express
-    - nodejs
+category: ["node"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 分别是这四种:
 

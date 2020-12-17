@@ -1,92 +1,79 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
+import React from "react"
+import kebabCase from "lodash.kebabcase"
+import { graphql, Link } from "gatsby"
+import { Row, Cell } from "griding"
 
-import Bio from '../components/bio';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import * as S from "../components/styles.css"
+import { Container } from "../components/grid"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import ConcatWords from "../utils/ConcatWords"
+import formatDate from "../utils/formatDate"
 
-const BlogPostTemplate = ({ data, location }) => {
-    const post = data.markdownRemark;
-    const siteTitle = data.site.siteMetadata?.title || `Title`;
-    const { previous, next } = data;
+const BlogPost = ({ data, pageContext }) => {
+    const { markdownRemark } = data
+    const { prev, next } = pageContext
+    console.log(next)
 
-    return (
-        <Layout location={location} title={siteTitle}>
-            <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
-            <article className='blog-post' itemScope itemType='http://schema.org/Article'>
-                <header>
-                    <h1 itemProp='headline'>{post.frontmatter.title}</h1>
-                    <p>{post.frontmatter.date}</p>
-                </header>
-                <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp='articleBody' />
-                <hr />
-                <footer>
-                    <Bio />
-                </footer>
-            </article>
-            <nav className='blog-post-nav'>
-                <ul
-                    style={{
-                        display: `flex`,
-                        flexWrap: `wrap`,
-                        justifyContent: `space-between`,
-                        listStyle: `none`,
-                        padding: 0,
-                    }}>
-                    <li>
-                        {previous && (
-                            <Link to={previous.fields.slug} rel='prev'>
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <Link to={next.fields.slug} rel='next'>
-                                {next.frontmatter.title} →
-                            </Link>
-                        )}
-                    </li>
-                </ul>
-            </nav>
+    return ( <Layout >
+        <Seo title = { markdownRemark.frontmatter.title }/>
+
+        <Container >
+     
+
+        <S.Author>
+        By { " " } <Link to = { `/blog/author/${kebabCase(markdownRemark.frontmatter.author)}` } >
+        { markdownRemark.frontmatter.author } </Link> </S.Author>
+
+        <S.Title > { markdownRemark.frontmatter.title } </S.Title>
+        <S.DateText > { formatDate(markdownRemark.frontmatter.date) } </S.DateText>
+        <S.Category>
+        {
+            markdownRemark.frontmatter.category.map((cat, index, arr) => ( 
+            <ConcatWords arrCount = { arr.length } index = { index } key = { cat } >
+                <Link to = { `/category/${kebabCase(cat)}` } > { cat } </Link> 
+            </ConcatWords>
+            ))
+        } </S.Category>
+
+        <S.BlogContent dangerouslySetInnerHTML = { { __html: markdownRemark.html } }/>
+
+        <Row >
+        {
+            prev && ( <Cell xs = { 6 } >
+                <Link to = { prev.fields.slug } >
+                <S.NavigationPost >
+                <div > { " " } { "<" } { prev.frontmatter.title } </div> </S.NavigationPost> </Link> </Cell>
+            )
+        }
+
+        {
+            next && ( <Cell xs = { 6 } >
+                <Link to = { next.fields.slug } >
+                <S.NavigationPost >
+                <div > { " " } { next.frontmatter.title } { ">" } </div> 
+                </S.NavigationPost>
+                </Link> 
+                </Cell>
+            )
+        } </Row>
+        </Container>
         </Layout>
-    );
-};
+    )
+}
 
-export default BlogPostTemplate;
+export default BlogPost
 
-export const pageQuery = graphql`
-    query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
-        site {
-            siteMetadata {
-                title
-            }
-        }
-        markdownRemark(id: { eq: $id }) {
-            id
-            excerpt(pruneLength: 160)
-            html
-            frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
-                description
-            }
-        }
-        previous: markdownRemark(id: { eq: $previousPostId }) {
-            fields {
-                slug
-            }
-            frontmatter {
-                title
-            }
-        }
-        next: markdownRemark(id: { eq: $nextPostId }) {
-            fields {
-                slug
-            }
-            frontmatter {
-                title
-            }
-        }
+export const query = graphql `
+  query BlogPostBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        author
+        category
+      }
     }
-`;
+  }
+`

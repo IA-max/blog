@@ -3,18 +3,15 @@ title: 'Skeleton Screens'
 date: '2019-09-10T03:17:25+08:00'
 status: publish
 permalink: /skeleton-screens
-author: admin
-excerpt: ''
-type: post
-id: 1389
-category:
-    - CSS
-tag:
-    - css
-    - ux
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["css"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 
 在网上设计加载状态经常被忽视或被视为事后的想法。性能不仅仅是开发人员的责任，建立一个与慢速连接一起工作的体验也可能是一项设计挑战。

@@ -3,17 +3,17 @@ title: 'JavaScript 交换变量值'
 date: '2019-09-18T15:47:25+08:00'
 status: publish
 permalink: /javascript-%e4%ba%a4%e6%8d%a2%e5%8f%98%e9%87%8f%e5%80%bc
-author: admin
-excerpt: ''
-type: post
-id: 1473
-category:
-    - Ecmascript
-tag: []
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
+
 **前言** <br>
 这篇文章总结了七种办法来交换a和b的变量值
 

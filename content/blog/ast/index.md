@@ -2,18 +2,15 @@
 title: 'AST 抽象语法树'
 date: '2019-09-09T23:27:50+08:00'
 status: publish
-permalink: /ast
-author: admin
-excerpt: ''
-type: post
-id: 1350
-category:
-    - 算法
-tag: []
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["algorithm"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: ./p1.png
+featuredimage:
+  src: "p1.png"
+  alt: ""
 ---
 提起 AST 抽象语法树，大家可能并不感冒。但是提到它的使用场景，也许会让你大吃一惊。  
 原来它一直在你左右与你相伴，而你却不知。

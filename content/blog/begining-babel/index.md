@@ -3,21 +3,15 @@ title: '入门 - Babel '
 date: '2019-01-14T01:57:50+08:00'
 status: publish
 permalink: /babel-tutorial
-author: admin
-excerpt: ''
-type: post
-id: 240
-category:
-    - 任务处理
-tag: []
-post_format: []
-classic-editor-remember:
-    - block-editor
-post_views_count:
-    - '0'
-    - '0'
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["flow"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
  Babel 是一个通用多用途的JavaScript编译器。 Babel 把用最新标准编写的 JavaScript 代码向下编译成可以在今天随处可用的版本。 这一过程叫做“源码到源码”编译， 也被称为转换编译.
 

@@ -3,16 +3,15 @@ title: 前端 - 国际化
 date: '2019-11-26T21:38:34+08:00'
 status: publish
 permalink: /i18
-author: admin
-excerpt: ''
-type: post
-id: 2627
-category:
-    - 理论
-tag: []
-post_format: []
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 基于纯前端的国际化多语言的解决方案，不依赖于任何后台技术。即只用HTML + JavaScript来实现国际化的方案。该方案参考了FCKEditor的实现机制，其实很多富文本编辑器都采用了类似的思路。
 

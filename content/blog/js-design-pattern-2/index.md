@@ -3,14 +3,15 @@ title: 常见设计模式
 date: '2019-01-15T15:20:11+08:00'
 status: draft
 permalink: '/?p=299'
-author: admin
-excerpt: ''
-type: post
-id: 299
-category:
-    - 未分类
-tag: []
-post_format: []
+category: ["js"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 
 **模式**是对某情景下，针对某种问题的某种解决方案。而一个设计模式是用来解决一个经常出现的设计问题的经验方法。这么说来，每个模式都可能有着自己的**意图**，**应用场景**，**使用方法**和**使用后果**。本文的行文思路和目的皆在于了解各个模式的**定义**，**应用场景**和**用实例说明如何在前端开发中使用**。

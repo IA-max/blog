@@ -3,23 +3,15 @@ title: 3种方式创建React组件
 date: '2017-02-12T09:29:34+08:00'
 status: publish
 permalink: /3-ways-to-create-react-components
-author: admin
-excerpt: ''
-type: post
-id: 197
-category:
-    - React
-tag: []
-post_format: []
-classic-editor-remember:
-    - classic-editor
-    - classic-editor
-post_views_count:
-    - '298'
-    - '298'
-php_everywhere_code:
-    - 'Just put [php_everywhere] where you want the code to be executed.'
-    - 'Just put [php_everywhere] where you want the code to be executed.'
+category: ["react"] 
+tag: [""]
+author: "max"
+excerpt: ""
+featured: false
+image: 
+featuredimage:
+  src: ""
+  alt: ""
 ---
 ReactJS是一个很棒的JavaScript库，用于在整个网站中重复使用HTML代码段。它通过使用[JSX](https://facebook.github.io/react/docs/introducing-jsx.html)和[ES6](http://es6-features.org/#Constants)语法将您的常规Javascript代码注入纯HTML代码并通过[Babel](https://babeljs.io/)将其编译为在页面上创建HTML片段的javascript来实现。
 
