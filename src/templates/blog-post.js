@@ -1,63 +1,74 @@
 import React from "react"
 import kebabCase from "lodash.kebabcase"
-import { graphql, Link } from "gatsby"
-import { Row, Cell } from "griding"
-
-import * as S from "../components/styles.css"
-import { Container } from "../components/grid"
+import {  graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ConcatWords from "../utils/ConcatWords"
 import formatDate from "../utils/formatDate"
+import B from "../components/b"
 
 const BlogPost = ({ data, pageContext }) => {
+
+
     const { markdownRemark } = data
     const { prev, next } = pageContext
-    console.log(next)
+    console.log(pageContext)
+    console.log(markdownRemark)
 
     return ( <Layout >
         <Seo title = { markdownRemark.frontmatter.title }/>
 
-        <Container >
-     
-
-        <S.Author>
-        By { " " } <Link to = { `/blog/author/${kebabCase(markdownRemark.frontmatter.author)}` } >
-        { markdownRemark.frontmatter.author } </Link> </S.Author>
-
-        <S.Title > { markdownRemark.frontmatter.title } </S.Title>
-        <S.DateText > { formatDate(markdownRemark.frontmatter.date) } </S.DateText>
-        <S.Category>
-        {
+        
+  <article class="px-4 py-24 mx-auto" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <div class="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
+     {  (markdownRemark.frontmatter.featuredimage != null && markdownRemark.frontmatter.featuredimage.src != null)  ? ( < Img className="object-cover w-full h-64 bg-center rounded-lg" fluid = { markdownRemark.frontmatter.featuredimage.src.childImageSharp.fluid } alt = { markdownRemark.frontmatter.featuredimage.alt }/> ) : " "   }
+    
+    <p class="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">Development</p>
+    <h1 class="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl" itemprop="headline" title="Rise of Tailwind - A Utility First CSS Framework">
+      { markdownRemark.frontmatter.title }
+    </h1>
+    <div class="flex mb-6 space-x-2">
+      {
             markdownRemark.frontmatter.category.map((cat, index, arr) => ( 
-            <ConcatWords arrCount = { arr.length } index = { index } key = { cat } >
-                <Link to = { `/category/${kebabCase(cat)}` } > { cat } </Link> 
+            <ConcatWords  arrCount = { arr.length } index = { index } key = { cat } >
+                <Link className="text-gray-900 px-2 rounded-lg bg-gray-100 badge hover:bg-gray-200" to = { `/category/${kebabCase(cat)}` } > { cat } </Link> 
             </ConcatWords>
             ))
-        } </S.Category>
+        } 
+    </div>
+    
+    <Link className="flex items-center text-gray-700" to = { `/blog/author/${kebabCase(markdownRemark.frontmatter.author)}` }>
+      <B/>
+      <div class="ml-2">
+        <p class="text-sm font-semibold text-gray-800">{ markdownRemark.frontmatter.author  }</p>
+        <p class="text-sm text-gray-500">{ formatDate(markdownRemark.frontmatter.date) }</p>
+      </div>
+    </Link>
+  </div>
 
-        <S.BlogContent dangerouslySetInnerHTML = { { __html: markdownRemark.html } }/>
+  <div class="w-full mx-auto prose md:w-3/4 lg:w-1/2" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
+</article>
 
-        <Row >
-        {
-            prev && ( <Cell xs = { 6 } >
-                <Link to = { prev.fields.slug } >
-                <S.NavigationPost >
-                <div > { " " } { "<" } { prev.frontmatter.title } </div> </S.NavigationPost> </Link> </Cell>
-            )
-        }
+   <section className="py-20 w-full mx-auto prose md:w-3/4 lg:w-1/2">
+    <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+      
+      <div>
+        <h1 class="mb-6 text-2xl font-light text-gray-900 md:text-3xl">{ prev &&<Link to = { prev.fields.slug }>{ " " } { "<" } { prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
+        <p class="mt-10 mb-3 font-semibold text-gray-900"></p>
+        <p class="text-gray-600"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
+      </div>
+      
+      <div>
+        <h1 class="mb-6 text-1xl font-light md:text-2xl">{ next && (  <Link to = { next.fields.slug } > <div > { " " } { next.frontmatter != null && next.frontmatter.title } { ">" } </div>  </Link>  ) }</h1>
+        <p class="mt-10 mb-3 font-semibold text-gray-900"> </p>
+        <p class="text-gray-600">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
+      </div>
 
-        {
-            next && ( <Cell xs = { 6 } >
-                <Link to = { next.fields.slug } >
-                <S.NavigationPost >
-                <div > { " " } { next.frontmatter.title } { ">" } </div> 
-                </S.NavigationPost>
-                </Link> 
-                </Cell>
-            )
-        } </Row>
-        </Container>
+    </div>
+
+</section>
         </Layout>
     )
 }
@@ -73,6 +84,16 @@ export const query = graphql `
         date(formatString: "MMMM DD, YYYY")
         author
         category
+        featuredimage {
+              src {
+                  childImageSharp {
+                      fluid(maxWidth: 1024) {
+                          ...GatsbyImageSharpFluid
+                      }
+                  }
+              }
+              alt
+          }
       }
     }
   }

@@ -41,19 +41,7 @@ const BlogIndex = ({ data, location }) => {
  { (firstPost.frontmatter.featuredimage != null && firstPost.frontmatter.featuredimage.src != null) && (<Img fluid={ firstPost.frontmatter.featuredimage.src.childImageSharp.fluid } alt = { firstPost.frontmatter.featuredimage.alt } className="h-full w-full bg-cover"/>) }
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
             <div class="row justify-content-between"> 
                     <div class="col-md"> 
                     <h5 class="font-weight-bold spanborder"><span>All Articles</span></h5> 

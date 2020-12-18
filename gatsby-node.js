@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             frontmatter {
                 title
                 date
+                excerpt
                 category
                 tag
                 featured
