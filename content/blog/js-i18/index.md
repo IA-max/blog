@@ -10,7 +10,7 @@ excerpt: ""
 featured: false
 image: 
 featuredimage:
-  src: ""
+  src: "none.png"
   alt: ""
 ---
 基于纯前端的国际化多语言的解决方案，不依赖于任何后台技术。即只用HTML + JavaScript来实现国际化的方案。该方案参考了FCKEditor的实现机制，其实很多富文本编辑器都采用了类似的思路。

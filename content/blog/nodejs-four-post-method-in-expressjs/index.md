@@ -10,7 +10,7 @@ excerpt: ""
 featured: false
 image: 
 featuredimage:
-  src: ""
+  src: "none.png"
   alt: ""
 ---
 分别是这四种:

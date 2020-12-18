@@ -8,9 +8,9 @@ tag: [""]
 author: "max"
 excerpt: ""
 featured: false
-image: ./p1.png
+image: 
 featuredimage:
-  src: "p1.png"
+  src: "none.png"
   alt: ""
 ---
 

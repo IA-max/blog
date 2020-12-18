@@ -8,9 +8,9 @@ tag: [""]
 author: "max"
 excerpt: ""
 featured: false
-image: 
+image: " "
 featuredimage:
-  src: ""
+  src: "none.png"
   alt: ""
 ---
 常用到的css代码片段，包括了一些hacks技术.

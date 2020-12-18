@@ -8,9 +8,9 @@ tag: [""]
 author: "max"
 excerpt: ""
 featured: false
-image: 
+image: " "
 featuredimage:
-  src: ""
+  src: "none.png"
   alt: ""
 ---
 排序算法可以说是一项基本功，解决实际问题中经常遇到，针对实际数据的特点选择合适的排序算法可以使程序获得更高的效率，有时候排序的稳定性还是实际问题中必须考虑的.  

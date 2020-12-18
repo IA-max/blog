@@ -8,7 +8,7 @@ tag: [""]
 author: "max"
 excerpt: ""
 featured: false
-image: 
+image: " "
 featuredimage:
   src: "cover.png"
   alt: "Docker"

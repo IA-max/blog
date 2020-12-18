@@ -10,7 +10,7 @@ excerpt: ""
 featured: false
 image: 
 featuredimage:
-  src: ""
+  src: "none.png"
   alt: ""
 ---
 systemctl 是系统服务管理器命令，它实际上将 service 和 chkconfig 这两个命令组合到一起。
