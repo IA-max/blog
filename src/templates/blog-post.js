@@ -51,23 +51,21 @@ const BlogPost = ({ data, pageContext }) => {
   <div class="w-full mx-auto prose md:w-3/4 lg:w-1/2" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
 </article>
 
-   <section className="py-20 w-full mx-auto prose md:w-3/4 lg:w-1/2">
+  <section className="py-20 border-t-2 w-full mx-auto prose md:w-3/4 lg:w-1/2">
     <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
       
       <div>
-        <h1 class="mb-6 text-2xl font-light text-gray-900 md:text-3xl">{ prev &&<Link to = { prev.fields.slug }>{ " " } { "<" } { prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
-        <p class="mt-10 mb-3 font-semibold text-gray-900"></p>
-        <p class="text-gray-600"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
+        <h1>{ prev &&<Link to = { prev.fields.slug } className="mb-6 text-md font-semibold text-black md:text-xl">{ prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
+        <p class="mt-2 text-gray-600 text-sm text-gray-50"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
       </div>
       
       <div>
-        <h1 class="mb-6 text-1xl font-light md:text-2xl">{ next && (  <Link to = { next.fields.slug } > <div > { " " } { next.frontmatter != null && next.frontmatter.title } { ">" } </div>  </Link>  ) }</h1>
-        <p class="mt-10 mb-3 font-semibold text-gray-900"> </p>
-        <p class="text-gray-600">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
+        <h1>{ next && ( <Link to = { next.fields.slug }  className="mb-6 text-md font-semibold text-black md:text-xl"> <div >  { next.frontmatter != null && next.frontmatter.title }  </div>  </Link>  ) }</h1>
+        <p class="mt-2 text-gray-600 text-sm text-gray-50">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
       </div>
 
     </div>
-
+       
 </section>
         </Layout>
     )
