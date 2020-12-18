@@ -14,7 +14,7 @@ tag: [
 ]
 featuredimage:
   alt: "unobtrusive-programming"
-  src: ""
+  src: "none.png"
 ---
 
 #### Web 标准: 分离内容, 展示和脚本
