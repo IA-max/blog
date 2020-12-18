@@ -6,7 +6,7 @@ permalink: /gmail-%e6%90%9c%e7%b4%a2%e5%b8%b8%e7%94%a8%e5%8f%82%e6%95%b0
 category: ["node"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "您可以使用称为搜索运算符的字词或符号来过滤 Gmail 搜索结果，也可以组合使用运算符来进一步过滤搜索结果"
 featured: false
 image: 
 featuredimage:

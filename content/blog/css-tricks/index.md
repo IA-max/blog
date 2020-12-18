@@ -6,7 +6,7 @@ permalink: /usefuly-css-snippet
 category: ["css"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "常用到的css代码片段，包括了一些hacks技术"
 featured: false
 image: " "
 featuredimage:

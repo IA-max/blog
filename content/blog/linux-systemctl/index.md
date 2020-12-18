@@ -6,7 +6,7 @@ permalink: /%e6%9c%8d%e5%8a%a1%e7%ae%a1%e7%90%86-systemctl%e5%91%bd%e4%bb%a4
 category: ["linux"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "systemctl 是系统服务管理器命令，它实际上将 service 和 chkconfig 这两个命令组合到一起"
 featured: false
 image: 
 featuredimage:

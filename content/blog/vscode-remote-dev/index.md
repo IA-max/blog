@@ -4,7 +4,7 @@ date: 2020-12-11
 category: ["linux"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "VSCode Linux 远程开发配置 搜索并安装插件"
 featured: false
 image: 
 featuredimage:

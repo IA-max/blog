@@ -5,7 +5,7 @@ status: publish
 category: ["algorithm"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "算法和数据结构是程序的基本功，而且语言都是想通的，只要是掌握了一门语言学习其他语言就如同顺水推舟。"
 featured: false
 featuredimage:
   src: "p1.png"

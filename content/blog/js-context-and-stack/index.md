@@ -6,7 +6,7 @@ permalink: /execution-context-in-javascript
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "深入研究JavaScript的最基本部分之一`Execution Context`, 对解释器正在尝试做的事情，为什么在声明它们之前可以使用某些函数/变量以及如何真正确定其值有更清楚的了解"
 featured: false
 image: ./p1.png
 featuredimage:

@@ -6,7 +6,7 @@ permalink: /expressjs-%e8%ae%b0%e5%bd%95
 category: ["node"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "get the full url in Express"
 featured: false
 image: 
 featuredimage:

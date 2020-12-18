@@ -6,7 +6,7 @@ permalink: /four-post-method-in-expressjs
 category: ["node"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "这是http的post请求默认的数据格式，需要body-parser中间件的支持 "
 featured: false
 image: 
 featuredimage:

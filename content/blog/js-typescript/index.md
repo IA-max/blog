@@ -6,7 +6,8 @@ permalink: /javascript-%e5%88%b0-typescript
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "TypeScript 简称 TS.  
+它是 JavaScript 的超集，在 JavaScript 上做了一层封装，封装出 TypeScript 的特性，最终代码可以编译为 JavaScript"
 featured: false
 image: 
 featuredimage:

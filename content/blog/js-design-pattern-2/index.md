@@ -6,7 +6,7 @@ permalink: '/?p=299'
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "策略模式定义了算法组，分别封装起来，让他们之间可以互相替换，此模式让算法的变化独立于使用算法的客户"
 featured: false
 image: 
 featuredimage:

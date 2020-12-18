@@ -6,7 +6,7 @@ permalink: /react-interview
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序"
 featured: false
 image: 
 featuredimage:

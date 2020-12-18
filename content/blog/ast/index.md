@@ -5,7 +5,7 @@ status: publish
 category: ["algorithm"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "抽象语法树（`abstract syntax tree` 或者缩写为 `AST`），或者语法树（`syntax tree`），是源代码的抽象语法结构的树状表现形式，这里特指编程语言的源代码。树上的每个节点都表示源代码中的一种结构"
 featured: false
 image: ./p1.png
 featuredimage:

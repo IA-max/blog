@@ -6,7 +6,7 @@ permalink: /%e6%b5%ae%e5%8a%a8%e6%b8%85%e9%99%a4
 category: ["css"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "清除浮动前我们要了解两个重要的定义"
 featured: false
 image: 
 featuredimage:

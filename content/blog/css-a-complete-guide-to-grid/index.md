@@ -5,7 +5,7 @@ status: private
 category: ["css"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows"
 featured: false
 image: 
 featuredimage:

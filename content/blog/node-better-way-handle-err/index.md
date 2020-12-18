@@ -6,7 +6,7 @@ permalink: /node-%e5%a4%84%e7%90%86%e9%94%99%e8%af%af-%e5%8f%8b%e5%a5%bd%e5%86%9
 category: ["node"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "Node 处理错误友好写法"
 featured: false
 image: 
 featuredimage:

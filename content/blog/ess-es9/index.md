@@ -6,7 +6,7 @@ permalink: /es9
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "ES2018引入异步迭代器"
 featured: false
 image: 
 featuredimage:

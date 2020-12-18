@@ -6,7 +6,7 @@ permalink: /tech-mindmap
 category: ["node"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "技能图谱"
 featured: false
 image: ./FE.png
 featuredimage:

@@ -6,7 +6,7 @@ permalink: /linux-usefuly-command
 category: ["linux"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "Linux下常见的压缩包格式有5种"
 featured: false
 image: 
 featuredimage:

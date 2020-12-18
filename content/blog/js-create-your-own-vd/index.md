@@ -6,7 +6,9 @@ permalink: /write-your-own-virtual-dom
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "构建自己的Virtual DOM需要了解两件事。您甚至不需要深入了解React的来源。  
+或者是任何其他Virtual DOM实现的源代码。  
+它们是如此庞大和复杂 – 但实际上Virtual DOM的主要部分可以用少于50行的代码编写"
 featured: false
 image: ./p1.png
 featuredimage:

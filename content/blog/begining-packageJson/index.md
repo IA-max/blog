@@ -6,7 +6,7 @@ permalink: /package-json-%e8%af%a6%e8%a7%a3
 category: ["node"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "所有npm软件包通常都在项目根目录中包含一个package.json文件"
 featured: false
 image: 
 featuredimage:

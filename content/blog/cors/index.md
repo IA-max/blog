@@ -6,7 +6,7 @@ permalink: /cors
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "前后端数据交互经常会碰到请求跨域，什么是跨域，以及有哪几种跨域方式"
 featured: false
 image: ./p1.png
 featuredimage:

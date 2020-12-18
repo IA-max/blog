@@ -6,7 +6,7 @@ permalink: /es7%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882016%ef%bc%89
 category: ["js"] 
 tag: [""]
 author: "max"
-excerpt: ""
+excerpt: "ES2016添加了两个小的特性来说明标准化过程"
 featured: false
 image: 
 featuredimage:
