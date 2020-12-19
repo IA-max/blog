@@ -11,7 +11,7 @@ const OpenMirrorsPage = ({ data, location }) => {
         <Layout location={location} title={siteTitle}>
             <SEO title='Open Mirrors' />
 
-            <article class="container px-4 py-24 mx-auto" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
+            <article class="container px-4 py-24 mx-auto md:w-3/4 lg:w-2/4" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
                 <div class="w-full mx-auto mb-12 text-center md:w-2/3">
                     <p class="mb-3 text-xs font-semibold tracking-wider text-gray-500 uppercase">Development</p>
                     <h1 class="mb-3 text-4xl font-bold text-gray-900 md:leading-tight md:text-5xl" itemprop="headline" title="Rise of Tailwind - A Utility First CSS Framework">
@@ -26,7 +26,7 @@ const OpenMirrorsPage = ({ data, location }) => {
                     </p>
                 </div>
 
-                <div class="mx-auto prose">
+                <div class="mx-auto prose articleContent">
                         <ol>
                             <li>NPM开源镜像: http://npm.taobao.org/mirrors</li>
                             <li>Node.js 镜像: http://npm.taobao.org/mirrors/node</li>
@@ -48,42 +48,37 @@ const OpenMirrorsPage = ({ data, location }) => {
 
 
             <h5>以Ubuntu 14.04.5 LTS</h5>
-                <code> <pre>
-            deb https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse <br/>
-            deb-src https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse<br/>
-            deb https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse<br/>
-            deb-src https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse<br/>
-
-            deb https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse<br/>
-            deb-src https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse<br/>
-
-            deb https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
-            deb-src https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
-
-            ## Not recommended
-            # deb https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
-            # deb-src https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
-            </pre></code>
+            <code>
+                <pre>
+                    deb https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse <br/>
+                    deb-src https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse<br/>
+                    deb https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse<br/>
+                    deb-src https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse<br/>
+                    deb https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse<br/>
+                    deb-src https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse<br/>
+                    deb https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
+                    deb-src https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
+                    ## Not recommended<br/>
+                    # deb https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
+                    # deb-src https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
+                </pre>
+            </code>
             
-
-
             <h5>ubuntu 20.04(focal) 配置</h5>
-            <code> <pre>
-            deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br/>
-            deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br/>
-
-            deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br/>
-            deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br/>
-
-            deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br/>
-            deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br/>
-
-            deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br/>
-            deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br/>
-
-            deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-            deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-            </pre></code>
+            <code> 
+                <pre>
+                    deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br/>
+                    deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br/>
+                    deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br/>
+                    deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br/>
+                    deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br/>
+                    deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br/>
+                    deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br/>
+                    deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br/>
+                    deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br/>
+                    deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+                </pre>
+            </code>
             
 
             </div>

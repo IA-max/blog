@@ -10,7 +10,7 @@ excerpt: "命令面板是vscode快捷键的主要交互界面,可以输入命令
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-vscode.png"
   alt: ""
 
 ---

@@ -45,11 +45,6 @@ const BlogIndex = ({ data, location }) => {
                         );
                     })}
                 </div>
-
-                {/* <div className="flex flex-col items-center justify-center pt-12 mt-12 space-x-0 space-y-2 border-t border-gray-200 md:space-x-2 md:space-y-0 md:flex-row">
-                    <a href="#" className="w-full rounded-full btn btn-light btn-xl md:w-auto">Previous Page</a>
-                    <a href="#" className="w-full rounded-full btn btn-light btn-xl md:w-auto">Next Page</a>
-                </div> */}
             </section>
         </Layout>
     );

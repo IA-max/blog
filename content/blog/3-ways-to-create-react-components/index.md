@@ -9,7 +9,7 @@ author: "max"
 excerpt: "ReactJS是一个很棒的JavaScript库，用于在整个网站中重复使用HTML代码段。它通过使用JSX语法将您的常规Javascript代码注入纯HTML代码并通过Babel将其编译为在页面上创建HTML片段的javascript来实现"
 featured: false
 featuredimage:
-  src: "none.png"
+  src: "cover.png"
   alt: ""
 ---
 ReactJS是一个很棒的JavaScript库，用于在整个网站中重复使用HTML代码段。它通过使用[JSX](https://facebook.github.io/react/docs/introducing-jsx.html)和[ES6](http://es6-features.org/#Constants)语法将您的常规Javascript代码注入纯HTML代码并通过[Babel](https://babeljs.io/)将其编译为在页面上创建HTML片段的javascript来实现。

@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 const pages =  [
 	{
 		title: 'Articles',
-		url: '/articles'
+		url: '/'
 	},
 	{
 		title: 'Resources',

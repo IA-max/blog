@@ -12,7 +12,7 @@ const Pagination = ({ numPages, currentPage, contextPage }) => {
       {Array.from({ length: numPages }).map((item, i) => {
         const index = i + 1
 
-        const baseLink = `/blog/${contextPage ? `${contextPage}/` : ""}`
+        const baseLink = `/${contextPage ? `${contextPage}/` : ""}`
         const link = index === 1 ? baseLink : `${baseLink}page/${index}`
 
         return (

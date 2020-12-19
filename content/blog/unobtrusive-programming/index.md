@@ -9,12 +9,10 @@ type: post
 id: 136
 image: 
 category: ["JS"]
-tag: [
-    "js"
-]
+tag: ["js"]
 featuredimage:
   alt: "unobtrusive-programming"
-  src: "none.png"
+  src: "cover-unobtrusive-js.png"
 ---
 
 #### Web 标准: 分离内容, 展示和脚本

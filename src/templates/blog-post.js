@@ -48,7 +48,7 @@ const BlogPost = ({ data, pageContext }) => {
     </Link>
   </div>
 
-  <div class="w-full mx-auto prose md:w-3/4 lg:w-1/2" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
+  <div class="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
 </article>
 
   <section className="py-20 border-t-2 w-full mx-auto prose md:w-3/4 lg:w-1/2">
