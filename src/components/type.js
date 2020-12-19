@@ -1,8 +1,6 @@
 import React from 'react';
 import Typing from 'react-typing-animation';
 
-
-
 const AnimatedTypingComponent = () => (
     <Typing>
     <div>
@@ -17,6 +15,5 @@ const AnimatedTypingComponent = () => (
     </div>
   </Typing>
 );
-
 
 export default AnimatedTypingComponent;
