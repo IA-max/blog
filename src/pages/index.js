@@ -29,8 +29,8 @@ const BlogIndex = ({ data, location }) => {
                 </div>
                 <div className = "flex flex-col space-y-12 divide-y divide-gray-200" >
                  { posts.map((post, index) => {
-                        const title = post.frontmatter.title || post.fields.slug;
-                        const featuredimage = post.frontmatter.featuredimage
+                        // const title = post.frontmatter.title || post.fields.slug;
+                        // const featuredimage = post.frontmatter.featuredimage
                         return (
                                 <div key={index}>                                
                                 <p className = "pt-12 mb-3 font-normal text-gray-500 font-sans text-xs"> { formatDate(post.frontmatter.date) } </p>

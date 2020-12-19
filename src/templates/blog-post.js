@@ -9,17 +9,10 @@ import formatDate from "../utils/formatDate"
 import B from "../components/b"
 
 const BlogPost = ({ data, pageContext }) => {
-
-
     const { markdownRemark } = data
     const { prev, next } = pageContext
-    console.log(pageContext)
-    console.log(markdownRemark)
-
     return ( <Layout >
         <Seo title = { markdownRemark.frontmatter.title }/>
-
-        
   <article class="px-4 py-24 mx-auto" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
   
   <div class="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
@@ -33,7 +26,7 @@ const BlogPost = ({ data, pageContext }) => {
       {
             markdownRemark.frontmatter.category.map((cat, index, arr) => ( 
             <ConcatWords  arrCount = { arr.length } index = { index } key = { cat } >
-                <Link className="text-gray-900 px-2 rounded-lg bg-gray-100 badge hover:bg-gray-200" to = { `/category/${kebabCase(cat)}` } > { cat } </Link> 
+                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-200 uppercase last:mr-0 mr-1 hover:no-underline" to = { `/category/${kebabCase(cat)}` } ># { cat } </Link> 
             </ConcatWords>
             ))
         } 

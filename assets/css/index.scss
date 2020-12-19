@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply font-body
+}
+
 /*---------------------------------------- Gatsby -----------------------------------*/
 .gatsby-remark-code-title {
     margin-bottom: -0.6rem;

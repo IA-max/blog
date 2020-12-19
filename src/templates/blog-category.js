@@ -12,28 +12,30 @@ const BlogCategory = ({ data, pageContext }) => {
 
     return (<Layout >
         <Seo title = { category }/>
-        <section class="text-gray-700 body-font">
-        <div class="container flex flex-wrap px-5 py-10 mx-auto items-center">
-          <div class="flex flex-col">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Categories:</h1>
-            <nav class="flex flex-wrap list-none -mb-1">
-              { allCategories.map((cat) => ( 
-                <li class="lg:w-1/3 mb-1 w-1/2">
-                  <Link to = { `/category/${kebabCase(cat)}` } > { cat } </Link> 
+        <section className="text-gray-700 body-font mx-auto md:w-3/4 lg:w-2/4">
+        <div className="container flex flex-wrap px-5 py-10 mx-auto items-center">
+          <div className="flex flex-col">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Categories:</h1>
+            <nav className="flex flex-wrap list-none -mb-1">
+              { allCategories.map((cat, index) => ( 
+                <li className="lg:w-1/6 mb-1 w-1/2" key={index}>
+                  <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-indigo-600 bg-indigo-200 uppercase last:mr-0 mr-1 hover:no-underline"to = { `/category/${kebabCase(cat)}` } > { cat } </Link> 
               </li>
               ))  }
             </nav>
           </div>
         </div>
       </section>
-      <section class="text-gray-700 body-font overflow-hidden">
-          <div class="container px-5 py-10 mx-auto">
-              <div class="-my-8">
+      <section className="text-gray-700 body-font overflow-hidden">
+          <div className="container px-5 py-10 mx-auto mx-auto md:w-3/4 lg:w-2/4">
+              <div className="-my-8">
                   { allMarkdownRemark.edges.map(renderList) }
           </div>
         </div>
       </section>
+      <div className="container w-full px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
       <Pagination currentPage = { currentPage } numPages = { numPages } contextPage = { `category/${kebabCase(category)}` }/>
+      </div>
       </Layout>
     )
 }
