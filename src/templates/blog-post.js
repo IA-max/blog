@@ -1,4 +1,4 @@
-import React from "react"
+import React , { useEffect } from 'react'
 import kebabCase from "lodash.kebabcase"
 import {  graphql, Link } from "gatsby"
 import Img from "gatsby-image"
@@ -8,9 +8,30 @@ import ConcatWords from "../utils/ConcatWords"
 import formatDate from "../utils/formatDate"
 import B from "../components/b"
 
+import Comment from "../components/comment"
+
 const BlogPost = ({ data, pageContext }) => {
     const { markdownRemark } = data
     const { prev, next } = pageContext
+
+    const commentBox = React.createRef()
+
+    useEffect(() => {
+      const scriptEl = document.createElement('script')
+      scriptEl.async = true
+      scriptEl.src = 'https://utteranc.es/client.js'
+      scriptEl.setAttribute('repo', 'IA-max/blog')
+      scriptEl.setAttribute('issue-term', 'title')
+      scriptEl.setAttribute('id', 'utterances')
+      scriptEl.setAttribute('theme', 'github-light')
+      scriptEl.setAttribute('crossorigin', 'anonymous')
+      if (commentBox && commentBox.current) {
+        commentBox.current.appendChild(scriptEl)
+      } else {
+        console.log(`Error adding utterances comments on: ${commentBox}`)
+      }
+    }, [])
+    
     return ( <Layout >
         <Seo title = { markdownRemark.frontmatter.title }/>
   <article class="px-4 py-24 mx-auto" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
@@ -58,7 +79,7 @@ const BlogPost = ({ data, pageContext }) => {
       </div>
 
     </div>
-       
+       <Comment commentBox={commentBox} />
 </section>
         </Layout>
     )
