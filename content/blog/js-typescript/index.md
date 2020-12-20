@@ -4,7 +4,7 @@ date: '2019-11-21T17:49:23+08:00'
 status: publish
 permalink: /javascript-%e5%88%b0-typescript
 category: ["js"] 
-tag: [""]
+tag: ["js","ts"]
 author: "max"
 excerpt: "TypeScript 简称 TS.  
 它是 JavaScript 的超集，在 JavaScript 上做了一层封装，封装出 TypeScript 的特性，最终代码可以编译为 JavaScript"

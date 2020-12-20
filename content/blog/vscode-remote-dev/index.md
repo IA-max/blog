@@ -2,7 +2,7 @@
 title: VSCode Linux 远程开发配置
 date: 2020-12-11
 category: ["linux"] 
-tag: [""]
+tag: ["software","vscode","linux"]
 author: "max"
 excerpt: "VSCode Linux 远程开发配置 搜索并安装插件"
 featured: false

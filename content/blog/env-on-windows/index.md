@@ -4,8 +4,8 @@ date: 2020-12-10
 featuredimage:
   src: "cover.png"
   alt: "Windows Dev Env"
-category: ["DevOps"] 
-tag: [""]
+category: ["devops"] 
+tag: ["DevOps", "setup"]
 author: "max"
 excerpt: ""
 featured: false

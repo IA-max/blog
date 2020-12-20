@@ -4,7 +4,7 @@ date: '2019-11-24T15:11:44+08:00'
 status: publish
 permalink: /javascript-%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f
 category: ["js"] 
-tag: [""]
+tag: ["js","design pattern"]
 author: "max"
 excerpt: "AOP(面向切面编程)的主要作用是把一些跟核心业务逻辑模块无关的功能抽离出来，这些跟业务逻辑无关的功能通常包括日志统计、安全控制、异常处理等。把这些功能抽离出来之后， 再通过“动态织入”的方式掺入业务逻辑模块中"
 featured: false

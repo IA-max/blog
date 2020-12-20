@@ -4,7 +4,7 @@ date: '2019-11-26T17:55:40+08:00'
 status: publish
 permalink: /es7%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882016%ef%bc%89
 category: ["js"] 
-tag: [""]
+tag: ["js","es7"]
 author: "max"
 excerpt: "ES2016添加了两个小的特性来说明标准化过程"
 featured: false

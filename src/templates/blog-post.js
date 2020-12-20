@@ -39,15 +39,24 @@ const BlogPost = ({ data, pageContext }) => {
   <div class="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
      {  (markdownRemark.frontmatter.featuredimage != null && markdownRemark.frontmatter.featuredimage.src != null)  ? ( < Img className="object-cover w-full h-64 bg-center rounded-lg" fluid = { markdownRemark.frontmatter.featuredimage.src.childImageSharp.fluid } alt = { markdownRemark.frontmatter.featuredimage.alt }/> ) : " "   }
     
-    <p class="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">Development</p>
+    <p class="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
+      {
+            markdownRemark.frontmatter.category.map((cat, index, arr) => ( 
+            <ConcatWords  arrCount = { arr.length } index = { index } key = { cat } >
+                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-200 uppercase last:mr-0 mr-1 hover:no-underline" to = { `/category/${kebabCase(cat)}` } >{ cat } </Link> 
+            </ConcatWords>
+            ))
+        } 
+      
+      </p>
     <h1 class="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl" itemprop="headline" title="Rise of Tailwind - A Utility First CSS Framework">
       { markdownRemark.frontmatter.title }
     </h1>
     <div class="flex mb-6 space-x-2">
       {
-            markdownRemark.frontmatter.category.map((cat, index, arr) => ( 
-            <ConcatWords  arrCount = { arr.length } index = { index } key = { cat } >
-                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-200 uppercase last:mr-0 mr-1 hover:no-underline" to = { `/category/${kebabCase(cat)}` } ># { cat } </Link> 
+            markdownRemark.frontmatter.tag.map((tag, index, arr) => ( 
+            < ConcatWords arrCount = { arr.length } index = { index } key = { index } >
+                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-200 uppercase last:mr-0 mr-1 hover:no-underline" to = { `/tag/${kebabCase(tag)}` } ># { tag } </Link> 
             </ConcatWords>
             ))
         } 
@@ -96,6 +105,7 @@ export const query = graphql `
         date(formatString: "MMMM DD, YYYY")
         author
         category
+        tag
         featuredimage {
               src {
                   childImageSharp {

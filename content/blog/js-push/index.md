@@ -4,7 +4,7 @@ date: '2019-11-21T20:02:15+08:00'
 status: publish
 permalink: /javascript-%e6%95%b0%e6%8d%ae%e6%8e%a8%e9%80%81
 category: ["js"] 
-tag: [""]
+tag: ["js"]
 author: "max"
 excerpt: "Comet 是一种 Web 应用架构。服务器端会主动以异步的方式向客户端程序推送数据（Ajax请求死循环），而不需要客户端显式的发出请求。Comet 架构非常适合事件驱动的 Web 应用，以及对交互性和实时性要求很强的应用，如股票交易行情分析、聊天室和 Web 版在线游戏等"
 featured: false

@@ -4,7 +4,7 @@ date: '2019-09-06T23:30:58+08:00'
 status: publish
 permalink: /algorithm-comparison
 category: ["algorithm"] 
-tag: [""]
+tag: ["algorithm"]
 author: "max"
 excerpt: "排序算法可以说是一项基本功，解决实际问题中经常遇到，针对实际数据的特点选择合适的排序算法可以使程序获得更高的效率，有时候排序的稳定性还是实际问题中必须考虑的.  
 这篇文章对常见的排序算法进行整理"

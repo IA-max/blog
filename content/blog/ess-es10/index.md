@@ -4,7 +4,7 @@ date: '2019-11-26T17:57:32+08:00'
 status: publish
 permalink: /es10%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882019%ef%bc%89
 category: ["js"] 
-tag: [""]
+tag: ["js","es10"]
 author: "max"
 excerpt: "如果输入 Unicode 格式但是超出范围的字符"
 featured: false

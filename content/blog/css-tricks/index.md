@@ -4,7 +4,7 @@ date: '2019-11-24T15:47:50+08:00'
 status: publish
 permalink: /usefuly-css-snippet
 category: ["css"] 
-tag: [""]
+tag: ["css"]
 author: "max"
 excerpt: "常用到的css代码片段，包括了一些hacks技术"
 featured: false

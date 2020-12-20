@@ -4,7 +4,7 @@ date: '2019-09-09T01:57:31+08:00'
 status: publish
 permalink: /%e4%bb%8e%e7%a6%8f%e5%b0%94%e6%91%a9%e6%96%af%e8%ba%ab%e4%b8%8a%e5%8f%af%e4%bb%a5%e5%ad%a6%e5%88%b0%e4%bb%80%e4%b9%88
 category: ["theory"] 
-tag: [""]
+tag: ["strategy"]
 author: "max"
 excerpt: "良好的研究和好的侦探工作之间惊人的相似。在这篇文章中，我们来仔细看看用户体验研究员可以从侦探所使用的调查方法中学到什么。通过这些经典的侦探故事，我们得出一个重要结论：如果你想要成为更好的研究员，你应该学会如何像侦探一样思考"
 featured: false

@@ -4,7 +4,7 @@ date: '2019-09-18T15:47:25+08:00'
 status: publish
 permalink: /javascript-%e4%ba%a4%e6%8d%a2%e5%8f%98%e9%87%8f%e5%80%bc
 category: ["js"] 
-tag: [""]
+tag: ["js"]
 author: "max"
 excerpt: "这篇文章总结了七种办法来交换a和b的变量值"
 featured: false

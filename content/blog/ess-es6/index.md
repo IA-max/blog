@@ -4,7 +4,7 @@ date: '2019-11-26T17:54:25+08:00'
 status: publish
 permalink: /es6
 category: ["js"] 
-tag: [""]
+tag: ["js","es6"]
 author: "max"
 excerpt: "ES6的特性比较多，在 ES5 发布近 6 年（2009-11 至 2015-6）之后才将其标准化。两个发布版本之间时间跨度很大，所以ES6中的特性比较多"
 featured: false

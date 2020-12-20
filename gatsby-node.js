@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
     const blogListLayout = path.resolve(`./src/templates/blog-list.js`)
     const blogCategoryLayout = path.resolve(`./src/templates/blog-category.js`)
+    const blogTagLayout = path.resolve(`./src/templates/blog-tag.js`)
     const result = await graphql(
         `
       {
@@ -68,6 +69,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const numPages = Math.ceil(postsWithoutFeatured.length / postsPerPage)
     const categories = []
     const authors = []
+    const tags = []
 
     // ----------------------------------------------------------------------------------- Creating blog list with pagination
     Array.from({ length: numPages }).forEach((_, i) => {
@@ -89,6 +91,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // ----------------------------------------------------------------------------------- Creating blog posts
     posts.forEach((post, index, arr) => {
         post.frontmatter.category.forEach(cat => categories.push(cat))
+        post.frontmatter.tag.forEach(tag => tags.push(tag))
         authors.push(post.frontmatter.author)
 
         const prev = arr[index - 1]
@@ -132,6 +135,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             skip: i * postsPerPage,
             currentPage: i + 1,
             numPages: Math.ceil(countCategories[cat] / postsPerPage),
+          },
+        })
+      })
+    })
+
+
+
+    // ----------------------------------------------------------------------------------- Creating tag page
+    const countTags = tags.reduce((prev, curr) => {
+      prev[curr] = (prev[curr] || 0) + 1
+      return prev
+    }, {})
+    const allTags = Object.keys(countTags)
+
+    allTags.forEach((tag, i) => {
+      const link = `/tag/${kebabCase(tag)}`
+
+      Array.from({
+        length: Math.ceil(countTags[tag] / postsPerPage),
+      }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? link : `${link}/page/${i + 1}`,
+          component: blogTagLayout,
+          context: {
+            allTags: allTags,
+            tag: tag,
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            currentPage: i + 1,
+            numPages: Math.ceil(countTags[tag] / postsPerPage),
           },
         })
       })
@@ -201,6 +234,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       excerpt: String
       date: Date @dateformat
       category: [String]!
+      tag: [String]!
       image: String
     }
 

@@ -3,8 +3,8 @@ title:  Docker 笔记
 date: '2020-03-01T04:31:21+08:00'
 status: publish
 permalink: /dockerNote
-category: ["flow"] 
-tag: [""]
+category: ["devops"] 
+tag: ["DevOps","note"]
 author: "max"
 excerpt: "Docker 笔记 常用命令"
 featured: false

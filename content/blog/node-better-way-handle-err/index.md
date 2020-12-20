@@ -4,7 +4,7 @@ date: '2019-12-22T02:45:34+08:00'
 status: publish
 permalink: /node-%e5%a4%84%e7%90%86%e9%94%99%e8%af%af-%e5%8f%8b%e5%a5%bd%e5%86%99%e6%b3%95
 category: ["node"] 
-tag: [""]
+tag: ["node","best practice"]
 author: "max"
 excerpt: "Node 处理错误友好写法"
 featured: false

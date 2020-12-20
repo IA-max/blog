@@ -4,7 +4,7 @@ date: '2019-10-15T22:35:04+08:00'
 status: publish
 permalink: /four-post-method-in-expressjs
 category: ["node"] 
-tag: [""]
+tag: ["node","express","json"]
 author: "max"
 excerpt: "这是http的post请求默认的数据格式，需要body-parser中间件的支持 "
 featured: false

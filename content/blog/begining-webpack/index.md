@@ -4,7 +4,7 @@ date: '2019-09-10T07:33:04+08:00'
 status: publish
 permalink: /webpack-%e5%85%a5%e9%97%a8
 category: ["flow"] 
-tag: [""]
+tag: ["flow","webpack"]
 author: "max"
 excerpt: "所有流行前端框架和库都在说服我们去写最新版本的JavaScript代码，但是问题在于将其编译为浏览器所能运行的ES5版本代码。一个简单babel编译器有助于完成我们的编译工作，但是将所有这些投入生产环境不是那么简单直接。幸运的是，一个10行代码的Webpack配置可以减轻你的负担"
 featured: false

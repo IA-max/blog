@@ -4,7 +4,7 @@ date: '2017-02-12T09:29:34+08:00'
 status: publish
 permalink: /3-ways-to-create-react-components
 category: ["react"] 
-tag: [""]
+tag: ["react",'js','component']
 author: "max"
 excerpt: "ReactJS是一个很棒的JavaScript库，用于在整个网站中重复使用HTML代码段。它通过使用JSX语法将您的常规Javascript代码注入纯HTML代码并通过Babel将其编译为在页面上创建HTML片段的javascript来实现"
 featured: false

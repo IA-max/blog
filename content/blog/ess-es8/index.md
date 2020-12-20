@@ -4,7 +4,7 @@ date: '2019-11-26T17:56:24+08:00'
 status: publish
 permalink: /es8
 category: ["js"] 
-tag: [""]
+tag: ["js","es8"]
 author: "max"
 excerpt: "ES2018引入异步迭代器"
 featured: false

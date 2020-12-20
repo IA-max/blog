@@ -8,7 +8,7 @@ excerpt: '可通过将所有 JavaScript 放在单独文件中, 将内联事件�
 type: post
 id: 136
 image: 
-category: ["JS"]
+category: ["js"]
 tag: ["js"]
 featuredimage:
   alt: "unobtrusive-programming"

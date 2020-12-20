@@ -4,7 +4,7 @@ date: '2019-12-22T02:42:13+08:00'
 status: publish
 permalink: /expressjs-%e8%ae%b0%e5%bd%95
 category: ["node"] 
-tag: [""]
+tag: ["node","js"]
 author: "max"
 excerpt: "get the full url in Express"
 featured: false

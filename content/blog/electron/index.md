@@ -4,7 +4,7 @@ date: '2019-11-26T17:54:25+08:00'
 status: publish
 permalink: /
 category: ["js"] 
-tag: [""]
+tag: ["js","electron"]
 author: "max"
 excerpt: ""
 featured: false

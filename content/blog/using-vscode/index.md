@@ -4,7 +4,7 @@ date: '2019-11-25T16:25:45+08:00'
 status: publish
 permalink: /vs-code-introduce
 category: ["other"] 
-tag: [""]
+tag: ["software"]
 author: "max"
 excerpt: "命令面板是vscode快捷键的主要交互界面,可以输入命令进行搜索(中英文都可以)，然后执行各种命令，包括编辑器自带的功能和插件提供的功能."
 featured: false

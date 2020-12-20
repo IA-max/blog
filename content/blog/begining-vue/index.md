@@ -4,7 +4,7 @@ date: '2019-11-24T15:04:12+08:00'
 status: publish
 permalink: /vue
 category: ["js"] 
-tag: [""]
+tag: ["vue","js"]
 author: "max"
 excerpt: "ue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性"
 featured: false

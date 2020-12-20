@@ -4,7 +4,7 @@ date: '2019-11-26T17:00:37+08:00'
 status: publish
 permalink: /package-json-%e8%af%a6%e8%a7%a3
 category: ["node"] 
-tag: [""]
+tag: ["node","git","linux"]
 author: "max"
 excerpt: "所有npm软件包通常都在项目根目录中包含一个package.json文件"
 featured: false

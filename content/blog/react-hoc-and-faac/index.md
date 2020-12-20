@@ -4,7 +4,7 @@ date: '2019-09-09T01:36:40+08:00'
 status: publish
 permalink: /react%e4%b8%ad%e7%9a%84%e5%87%bd%e6%95%b0%e5%ad%90%e7%bb%84%e4%bb%b6facc%e5%92%8c%e9%ab%98%e9%98%b6%e7%bb%84%e4%bb%b6hoc
 category: ["react"] 
-tag: [""]
+tag: ["js","react"]
 author: "max"
 excerpt: "在接触过React项目后，大多数人都应该已经了解过或则用过了HOC(High-Order-Components)和FaCC(Functions as Child Components)，因为这两个模式在大多数react的开源库里都存在"
 featured: false

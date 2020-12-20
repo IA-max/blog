@@ -3,7 +3,7 @@ title: NPM常用命令与配置
 date: '2019-09-10T07:35:01+08:00'
 status: publish
 category: ["node"] 
-tag: [""]
+tag: ["node","linux"]
 author: "max"
 excerpt: ""
 featured: false

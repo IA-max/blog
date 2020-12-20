@@ -3,7 +3,7 @@ title: Gastby 入门
 date: 2020-12-08
 description: 'Gastby 入门'
 category: ["FE"] 
-tag: ["js"]
+tag: ["js","gastby"]
 excerpt: "快速开始 使用 Gatsby CLI"
 image: ./cover.png
 featured: true

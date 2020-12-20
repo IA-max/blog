@@ -4,7 +4,7 @@ date: '2019-09-25T19:20:14+08:00'
 status: publish
 permalink: /linux-usefuly-command
 category: ["linux"] 
-tag: [""]
+tag: ["linux","command"]
 author: "max"
 excerpt: "Linux下常见的压缩包格式有5种"
 featured: false
