@@ -11,22 +11,22 @@ const OpenMirrorsPage = ({ data, location }) => {
         <Layout location={location} title={siteTitle}>
             <SEO title='Open Mirrors' />
 
-            <article class="container px-4 py-24 mx-auto md:w-3/4 lg:w-2/4" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
-                <div class="w-full mx-auto mb-12 text-center md:w-2/3">
-                    <p class="mb-3 text-xs font-semibold tracking-wider text-gray-500 uppercase">Development</p>
-                    <h1 class="mb-3 text-4xl font-bold text-gray-900 md:leading-tight md:text-5xl" itemprop="headline" title="Rise of Tailwind - A Utility First CSS Framework">
+            <article className="container px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
+                <div className="w-full mx-auto mb-12 text-center md:w-2/3">
+                    <p className="mb-3 text-xs font-semibold tracking-wider text-gray-500 uppercase">Development</p>
+                    <h1 className="mb-3 text-4xl font-bold text-gray-900 md:leading-tight md:text-5xl" title="Rise of Tailwind - A Utility First CSS Framework">
                     开源镜像资源
                     </h1>
-                    <p class="text-gray-700">
+                    <p className="text-gray-700">
                     Written by 
-                    <span class="byline author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-                        <a href="#" target="_blank" itemprop="url" rel="author noopener noreferrer" class="text-primary hover:text-primary-dark"><span itemprop="name"> Max </span></a>
+                    <span className="byline author vcard">
+                        <a href="#" target="_blank"  className="text-primary hover:text-primary-dark"><span> Max </span></a>
                     </span>
-                      on <time itemprop="datePublished dateModified" datetime="2010-08-07 11:11:03-0400" pubdate>Jan 02 2021</time>
+                      on <time>Jan 02 2021</time>
                     </p>
                 </div>
 
-                <div class="mx-auto prose articleContent">
+                <div className="mx-auto prose articleContent">
                         <ol>
                             <li>NPM开源镜像: http://npm.taobao.org/mirrors</li>
                             <li>Node.js 镜像: http://npm.taobao.org/mirrors/node</li>
@@ -80,11 +80,31 @@ const OpenMirrorsPage = ({ data, location }) => {
                 </pre>
             </code>
             
+            <h3>其他资源</h3>
 
-            </div>
+            <h4>tailwind Css</h4>
+            <ul>
+                <li>
+                    https://github.com/aniftyco/awesome-tailwindcss
+                </li>
+                <li>https://blog.tailwindcss.com/</li>
+                <li>https://pinegrow.com/tutorials/customizing-a-tailwind-css-theme/</li>
+            </ul>
+
+
+            <h4>Gatsby Plugins</h4>
+            <ul><li><a href="https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/">gatsby-source-filesystem/</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-image/">gatsby-image</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-sharp">gatsby-plugin-sharp</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest">gatsby-plugin-manifes</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-transformer-sharp">gatsby-transformer-sharp</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-typescript">gatsby-plugin-typescript</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-offline">gatsby-plugin-offline</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/">gatsby-plugin-sitemap</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics">gatsby-plugin-google-analytics</a></li><li><a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx">gatsby-plugin-mdx</a></li></ul>
+         
+           
+
+            <h4>学习资源</h4>
+            <ul><li><a href="https://leetcode-cn.com">Leet Code</a></li></ul>
+
+
+
+
+                </div>
             </article>
-
-            
         </Layout>
     );
 };

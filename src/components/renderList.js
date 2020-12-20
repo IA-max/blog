@@ -8,6 +8,7 @@ import formatDate from "../utils/formatDate"
 const renderList = ({ node }) => {
     const featuredimage = node.frontmatter.featuredimage
 
+    console.log(node)
     return ( <div className="py-8 flex flex-wrap md:flex-no-wrap" key = { node.fields.slug }>
         <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
          {

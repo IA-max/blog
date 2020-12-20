@@ -179,6 +179,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
 
     if (node.internal.type === `MarkdownRemark`) {
+      
+      console.log(node);
+      // console.log(getNode);
+
         const value = createFilePath({ node, getNode })
         const [month, day, year] = new Date(node.frontmatter.date)
             .toLocaleDateString('en-EN', {

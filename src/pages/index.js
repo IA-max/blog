@@ -29,18 +29,16 @@ const BlogIndex = ({ data, location }) => {
                 </div>
                 <div className = "flex flex-col space-y-12 divide-y divide-gray-200" >
                  { posts.map((post, index) => {
-                        // const title = post.frontmatter.title || post.fields.slug;
-                        // const featuredimage = post.frontmatter.featuredimage
                         return (
                                 <div key={index}>                                
-                                <p className = "pt-12 mb-3 font-normal text-gray-500 font-sans text-xs"> { formatDate(post.frontmatter.date) } </p>
+                                <p className = "pt-12 mb-1 font-normal text-gray-500 font-sans text-xs"> <small>{ formatDate(post.frontmatter.date) }</small> </p>
                                 <h2 className="mb-2 text-xl font-extrabold leading-snug tracking-tight text-gray-800 md:text-3xl">
-                                    <Link to={ post.fields.slug } className="text-gray-900 font-medium hover:text-purple-700 hover:no-underline">{ post.frontmatter.title }</Link>
+                                    <Link to={ post.fields.slug } className="text-2xl text-gray-900 font-medium hover:text-purple-700 hover:no-underline">{ post.frontmatter.title }</Link>
                                 </h2>
-                                <p className="mb-4 text-base font-normal text-gray-600">
-                                    { post.frontmatter.description || post.frontmatter.excerpt }
+                                <p className="mb-4 text-sm font-normal text-gray-600">
+                                    { post.frontmatter.excerpt || post.frontmatter.description }
                                 </p>
-                                <Link to={ post.fields.slug } className="btn btn-light btn-sm bg-gray-100 px-2 py-2 rounded hover:no-underline text-xs">Continue Reading</Link>
+                                <Link to={ post.fields.slug } className="btn btn-light btn-sm bg-gray-100 px-2 py-2 rounded hover:no-underline text-xs hover:bg-gray-400 hover:text-white">Continue Reading</Link>
                                 </div>
                         );
                     })}
