@@ -4,7 +4,7 @@ date: 2020-12-08
 description: 'Gastby 入门'
 category: ["FE"] 
 tag: ["js","gastby"]
-excerpt: "快速开始 使用 Gatsby CLI"
+excerpt: "Gatsby可用于构建静态网站，这些网站是渐进式Web应用程序，遵循最新的Web标准，并经过优化以实现高性能。它利用了最新和流行的技术，包括ReactJS，Webpack，GraphQL，现代的ES6 + JavaScript和CSS."
 image: ./cover.png
 featured: true
 author: "me"
@@ -12,6 +12,23 @@ featuredimage:
   src: "cover.png"
   alt: "Gastby"
 ---
+
+# Why?  为什么我们需要Gatsby?
+
+Gatsby 是一个静态网站生成器，例如Hugo，Jekyll等。那有什么特别之处呢？
+Gatsby可用于构建静态网站，这些网站是渐进式Web应用程序，遵循最新的Web标准，并经过优化以实现高性能。它利用了最新和流行的技术，包括ReactJS，Webpack，GraphQL，现代的ES6 + JavaScript和CSS。
+
+- ✔️ 基于 React 的免费、开源框架
+- ✔️ 构建运行速度极快的网站
+- ✔️ Gatsby SSG会利用代码/数据拆分，预加载，预缓存，图像优化和各种性能增强的功能
+- ✔️ 构建时渲染服务器端
+- ✔️ 推送到仓库时，会自动部署
+- ✔️ 超丰富的生态资源
+
+
+![Gatsby](fun.png)
+
+GraphQL + React + Webpack = 💘
 
 #### 快速开始
 
@@ -156,20 +173,7 @@ Gatsby处理数据是基于插件.   插件从数据源中提取数据, 也可�
 `gatsby-source-wordpress`  -> 从 WordPress API 提取数据
 
 #### 向 GraphQL 添加数据
-
-
-
-
-
-
-
-<div style="height:200px"></div>
-
-
----
-
-
-
+...
 
 
 
@@ -184,7 +188,8 @@ const AboutPage = () => (
 export default AboutPage;
 ```
 
-额外资源
-
-[syntax-highlighting-prismjs-gatsby](https://stephencharlesweiss.com/syntax-highlighting-prismjs-gatsby/) </br>
-[adding-cover-images-to-your-gatsby-blog](https://tjaddison.com/blog/2019/10/adding-cover-images-to-your-gatsby-blog/)
+#### 参考链接
+- [Adding cover images to your Gatsby blog](https://tjaddison.com/blog/2019/10/adding-cover-images-to-your-gatsby-blog/)
+- [Building advanced blog system in Gatsby and React](https://danilowoz.com/blog/advanced-blog-system-in-gatsby)
+- [syntax-highlighting-prismjs-gatsby](https://stephencharlesweiss.com/syntax-highlighting-prismjs-gatsby/)
+- [adding-cover-images-to-your-gatsby-blog](https://tjaddison.com/blog/2019/10/adding-cover-images-to-your-gatsby-blog/)

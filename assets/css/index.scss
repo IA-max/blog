@@ -30,33 +30,58 @@ html {
 
 /*---------------------------------------- Gatsby Article -----------------------------------*/
 .articleContent {
-    h4 {
-        @apply text-xl;
+    h1, h2, h3, h4, h5 {
         @apply tracking-tight;
         @apply font-extrabold;
         @apply text-gray-900;
         @apply mt-8;
         @apply mb-4;
     }
+    h1 {
+        @apply text-4xl;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
     p {
         @apply max-w-screen-lg;
         @apply text-lg;
-        @apply leading-8;
+        @apply leading-6;
         @apply font-medium;
         @apply mb-6;
     }
 
-    ul {
+    ul, ol {
         @apply list-inside;
-        @apply list-disc;
-        @apply py-2;
+        @apply py-1;
         @apply rounded-md;
+        li {
+            @apply my-0;
+        }
+    }
+
+    ul {
+        @apply list-disc;
     }
 
     ol {
-        @apply list-inside;
         @apply list-decimal;
-        @apply py-2;
-        @apply rounded-md;
+    }
+
+    hr {
+        height: 1px;
+        border-color: #efeff1;
+        border-top-width: 1px;
+        margin-bottom: 1.5em;
     }
 }

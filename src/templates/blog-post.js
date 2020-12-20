@@ -34,29 +34,29 @@ const BlogPost = ({ data, pageContext }) => {
     
     return ( <Layout >
         <Seo title = { markdownRemark.frontmatter.title }/>
-  <article class="px-4 py-24 mx-auto" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
+  <article className="px-4 py-24 mx-auto">
   
-  <div class="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
-     {  (markdownRemark.frontmatter.featuredimage != null && markdownRemark.frontmatter.featuredimage.src != null)  ? ( < Img className="object-cover w-full h-64 bg-center rounded-lg" fluid = { markdownRemark.frontmatter.featuredimage.src.childImageSharp.fluid } alt = { markdownRemark.frontmatter.featuredimage.alt }/> ) : " "   }
+  <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
+     {  (markdownRemark.frontmatter.featuredimage != null && markdownRemark.frontmatter.featuredimage.src != null)  ? ( < Img classNameName="object-cover w-full h-64 bg-center rounded-lg" fluid = { markdownRemark.frontmatter.featuredimage.src.childImageSharp.fluid } alt = { markdownRemark.frontmatter.featuredimage.alt }/> ) : " "   }
     
-    <p class="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
+    <p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
       {
             markdownRemark.frontmatter.category.map((cat, index, arr) => ( 
             <ConcatWords  arrCount = { arr.length } index = { index } key = { cat } >
-                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-200 uppercase last:mr-0 mr-1 hover:no-underline" to = { `/category/${kebabCase(cat)}` } >{ cat } </Link> 
+                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-purple-700 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-purple-400" to = { `/category/${kebabCase(cat)}` } >{ cat } </Link> 
             </ConcatWords>
             ))
         } 
       
       </p>
-    <h1 class="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl" itemprop="headline" title="Rise of Tailwind - A Utility First CSS Framework">
+    <h1 className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl" title="Rise of Tailwind - A Utility First CSS Framework">
       { markdownRemark.frontmatter.title }
     </h1>
-    <div class="flex mb-6 space-x-2">
+    <div className="flex mb-6 space-x-2">
       {
             markdownRemark.frontmatter.tag.map((tag, index, arr) => ( 
             < ConcatWords arrCount = { arr.length } index = { index } key = { index } >
-                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-yellow-600 bg-yellow-200 uppercase last:mr-0 mr-1 hover:no-underline" to = { `/tag/${kebabCase(tag)}` } ># { tag } </Link> 
+                <Link className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-gray-500 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-gray-400" to = { `/tag/${kebabCase(tag)}` } ># { tag } </Link> 
             </ConcatWords>
             ))
         } 
@@ -64,27 +64,27 @@ const BlogPost = ({ data, pageContext }) => {
     
     <Link className="flex items-center text-gray-700" to = { `/blog/author/${kebabCase(markdownRemark.frontmatter.author)}` }>
       <B/>
-      <div class="ml-2">
-        <p class="text-sm font-semibold text-gray-800">{ markdownRemark.frontmatter.author  }</p>
-        <p class="text-sm text-gray-500">{ formatDate(markdownRemark.frontmatter.date) }</p>
+      <div className="ml-2">
+        <p className="text-sm font-semibold text-gray-800">{ markdownRemark.frontmatter.author  }</p>
+        <p className="text-sm text-gray-500">{ formatDate(markdownRemark.frontmatter.date) }</p>
       </div>
     </Link>
   </div>
 
-  <div class="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
+  <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
 </article>
 
   <section className="py-20 border-t-2 w-full mx-auto prose md:w-3/4 lg:w-1/2">
-    <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
       
       <div>
         <h1>{ prev &&<Link to = { prev.fields.slug } className="mb-6 text-md font-semibold text-black md:text-xl">{ prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
-        <p class="mt-2 text-gray-600 text-sm text-gray-50"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
+        <p className="mt-2 text-gray-600 text-sm text-gray-50"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
       </div>
       
       <div>
         <h1>{ next && ( <Link to = { next.fields.slug }  className="mb-6 text-md font-semibold text-black md:text-xl"> <div >  { next.frontmatter != null && next.frontmatter.title }  </div>  </Link>  ) }</h1>
-        <p class="mt-2 text-gray-600 text-sm text-gray-50">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
+        <p className="mt-2 text-gray-600 text-sm text-gray-50">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
       </div>
 
     </div>
