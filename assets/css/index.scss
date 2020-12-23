@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 html {
-    @apply font-body
+    @apply font-body;
+    font-size: 90%;
 }
 
 /*---------------------------------------- Gatsby -----------------------------------*/
@@ -30,7 +31,7 @@ html {
 
 /*---------------------------------------- Gatsby Article -----------------------------------*/
 .articleContent {
-    h1, h2, h3, h4, h5 {
+    h1, h2, h3, h4, h5, h6 {
         @apply tracking-tight;
         @apply font-extrabold;
         @apply text-gray-900;
@@ -51,6 +52,14 @@ html {
 
     h4 {
         @apply text-xl;
+    }
+
+    h5 {
+        @apply text-lg;
+    }
+
+    h6 {
+        @apply text-base;
     }
 
     p {
@@ -84,4 +93,47 @@ html {
         border-top-width: 1px;
         margin-bottom: 1.5em;
     }
+    a.em{
+        
+        padding: 2px 0px 1px;
+        background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%);
+        transition: background-position 120ms ease-in-out 0s,
+        padding 120ms ease-in-out 0s;
+        background-size: 100% 200%;
+        background-position: 0px 0px;
+        word-break: break-word;
+        &:hover {
+            text-shadow: rgb(0, 187, 0) 1px 1px 0px;
+            text-decoration: none;
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgb(0, 255, 0) calc(50% - 9px), rgb(0, 255, 0) 100%);
+            background-position: 0px 100%;
+        }
+    }
+
+    blockquote {
+        @apply my-6;
+        @apply py-3;
+        p {
+            @apply my-0;
+        }
+        background: #EFFAFF;
+        border-left: 4px solid #12A4E2;
+    }
+    .gatsby-resp-image-wrapper{
+        @apply my-12;
+    }
+}
+
+.gatsby-image-wrapper {
+    img {
+        transition: transform 0.2s ease 0s!important;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+
+.section-more{
+    background: #D8F3FF;
 }

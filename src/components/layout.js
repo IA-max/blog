@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Typography from "typography"
 import moragaTheme from "typography-theme-moraga"
-import { Provider as GridProvider } from "griding"
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -23,13 +22,11 @@ const Layout = ({ children }) => (
       }
     `}
 		render={(data) => (
-		 <GridProvider>
 		   <>
 			<Header/>
 		     <main>{children}</main>
 		     <Footer/>
 		   </>
-		 </GridProvider>
 		)}
 	/>
 );

@@ -4,7 +4,7 @@ const Footer = () => {
         return (
 <footer className="text-gray-700 body-font">
   <div className="bg-gray-50">
-    <div className="container mx-auto py-6 px-5 flex flex-wrap flex-col sm:flex-row md:w-3/4 lg:w-2/4">
+    <div className="container mx-auto py-6 px-0 flex flex-wrap flex-col sm:flex-row md:w-3/4 lg:w-2/4">
       <p className="text-gray-500 text-sm text-center sm:text-left">Copyright © 2020
         <a href="https://imaxyoung.com" className="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">imaxyoung</a>
       </p>

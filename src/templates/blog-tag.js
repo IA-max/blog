@@ -9,6 +9,11 @@ import renderTag from "../components/renderTag"
 const BlogTag = ({ data, pageContext }) => {
     const { allMarkdownRemark } = data
     const { currentPage, numPages, tag, allTags } = pageContext
+    const tags = allTags.sort(function (a, b) {
+        if (a < b) { return -1; }
+        if (a > b) { return 1; }
+        return 0;
+    })
 
     return (<Layout >
         <Seo title = { tag }/>
@@ -17,9 +22,10 @@ const BlogTag = ({ data, pageContext }) => {
           <div className="flex flex-col">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Tags:</h1>
             <nav className="flex flex-wrap list-none -mb-1">
-              { allTags.map((tag, index) => (
+              {
+                tags.map((tag, index) => (
                 <li className="lg:w-1/6 mb-1 w-1/2" key={index}>
-                  <Link className = { `text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-indigo-600 bg-indigo-200 uppercase last:mr-0 hover:no-underline ` } to = { `/tag/${kebabCase(tag)}` } > { tag } </Link> 
+                  <Link className = { `text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-indigo-600 bg-indigo-200 uppercase last:mr-0 hover:no-underline ` } to = { `/tag/${kebabCase(tag)}` } ># { tag } </Link> 
               </li>
               ))  }
             </nav>

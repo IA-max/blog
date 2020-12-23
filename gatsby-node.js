@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     //     })
     // }
     const posts = result.data.allMarkdownRemark.nodes
-    const postsPerPage = 3
+    const postsPerPage = 10
     const postsWithoutFeatured = posts.filter((n) => {
         return n.frontmatter.featured == null || !n.frontmatter.featured
     })
@@ -104,6 +104,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 slug: post.fields.slug,
                 prev: prev,
                 next: next,
+                allPost:posts
             },
         })
     })
@@ -180,7 +181,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (node.internal.type === `MarkdownRemark`) {
       
-      console.log(node);
+      //console.log(node);
       // console.log(getNode);
 
         const value = createFilePath({ node, getNode })

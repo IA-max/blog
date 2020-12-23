@@ -1,9 +1,6 @@
 import React from "react"
 import kebabCase from "lodash.kebabcase"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { Row, Cell } from "griding"
-
-import * as S from "../components/styles.css"
 import ConcatWords from "../utils/ConcatWords"
 import formatDate from "../utils/formatDate"
 
@@ -11,19 +8,19 @@ const BlogFeatured = () => {
   const { markdownRemark } = useStaticQuery(query)
 
   return (
-    <Row>
-      <Cell md={6}>
-        <S.FeaturedImage>
+    <div>
+      <div md={6}>
+        <div>
           <Link to={markdownRemark.fields.slug}>
          
           </Link>
-        </S.FeaturedImage>
-      </Cell>
+        </div>
+      </div>
 
-      <Cell md={6}>
-        <Row>
-          <S.FeaturedInfos>
-            <S.Author>
+      <div md={6}>
+        <div>
+          <div>
+            <div>
               By{" "}
               <Link
                 to={`/blog/author/${kebabCase(
@@ -32,27 +29,27 @@ const BlogFeatured = () => {
               >
                 {markdownRemark.frontmatter.author}
               </Link>
-            </S.Author>
+            </div>
 
             <Link to={markdownRemark.fields.slug}>
-              <S.Title>{markdownRemark.frontmatter.title}</S.Title>
+              <div>{markdownRemark.frontmatter.title}</div>
             </Link>
 
-            <S.DateText>
+            <div>
               {formatDate(markdownRemark.frontmatter.date)}
-            </S.DateText>
+            </div>
 
-            <S.Category>
+            <div>
               {markdownRemark.frontmatter.category.map((cat, index, arr) => (
                 <ConcatWords arrCount={arr.length} index={index} key={cat}>
                   <Link to={`/blog/category/${kebabCase(cat)}`}>{cat}</Link>
                 </ConcatWords>
               ))}
-            </S.Category>
-          </S.FeaturedInfos>
-        </Row>
-      </Cell>
-    </Row>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -70,7 +67,6 @@ const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         author
         category
-
       }
     }
   }

@@ -196,6 +196,6 @@ export default AboutPage;
 
 
 #### 参考链接
-- [Adding cover images to your Gatsby blog](https://tjaddison.com/blog/2019/10/adding-cover-images-to-your-gatsby-blog/)
+- <a class="em" href="https://tjaddison.com/blog/2019/10/adding-cover-images-to-your-gatsby-blog/">Adding cover images to your Gatsby blog</a> 
 - [Building advanced blog system in Gatsby and React](https://danilowoz.com/blog/advanced-blog-system-in-gatsby)
 - [syntax-highlighting-prismjs-gatsby](https://stephencharlesweiss.com/syntax-highlighting-prismjs-gatsby/)

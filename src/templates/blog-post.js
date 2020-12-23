@@ -9,10 +9,13 @@ import formatDate from "../utils/formatDate"
 import B from "../components/b"
 
 import Comment from "../components/comment"
+import RecommandPost from '../components/recommendPost'
 
 const BlogPost = ({ data, pageContext }) => {
     const { markdownRemark } = data
     const { prev, next } = pageContext
+
+    console.log(pageContext);
 
     const commentBox = React.createRef()
 
@@ -73,23 +76,28 @@ const BlogPost = ({ data, pageContext }) => {
 
   <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent" dangerouslySetInnerHTML = { { __html: markdownRemark.html } }></div>
 </article>
-
-  <section className="py-20 border-t-2 w-full mx-auto prose md:w-3/4 lg:w-1/2">
-    <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
-      
-      <div>
-        <h1>{ prev &&<Link to = { prev.fields.slug } className="mb-6 text-md font-semibold text-black md:text-xl">{ prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
-        <p className="mt-2 text-gray-600 text-sm text-gray-50"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
-      </div>
-      
-      <div>
-        <h1>{ next && ( <Link to = { next.fields.slug }  className="mb-6 text-md font-semibold text-black md:text-xl"> <div >  { next.frontmatter != null && next.frontmatter.title }  </div>  </Link>  ) }</h1>
-        <p className="mt-2 text-gray-600 text-sm text-gray-50">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
+      <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
+          <Comment commentBox={commentBox} />
       </div>
 
-    </div>
-       <Comment commentBox={commentBox} />
-</section>
+
+      <RecommandPost allpost={ pageContext.allPost}  category ={ markdownRemark.frontmatter.category } / >
+      
+  
+      {/* <section className="py-20  w-full mx-auto prose md:w-3/4 lg:w-4/6">
+        <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
+          <div>
+            <h1>{ prev &&<Link to = { prev.fields.slug } className="mb-6 text-md font-semibold text-black md:text-xl">{ prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
+            <p className="mt-2 text-gray-600 text-sm text-gray-50"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
+          </div>
+          <div>
+            <h1>{ next && ( <Link to = { next.fields.slug }  className="mb-6 text-md font-semibold text-black md:text-xl"> <div >  { next.frontmatter != null && next.frontmatter.title }  </div>  </Link>  ) }</h1>
+            <p className="mt-2 text-gray-600 text-sm text-gray-50">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
+          </div>
+        </div>
+    </section> */}
+
+
         </Layout>
     )
 }
