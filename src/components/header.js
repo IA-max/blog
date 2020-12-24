@@ -4,8 +4,8 @@ import C from "../components/cat"
 
 const pages =  [
 	{
-		title: 'Articles',
-		url: '/'
+		title: 'Article',
+		url: '/article'
 	},
 	{
 		title: 'Resources',

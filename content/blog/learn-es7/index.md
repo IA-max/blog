@@ -10,7 +10,7 @@ excerpt: "ES2016添加了两个小的特性来说明标准化过程"
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-es.png"
   alt: ""
 ---
 ES2016添加了两个小的特性来说明标准化过程：

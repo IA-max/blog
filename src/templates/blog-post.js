@@ -37,7 +37,7 @@ const BlogPost = ({ data, pageContext }) => {
     
     return ( <Layout >
         <Seo title = { markdownRemark.frontmatter.title }/>
-  <article className="px-4 py-24 mx-auto">
+  <article className="px-4 py-6 mx-auto">
   
   <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
      {  (markdownRemark.frontmatter.featuredimage != null && markdownRemark.frontmatter.featuredimage.src != null)  ? ( < Img classNameName="object-cover w-full h-64 bg-center rounded-lg" fluid = { markdownRemark.frontmatter.featuredimage.src.childImageSharp.fluid } alt = { markdownRemark.frontmatter.featuredimage.alt }/> ) : " "   }

@@ -10,7 +10,7 @@ excerpt: "如果输入 Unicode 格式但是超出范围的字符"
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-es.png"
   alt: ""
 ---
 - 行分隔符（U + 2028）和段分隔符（U + 2029）符号现在允许在字符串文字中，与JSON匹配

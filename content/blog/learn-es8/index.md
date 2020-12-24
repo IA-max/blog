@@ -10,7 +10,7 @@ excerpt: "ES2018引入异步迭代器"
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-es.png"
   alt: ""
 ---
 - async/await

@@ -2,12 +2,23 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import Img from "gatsby-image"
-import TYPE from '../components/type';
 import formatDate from "../utils/formatDate"
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title || `Title`;
     const posts = data.allMarkdownRemark.nodes;
+
+    const PostOfReact = posts.filter((p) => {
+        return  (p != null && p.frontmatter != null) &&  p.frontmatter.tag.includes("react")
+    });
+
+    const PostOfJs = posts.filter((p) => {
+        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("js")
+    });
+
+    const PostOfCss = posts.filter((p) => {
+        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("css")
+    });
+
 
     if (posts.length === 0) {
         return (
@@ -20,29 +31,49 @@ const BlogIndex = ({ data, location }) => {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO title='All posts' />
-            <section className="container w-full px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
-                <div className="mb-12 text-left md:text-center">
-                    <h2 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900">
-                           <TYPE />
-                    </h2>
-                    <p className="text-lg text-gray-500">Design-driven developer focused on crafting products in ReactJS. I write about new technologies, how I've solved some problems, and bring out my side-projects..</p>
+            <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
+                <h1 className="text-4xl">React</h1>
+                  <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
+                    <div className="w-24 h-full bg-indigo-500"></div>
                 </div>
-                <div className = "flex flex-col space-y-12 divide-y divide-gray-200" >
-                 { posts.map((post, index) => {
+                   { PostOfReact.map((post, index) => {
                         return (
-                                <div key={index}>                                
-                                <p className = "pt-12 mb-1 font-normal text-gray-500 font-sans text-xs"> <small>{ formatDate(post.frontmatter.date) }</small> </p>
-                                <h2 className="mb-2 text-xl font-extrabold leading-snug tracking-tight text-gray-800 md:text-3xl">
-                                    <Link to={ post.fields.slug } className="text-2xl text-gray-900 font-medium hover:text-purple-700 hover:no-underline">{ post.frontmatter.title }</Link>
-                                </h2>
-                                <p className="mb-4 text-sm font-normal text-gray-600">
-                                    { post.frontmatter.excerpt || post.frontmatter.description }
-                                </p>
-                                <Link to={ post.fields.slug } className="btn btn-light btn-sm bg-gray-100 px-2 py-2 rounded hover:no-underline text-xs hover:bg-gray-400 hover:text-white">Continue Reading</Link>
-                                </div>
+                             <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
+                                <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link to={ post.fields.slug } className="text-gray-900 font-semibold hover:text-purple-700 hover:no-underline">{ post.frontmatter.title }</Link></h1>
+                                <h1 className="mb-2 text-xl font-light md:text-base text-right hidden md:block text-gray-400">{ formatDate(post.frontmatter.date) }</h1>
+                            </div>
                         );
                     })}
+            </section>
+
+            <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
+                <h1 className="text-4xl">JS</h1>
+                  <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
+                    <div className="w-24 h-full bg-indigo-500"></div>
                 </div>
+                   { PostOfJs.map((post, index) => {
+                        return (
+                             <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
+                                <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link to={ post.fields.slug } className="text-gray-900 font-semibold hover:text-purple-700 hover:no-underline">{ post.frontmatter.title }</Link></h1>
+                                <h1 className="mb-2 text-xl font-light md:text-base text-right hidden md:block text-gray-400">{ formatDate(post.frontmatter.date) }</h1>
+                            </div>
+                        );
+                    })}
+            </section>
+
+            <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
+                <h1 className="text-4xl">CSS</h1>
+                  <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
+                    <div className="w-24 h-full bg-indigo-500"></div>
+                </div>
+                   { PostOfCss.map((post, index) => {
+                        return (
+                             <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
+                                <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link to={ post.fields.slug } className="text-gray-900 font-semibold hover:text-purple-700 hover:no-underline">{ post.frontmatter.title }</Link></h1>
+                                <h1 className="mb-2 text-xl font-light md:text-base text-right hidden md:block text-gray-400">{ formatDate(post.frontmatter.date) }</h1>
+                            </div>
+                        );
+                    })}
             </section>
         </Layout>
     );
@@ -65,6 +96,8 @@ export const pageQuery = graphql`
                     excerpt
                     date(formatString: "MM-DD YYYY")
                     title
+                    tag
+                    category
                     description
                     featuredimage {
                         src {

@@ -4,13 +4,13 @@ date: '2019-12-03T18:44:58+08:00'
 status: private
 permalink: /react-interview
 category: ["js"] 
-tag: ["js","react"]
+tag: ["react"]
 author: "max"
 excerpt: "React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序"
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-all-react.png"
   alt: ""
 ---
 ### 什么是React？
@@ -146,5 +146,5 @@ class User extends React.Component {
 }
 ```
 
-<figure class="wp-block-image size-large">![](https://blog.imaxyoung.com/wp-content/uploads/2019/12/state.jpg)</figure>State 类似于 props ，但它是私有的，并由组件完全控制。  
-即，除了拥有和设置它的组件之外，其他任何组件都无法访问它。
+![](./state.png)
+State 类似于 props ，但它是私有的，并由组件完全控制。  即，除了拥有和设置它的组件之外，其他任何组件都无法访问它。

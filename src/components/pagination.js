@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 const Pagination = ({ numPages, currentPage, contextPage }) => {
+  console.log(contextPage);
+  
   if (numPages <= 1) {
     return null
   }
