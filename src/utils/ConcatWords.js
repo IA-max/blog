@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default ({ arrCount, index, children }) => {
+export default ({arrCount, index, children}) => {
     // if (arrCount === 1) {
     //     return <> { children } </>
     // }
@@ -15,5 +15,5 @@ export default ({ arrCount, index, children }) => {
     // }
 
     // return <> { children } </>
-     return <>{ children }</>
+    return <>{children}</>
 }
