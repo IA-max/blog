@@ -10,7 +10,7 @@ excerpt: ""
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-ele.png"
   alt: ""
 ---
 

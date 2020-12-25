@@ -3,7 +3,7 @@ title: 前端进阶
 date: '2019-09-18T18:16:11+08:00'
 status: publish
 category: ["js"] 
-tag: ["react","vue"]
+tag: ["js"]
 author: "max"
 excerpt: "React和Vue对比. 数据驱动视图，提供了响应式（Reactive）和组件化（Composable）的视图组件。  
 都有Virtual DOM，组件化开发，通过props参数进行父子组件数据的传递，都实现webComponents规范  "

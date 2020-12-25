@@ -1,17 +1,19 @@
 ---
-title: Windows 上的开发环境搭建
+title: DevOps on Windows
 date: 2020-12-10
-featuredimage:
-  src: "cover.png"
-  alt: "Windows Dev Env"
 category: ["devops"] 
 tag: ["DevOps", "setup"]
 author: "max"
 excerpt: ""
 featured: false
-image: 
+image:
+featuredimage:
+  src: "devops.png"
+  alt: "Windows Dev Env"
 ---
 
+
+Windows 上的开发环境搭建
 
 #### Ubuntu 20.04 安装启用 SSH
 
