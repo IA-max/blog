@@ -10,7 +10,7 @@ excerpt: "get the full url in Express"
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-express.png"
   alt: ""
 ---
 get the full url in Express?

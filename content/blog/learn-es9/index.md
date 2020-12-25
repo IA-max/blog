@@ -1,5 +1,5 @@
 ---
-title: ES9新特性 - (2018)
+title: ES 9新特性 - (2018)
 date: '2019-11-26T17:56:55+08:00'
 status: publish
 permalink: /es9
