@@ -12,13 +12,13 @@ const BlogPostList = ({data, pageContext}) => {
     console.log(data);
     return (<Layout>
         <section className="container w-full px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
-            <div className="mb-12 text-left md:text-center">
-                <h2 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900">
-                    <TYPE/>
-                </h2>
-                <p className="text-lg text-gray-500">Design-driven developer focused on crafting products in ReactJS. I
-                    write about new technologies, how I've solved some problems, and bring out my side-projects..</p>
-            </div>
+            {/*<div className="mb-12 text-left md:text-center">*/}
+            {/*    <h2 className="mb-2 text-3xl font-extrabold leading-tight text-gray-900">*/}
+            {/*        <TYPE/>*/}
+            {/*    </h2>*/}
+            {/*    <p className="text-lg text-gray-500">Design-driven developer focused on crafting products in ReactJS. I*/}
+            {/*        write about new technologies, how I've solved some problems, and bring out my side-projects..</p>*/}
+            {/*</div>*/}
             <div className="flex flex-col space-y-12 divide-y divide-gray-200">
                 {posts.map((post, index) => {
                     return (

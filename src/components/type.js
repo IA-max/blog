@@ -4,7 +4,7 @@ import Typing from 'react-typing-animation';
 const AnimatedTypingComponent = () => (
     <Typing>
         <div>
-            Hello, I'm
+            Hello 👋, I'm
             <Typing.Delay ms={1000}/> Max.
             <Typing.Delay ms={3000}/>
             <Typing.Backspace count={8}/>
