@@ -10,7 +10,7 @@ excerpt: "ue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模�
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-v.png"
   alt: ""
 ---
 ### 安装

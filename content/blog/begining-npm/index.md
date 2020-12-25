@@ -7,9 +7,9 @@ tag: ["node","linux"]
 author: "max"
 excerpt: ""
 featured: false
-image: 
+image: ''
 featuredimage:
-  src: "none.png"
+  src: "cover-npm.png"
   alt: ""
 ---
  可以使用定制的 [cnpm](https://github.com/cnpm/cnpm) (gzip 压缩支持) 命令行工具代替默认的 npm

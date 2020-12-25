@@ -10,7 +10,7 @@ excerpt: "清除浮动前我们要了解两个重要的定义"
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-c3.png"
   alt: ""
 ---
 #### 清除浮动前我们要了解两个重要的定义

@@ -10,7 +10,7 @@ excerpt: "React和Vue对比. 数据驱动视图，提供了响应式（Reactive�
 featured: false
 image: ./p1.png
 featuredimage:
-  src: "p1.png"
+  src: "cover-front-end-dev.png"
   alt: ""
 ---
 
@@ -158,7 +158,7 @@ Etag是服务器自动生成或者由开发者生成的对应资源在服务器�
 ```javascript
 // 内部的抽象实现
 function createHistory(options={}) {
-  ...
+  //...
   return {
     listenBefore, // 内部的hook机制，可以在location发生变化前执行某些行为，AOP的实现
     listen, // location发生改变时触发回调
@@ -196,10 +196,10 @@ function createLocation() {
 ```javascript
 // createBrowserHistory(HTML5)中的前进实现
 function finishTransition(location) {
-  ···
+  //···
   const historyState = { key };
-  ···
-  if (location.action === 'PUSH') ) {
+  //···
+  if (location.action === 'PUSH') {
     window.history.pushState(historyState, null, path);
   } else {
     window.history.replaceState(historyState, null, path)
@@ -207,8 +207,8 @@ function finishTransition(location) {
 }
 // createHashHistory的内部实现
 function finishTransition(location) {
-  ...
-  if (location.action === 'PUSH') ) {
+  //...
+  if (location.action === 'PUSH') {
     window.location.hash = path;
   } else {
     window.location.replace(
@@ -219,7 +219,7 @@ function finishTransition(location) {
 // createMemoryHistory的内部实现
 entries = [];
 function finishTransition(location) {
-  ...
+  //...
   switch (location.action) {
     case 'PUSH':
       entries.push(location);
@@ -754,7 +754,7 @@ Object.assign(MyTransaction.prototype, Transaction.Mixin, {
               console.log('after method perform');
             }
         }];
- };
+ },
 });
 //实例化一个transaction
 var transaction = new MyTransaction();
