@@ -1,10 +1,10 @@
 ---
 title: 'JS - 编写 Virtual DOM'
-date: '2019-09-09T14:15:53+08:00'
+date: '2018-09-09T14:15:53+08:00'
 status: publish
 permalink: /write-your-own-virtual-dom
 category: ["js"] 
-tag: ["vd","js"]
+tag: ["mv*","vd","js"]
 author: "max"
 excerpt: "构建自己的Virtual DOM需要了解两件事。您甚至不需要深入了解React的来源。  
 或者是任何其他Virtual DOM实现的源代码。  

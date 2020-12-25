@@ -8,8 +8,8 @@ const BlogIndex = ({data, location}) => {
     const siteTitle = data.site.siteMetadata.title || `Title`;
     const posts = data.allMarkdownRemark.nodes;
 
-    const PostOfReact = posts.filter((p) => {
-        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("react")
+    const PostOfMv = posts.filter((p) => {
+        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("mv*")
     });
 
     const PostOfJs = posts.filter((p) => {
@@ -34,11 +34,11 @@ const BlogIndex = ({data, location}) => {
         <Layout location={location} title={siteTitle}>
             <SEO title='All posts'/>
             <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
-                <h1 className="text-4xl">React</h1>
+                <h1 className="text-4xl">MV框架</h1>
                 <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
                     <div className="w-24 h-full bg-indigo-500"></div>
                 </div>
-                {PostOfReact.map((post, index) => {
+                {PostOfMv.map((post, index) => {
                     return (
                         <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
                             <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link
@@ -52,7 +52,7 @@ const BlogIndex = ({data, location}) => {
             </section>
 
             <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
-                <h1 className="text-4xl">JS</h1>
+                <h1 className="text-4xl">JavaScript</h1>
                 <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
                     <div className="w-24 h-full bg-indigo-500"></div>
                 </div>
