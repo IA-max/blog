@@ -11,7 +11,7 @@ excerpt: "TypeScript 简称 TS.
 featured: false
 image: 
 featuredimage:
-  src: "none.png"
+  src: "cover-ts.png"
   alt: ""
 ---
 #### 什么是 TypeScript
