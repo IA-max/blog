@@ -3,7 +3,7 @@ import {graphql} from 'gatsby';
 import ConfettiGenerator from "confetti-js";
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import TYPE from '../components/type';
+import TYPE from '../components/typingEffect';
 
 const About = ({data, location}) => {
     const siteTitle = data.site.siteMetadata.title;

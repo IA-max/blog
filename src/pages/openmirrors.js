@@ -21,7 +21,7 @@ const OpenMirrorsPage = ({data, location}) => {
                     <p className="text-gray-700">
                         Written by
                         <span className="byline author vcard">
-                        <a href="#" target="_blank" className="text-primary hover:text-primary-dark"><span> Max </span></a>
+                        <a href="/about" target="_blank" className="text-primary hover:text-primary-dark"><span> Max </span></a>
                     </span>
                         on <time>Jan 02 2021</time>
                     </p>

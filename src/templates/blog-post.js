@@ -13,11 +13,8 @@ import RecommandPost from '../components/recommendPost'
 
 const BlogPost = ({data, pageContext}) => {
     const {markdownRemark} = data
-    const {prev, next} = pageContext
-
-    console.log(pageContext);
-
     const commentBox = React.createRef()
+    // const {prev, next} = pageContext
 
     useEffect(() => {
         const scriptEl = document.createElement('script')
