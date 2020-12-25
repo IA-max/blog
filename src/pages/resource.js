@@ -4,7 +4,7 @@ import {graphql} from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const OpenMirrorsPage = ({data, location}) => {
+const ResourcePage = ({data, location}) => {
     const siteTitle = data.site.siteMetadata.title;
 
     return (
@@ -123,6 +123,7 @@ const OpenMirrorsPage = ({data, location}) => {
                     <ul>
                         <li><a href="https://leetcode-cn.com">Leet Code</a></li>
                         <li><a href="http://devdocs.io/">devdocs</a></li>
+                        <li><a href="https://cn.history.js.org/">JavaScript 20 年</a></li>
                     </ul>
                 </div>
             </article>
@@ -130,7 +131,7 @@ const OpenMirrorsPage = ({data, location}) => {
     );
 };
 
-export default OpenMirrorsPage;
+export default ResourcePage;
 
 export const pageQuery = graphql`
     query {

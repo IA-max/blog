@@ -7,8 +7,8 @@ const pages = [
         url: '/article'
     },
     {
-        title: 'Resources',
-        url: '/openmirrors'
+        title: 'Resource',
+        url: '/resource'
     },
     {
         title: 'About',
