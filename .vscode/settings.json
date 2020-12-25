@@ -1,8 +1,0 @@
-{
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "terminal.integrated.shellArgs.windows": [
-        "-c",
-        "zsh"
-    ],
-    "terminal.integrated.shell.linux": "/bin/zsh",
-}
