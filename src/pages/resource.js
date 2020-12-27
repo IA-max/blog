@@ -9,8 +9,7 @@ const ResourcePage = ({data, location}) => {
 
     return (
         <Layout location={location} title={siteTitle}>
-            <SEO title='Open Mirrors'/>
-
+            <SEO title='Resource'/>
             <article className="container px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
                 <div className="w-full mx-auto mb-12 text-center md:w-2/3">
                     <p className="mb-3 text-xs font-semibold tracking-wider text-gray-500 uppercase">Development</p>
@@ -26,7 +25,7 @@ const ResourcePage = ({data, location}) => {
                         on <time>Jan 02 2021</time>
                     </p>
                 </div>
-
+                <script src="https://gist.github.com/IA-max/721ac3bf1618cdb0a591a82fd26c9c7c.js"></script>
                 <div className="mx-auto prose articleContent">
                     <ol>
                         <li>NPM开源镜像: http://npm.taobao.org/mirrors</li>
@@ -124,6 +123,7 @@ const ResourcePage = ({data, location}) => {
                         <li><a href="https://leetcode-cn.com">Leet Code</a></li>
                         <li><a href="http://devdocs.io/">devdocs</a></li>
                         <li><a href="https://cn.history.js.org/">JavaScript 20 年</a></li>
+                        <li><a href="https://lab.github.com/">Learning Lab</a></li>
                     </ul>
                 </div>
             </article>
