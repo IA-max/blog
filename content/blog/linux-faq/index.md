@@ -13,6 +13,7 @@ featuredimage:
   src: "cover-linux.png"
   alt: ""
 ---
+
 #### 压缩与解压
 
  Linux下常见的压缩包格式有5种:
@@ -104,7 +105,7 @@ setfacl --restore=permissions_backup
 从 Linux 控制台登录后，便可以看到 Shell 提示符。提示符是通往 Shell 的大门，是输入 Shell 命令的地方.
 
 > 对于普通用户，Base shell 默认的提示符是美元符号$；
-<br>
+
 > 对于超级用户（root 用户），Bash Shell 默认的提示符是井号#。
 ```bash
 [max@localhost ~]$

@@ -5,8 +5,7 @@ status: publish
 permalink: /unobtrusive-programming
 author: admin
 excerpt: '可通过将所有 JavaScript 放在单独文件中, 将内联事件处理程序代码与内容分离'
-type: post
-id: 136
+featured: false
 image: 
 category: ["js"]
 tag: ["js"]

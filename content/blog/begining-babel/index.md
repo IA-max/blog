@@ -95,7 +95,7 @@ require('reg') //引入的文件
 #### Babel-node
 babel-cli工具自带一个babel-node命令，提供一个支持ES6的REPL环境。它支持Node的REPL环境的所有功能，而且可以直接运行ES6代码。 用babel-node替代node运行所有代码
 
-```json
+```diff
 {
     "scripts": {
 -     "script-name": "node script.js"
@@ -297,28 +297,28 @@ npm install --save-dev babel-plugin-transform-es2015-classes
 
  我的常用Babel 基本与ENV设置
 
-```json
+```markup
 {
-    "presets": [
-        "es2015",
-        "react",
-        "stage-2"
-    ],
-    "plugins": [
-    ],
-    "env":{
-        "development":{
-            "plugins":[
-                "transform-runtime",
-                ["transform-es2015-classes",{"loose": true}]
-            ]
-        },
-        "production":{
-            "plugins":[
-                "transform-runtime",
-                ["transform-es2015-classes"]
-            ]
-        }
+  "presets": [
+    "es2015",
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+  ],
+  "env":{
+    "development":{
+      "plugins":[
+        "transform-runtime",
+        ["transform-es2015-classes",{"loose": true}]
+      ]
+    },
+    "production":{
+      "plugins":[
+        "transform-runtime",
+        ["transform-es2015-classes"]
+      ]
+    }
 }
 ```
 

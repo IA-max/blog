@@ -55,7 +55,7 @@ Values:
 - **&lt;track-size&gt;** – can be a length, a percentage, or a fraction of the free space in the grid (using the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#fr-unit">fr</a>` unit)
 - **&lt;line-name&gt;** – an arbitrary name of your choosing
 
-```css
+```markup
 .container {
   grid-template-columns: <track-size> ... | <line-name> <track-size> ...;
   grid-template-rows: <track-size> ... | <line-name> <track-size> ...;
@@ -73,7 +73,8 @@ When you leave an empty space between the track values, the grid lines are autom
 }
 ```
 
-<figure class="wp-block-image">![](https://css-tricks.com/wp-content/uploads/2018/11/template-columns-rows-01.svg)</figure>But you can choose to explicitly name the lines. Note the bracket syntax for the line names:
+![](https://css-tricks.com/wp-content/uploads/2018/11/template-columns-rows-01.svg)
+But you can choose to explicitly name the lines. Note the bracket syntax for the line names:
 
 ```css
 .container {
@@ -82,7 +83,8 @@ When you leave an empty space between the track values, the grid lines are autom
 }
 ```
 
-<figure class="wp-block-image">![Grid with user named lines](https://css-tricks.com/wp-content/uploads/2018/11/template-column-rows-02.svg)</figure>Note that a line can have more than one name. For example, here the second line will have two names: row1-end and row2-start:
+![Grid with user named lines](https://css-tricks.com/wp-content/uploads/2018/11/template-column-rows-02.svg)
+Note that a line can have more than one name. For example, here the second line will have two names: row1-end and row2-start:
 
 ```css
 .container {
@@ -176,7 +178,7 @@ Example:
 
 That’ll create a grid that’s four columns wide by three rows tall. The entire top row will be comprised of the **header** area. The middle row will be comprised of two **main** areas, one empty cell, and one **sidebar** area. The last row is all **footer**.
 
-<figure class="wp-block-image">![Example of grid-template-areas](https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg)</figure>Each row in your declaration needs to have the same number of cells.
+![Example of grid-template-areas](https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg)Each row in your declaration needs to have the same number of cells.
 
 You can use any number of adjacent periods to declare a single empty cell. As long as the periods have no spaces between them they represent a single cell.
 
@@ -254,7 +256,7 @@ Example:
 }
 ```
 
-<figure class="wp-block-image">![Example of grid-column-gap and grid-row-gap](https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-gap.svg)</figure>The gutters are only created *between* the columns/rows, not on the outer edges.
+![Example of grid-column-gap and grid-row-gap](https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-gap.svg)The gutters are only created *between* the columns/rows, not on the outer edges.
 
 Note: The `grid-` prefix will be removed and `grid-column-gap` and `grid-row-gap` renamed to `column-gap` and `row-gap`. The unprefixed properties are already supported in Chrome 68+, Safari 11.2 Release 50+ and Opera 54+.
 
@@ -311,25 +313,25 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-items set to start](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-start.svg)</figure>```css
+![Example of justify-items set to start](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-start.svg)```css
 .container {
   justify-items: end;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-items set to end](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-end.svg)</figure>```css
+![Example of justify-items set to end](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-end.svg)```css
 .container {
   justify-items: center;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-items set to center](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-center.svg)</figure>```css
+![Example of justify-items set to center](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-center.svg)```css
 .container {
   justify-items: stretch;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-items set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-stretch.svg)</figure>This behavior can also be set on individual grid items via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-self">justify-self</a>` property.
+![Example of justify-items set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/justify-items-stretch.svg)This behavior can also be set on individual grid items via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-self">justify-self</a>` property.
 
 #### align-items
 
@@ -356,25 +358,25 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of align-items set to start](https://css-tricks.com/wp-content/uploads/2018/11/align-items-start.svg)</figure>```css
+![Example of align-items set to start](https://css-tricks.com/wp-content/uploads/2018/11/align-items-start.svg)```css
 .container {
   align-items: end;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-items set to end](https://css-tricks.com/wp-content/uploads/2018/11/align-items-end.svg)</figure>```css
+![Example of align-items set to end](https://css-tricks.com/wp-content/uploads/2018/11/align-items-end.svg)```css
 .container {
   align-items: center;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-items set to center](https://css-tricks.com/wp-content/uploads/2018/11/align-items-center.svg)</figure>```css
+![Example of align-items set to center](https://css-tricks.com/wp-content/uploads/2018/11/align-items-center.svg)```css
 .container {
   align-items: stretch;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-items set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/align-items-stretch.svg)</figure>This behavior can also be set on individual grid items via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-align-self">align-self</a>` property.
+![Example of align-items set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/align-items-stretch.svg)This behavior can also be set on individual grid items via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-align-self">align-self</a>` property.
 
 #### place-items
 
@@ -416,43 +418,43 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to start](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-start.svg)</figure>```css
+![Example of justify-content set to start](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-start.svg)```css
 .container {
   justify-content: end;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to end](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-end.svg)</figure>```css
+![Example of justify-content set to end](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-end.svg)```css
 .container {
   justify-content: center;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to center](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-center.svg)</figure>```css
+![Example of justify-content set to center](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-center.svg)```css
 .container {
   justify-content: stretch;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-stretch.svg)</figure>```css
+![Example of justify-content set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-stretch.svg)```css
 .container {
   justify-content: space-around;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to space-around](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-space-around.svg)</figure>```css
+![Example of justify-content set to space-around](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-space-around.svg)```css
 .container {
   justify-content: space-between;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to space-between](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-space-between.svg)</figure>```css
+![Example of justify-content set to space-between](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-space-between.svg)```css
 .container {
   justify-content: space-evenly;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-content set to space-evenly](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-space-evenly.svg)</figure>#### align-content
+![Example of justify-content set to space-evenly](https://css-tricks.com/wp-content/uploads/2018/11/justify-content-space-evenly.svg)#### align-content
 
 Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like `px`. In this case you can set the alignment of the grid within the grid container. This property aligns the grid along the *block (column)* axis (as opposed to `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-content">justify-content</a>` which aligns the grid along the *inline (row)* axis).
 
@@ -480,43 +482,43 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to start](https://css-tricks.com/wp-content/uploads/2018/11/align-content-start.svg)</figure>```css
+![Example of align-content set to start](https://css-tricks.com/wp-content/uploads/2018/11/align-content-start.svg)```css
 .container {
   align-content: end;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to end](https://css-tricks.com/wp-content/uploads/2018/11/align-content-end.svg)</figure>```css
+![Example of align-content set to end](https://css-tricks.com/wp-content/uploads/2018/11/align-content-end.svg)```css
 .container {
   align-content: center;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to center](https://css-tricks.com/wp-content/uploads/2018/11/align-content-center.svg)</figure>```css
+![Example of align-content set to center](https://css-tricks.com/wp-content/uploads/2018/11/align-content-center.svg)```css
 .container {
   align-content: stretch;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/align-content-stretch.svg)</figure>```css
+![Example of align-content set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/align-content-stretch.svg)```css
 .container {
   align-content: space-around;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to space-around](https://css-tricks.com/wp-content/uploads/2018/11/align-content-space-around.svg)</figure>```css
+![Example of align-content set to space-around](https://css-tricks.com/wp-content/uploads/2018/11/align-content-space-around.svg)```css
 .container {
   align-content: space-between;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to space-between](https://css-tricks.com/wp-content/uploads/2018/11/align-content-space-between.svg)</figure>```css
+![Example of align-content set to space-between](https://css-tricks.com/wp-content/uploads/2018/11/align-content-space-between.svg)```css
 .container {
   align-content: space-evenly;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-content set to space-evenly](https://css-tricks.com/wp-content/uploads/2018/11/align-content-space-evenly.svg)</figure>#### place-content
+![Example of align-content set to space-evenly](https://css-tricks.com/wp-content/uploads/2018/11/align-content-space-evenly.svg)#### place-content
 
 `place-content` sets both the `align-content` and `justify-content` properties in a single declaration.
 
@@ -553,7 +555,7 @@ To illustrate how implicit grid tracks get created, think about this:
 }
 ```
 
-<figure class="wp-block-image">![Example of 2x2 grid](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-columns-rows-01.svg)</figure>This creates a 2 x 2 grid.
+![Example of 2x2 grid](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-columns-rows-01.svg)This creates a 2 x 2 grid.
 
 But now imagine you use `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row">grid-column</a>` and `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-column-row">grid-row</a>` to position your grid items like this:
 
@@ -568,7 +570,7 @@ But now imagine you use `<a href="https://css-tricks.com/snippets/css/complete-g
 }
 ```
 
-<figure class="wp-block-image">![Example of implicit tracks](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-columns-rows-02.svg)</figure>We told .item-b to start on column line 5 and end at column line 6, *but we never defined a column line 5 or 6*. Because we referenced lines that don’t exist, implicit tracks with widths of 0 are created to fill in the gaps. We can use `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-columns-rows">grid-auto-columns</a>` and `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-columns-rows">grid-auto-rows</a>` to specify the widths of these implicit tracks:
+![Example of implicit tracks](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-columns-rows-02.svg)We told .item-b to start on column line 5 and end at column line 6, *but we never defined a column line 5 or 6*. Because we referenced lines that don’t exist, implicit tracks with widths of 0 are created to fill in the gaps. We can use `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-columns-rows">grid-auto-columns</a>` and `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-columns-rows">grid-auto-rows</a>` to specify the widths of these implicit tracks:
 
 ```css
 .container {
@@ -576,7 +578,7 @@ But now imagine you use `<a href="https://css-tricks.com/snippets/css/complete-g
 }
 ```
 
-<figure class="wp-block-image">![grid-auto-columns-rows](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-columns-rows-03.svg)</figure>#### grid-auto-flow
+![grid-auto-columns-rows](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-columns-rows-03.svg)#### grid-auto-flow
 
 If you have grid items that you don’t explicitly place on the grid, the *auto-placement algorithm* kicks in to automatically place the items. This property controls how the auto-placement algorithm works.
 
@@ -598,7 +600,7 @@ Examples:
 
 Consider this HTML:
 
-```css
+```markup
 <section class="container">
   <div class="item-a">item-a</div>
   <div class="item-b">item-b</div>
@@ -634,7 +636,7 @@ When placing the items on the grid, you only specify spots for two of them:
 
 Because we set `grid-auto-flow` to `row`, our grid will look like this. Notice how the three items we didn’t place (**item-b**, **item-c** and **item-d**) flow across the available rows:
 
-<figure class="wp-block-image">![Example of grid-auto-flow set to row](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-flow-01.svg)</figure>If we instead set `grid-auto-flow` to `column`, **item-b**, **item-c** and **item-d** flow down the columns:
+![Example of grid-auto-flow set to row](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-flow-01.svg)If we instead set `grid-auto-flow` to `column`, **item-b**, **item-c** and **item-d** flow down the columns:
 
 ```css
 .container {
@@ -645,7 +647,7 @@ Because we set `grid-auto-flow` to `row`, our grid will look like this. Notice h
 }
 ```
 
-<figure class="wp-block-image">![Example of grid-auto-flow set to column](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-flow-02.svg)</figure>#### grid
+![Example of grid-auto-flow set to column](https://css-tricks.com/wp-content/uploads/2018/11/grid-auto-flow-02.svg)#### grid
 
 A shorthand for setting all of the following properties in a single declaration: `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-template-columns-rows">grid-template-rows</a>`, `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-template-columns-rows">grid-template-columns</a>`, `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-template-areas">grid-template-areas</a>`, `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-columns-rows">grid-auto-rows</a>`, `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-columns-rows">grid-auto-columns</a>`, and `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-auto-flow">grid-auto-flow</a>` (Note: You can only specify the explicit or the implicit grid properties in a single grid declaration).
 
@@ -785,7 +787,7 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of grid-row/column-start/end](https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row-start-end-01.svg)</figure>```css
+![Example of grid-row/column-start/end](https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row-start-end-01.svg)```css
 .item-b {
   grid-column-start: 1;
   grid-column-end: span col4-start;
@@ -794,7 +796,7 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of grid-row/column-start/end](https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row-start-end-02.svg)</figure>If no `grid-column-end`/`grid-row-end` is declared, the item will span 1 track by default.
+![Example of grid-row/column-start/end](https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row-start-end-02.svg)If no `grid-column-end`/`grid-row-end` is declared, the item will span 1 track by default.
 
 Items can overlap each other. You can use `z-index` to control their stacking order.
 
@@ -823,7 +825,7 @@ Example:
 }
 ```
 
-<figure class="wp-block-image">![Example of grid-column/grid-row](https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row.svg)</figure>If no end line value is declared, the item will span 1 track by default.
+![Example of grid-column/grid-row](https://css-tricks.com/wp-content/uploads/2018/11/grid-column-row.svg)If no end line value is declared, the item will span 1 track by default.
 
 #### grid-area
 
@@ -858,7 +860,7 @@ As the short-shorthand for `<a href="https://css-tricks.com/snippets/css/complet
 }
 ```
 
-<figure class="wp-block-image">![Example of grid-area](https://css-tricks.com/wp-content/uploads/2018/11/grid-area.svg)</figure>#### justify-self
+![Example of grid-area](https://css-tricks.com/wp-content/uploads/2018/11/grid-area.svg)#### justify-self
 
 Aligns a grid item inside a cell along the *inline (row)* axis (as opposed to `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-align-self">align-self</a>` which aligns along the *block (column)* axis). This value applies to a grid item inside a single cell.
 
@@ -883,25 +885,25 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-self set to start](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-start.svg)</figure>```css
+![Example of justify-self set to start](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-start.svg)```css
 .item-a {
   justify-self: end;
 }
 ```
 
-<figure class="wp-block-image">![alt="Example](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-end.svg)</figure>```css
+![alt="Example](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-end.svg)```css
 .item-a {
   justify-self: center;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-self set to center](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-center.svg)</figure>```css
+![Example of justify-self set to center](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-center.svg)```css
 .item-a {
   justify-self: stretch;
 }
 ```
 
-<figure class="wp-block-image">![Example of justify-self set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-stretch.svg)</figure>To set alignment for *all* the items in a grid, this behavior can also be set on the grid container via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-items">justify-items</a>` property.
+![Example of justify-self set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/justify-self-stretch.svg)To set alignment for *all* the items in a grid, this behavior can also be set on the grid container via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-justify-items">justify-items</a>` property.
 
 #### align-self
 
@@ -928,25 +930,25 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![Example of align-self set to start](https://css-tricks.com/wp-content/uploads/2018/11/align-self-start.svg)</figure>```css
+![Example of align-self set to start](https://css-tricks.com/wp-content/uploads/2018/11/align-self-start.svg)```css
 .item-a {
   align-self: end;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-self set to end](https://css-tricks.com/wp-content/uploads/2018/11/align-self-end.svg)</figure>```css
+![Example of align-self set to end](https://css-tricks.com/wp-content/uploads/2018/11/align-self-end.svg)```css
 .item-a {
   align-self: center;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-self set to center](https://css-tricks.com/wp-content/uploads/2018/11/align-self-center.svg)</figure>```css
+![Example of align-self set to center](https://css-tricks.com/wp-content/uploads/2018/11/align-self-center.svg)```css
 .item-a {
   align-self: stretch;
 }
 ```
 
-<figure class="wp-block-image">![Example of align-self set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/align-self-stretch.svg)</figure>To align *all* the items in a grid, this behavior can also be set on the grid container via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-align-items">align-items</a>` property.
+![Example of align-self set to stretch](https://css-tricks.com/wp-content/uploads/2018/11/align-self-stretch.svg)To align *all* the items in a grid, this behavior can also be set on the grid container via the `<a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-align-items">align-items</a>` property.
 
 #### place-self
 
@@ -965,13 +967,13 @@ Examples:
 }
 ```
 
-<figure class="wp-block-image">![place self set to center](https://css-tricks.com/wp-content/uploads/2018/11/place-self-center.svg)</figure>```css
+![place self set to center](https://css-tricks.com/wp-content/uploads/2018/11/place-self-center.svg)```css
 .item-a {
   place-self: center stretch;
 }
 ```
 
-<figure class="wp-block-image">![place set set to center stretch](https://css-tricks.com/wp-content/uploads/2018/11/place-self-center-stretch.svg)</figure>All major browsers except Edge support the `place-self` shorthand property.
+![place set set to center stretch](https://css-tricks.com/wp-content/uploads/2018/11/place-self-center-stretch.svg)All major browsers except Edge support the `place-self` shorthand property.
 
 ### [\#](https://css-tricks.com/snippets/css/complete-guide-grid/#article-header-id-4)Special Functions and Keywords
 

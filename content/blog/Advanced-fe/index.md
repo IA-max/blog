@@ -961,7 +961,7 @@ body {
 
 TCP是通过序列号确认号和计时器来检测丢包和保证数据顺序的。使用校验和来检测报文段的错误。
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/Tcp_transport_example.gif)</figure>
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/Tcp_transport_example.gif)
 
 1. 发送方首先发送第一个包含序列号为1（可变化）和1460字节数据的TCP报文段给接收方。接收方以一个没有数据的TCP报文段来回复（只含报头），用确认号1461来表示已完全收到并请求下一个报文段。
 2. 发送方然后发送第二个包含序列号为1461和1460字节数据的TCP报文段给接收方。正常情况下，接收方以一个没有数据的TCP报文段来回复，用确认号2921（1461+1460）来表示已完全收到并请求下一个报文段。发送接收这样继续下去。

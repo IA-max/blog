@@ -24,7 +24,7 @@ var b = 456;
 ```
 
 
-**交换变量值方案一**<br>
+**交换变量值方案一**  
 最最最简单的办法就是使用一个临时变量了，不过使用临时变量的方法实在是太low了
 ```js
 var t;
@@ -35,7 +35,7 @@ b = t;
 
 首先把a的值存储到临时变量中，然后b赋值给a，最后拿出临时变量中的a值赋给b，这个办法是最基本的了
 
-**交换变量值方案二**<br>
+**交换变量值方案二**  
 下面的方案都不会有临时变量，我总结了一下，其实不使用临时变量的思路都是让其中一个变量变成一个a和b都有关系的值，这样可以先改变另一个变量值， 最后改变原修改的变量值
 
 **比如这个**
@@ -55,7 +55,7 @@ a = b - a;
 //但是感觉和的形式更容易理解
 ```
 
-**交换变量值方案三**<br>
+**交换变量值方案三**  
 这种方法对于第一次学习JavaScript的同学来说可能不了解，因为我们JavaScript很少会用到位操作，这是我在以前看算法竞赛书的时候学来的，通过底层位运算来进行交换变量值，也是上面的方案演化来的
 
 ```js
@@ -70,7 +70,7 @@ a ^= b;
 a = (b^=a^=b)^a;
 ```
 
-**交换变量值方案四**<br>
+**交换变量值方案四**  
 把a先变成了一个对象，这个对象保存着应该交换后的键值对，最后赋值搞定
 
 ```js
@@ -79,7 +79,7 @@ b = a.b;
 a = a.a;
 ```
 
-**交换变量值方案五**<br>
+**交换变量值方案五**  
 和上面的方法很像，只不过对象换成了数组
 
 ```js
@@ -89,10 +89,10 @@ a = a[1];
 ```
 
 
-**交换变量值方案六**<br>
+**交换变量值方案六**  
 这个办法十分的巧妙，不是我想出来的，想出来的人一定是大神，除非他是托梦想出来的，简单粗暴一行代码交换了a和b的变量值a = \[b,b=a\]\[0\];根据运算符优先级，首先执行b=a，此时的b直接得到了a的变量值，然后一步数组索引让a得到了b的值（简直不能再厉害）
 
-**交换变量值方案七**<br>
+**交换变量值方案七**  
 最后我的方案是利用了ES6的解构赋值语法，它允许我们提取数组和对象的值，对变量进行赋值，不过我现在测试用的chrome浏览器已经实现了
 
 ```js
@@ -166,14 +166,14 @@ function getTarget(ev) {
 function getSP() {
 	return {
 		top: document.documentElement.scrollTop || document.body.scrollTop,
-		left: document.documentElement.scrollLeft || document.body.scrollLeft;
+		left: document.documentElement.scrollLeft || document.body.scrollLeft
 	}
 }
 ```
 
 #### 跨浏览器获取可视窗口大小
 
-```javascript
+```js
 //跨浏览器获取可视窗口大小
 function getWindow() {
 	if (typeof window.innerWidth != 'undefined') {
@@ -187,8 +187,7 @@ function getWindow() {
 			height: document.documentElement.clientHeight
 		}
 	}
-},
-
+}
 ```
 
 #### js 对象冒充
@@ -239,7 +238,7 @@ console.log(o.say()); //name : zhangsan age: 20
 
 #### js获取屏幕坐标
 
-```javascript
+```html
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
@@ -284,26 +283,26 @@ console.log(o.say()); //name : zhangsan age: 20
 #### IE
 
 ```javascript
-document.body.clientWidth ==> BODY对象宽度
-document.body.clientHeight ==> BODY对象高度
-document.documentElement.clientWidth ==> 可见区域宽度
-document.documentElement.clientHeight ==> 可见区域高度
+document.body.clientWidth; // BODY对象宽度
+document.body.clientHeight; // BODY对象高度
+document.documentElement.clientWidth; // 可见区域宽度
+document.documentElement.clientHeight; // 可见区域高度
 ```
 
 #### Firefox
 
 ```javascript
-document.documentElement.scrollHeight ==> 浏览器所有内容高度
-document.body.scrollHeight ==> 浏览器所有内容高度
-document.documentElement.scrollTop ==> 浏览器滚动部分高度
-document.body.scrollTop ==>始终为0
-document.documentElement.clientHeight ==>浏览器可视部分高度
-document.body.clientHeight ==> 浏览器所有内容高度
+document.documentElement.scrollHeight; // 浏览器所有内容高度
+document.body.scrollHeight;            // 浏览器所有内容高度
+document.documentElement.scrollTop;    // 浏览器滚动部分高度
+document.body.scrollTop;               // 始终为0
+document.documentElement.clientHeight; // 浏览器可视部分高度
+document.body.clientHeight;            // 浏览器所有内容高度
 ```
 
 #### Chrome
 
-```javascript
+```text
 document.documentElement.scrollHeight ==> 浏览器所有内容高度
 document.body.scrollHeight ==> 浏览器所有内容高度
 document.documentElement.scrollTop==> 始终为0
@@ -321,7 +320,7 @@ document.body.clientHeight ==> 浏览器所有内容高度
 2. `scrollHeight、clientHeight` 在`DTD`已声明的情况下用`documentElement`，未声明的情况下用`body`
 
 
-*clientHeight* <br>
+*clientHeight*   
 在IE和FF下，该属性没什么差别，都是指浏览器的可视区域，即除去浏览器的那些工具栏状态栏剩下的页面展示空间的高度。
 
 
@@ -342,7 +341,7 @@ document.body.clientHeight ==> 浏览器所有内容高度
 只有`clientX`和`screenX` 皆大欢喜是W3C标准.其他的,都纠结了.  
 最给力的是，`chrome`和`safari`一条龙通杀!完全支持所有属性
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/bVkTT9_Converted.jpg)</figure>#### js拖拽效果
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/bVkTT9_Converted.jpg)#### js拖拽效果
 
 ```html
 <html lang="zn-CN">
@@ -544,6 +543,7 @@ console.log(num.sort(compare)); //Array [ -23, 0, 2, 4, 5, 32, 43 ]
 
 Date日期时间部分
 ----------
+asd
 
 #### js计算时间差
 
@@ -634,3 +634,78 @@ function countStr(str) {
 	return i + ':' + m;
 }
 ```
+
+
+---
+
+### JavaScript 运算符单竖杠 与数据处理
+
+很多朋友都对双竖杠“||”，了如指掌，因为这个经常用到。但是大家知道单竖杠吗？  
+这篇文章里面，js整数的操作运用了单竖杠，问我单竖杠是啥意思？
+
+```typescript
+parseInt //在JS整数操作的时候，相当于去除小数点
+Math.floor() //在正数的时候
+Math.ceil() //负数的时候
+```
+
+```typescript
+Math.ceil()  //用作向上取整。
+Math.floor() //用作向下取整。
+Math.round() //我们数学中常用到的四舍五入取整。
+console.log(0.6|0)//0
+console.log(1.1|0)//1
+console.log(3.65555|0)//3
+console.log(5.99999|0)//5
+console.log(-7.777|0)//-7
+```
+
+注：除了Math的三个方法处理数字，我们还经常用parseInt()、parseFloat()、toFixed()与toPrecision() 等等。 简单解释：
+
+toFixed方法用法如下：
+
+```typescript
+100.456001.toFixed(2); //100.47
+100.456001.toFixed(3); //100.456
+Number.prototype.toFixed.call(100.456001,2);  //100.47
+```
+
+缺点：用之后就会变成字符串。
+
+toPrecision用法如下：
+
+```typescript
+99.456001.toPrecision(5);  //99.456
+100.456001.toPrecision(5); //100.46
+Number.prototype.toPrecision.call(10.456001,5);  //10.456
+```
+
+单竖杠的运算规则
+--------
+
+看了上面的例子，大体知道单竖杠可以进行取整运算，就是只保留正数部分，小数部分通过拿掉，但是“|0”，又是如何进行运算的呢，为什么能“|0”能达到取整的目的呢？单竖杠不是0有会是多少呢？
+
+带着这些问题，我们看下面例子：
+
+```typescript
+console.log(3|4); //7
+console.log(4|4);//4
+console.log(8|3);//11
+console.log(5.3|4.1);//5
+console.log(9|3455);//3455
+```
+
+而单竖杠“|”就是转换为2进制之后相加得到的结果。例如我们拿简单的举例：
+
+
+```text
+3|4
+转换为二进制之后011|100  相加得到111=7
+4|4
+转换为二进制之后100 |100  相加得到100=4
+8|3
+转换为二进制之后1000 |011  相加得到1011=11
+```
+
+
+以此类推，我在这里就不一一列举了，单竖杠“|”运算就是转换为2进制之后相加得到的结果！

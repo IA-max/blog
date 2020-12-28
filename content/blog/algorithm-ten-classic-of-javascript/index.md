@@ -25,17 +25,17 @@ featuredimage:
 
 <table class="has-fixed-layout"><thead><tr><th> 排序算法 </th><th>平均时间复杂度 </th><th> 最好情况 </th><th> 最坏情况 </th><th>空间复杂间</th><th>排序方式</th><th>稳定性</th></tr></thead><tbody><tr><td>冒泡排序</td><td>O(n<sup>2</sup>)</td><td> O(n<sup>2</sup>) </td><td> O(n<sup>2</sup>) </td><td> O(1) </td><td>In-place</td><td>稳定</td></tr><tr><td>选择排序</td><td> O(n<sup>2</sup>) </td><td> O(n<sup>2</sup>) </td><td> O(n<sup>2</sup>) </td><td> O(1) </td><td>In-place </td><td> 稳定 </td></tr><tr><td>插入排序</td><td> O(n<sup>2</sup>) </td><td> O(n) </td><td> O(n<sup>2</sup>) </td><td> O(1) </td><td>In-place </td><td> 稳定 </td></tr><tr><td>希尔排序 </td><td> O(n log n) </td><td> O(n log<sup>2 </sup>n) </td><td>O(<sub>n</sub> log<sup>2</sup> <sub>n</sub>)</td><td> O(1) </td><td>In-place </td><td> 稳定 </td></tr><tr><td> 归并排序 </td><td> O(n log n) </td><td> O(n log n) </td><td> O(n logn) </td><td> O(n) </td><td>Out-place </td><td> 不稳定 </td></tr><tr><td> 快速排序 </td><td> O(n log n) </td><td> O(n log n) </td><td> O(n<sup>2</sup>)</td><td> O(log n) </td><td>In-place </td><td> 稳定 </td></tr><tr><td> 堆排序 </td><td> O(n log n) </td><td> O(n log n) </td><td> O(n log n) </td><td>O(1)</td><td>In-place </td><td> 不稳定 </td></tr><tr><td> 计数排序 </td><td> O(n + k) </td><td> O(n + k) </td><td> O(n + k) </td><td>O(k)</td><td>Out-place </td><td> 不稳定 </td></tr><tr><td>桶排序</td><td> O(n + k) </td><td> O(n + k) </td><td> O(n<sup>2</sup>) </td><td>O(n + k)</td><td>Out-place </td><td> 稳定 </td></tr><tr><td>基数排序</td><td> O(n \* k) </td><td> O(n \* k) </td><td> O(n \* k) </td><td> O(n + k) </td><td>Out-place </td><td> 稳定 </td></tr></tbody></table>
 
-**关于时间复杂度：**<br/>
+**关于时间复杂度：**  
 - 平方阶 (O(n2)) 排序 各类简单排序：直接插入、直接选择和冒泡排序。
 - 线性对数阶 (O(nlog2n)) 排序 快速排序、堆排序和归并排序；
 - O(n1+§)) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序
 - 线性阶 (O(n)) 排序 基数排序，此外还有桶、箱排序。
 
- **关于稳定性：**<br/>
+ **关于稳定性：**  
 - 稳定的排序算法：冒泡排序、插入排序、归并排序和基数排序.
 - 不是稳定的排序算法：选择排序、快速排序、希尔排序、堆排序.
 
-**名词解释：**<br/>
+**名词解释：**  
 - n：数据规模
 - k：“桶”的个数
 - In-place：占用常数内存，不占用额外内存
@@ -278,8 +278,10 @@ function bubbleSort($arr)
 
 ### 2. 动图演示
 
-<div class="wp-block-image"><figure class="aligncenter">[![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KSObDh5VGWhPE8Wh_selectionSort.gif)](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KSObDh5VGWhPE8Wh_selectionSort.gif)<figcaption> 动图演示 </figcaption></figure></div>### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
+[![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KSObDh5VGWhPE8Wh_selectionSort.gif)](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KSObDh5VGWhPE8Wh_selectionSort.gif)
+### 动图演示
 
+### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
 ```js
 function selectionSort(arr) {
     var len = arr.length;
@@ -317,7 +319,7 @@ def selectionSort(arr):
 
 ### 5. Go 代码实现[](#5-go-dai-ma-shi-xian)
 
-```js
+```go
 func selectionSort(arr []int) []int {
     length := len(arr)
     for i := 0; i < length-1; i++ {
@@ -335,7 +337,7 @@ func selectionSort(arr []int) []int {
 
 ### 6. Java 代码实现[](#6-java-dai-ma-shi-xian)
 
-```js
+```java
 public class SelectionSort implements IArraySort {
     @Override
     public int[] sort(int[] sourceArray) throws Exception {
@@ -365,7 +367,7 @@ public class SelectionSort implements IArraySort {
 7. PHP 代码实现[](#7-php-dai-ma-shi-xian)
 =====================================
 
-```js
+```php
 function selectionSort($arr)
 {
     $len = count($arr);
@@ -398,7 +400,9 @@ function selectionSort($arr)
 
 2\. 动图演示
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KSRUSDsU1-_gwBLT_insertionSort.gif)</figure>### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KSRUSDsU1-_gwBLT_insertionSort.gif)
+
+### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
 
 ```js
 function insertionSort(arr) {
@@ -448,7 +452,7 @@ console.log(binaryInsertionSort(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44,
 
 ### 4. Python 代码实现[](#4-python-dai-ma-shi-xian)
 
-```js
+```py
 def insertionSort(arr):
     for i in range(len(arr)):
         preIndex = i-1
@@ -462,7 +466,7 @@ def insertionSort(arr):
 
 ### 5. Go 代码实现[](#5-go-dai-ma-shi-xian)
 
-```js
+```go
 func insertionSort(arr []int) []int {
     for i := range arr {
         preIndex := i - 1
@@ -479,7 +483,7 @@ func insertionSort(arr []int) []int {
 
 ### 6. Java 代码实现[](#6-java-dai-ma-shi-xian)
 
-```js
+```java
 public class InsertSort implements IArraySort {
     @Override
     public int[] sort(int[] sourceArray) throws Exception {
@@ -536,7 +540,9 @@ function insertionSort($arr)
 
 希尔排序的基本思想是：先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/86dc5422e18bd545afef8898b1bb1315_Converted.jpg)</figure>### **1. 算法步骤**[](https://sort.hust.cc/4.shellsort#1-suan-fa-bu-zhou)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/86dc5422e18bd545afef8898b1bb1315_Converted.jpg)
+
+### **1. 算法步骤**[](https://sort.hust.cc/4.shellsort#1-suan-fa-bu-zhou)
 
 1. 选择一个增量序列 t1，t2，……，tk，其中 ti &gt; tj, tk = 1；
 2. 按增量序列个数 k，对序列进行 k 趟排序；
@@ -567,7 +573,7 @@ function shellSort(arr) {
 
 ### **3. Python 代码实现**[](https://sort.hust.cc/4.shellsort#3-python-dai-ma-shi-xian)
 
-```js
+```py
 def shellSort(arr):
     import math
     gap=1
@@ -588,7 +594,7 @@ def shellSort(arr):
 
 ### **4. Go 代码实现**[](https://sort.hust.cc/4.shellsort#4-go-dai-ma-shi-xian)
 
-```js
+```go
 func shellSort(arr []int) []int {
     length := len(arr)
     gap := 1
@@ -613,7 +619,7 @@ func shellSort(arr []int) []int {
 
 ### **5. Java 代码实现**[](https://sort.hust.cc/4.shellsort#5-java-dai-ma-shi-xian)
 
-```js
+```java
 public class ShellSort implements IArraySort {
     @Override
     public int[] sort(int[] sourceArray) throws Exception {
@@ -694,7 +700,8 @@ function shellSort($arr)
 
 ### **3. 动图演示**
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR9MTC7BHYOobU-Y_mergeSort.gif)</figure>### 4. JavaScript 代码实现[](#4-javascript-dai-ma-shi-xian)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR9MTC7BHYOobU-Y_mergeSort.gif)
+### 4. JavaScript 代码实现[](#4-javascript-dai-ma-shi-xian)
 
 ```js
 function mergeSort(arr) {  // 采用自上而下的递归方法
@@ -727,7 +734,7 @@ function merge(left, right)
 
 ### 5. Python 代码实现[](#5-python-dai-ma-shi-xian)
 
-```js
+```py
 def mergeSort(arr):
     import math
     if(len(arr)<2):
@@ -751,7 +758,7 @@ def merge(left,right):
 
 ### 6. Go 代码实现[](#6-go-dai-ma-shi-xian)
 
-```js
+```go
 func mergeSort(arr []int) []int {
     length := len(arr)
     if length < 2 {
@@ -788,7 +795,7 @@ func merge(left []int, right []int) []int {
 7. Java 代码实现[](#7-java-dai-ma-shi-xian)
 =======================================
 
-```js
+```java
 public class MergeSort implements IArraySort {
     @Override
     public int[] sort(int[] sourceArray) throws Exception {
@@ -830,7 +837,7 @@ public class MergeSort implements IArraySort {
 8. PHP 代码实现[](#8-php-dai-ma-shi-xian)
 =====================================
 
-```js
+```php
 function mergeSort($arr)
 {
     $len = count($arr);
@@ -883,7 +890,9 @@ function merge($left, $right)
 
 ### **2. 动图演示**
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR8iDzYGG-GLSb8O_quickSort.gif)</figure>### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR8iDzYGG-GLSb8O_quickSort.gif)
+
+### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
 
 ```js
 function quickSort(arr, left, right) {
@@ -942,7 +951,7 @@ function quickSort2(arr, low, high) {
 
 ### 4. Python 代码实现[](#4-python-dai-ma-shi-xian)
 
-```js
+```py
 def quickSort(arr, left=None, right=None):
     left = 0 if not isinstance(left,(int, float)) else left
     right = len(arr)-1 if not isinstance(right,(int, float)) else right
@@ -968,7 +977,7 @@ def swap(arr, i, j):
 
 ### 5. Go 代码实现[](#5-go-dai-ma-shi-xian)
 
-```js
+```go
 func quickSort(arr []int) []int {
     return _quickSort(arr, 0, len(arr)-1)
 }
@@ -999,7 +1008,7 @@ func swap(arr []int, i, j int) {
 
 ### 6. C++版[](#6cban)
 
-```
+```c++
 <pre class="EnlighterJSRAW" data-enlighter-group="" data-enlighter-highlight="" data-enlighter-language="cpp" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-theme="" data-enlighter-title=""> //严蔚敏《数据结构》标准分割函数
  Paritition1(int A[], int low, int high) {
    int pivot = A[low];
@@ -1028,7 +1037,7 @@ func swap(arr []int, i, j int) {
 
 ### 7. Java 代码实现[](#7-java-dai-ma-shi-xian)
 
-```js
+```java
 public class QuickSort implements IArraySort {
     @Override
     public int[] sort(int[] sourceArray) throws Exception {
@@ -1067,7 +1076,7 @@ public class QuickSort implements IArraySort {
 
 ### 8. PHP 代码实现[](#8-php-dai-ma-shi-xian)
 
-```js
+```php
 function quickSort($arr)
 {
     if (count($arr) <= 1)
@@ -1107,7 +1116,9 @@ function quickSort($arr)
 
 ### **2. 动图演示**
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KRR1vlUE00Usu8qB_heapSort.gif)</figure>### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KRR1vlUE00Usu8qB_heapSort.gif)
+
+### 3. JavaScript 代码实现[](#3-javascript-dai-ma-shi-xian)
 
 ```js
 var len;    // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
@@ -1315,7 +1326,9 @@ function heapSort($arr) {
 
 ### **1. 动图演示**[](https://sort.hust.cc/8.countingsort#1-dong-tu-yan-shi)
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR6H7q7zAmoZ2MSj_countingSort.gif)</figure>### **2. JavaScript 代码实现**[](https://sort.hust.cc/8.countingsort#2-javascript-dai-ma-shi-xian)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR6H7q7zAmoZ2MSj_countingSort.gif)
+
+### **2. JavaScript 代码实现**[](https://sort.hust.cc/8.countingsort#2-javascript-dai-ma-shi-xian)
 
 ```js
 function countingSort(arr, maxValue) {
@@ -1460,7 +1473,9 @@ function countingSort($arr, $maxValue = null)
 
 同时，对于桶中元素的排序，选择何种比较排序算法对于性能的影响至关重要。
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/demo_js_algorithmSort_bucketSort_1_Converted.jpg)</figure>### **1. 什么时候最快**[](https://sort.hust.cc/9.bucketsort#1-shen-me-shi-hou-zui-kuai)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/demo_js_algorithmSort_bucketSort_1_Converted.jpg)
+
+### **1. 什么时候最快**[](https://sort.hust.cc/9.bucketsort#1-shen-me-shi-hou-zui-kuai)
 
 当输入的数据可以均匀的分配到每一个桶中。
 
@@ -1619,7 +1634,9 @@ function bucketSort($arr, $bucketSize = 5)
 
 ### **2. LSD 基数排序动图演示**[](https://sort.hust.cc/10.radixsort#2-lsd-ji-shu-pai-xu-dong-tu-yan-shi)
 
-<figure class="wp-block-image">![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR9HMl708IHhEYGK_radixSort.gif)</figure>### **3. JavaScript 代码实现**[](https://sort.hust.cc/10.radixsort#3-javascript-dai-ma-shi-xian)
+![](https://blog.imaxyoung.com/wp-content/uploads/2019/09/assets_-Lm9JtwbhXVOfXyecToy_-Lm9KQIJAMvCgJQzErQS_-Lm9KR9HMl708IHhEYGK_radixSort.gif)### 
+
+**3. JavaScript 代码实现**[](https://sort.hust.cc/10.radixsort#3-javascript-dai-ma-shi-xian)
 
 ```js
 //LSD Radix Sort

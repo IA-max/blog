@@ -83,7 +83,7 @@ class MyComponent extends React.Component{
 
 #### 方法3：使用无状态组件
 
-实际上它是一个返回React组件的简单函数（而非变量）。在这里，您将看到一些新的ES6语法，它使javascript代码更短，更易于阅读。<br>
+实际上它是一个返回React组件的简单函数（而非变量）。在这里，您将看到一些新的ES6语法，它使javascript代码更短，更易于阅读。  
 首先创建一个名为MyComponent 的[**const**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)并将其设置为等于**function()**,并使用箭头函数**=&gt;**来声明函数逻辑： 
 
 ```jsx

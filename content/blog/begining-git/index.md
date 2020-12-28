@@ -51,7 +51,7 @@ git clone username@host:/path/to/repository
 第二个是 缓存区（Index），它像个缓存区域，临时保存你的改动；  
 最后是 HEAD，指向你最近一次提交后的结果。
 
-</div></div>##### **添加与提交**
+##### **添加与提交**
 
 你可以计划改动（把它们添加到缓存区）：
 
@@ -94,7 +94,7 @@ git remote add origin <server>
 在你创建仓库的时候，master 是“默认的”。  
 在其他分支上进行开发，完成后再将它们合并到主分支上。
 
-</div></div>创建一个叫做“feature\_x”的分支，并切换过去：
+创建一个叫做“feature\_x”的分支，并切换过去：
 
 ```bash
 git checkout -b feature_x

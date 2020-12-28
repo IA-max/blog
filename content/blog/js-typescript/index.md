@@ -37,7 +37,7 @@ let num: number
 
 从上面的代码中，我们可以知道变量 `num` 是 `number` 类型的，如果我们给 `num` 赋其他类型的值，则会报错：
 
-<figure class="wp-block-image">![类型报错](https://static.tasaid.com/blogs/8e5603f8b97de041f81698251c5cc94a.jpeg)</figure>是不是很简单？是的，这就是 TypeScript 的核心。
+![类型报错](https://static.tasaid.com/blogs/8e5603f8b97de041f81698251c5cc94a.jpeg)是不是很简单？是的，这就是 TypeScript 的核心。
 
 我们再来看看一个函数该如何表达：
 
@@ -85,7 +85,7 @@ if (result instanceof Error) {
 
 是不是很有意思？鹅妹子嘤！TypeScript 在说话，TypeScript 在让代码描述自身。
 
-<figure class="wp-block-image">![类型在说话](https://static.tasaid.com/blogs/0488223f3b2ffbc24eb68ae4c6197540.png)</figure>这就是静态数据类型的意义。静态类型在越复杂的应用中，需求越强烈。
+![类型在说话](https://static.tasaid.com/blogs/0488223f3b2ffbc24eb68ae4c6197540.png)这就是静态数据类型的意义。静态类型在越复杂的应用中，需求越强烈。
 
 这是 `react` 对于数据类型的约束：
 
@@ -508,7 +508,7 @@ $ npm i  --save-dev typescript
 
 按 `control+shift+B` 即可编译。
 
-<figure class="wp-block-image">![编译 Code](https://static.tasaid.com/blogs/ca484d61d09a03e92c816b2539c39767.jpeg)</figure>##### debug
+![编译 Code](https://static.tasaid.com/blogs/ca484d61d09a03e92c816b2539c39767.jpeg)##### debug
 
 在 `./.vscode/launch.json` 中加入如下代码即可调试，记得要在 `tsconfig.json` 里打开 `sourceMap` 选项：
 
@@ -534,7 +534,7 @@ $ npm i  --save-dev typescript
 
 然后在 `vs code` 中给代码打上断点，按 F5，一步步调试即可。
 
-<figure class="wp-block-image">![vscode debug](https://static.tasaid.com/blogs/b3aaefb3dcfacd5a6efd35abd0d5a50a.gif)</figure>#### 前言
+![vscode debug](https://static.tasaid.com/blogs/b3aaefb3dcfacd5a6efd35abd0d5a50a.gif)#### 前言
 
 在了解装饰器之前，我们先看一段代码：
 
@@ -850,7 +850,7 @@ class User {
 }
 ```
 
-<figure class="wp-block-image">![运行代码](https://static.tasaid.com/blogs/f5cc17abfcb4ecdc20ab0b9622704a28.jpeg)</figure>#### 元数据反射
+![运行代码](https://static.tasaid.com/blogs/f5cc17abfcb4ecdc20ab0b9622704a28.jpeg)#### 元数据反射
 
 反射，就是在运行时动态获取一个对象的一切信息：方法/属性等等，特点在于动态**类型反推导**。在 TypeScript 中，反射的原理是通过设计阶段对对象注入元数据信息，在运行阶段读取注入的元数据，从而得到对象信息。
 
@@ -1057,7 +1057,7 @@ const createController = (app: Express) => {
 
 至此，我们的 `express` 路由进化完毕，效果如下：
 
-<figure class="wp-block-image">![路由进化](https://static.tasaid.com/blogs/1e9c56855d825cd3c6e22af5553f4840.png)</figure>完整的例子可以参考我的 [Github](https://tasaid.com/link?url=https%3A%2F%2Fgithub.com%2FlinkFly6%2Fts-router-to-controller)。
+![路由进化](https://static.tasaid.com/blogs/1e9c56855d825cd3c6e22af5553f4840.png)完整的例子可以参考我的 [Github](https://tasaid.com/link?url=https%3A%2F%2Fgithub.com%2FlinkFly6%2Fts-router-to-controller)。
 
 #### 结语
 
@@ -1065,7 +1065,7 @@ const createController = (app: Express) => {
 
 装饰器来装饰路由，并且封装 `router` 操作的的思路缘起 `.NET MVC` 架构：
 
-<figure class="wp-block-image">![.NET MVC](https://static.tasaid.com/blogs/3a2e5a58317f1e155f34684febcd921f.png)</figure>`angular 2.x` 使用也引入了装饰器作为核心开发，随着规范的推进，相信装饰器进入大家视野，应用的场景也会越来越多。
+![.NET MVC](https://static.tasaid.com/blogs/3a2e5a58317f1e155f34684febcd921f.png)`angular 2.x` 使用也引入了装饰器作为核心开发，随着规范的推进，相信装饰器进入大家视野，应用的场景也会越来越多。
 
 - - - - - -
 

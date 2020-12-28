@@ -63,7 +63,7 @@ featuredimage:
 5. [Server-side request 后端请求](#ssr)
 6. [Websocket](#ws)
 
-- - - - - -
+------
 
 #### Cors
 
@@ -78,7 +78,7 @@ featuredimage:
 
 **1) 简单请求**
 
-只要同时满足以下两大条件，就属于简单请求。<br>
+只要同时满足以下两大条件，就属于简单请求。  
 条件1：使用下列方法之一：
 - GET
 - HEAD
@@ -287,7 +287,7 @@ Flickr API服务器。
 ```
 
 前面代码中的文件指示任何来源都可以发出跨来源请求(domain ="\*"), 无论来源是否支持SSL (secure = "false"). 允许来自以下位置的授权请求标头（headers = "Authorization")
-所有来源 (domain = "\*"). <br>
+所有来源 (domain = "\*").   
 可以在此找到crossdomain.xml的[完整规范](www.adobe.com/devnet/articles/crossdomain\_policy\_file\_spec.html)
 
 图D.5显示了来自Flash的跨域请求的流程。在发出跨域请求之前，Flash首先读取crossdomain.xml文件b。如果该策略映射到发出请求的客户端，则Flash将请求发送到服务器。
@@ -488,8 +488,9 @@ Websocket 是 HTML5 的一个持久化的协议，它实现了浏览器与服务
 
 我们先来看个例子：本地文件 socket.html 向`localhost:3000`发生数据和接受数据：
 
-```js
-// socket.html
+
+```html
+<!--socket.html -->
 <script>
     let socket = new WebSocket('ws://localhost:3000');
     socket.onopen = function () {
@@ -499,6 +500,10 @@ Websocket 是 HTML5 的一个持久化的协议，它实现了浏览器与服务
       console.log(e.data);//接收服务器返回的数据
     }
 </script>
+```
+
+
+```js
 // server.js
 let express = require('express');
 let app = express();
@@ -520,24 +525,26 @@ window.name属性的独特之处：name值在不同的页面（甚至不同域�
 
 其中a.html和b.html是同域的，都是`http://localhost:3000`;而c.html是`http://localhost:4000`
 
+
+```markup
+<!-- a.html(http://localhost:3000/b.html)->
+<iframe src="http://localhost:4000/c.html" frameborder="0" onload="load()" id="iframe"></iframe>
+```
+
 ```js
- // a.html(http://localhost:3000/b.html)
-  <iframe src="http://localhost:4000/c.html" frameborder="0" onload="load()" id="iframe"></iframe>
-  <script>
-    let first = true
-    // onload事件会触发2次，第1次加载跨域页，并留存数据于window.name
-    function load() {
-      if(first){
-      // 第1次onload(跨域页)成功后，切换到同域代理页面
-        let iframe = document.getElementById('iframe');
-        iframe.src = 'http://localhost:3000/b.html';
-        first = false;
-      }else{
-      // 第2次onload(同域b.html页)成功后，读取同域window.name中数据
-        console.log(iframe.contentWindow.name);
-      }
-    }
-  </script>
+let first = true
+// onload事件会触发2次，第1次加载跨域页，并留存数据于window.name
+function load() {
+  if(first){
+  // 第1次onload(跨域页)成功后，切换到同域代理页面
+    let iframe = document.getElementById('iframe');
+    iframe.src = 'http://localhost:3000/b.html';
+    first = false;
+  }else{
+  // 第2次onload(同域b.html页)成功后，读取同域window.name中数据
+    console.log(iframe.contentWindow.name);
+  }
+}
 ```
 
 b.html为中间代理页，与a.html同域，内容为空。
@@ -628,4 +635,3 @@ b.html为中间代理页，与a.html同域，内容为空。
 - 不管是 Node 中间件代理还是 nginx 反向代理，主要是通过同源策略对服务器不加限制；
 - 日常工作中，用得比较多的跨域方案是 cors 和 nginx 反向代理。
 
-</body>
