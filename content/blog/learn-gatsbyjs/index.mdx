@@ -151,7 +151,7 @@ plugins: [`gatsby-plugin-sass`],
 }
 ```
 
-在 .sass 或 .scss 文件中编写样式表, 并引入到 JavaScript 文件
+在.sass 或 .scss 文件中编写样式表, 并引入到 JavaScript 文件
 
 ```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -176,8 +176,6 @@ Gatsby处理数据是基于插件.   插件从数据源中提取数据, 也可�
 #### 向 GraphQL 添加数据
 ...
 
-
-
 ```jsx
 import React from 'react';
 const AboutPage = () => (
@@ -188,6 +186,113 @@ const AboutPage = () => (
 );
 export default AboutPage;
 ```
+
+
+
+### 添加Mdx到Gatsby
+
+1. 安装插件, 删除无关插件
+```bash
+yarn add  gatsby-plugin-mdx gatsby-plugin-feed-mdx @mdx-js/mdx @mdx-js/react
+yarn remove gatsby-transformer-remark gatsby-plugin-feed
+```
+
+2. gatsby-config.js 替换`gatsby-transformer-remark`为 `gatsby-plugin-mdx`
+```diff-javascript
+{
+-  resolve: `gatsby-transformer-remark`,
++  resolve: `gatsby-plugin-mdx`,
+   options: {
++    extensions: [`.mdx`, `.md`],
+-    plugins: [
++    gatsbyRemarkPlugins: [
+       {
+         resolve: `gatsby-remark-images`,
+         options: {
+           maxWidth: 590,
+         },
+       },
+       {
+         resolve: `gatsby-remark-responsive-iframe`,
+         options: {
+           wrapperStyle: `margin-bottom: 1.0725rem`,
+         },
+       },
+       `gatsby-remark-prismjs`,
+       `gatsby-remark-copy-linked-files`,
+       `gatsby-remark-smartypants`,
+     ],
+   },
+  },
+```
+
+```diff-javascript
+- `gatsby-plugin-feed`,
++ `gatsby-plugin-feed-mdx`
+```
+
+3. gatsby-node.js 替换多个 allMarkdownRemark 为 allMdx
+```diff-javascript
+# line 11
+- allMarkdownRemark(
++ allMdx(
+# line 35
+- const posts = result.data.allMarkdownRemark.edges
++ const posts = result.data.allMdx.edges
+# line 56
+- if (node.internal.type === `MarkdownRemark`) {
++ if (node.internal.type === `Mdx`) {
+```
+
+4. 利用IDE全文搜索替换:
+- 将所有markdownRemark 替换为 mdx
+- GraphQL查询中的html 替换为 body
+
+5. 替换dangerouslySetInnerHTML
+```diff-javascript
+- <section dangerouslySetInnerHTML={{ __html: post.html }} />
++ <MDXRenderer>{post.body}</MDXRenderer>
+```
+
+参考指南
+- [Gatsby](https://www.gatsbyjs.com/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/)
+- [gatsby-plugin-mdx](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx)
+- [MDX](https://mdxjs.com/)
+
+---
+
+### 添加react-gist到Gatsby
+1. 安装react-gist, 附上React-gist [NPM地址](https://github.com/tleunen/react-gist)
+```bash
+yarn add react-gist
+```
+2. Post组件引入Gist  
+```jsx
+import Gist from 'react-gist'
+```
+3. 在mdx或md文件中使用Gist
+```jsx
+<Gist id='68d393e7076e9741ccfe729e3c756647' file='sample_text'/>
+```
+示例如下:
+<Gist id='68d393e7076e9741ccfe729e3c756647' file='sample_text'/>
+
+4. 全局注册组件
+MDX有一个新功能，叫全局Shortcodes. 在post组件中添加MDXProvider即可, 使mdx文件中使用组件功能. 
+```diff-jsx
++ import {MDXProvider} from '@mdx-js/react'
++ const shortcodes = {YouTube, Twitter, TomatoBox}
+
+- <MDXRenderer>{mdx.body}</MDXRenderer>
++ <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
+```
+
+
+
+
+
+
+
 
 
 
