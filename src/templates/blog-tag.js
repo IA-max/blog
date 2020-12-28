@@ -7,7 +7,7 @@ import Pagination from "../components/pagination"
 import renderTag from "../components/renderTag"
 
 const BlogTag = ({data, pageContext}) => {
-    const {allMarkdownRemark} = data
+    const {allMdx} = data
     const {currentPage, numPages, tag, allTags} = pageContext
     const tags = allTags.sort(function (a, b) {
         if (a < b) {
@@ -41,7 +41,7 @@ const BlogTag = ({data, pageContext}) => {
             <section className="text-gray-700 body-font overflow-hidden">
                 <div className="container px-5 py-10 mx-auto mx-auto md:w-3/4 lg:w-2/4">
                     <div className="-my-8">
-                        {allMarkdownRemark.edges.map(renderTag)}
+                        {allMdx.edges.map(renderTag)}
                     </div>
                 </div>
             </section>
@@ -56,7 +56,7 @@ export default BlogTag
 
 export const query = graphql`
     query blogPostsListByTag($tag: String, $skip: Int!, $limit: Int!) {
-        allMarkdownRemark(
+        allMdx(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { tag: { in: [$tag] } } }
             limit: $limit
@@ -64,7 +64,6 @@ export const query = graphql`
         ) {
             edges {
                 node {
-                    html
                     excerpt(pruneLength: 70)
                     fields {
                         slug

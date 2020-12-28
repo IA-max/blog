@@ -7,7 +7,7 @@ import Pagination from "../components/pagination"
 import renderList from "../components/renderList"
 
 const BlogCategory = ({data, pageContext}) => {
-    const {allMarkdownRemark} = data
+    const {allMdx} = data
     const {currentPage, numPages, category, allCategories} = pageContext
 
     return (<Layout>
@@ -31,7 +31,7 @@ const BlogCategory = ({data, pageContext}) => {
             <section className="text-gray-700 body-font overflow-hidden">
                 <div className="container px-5 py-10 mx-auto mx-auto md:w-3/4 lg:w-2/4">
                     <div className="-my-8">
-                        {allMarkdownRemark.edges.map(renderList)}
+                        {allMdx.edges.map(renderList)}
                     </div>
                 </div>
             </section>
@@ -46,7 +46,7 @@ const BlogCategory = ({data, pageContext}) => {
 export default BlogCategory
 export const query = graphql`
     query blogPostsListByCategory($category: String, $skip: Int!, $limit: Int!) {
-        allMarkdownRemark(
+        allMdx(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { category: { in: [$category] } } }
             limit: $limit
@@ -54,7 +54,6 @@ export const query = graphql`
         ) {
             edges {
                 node {
-                    html
                     excerpt(pruneLength: 70)
                     fields {
                         slug

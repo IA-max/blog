@@ -5,13 +5,13 @@ import ConcatWords from "../utils/ConcatWords"
 import formatDate from "../utils/formatDate"
 
 const BlogFeatured = () => {
-  const { markdownRemark } = useStaticQuery(query)
+  const { mdx } = useStaticQuery(query)
 
   return (
     <div>
       <div md={6}>
         <div>
-          <Link to={markdownRemark.fields.slug}>
+          <Link to={mdx.fields.slug}>
          
           </Link>
         </div>
@@ -24,23 +24,23 @@ const BlogFeatured = () => {
               By{" "}
               <Link
                 to={`/blog/author/${kebabCase(
-                  markdownRemark.frontmatter.author
+                  mdx.frontmatter.author
                 )}`}
               >
-                {markdownRemark.frontmatter.author}
+                {mdx.frontmatter.author}
               </Link>
             </div>
 
-            <Link to={markdownRemark.fields.slug}>
-              <div>{markdownRemark.frontmatter.title}</div>
+            <Link to={mdx.fields.slug}>
+              <div>{mdx.frontmatter.title}</div>
             </Link>
 
             <div>
-              {formatDate(markdownRemark.frontmatter.date)}
+              {formatDate(mdx.frontmatter.date)}
             </div>
 
             <div>
-              {markdownRemark.frontmatter.category.map((cat, index, arr) => (
+              {mdx.frontmatter.category.map((cat, index, arr) => (
                 <ConcatWords arrCount={arr.length} index={index} key={cat}>
                   <Link to={`/blog/category/${kebabCase(cat)}`}>{cat}</Link>
                 </ConcatWords>
@@ -57,8 +57,8 @@ export default BlogFeatured
 
 const query = graphql`
   query BlogFeatured {
-    markdownRemark(frontmatter: { featured: { eq: true } }) {
-      html
+    mdx(frontmatter: { featured: { eq: true } }) {
+      body
       fields {
         slug
       }

@@ -6,7 +6,7 @@ import Pagination from "../components/pagination"
 
 const BlogPostList = ({data, pageContext}) => {
     const {currentPage, numPages} = pageContext
-    const posts = data.allMarkdownRemark.edges;
+    const posts = data.allMdx.edges;
 
     return (<Layout>
         <section className="container w-full px-4 py-24 mx-auto md:w-3/4 lg:w-2/4">
@@ -21,7 +21,7 @@ const BlogPostList = ({data, pageContext}) => {
                                       className="text-2xl text-gray-900 font-medium hover:text-purple-700 hover:no-underline">{post.node.frontmatter.title}</Link>
                             </h2>
                             <p className="mb-4 text-sm font-normal text-gray-600">
-                                {post.node.frontmatter.excerpt || post.node.frontmatter.description}
+                                {post.node.frontmatter.excerpt}
                             </p>
                             <Link to={post.node.fields.slug}
                                   className="btn btn-light btn-sm bg-gray-100 px-2 py-2 rounded hover:no-underline text-xs hover:bg-gray-400 hover:text-white">Continue
@@ -38,7 +38,7 @@ const BlogPostList = ({data, pageContext}) => {
 export default BlogPostList
 export const query = graphql`
     query blogPostsList($skip: Int!, $limit: Int!) {
-        allMarkdownRemark(
+        allMdx(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { featured: { eq: false } } }
             limit: $limit
@@ -55,19 +55,6 @@ export const query = graphql`
                         date(formatString: "MM-DD YYYY")
                         author
                         category
-                        featuredimage {
-                            src {
-                                childImageSharp {
-                                    fluid(maxWidth: 1000) {
-                                        ...GatsbyImageSharpFluid
-                                    }
-                                    fixed(width: 200, height: 100) {
-                                        ...GatsbyImageSharpFixed
-                                    }
-                                }
-                            }
-                            alt
-                        }
                     }
                 }
             }

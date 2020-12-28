@@ -1,9 +1,6 @@
 import React from "react"
 import formatDate from "../utils/formatDate"
 import {Link} from "gatsby"
-// import Img from "gatsby-image"
-// import kebabCase from "lodash.kebabcase"
-// import ConcatWords from "../utils/ConcatWords"
 
 const renderList = ({node}) => {
     // const featuredimage = node.frontmatter.featuredimage
@@ -17,7 +14,8 @@ const renderList = ({node}) => {
                         {node.frontmatter.title}
                     </Link>
                 </h2>
-                <div className="leading-relaxed text-sm" dangerouslySetInnerHTML={{__html: node.excerpt}}></div>
+                {/*<div className="leading-relaxed text-sm" dangerouslySetInnerHTML={{__html: node.excerpt}}></div>*/}
+                <div className="leading-relaxed text-sm">{node.excerpt}</div>
                 <div>
                 </div>
             </div>

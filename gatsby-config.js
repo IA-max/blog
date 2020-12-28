@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `IMY Blog`,
+        title: `Max's log`,
         author: {
-            name: `Max Young`,
+            name: `Max`,
             summary: `who lives and works in GuangDong building useful things.`,
         },
         description: `A blog share what tech can do.`,
@@ -29,16 +29,16 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-plugin-mdx`,
             options: {
-                plugins: [
+                extensions: [`.mdx`, `.md`],
+                gatsbyRemarkPlugins: [
                     {
                         resolve: 'gatsby-remark-code-titles',
                         options: {
                           className: 'gatsby-remark-code-title',
                         },
-                      }, // IMPORTANT: this must be ahead of other plugins that use code blocks
-
+                    },
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
@@ -69,7 +69,6 @@ module.exports = {
                             escapeEntities: {},
                         },
                     },
-                  
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
@@ -82,9 +81,9 @@ module.exports = {
                             wrapperStyle: `margin-bottom: 1.0725rem`,
                         },
                     },
-                    `gatsby-remark-prismjs`,
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
+
                 ],
             },
         },
@@ -94,7 +93,7 @@ module.exports = {
                 trackingId: `G-5C987MJPC9`,
             },
         },
-        `gatsby-plugin-feed`,
+        `gatsby-plugin-feed-mdx`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -108,19 +107,13 @@ module.exports = {
             },
         },
         `gatsby-plugin-react-helmet`,
-        // {
-        //     resolve: `gatsby-plugin-sass`,
-        //     options: {
-        //         implementation: require('sass')
-        //     },
-        // },
         `gatsby-plugin-postcss`,
         {
            resolve: `gatsby-plugin-sass`,
                options: {
                    postCssPlugins: [
                        require("tailwindcss"),
-                       require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+                       require("./tailwind.config.js"),
                    ],
                },
         },
