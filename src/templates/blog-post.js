@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react'
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import {MDXRenderer} from "gatsby-plugin-mdx"
+import {MDXProvider} from "@mdx-js/react"
+import Gist from 'react-gist'
 import kebabCase from "lodash.kebabcase"
 import {graphql, Link} from "gatsby"
 import Img from "gatsby-image"
@@ -12,6 +14,7 @@ import Comment from "../components/comment"
 import RecommandPost from '../components/recommendPost'
 
 const BlogPost = ({data, pageContext}) => {
+    const shortcodes = {Link, Gist}
     const {mdx} = data
     const commentBox = React.createRef()
     // const {prev, next} = pageContext
@@ -79,16 +82,13 @@ const BlogPost = ({data, pageContext}) => {
                         </div>
                     </Link>
                 </div>
-                {/*<div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent"*/}
-                {/*     dangerouslySetInnerHTML={{__html: mdx.html}}></div>*/}
                 <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent">
-                    <MDXRenderer>{mdx.body}</MDXRenderer>
+                    <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
                 </div>
             </article>
             <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
                 <Comment commentBox={commentBox}/>
             </div>
-
             <RecommandPost allpost={pageContext.allPost} category={mdx.frontmatter.category}/>
             {/* <section className="py-20  w-full mx-auto prose md:w-3/4 lg:w-4/6">
         <div className="grid grid-cols-1 gap-24 md:grid-cols-2">

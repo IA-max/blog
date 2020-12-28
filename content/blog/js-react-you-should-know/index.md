@@ -13,6 +13,12 @@ featuredimage:
   src: "cover-all-react.png"
   alt: ""
 ---
+import Gist from 'react-gist';
+
+<Gist id='5995ea726914f280afb3' file='Chef-Dockerfile'/>
+721ac3bf1618cdb0a591a82fd26c9c7c#file-html_meta-md
+
+
 ### 什么是React？
 
 React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序。它用于处理Web和移动应用程序的视图层。React是由Facebook的软件工程师Jordan Walke创建的。React于2011年首次部署在Facebook的News Feed上，2012年首次部署在Instagram上。
