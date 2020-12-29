@@ -12,6 +12,13 @@ const Acc = ({props}) => {
         return ''
     }
     const htmlStr = props.map((txt,ind) => {
+        const content = () => {
+            if(!txt.isComponent){
+                return (<div dangerouslySetInnerHTML={{ __html: txt.content }}></div>)
+            } else {
+                return txt.content
+            }
+        }
         return (
             <AccordionItem key={ind}>
                 <AccordionItemHeading>
@@ -20,7 +27,7 @@ const Acc = ({props}) => {
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                    <div dangerouslySetInnerHTML={{ __html: txt.content }}></div>
+                    { content() }
                 </AccordionItemPanel>
             </AccordionItem>
         )

@@ -1,12 +1,15 @@
 import React from 'react';
-import {graphql} from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Acc from '../components/acc'
+import Gist from "react-gist";
+
 
 
 const ResourcePage = ({data, location}) => {
     const siteTitle = data.site.siteMetadata.title;
+    const shortcodes = {Link, Gist}
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -30,15 +33,55 @@ const ResourcePage = ({data, location}) => {
 
                 <div className="mx-auto prose articleContent">
 
-                    <h4>学习资源</h4>
-                    <ul>
-                        <li><a href="https://leetcode-cn.com">Leet Code</a></li>
-                        <li><a href="http://devdocs.io/">devdocs</a></li>
-                        <li><a href="https://cn.history.js.org/">JavaScript 20 年</a></li>
-                        <li><a href="https://lab.github.com/">Learning Lab</a></li>
-                        <li><a href="https://caniuse.com/">Can I Use</a></li>
-                    </ul>
-                    <hr/>
+                    <h4>快捷链接</h4>
+                    <Acc props={
+                        [{
+                            title: `学习资源`,
+                            content: `<ul>
+                                    <li><a href="https://leetcode-cn.com">Leet Code</a></li>
+                                    <li><a href="http://devdocs.io/">devdocs</a></li>
+                                    <li><a href="https://cn.history.js.org/">JavaScript 20 年</a></li>
+                                    <li><a href="https://lab.github.com/">Learning Lab</a></li>
+                                    <li><a href="https://caniuse.com/">Can I Use</a></li>
+                                    <li><a href="https://gist.github.com/IA-max/721ac3bf1618cdb0a591a82fd26c9c7c#file-git_cheatsheet-md">Git CheatSheet</a></li>
+                                    <li><a href="https://www.techview.dev/docs/react-basics">react-basics</a></li>
+                                    <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn">MDN Web Docs</a></li>
+                                    <li><a href="https://www.electronjs.org/docs">Electron</a></li>
+                                    <li><a href="https://fullstackopen.com/zh/">Full Stack Open</a></li>
+                                </ul>`
+                        },{
+                            title: `Tooling`,
+                            content: `<ul>
+                                    <li><a href="http://www.jshint.com/">jshit</a></li>
+                                    <li><a href="https://www.npmjs.com/">Npm</a></li>
+                                    <li><a href="https://www.typescriptlang.org/index.html"></a>TypeScript</li>
+                                    <li><a href="https://jasmine.github.io/">Jasmine</a></li>
+                                    <li><a href="Chrome Developer Tools">https://developer.chrome.com/devtools</a></li>
+                                    <li><a href="https://gruntjs.com/">Grunt</a></li>
+                                    <li><a href="https://webpack.js.org/">webpack</a></li>
+                                </ul>`
+                        },
+                            {
+                                title: `CSS类`,
+                                content: `<ul>
+                                    <li><a href="https://sass-lang.com/">sass</a></li>
+                                    <li><a href="http://lesscss.org/">Less</a></li>
+                                    <li><a href="https://get.foundation/">Foundation</a></li>
+                                </ul>`
+                            },
+                            {
+                                title: `JS 框架`,
+                                content: `<ul>
+                                    <li><a href="https://zh-hans.reactjs.org">react</a></li>
+                                    <li><a href="https://vuejs.org/">vue</a></li>
+                                    <li><a href="https://angular.io/">angular</a></li>
+                                    <li><a href="https://www.meteor.com/">Meteor</a></li>
+                                    <li><a href="https://backbonejs.org/">Backbone</a></li>
+                                </ul>`
+                            },
+                        ]
+                    }></Acc>
+
 
                     <h4>开源镜像资源</h4>
                     <p>更多在 https://developer.aliyun.com/mirror/</p>
@@ -158,8 +201,7 @@ yum -y update
                         }]
                     }></Acc>
 
-
-
+                  <hr/>
 
                 </div>
             </article>
@@ -168,7 +210,6 @@ yum -y update
 };
 
 export default ResourcePage;
-
 export const pageQuery = graphql`
     query {
         site {

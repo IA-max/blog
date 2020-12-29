@@ -3,6 +3,10 @@ import {Link} from 'gatsby';
 import C from "../components/cat"
 const pages = [
     {
+      title: 'Index',
+      url: '/'
+    },
+    {
         title: 'Article',
         url: '/article'
     },
