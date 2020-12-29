@@ -12,6 +12,12 @@ module.exports = {
         },
     },
     plugins: [
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: `UA-186069955-1`,
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
@@ -85,12 +91,6 @@ module.exports = {
                     `gatsby-remark-smartypants`,
 
                 ],
-            },
-        },
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: `G-5C987MJPC9`,
             },
         },
         `gatsby-plugin-feed-mdx`,
