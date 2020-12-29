@@ -1,5 +1,5 @@
 ---
-title: ES8新特性 - (2017)
+title: ES 8新特性 - (2017)
 date: '2019-11-26T17:56:24+08:00'
 status: publish
 permalink: /es8

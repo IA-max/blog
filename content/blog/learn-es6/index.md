@@ -1,5 +1,5 @@
 ---
-title: ES6新特性 - (2015)
+title: ES 6新特性 - (2015)
 date: '2019-11-26T17:54:25+08:00'
 status: publish
 permalink: /es6

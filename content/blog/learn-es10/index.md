@@ -1,5 +1,5 @@
 ---
-title: ES10新特性 - (2019)
+title: ES 10新特性 - (2019)
 date: '2019-11-26T17:57:32+08:00'
 status: publish
 permalink: /es10%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882019%ef%bc%89

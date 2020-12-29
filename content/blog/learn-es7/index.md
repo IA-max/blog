@@ -1,5 +1,5 @@
 ---
-title: ES7新特性 - (2016)
+title: ES 7新特性 - (2016)
 date: '2019-11-26T17:55:40+08:00'
 status: publish
 permalink: /es7%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882016%ef%bc%89
