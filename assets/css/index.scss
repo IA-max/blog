@@ -202,3 +202,34 @@ html {
     padding: 20px;
     animation: fadein 0.35s ease-in;
 }
+
+
+
+.fixTable{
+    @apply table-auto;
+    @apply w-full;
+    @apply text-left;
+    table-layout: fixed;
+    thead {
+        th {
+            border: none;
+            @apply px-4;
+            @apply py-3;
+            @apply tracking-wider;
+            @apply font-medium;
+            @apply text-gray-900;
+            @apply text-sm;
+            @apply bg-gray-100;
+            @apply rounded-tl;
+            @apply rounded-bl;
+        }
+    }
+    tbody {
+        td {
+            @apply text-sm;
+            @apply border-b-2;
+            @apply px-4;
+            @apply py-3;
+        }
+    }
+}
