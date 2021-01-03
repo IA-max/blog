@@ -43,6 +43,7 @@ module.exports = {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
+                remarkPlugins: [require('remark-slug')],
                 gatsbyRemarkPlugins: [
                     {
                         resolve: 'gatsby-remark-code-titles',
@@ -98,6 +99,7 @@ module.exports = {
                 ],
             },
         },
+        'gatsby-remark-reading-time',
         `gatsby-plugin-feed-mdx`,
         {
             resolve: `gatsby-plugin-manifest`,

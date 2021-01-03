@@ -230,6 +230,9 @@ const ResourcePage = ({data, location}) => {
                 title: 'quirksmode',
                 content: 'https://www.quirksmode.org/compatibility.html'
             }, {
+                title: 'JS API Tutorial',
+                content: 'https://help.tableau.com/samples/en-us/js_api/tutorial.htm'
+            }, {
                 title: 'JavaScript Katas',
                 content: 'https://jskatas.org/'
             }, {
@@ -337,9 +340,6 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'rubygems',
                 content: 'https://rubygems.org/'
-            }, {
-                title: '',
-                content: ''
             }]
         }
 
@@ -385,9 +385,6 @@ const ResourcePage = ({data, location}) => {
             data: [{
                 title: 'bootcdn',
                 content: 'https://www.bootcdn.cn/',
-            }, {
-                title: '',
-                content: '',
             }]
         }
 
@@ -396,9 +393,6 @@ const ResourcePage = ({data, location}) => {
             data: [{
                 title: 'Google JS Guide',
                 content: 'https://google.github.io/styleguide/javascriptguide.xml',
-            }, {
-                title: '',
-                content: '',
             }]
         }
 
@@ -476,9 +470,6 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'phodal',
                 content: 'https://www.phodal.com/'
-            }, {
-                title: '',
-                content: ''
             }]
         }
 
@@ -499,9 +490,6 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'microsoft opensource',
                 content: 'https://cloudblogs.microsoft.com/opensource/#home'
-            }, {
-                title: '',
-                content: ''
             }]
         }
 
@@ -592,9 +580,6 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'apollo graphql',
                 content: 'https://www.apollographql.com/docs/'
-            }, {
-                title: '',
-                content: ''
             }]
         }
 
@@ -603,9 +588,6 @@ const ResourcePage = ({data, location}) => {
             data: [{
                 title: 'weex',
                 content: 'https://weex.apache.org/'
-            }, {
-                title: '',
-                content: ''
             }]
         }
 
@@ -669,9 +651,6 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'material angularjs',
                 content: 'https://material.angularjs.org/latest/'
-            }, {
-                title: '',
-                content: ''
             }]
         }
 
@@ -792,11 +771,10 @@ const ResourcePage = ({data, location}) => {
                         https://frontender-ua.medium.com/frontend-weekly-digest-190-21-27-december-2020-f8e203cc4f55
 
                         <h4>开源镜像资源</h4>
-                        <p>更多在 https://developer.aliyun.com/mirror/</p>
                         <Acc props={
                             [{
                                 title: `TabBao镜像`,
-                                content: `<ol>
+                                content: ` <p>更多在 https://developer.aliyun.com/mirror/</p><ol>
                                     <li>NPM开源镜像: http://npm.taobao.org/mirrors</li>
                                     <li>Node.js 镜像: http://npm.taobao.org/mirrors/node</li>
                                     <li>alinode 镜像: http://npm.taobao.org/mirrors/alinode</li>
@@ -813,38 +791,38 @@ const ResourcePage = ({data, location}) => {
                         }></Acc>
 
                         <h4>Ubuntu 镜像</h4>
-                        <div>
-                            用你熟悉的编辑器打开： /etc/apt/sources.list <br/> 替换默认的 http://archive.ubuntu.com/ 为 mirrors.aliyun.com
-                        </div>
                         <Acc props={
                             [{
                                 title: `Ubuntu 14.04.5 LTS`,
-                                content: `<pre>
-deb https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse <br/>
-deb-src https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse<br/>
-deb https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse<br/>
-deb-src https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse<br/>
-deb https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse<br/>
-deb-src https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse<br/>
-deb https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
-deb-src https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
-## Not recommended<br/>
-# deb https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
-# deb-src https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
+                                content: `<div>
+                            用你熟悉的编辑器打开： /etc/apt/sources.list <br/> 替换默认的 http://archive.ubuntu.com/ 为 mirrors.aliyun.com
+                        </div><br/>
+                        <pre>
+deb https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse 
+deb-src https://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+## Not recommended
+# deb https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+# deb-src https://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
                                 </pre>`
                             },
                                 {
                                     title: `ubuntu 20.04(focal)`,
                                     content: `<pre>
-deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br/>
-deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br/>
-deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br/>
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br/>
-deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br/>
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br/>
-deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br/>
-deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse<br/>
-deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br/>
+deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
                                 </pre>`
                                 }]

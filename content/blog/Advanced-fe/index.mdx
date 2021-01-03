@@ -365,46 +365,35 @@ CORS跨域，关键在于服务器，如果服务器实现了CORS跨域的接口
 
 非简单请求请求头：
 
-##### **（1）Access-Control-Request-Method**
-
+##### Access-Control-Request-Method
 该字段是必须的，用来列出浏览器的CORS请求会用到哪些HTTP方法
 
-##### **（2）Access-Control-Request-Headers**
-
+##### Access-Control-Request-Headers
 该字段是一个逗号分隔的字符串，指定浏览器CORS请求会额外发送的头信息字段
-
 执行简单请求的时候，浏览器会在请求头信息增加`origin`字段，服务器据此来判断请求域名是否在许可范围之内，来决定是否返回`Access-Control-Allow-Origin`字段。响应头有以下几种：
 
-##### **（1）Access-Control-Allow-Origin**
-
+##### Access-Control-Allow-Origin
 该字段是必须的。它的值要么是请求时`Origin`字段的值，要么是一个`*`，表示接受任意域名的请求。
 
-##### **（2）Access-Control-Allow-Credentials**
-
+##### Access-Control-Allow-Credentials
 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为`true`，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为`true`，如果服务器不要浏览器发送Cookie，删除该字段即可。
 
-##### **（3）Access-Control-Expose-Headers**
-
+##### Access-Control-Expose-Headers
 该字段可选。CORS请求时，`XMLHttpRequest`对象的`getResponseHeader()`方法只能拿到6个基本字段：`Cache-Control`、`Content-Language`、`Content-Type`、`Expires`、`Last-Modified`、`Pragma`。如果想拿到其他字段，就必须在`Access-Control-Expose-Headers`里面指定。
 
-##### **(4)Access-Control-Max-Age**
-
+##### Access-Control-Max-Age
 `Access-Control-Max-Age` 首部字段指明了预检请求的响应的有效时间。
 
-##### **(5)Access-Control-Allow-Methods**
-
+##### Access-Control-Allow-Methods
 `Access-Control-Allow-Methods` 首部字段用于预检请求的响应。其指明了实际请求所允许使用的 HTTP 方法。
 
-##### **(6)Access-Control-Allow-Headers**
-
+##### Access-Control-Allow-Headers
 `Access-Control-Allow-Headers`首部字段用于预检请求的响应。其指明了实际请求中允许携带的首部字段。
 
 其他方法：`document.domin`(IE6,7配合iframe;IE6,7发送POST跨域请求),html5的`postMessage`,`window.name`等
 
 #### 函数节流和函数防抖
-
 函数节流让指函数有规律的进行调用，应用场景：window.resize，游戏中子弹发射(1s只能发射一颗子弹)等；
-
 函数防抖让函数在”调用’’之后的一段时间后生效，应用场景:输入框(例：在用户停止输入的500ms后再处理用户数据)。
 
 ```javascript

@@ -1,0 +1,234 @@
+---
+title: 'JavaScript - Core'
+date: '2018-11-11T13:33:51+08:00'
+status: publish
+permalink: /core-in-javascript
+category: ["FE"]
+tag: ["js"]
+author: "max"
+excerpt: "js core"
+featured: false
+image: ./cover.png
+featuredimage:
+src: "cover.png"
+alt: ""
+---
+### 概念
+
+#### 构造函数  
+构造函数就是初始化一个实例对象，对象的prototype属性是继承一个实例对象.
+1. 默认函数首字母大写
+2. 构造函数并没有显示返回任何东西
+3. 也可以在构造函数中显示调用return.如果返回的值是一个对象，它会代替新创建的对象实例返回
+
+
+### 继承
+继承与封装是面向对象中的两个主要特征. 继承即是对原有对象的封装，从中创建私有属性、私有方法、特权方法、共有属性、共有方法等.
+有的只能创建一次，这类属性或方法称为静态的.
+有的只被类所拥有，这类属性与方法又是静态类方法与静态类属性.
+
+可被继承的方法与属性无外科两类:
+1. 一类在构造函数中，这类属性与方法在对象实例化时被复制一遍.
+2. 另一类在原型对象中，这类属性与方法在对象实例化时被所有实例化对象所共用.  
+
+> 实例化的是对象，则为对象继承.  实例化的是类，则是类的继承.  
+
+类的继承分为:  
+- 通过原型链继承的称为 类式继承
+- 通过构造函数继承的称为 构造函数式继承
+- 如以上两者组合起来称为 组合继承
+
+<blockquote>
+<p>由于类式继承过程中会实例化父类，如果父类构造函数极其复杂，那么这种方式对构造函数的开销是不值得的，因此有了新的继承方式:<br/>
+通过一个函数内的过渡对象实现继承并对象的方式，我们称为<strong>寄生式继承</strong>.<br/>
+再融合构造函数继承中的优点并去除其缺点，得到我们称为<strong>寄生组合式继承</strong>.</p>
+</blockquote>
+
+
+#### 组合继承
+```js
+function SuperClass(name) {
+    this.name = name;
+    this.books = ["html", "css", "javascript"];
+}
+SuperClass.prototype.getName = function (){
+    console.log(this.name);
+    return this.name;
+}
+
+function SubClass(name, time) {
+    SuperClass.call(this, name);
+    this.time = time;
+}
+SubClass.prototype = new SuperClass();
+SubClass.prototype.getTime = function () {
+    console.log(this.time);
+    return this.time;
+}
+```
+#### 原型式继承
+```js
+function inheritObject(o){
+    function F(){}      //声明一个过渡函数对象
+    F.prototype = o;    //过渡对象的原型继承父对象
+    return new F();     //返回过渡对象的一实例，该实例原型继承了父对象
+}
+```
+缺点: 引用类型的属性被共用
+
+
+#### 寄生式继承
+```js
+
+const book = {                          //声明基对象
+    name: "js book",
+    alikeBook: ["css book", "html book"]
+};
+function createBook(obj) {
+    var o = new inheritObject(obj);     //通过原型继承方式创建新对象
+    o.getName = function () {           //拓展新对象
+        console.log(this.name)
+    }
+    return o;                           //返回新对象        
+}
+```
+特点: 基于原型继承的二次封装，并对继承进行拓展。不仅有父类的属性与方法，还添加新属性与方法.
+
+#### 寄生组合式继承
+```js
+function inheritPrototype (subClass, superClass) {
+    var p = inheritObject(superClass.prototype);    //复制父类的原型副本到变量
+    p.constructor = subClass;                       //修正因重写子类原型导致子类constructor属性被改
+    subClass.prototype = p;                         //设置子类原型
+}
+```
+
+#### 单继承
+只能复制值类型的属性.
+```js:title=浅复制
+var extend = function (target, source) {
+    for(var property in source){            //遍历源对象中的属性
+        target[property] = source[property] //
+    }
+    return target;
+}
+```
+
+#### 多继承
+将传入的多对象的属性复制到源对象中， 其中第一个参数是 `需要继承的对象`
+```js:title=浅复制
+var mix = function() {
+    var i = 1,
+        len = arguments.length,
+        target = arguments[0],
+        arg;
+    for(; i < len; i++) {
+        arg = argumenets[i];
+        for (var property in arg) {
+            target[property] = arg[property]
+        }
+    }
+    return target;
+}
+```
+
+### 多态
+对传入的参数做判断以实现多种调用方式.
+
+```js
+function add () {
+    var arg = arguments,            //获取参数
+        len = arg.length;           //获取参数长度
+    switch (len) {
+        case 0:                     //如没有参数
+            return 10;
+        case 1:                     //如只有一参数
+            return 10 + arg[0];
+        case 2:                     //如有两个参数
+            return arg[0] + arg[1]  
+    }
+}
+```
+
+
+
+### 设计模式
+
+#### 工厂模式
+
+
+```js
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

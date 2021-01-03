@@ -6,32 +6,55 @@ html {
     @apply font-body;
     font-size: 90%;
 }
+a {
+    @apply font-semibold
+}
 
 /*---------------------------------------- Gatsby -----------------------------------*/
 .gatsby-remark-code-title {
-    margin-bottom: -0.6rem;
-    padding: 0.5em 1em;
-    /* font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    //margin-bottom: -1.6rem;
+    //padding: 0.5em 1em;
+    //display: inline-block;
+    //top:30px;
+    //position: relative;
+    //font-size: 62.5%;
+    //background-color: #d9d7e0;
+    //color: #232129;
+    //z-index: 2;
+    //left: 2em;
+    //border-bottom-left-radius: 5px;
+    //border-bottom-right-radius: 5px;
+
+    font-family: Inter, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
       'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
       'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
-      monospace; */
-    font-size: 62.5%;
-    background-color: black;
-    color: white;
-    z-index: 0;
+      monospace;
 
-    border-top-left-radius: 0.3em;
-    border-top-right-radius: 0.3em;
+    margin-bottom: 20px;
+    top: 46px;
+    margin-top: -43px;
+    padding: 0.5em 1em;
+    display: table;
+    position: relative;
+    font-size: 62.5%;
+    background-color: #d9d7e0;
+    color: #232129;
+    z-index: 2;
+    left: 2em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .gatsby-remark-code-title+.gatsby-highlight {
     border-top-left-radius: 0;
-    border-top-right-radius: 0
+    border-top-right-radius: 0;
+    pre {
+        padding: 2.6rem 1rem 1rem
+    }
 }
 
 /*---------------------------------------- Gatsby Article -----------------------------------*/
 .articleContent {
-
     h1, h2, h3, h4, h5, h6 {
         @apply tracking-tight;
         @apply font-extrabold;
@@ -68,7 +91,10 @@ html {
         @apply text-lg;
         @apply leading-6;
         @apply font-medium;
-        @apply mb-6;
+        @apply py-2;
+    }
+    pre {
+        margin: 0
     }
 
     ul, ol {
@@ -114,14 +140,28 @@ html {
     blockquote {
         @apply my-6;
         @apply py-3;
+        @apply pl-4;
         p {
             @apply my-0;
+            @apply leading-3;
+            @apply text-base;
+            @apply text-gray-600;
         }
-        background: #EFFAFF;
-        border-left: 4px solid #12A4E2;
+        background: #fdfaf6;
+        border-left: 4px solid rgb(255, 228, 161);
     }
     .gatsby-resp-image-wrapper{
         @apply my-12;
+    }
+
+    aside {
+        ul {
+            min-width: 250px;
+            border-left: 1px solid #edf2f7;
+            li {
+                list-style: none;
+            }
+        }
     }
 }
 
@@ -148,8 +188,6 @@ html {
     border: 1px dashed;
     padding: 16px 25px 16px 20px;
 }
-
-
 
 
 /*
@@ -232,4 +270,9 @@ html {
             @apply py-3;
         }
     }
+}
+
+.gatsby-highlight {
+    position: relative;
+    z-index: -1;
 }

@@ -31,7 +31,7 @@ const Header = () => {
                     <span className="ml-3 text-xl">IMY Blog</span>
                 </Link>
             </div>
-            <div className="flex text-sm">
+            <div className="flex text-base">
                 {
                     pages.map((page, index) => {
                         return (<Link key={index}

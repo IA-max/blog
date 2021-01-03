@@ -12,12 +12,28 @@ import formatDate from "../utils/formatDate"
 import B from "../components/b"
 import Comment from "../components/comment"
 import RecommandPost from '../components/recommendPost'
+import Slugger from 'github-slugger'
 
 const BlogPost = ({data, pageContext}) => {
+    const slugger = new Slugger()
     const shortcodes = {Link, Gist}
     const {mdx} = data
     const commentBox = React.createRef()
     // const {prev, next} = pageContext
+    let allHeadings,
+        level = {
+            1: 'text-2xl',
+            2: 'text-xl',
+            3: 'text-lg',
+            4: 'text-base',
+            5: 'text-xs',
+        };
+    if(mdx.headings.length) {
+        allHeadings = mdx.headings.map((h, i) => {
+
+            return (<li key={i}><Link to={'#' + slugger.slug(h.value)} className={`${level[h.depth]} font-normal `}>{h.value}</Link></li>)
+        })
+    }
 
     useEffect(() => {
         const scriptEl = document.createElement('script')
@@ -44,7 +60,6 @@ const BlogPost = ({data, pageContext}) => {
                         < Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                               fluid={mdx.frontmatter.featuredimage.src.childImageSharp.fluid}
                               alt={mdx.frontmatter.featuredimage.alt}/>) : " "}
-
                     <p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
                         {
                             mdx.frontmatter.category.map((cat, index, arr) => (
@@ -55,35 +70,43 @@ const BlogPost = ({data, pageContext}) => {
                                 </ConcatWords>
                             ))
                         }
-
                     </p>
-                    <h1 className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
-                        title="Rise of Tailwind - A Utility First CSS Framework">
-                        {mdx.frontmatter.title}
+                    <h1 className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
+                       <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                     </h1>
-                    <div className="flex mb-6 space-x-2">
+                    <div className="flex mb-2 space-x-2 text-gray-500">
+                        { formatDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text} /
                         {
                             mdx.frontmatter.tag.map((tag, index, arr) => (
-                                < ConcatWords arrCount={arr.length} index={index} key={index}>
+                                <ConcatWords arrCount={arr.length} index={index} key={index}>
                                     <Link
-                                        className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-gray-500 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-gray-400"
+                                        className="ml-2 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-gray-500 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-gray-400"
                                         to={`/tag/${kebabCase(tag)}`}># {tag} </Link>
                                 </ConcatWords>
                             ))
                         }
+
                     </div>
 
                     <Link className="flex items-center text-gray-700"
                           to={`/blog/author/${kebabCase(mdx.frontmatter.author)}`}>
-                        <B/>
-                        <div className="ml-2">
-                            <p className="text-sm font-semibold text-gray-800">{mdx.frontmatter.author}</p>
-                            <p className="text-sm text-gray-500">{formatDate(mdx.frontmatter.date)}</p>
-                        </div>
+                        {/*<B/>*/}
+                        {/*<div className="ml-2">*/}
+                        {/*    <p className="text-sm font-semibold text-gray-800">{mdx.frontmatter.author}</p>*/}
+                        {/*    <p className="text-sm text-gray-500">{formatDate(mdx.frontmatter.date)}</p>*/}
+                        {/*</div>*/}
                     </Link>
+                    {/*<p className="text-sm text-gray-500">{formatDate(mdx.frontmatter.date)} - {mdx.fields.readingTime.text}</p>*/}
                 </div>
-                <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent">
-                    <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
+
+                <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent flex">
+                    <div>
+                        <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
+                    </div>
+                    <aside className="h-1/2 sticky top-0 md:w-4/12 ml-4">
+                        <h4 className='pl-4'>目录</h4>
+                        <ul className='pl-4'>{allHeadings}</ul>
+                    </aside>
                 </div>
             </article>
             <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
@@ -111,6 +134,10 @@ export default BlogPost
 export const query = graphql`
     query BlogPostBySlug($slug: String!) {
         mdx(fields: { slug: { eq: $slug } }) {
+            headings {
+                depth
+                value
+            }
             body
             frontmatter {
                 title
@@ -128,6 +155,12 @@ export const query = graphql`
                     }
                     alt
                 }
+            }
+            fields {
+                readingTime {
+                    text
+                }
+                slug
             }
         }
     }
