@@ -1,14 +1,13 @@
 import React from 'react'
-import {graphql, Link} from 'gatsby'
+import {graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Acc from '../components/acc'
 import Table from '../components/table'
-import Gist from "react-gist"
+
 
 const ResourcePage = ({data, location}) => {
         const siteTitle = data.site.siteMetadata.title;
-        const shortcodes = {Link, Gist};
         const tableList1 = {
             title: '包管理',
             data: [{
@@ -754,6 +753,8 @@ const ResourcePage = ({data, location}) => {
                         <Table props={tableList22}/>
 
                         <Table props={tableList24}/>
+                        <Table props={tableList23}/>
+                        <Table props={tableList25}/>
 
 
                         <Table props={tableList9}/>

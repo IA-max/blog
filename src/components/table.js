@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 const Table = ({props}) => {
     const {title, data} = props;
     const chunkSize = 4;
@@ -11,7 +12,7 @@ const Table = ({props}) => {
                 {
                     txt.map((t,i) => {
                         return (
-                            <td key={i}><a target={"_blank"} href={t.content}>{t.title}</a></td>
+                            <td key={i}><Link target={"_blank"} rel="noreferrer" to={t.content}>{t.title}</Link></td>
                         )
                     })
                 }
@@ -21,7 +22,7 @@ const Table = ({props}) => {
 
     return (
         <>
-            <table className={"fixTable"}>
+            <table className={"fixTable mb-6"}>
                 <thead>
                     <tr key={title}>
                         <th colSpan={4}>

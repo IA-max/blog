@@ -9,9 +9,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ConcatWords from "../utils/ConcatWords"
 import formatDate from "../utils/formatDate"
-import B from "../components/b"
 import Comment from "../components/comment"
-import RecommandPost from '../components/recommendPost'
 import Slugger from 'github-slugger'
 
 const BlogPost = ({data, pageContext}) => {
@@ -50,7 +48,7 @@ const BlogPost = ({data, pageContext}) => {
         } else {
             console.log(`Error adding utterances comments on: ${commentBox}`)
         }
-    }, [])
+    }, [commentBox])
 
     return (<Layout>
             <Seo title={mdx.frontmatter.title}/>
