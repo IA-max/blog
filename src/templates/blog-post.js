@@ -19,19 +19,20 @@ const BlogPost = ({data, pageContext}) => {
     const shortcodes = {Link, Gist}
     const {mdx} = data
     const commentBox = React.createRef()
-    // const {prev, next} = pageContext
+    const {prev, next} = pageContext
     let allHeadings,
         level = {
             1: 'text-2xl',
-            2: 'text-xl',
-            3: 'text-lg',
-            4: 'text-base',
-            5: 'text-xs',
+            2: 'text-xl pl-2',
+            3: 'text-lg pl-4',
+            4: 'text-base pl-8',
+            5: 'text-xs pl-16',
         };
-    if(mdx.headings.length) {
+    if (mdx.headings.length) {
         allHeadings = mdx.headings.map((h, i) => {
 
-            return (<li key={i}><Link to={'#' + slugger.slug(h.value)} className={`${level[h.depth]} font-normal `}>{h.value}</Link></li>)
+            return (<li key={i}><Link to={'#' + slugger.slug(h.value)}
+                                      className={`${level[h.depth]} font-normal `}>{h.value}</Link></li>)
         })
     }
 
@@ -54,7 +55,6 @@ const BlogPost = ({data, pageContext}) => {
     return (<Layout>
             <Seo title={mdx.frontmatter.title}/>
             <article className="px-4 py-6 mx-auto">
-
                 <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
                     {(mdx.frontmatter.featuredimage != null && mdx.frontmatter.featuredimage.src != null) ? (
                         < Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
@@ -72,10 +72,10 @@ const BlogPost = ({data, pageContext}) => {
                         }
                     </p>
                     <h1 className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
-                       <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
+                        <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                     </h1>
                     <div className="flex mb-2 space-x-2 text-gray-500">
-                        { formatDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text} /
+                        {formatDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text} /
                         {
                             mdx.frontmatter.tag.map((tag, index, arr) => (
                                 <ConcatWords arrCount={arr.length} index={index} key={index}>
@@ -85,7 +85,6 @@ const BlogPost = ({data, pageContext}) => {
                                 </ConcatWords>
                             ))
                         }
-
                     </div>
 
                     <Link className="flex items-center text-gray-700"
@@ -98,33 +97,37 @@ const BlogPost = ({data, pageContext}) => {
                     </Link>
                     {/*<p className="text-sm text-gray-500">{formatDate(mdx.frontmatter.date)} - {mdx.fields.readingTime.text}</p>*/}
                 </div>
-
                 <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent flex">
-                    <div>
+                    <div className="sm:w-full lg:w-4/5">
                         <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
                     </div>
-                    <aside className="h-1/2 sticky top-0 md:w-4/12 ml-4">
+                    <aside className="h-1/2 sticky top-0 ml-4 sm:hidden lg:block lg:w-1/5">
                         <h4 className='pl-4'>目录</h4>
                         <ul className='pl-4'>{allHeadings}</ul>
                     </aside>
+
                 </div>
             </article>
             <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
                 <Comment commentBox={commentBox}/>
             </div>
-            <RecommandPost allpost={pageContext.allPost} category={mdx.frontmatter.category}/>
-            {/* <section className="py-20  w-full mx-auto prose md:w-3/4 lg:w-4/6">
-        <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
-          <div>
-            <h1>{ prev &&<Link to = { prev.fields.slug } className="mb-6 text-md font-semibold text-black md:text-xl">{ prev.frontmatter != null && prev.frontmatter.title }</Link> }</h1>
-            <p className="mt-2 text-gray-600 text-sm text-gray-50"> { prev != null && prev.frontmatter != null &&  prev.frontmatter.excerpt }</p>
-          </div>
-          <div>
-            <h1>{ next && ( <Link to = { next.fields.slug }  className="mb-6 text-md font-semibold text-black md:text-xl"> <div >  { next.frontmatter != null && next.frontmatter.title }  </div>  </Link>  ) }</h1>
-            <p className="mt-2 text-gray-600 text-sm text-gray-50">{ next != null && next.frontmatter != null && next.frontmatter.excerpt } </p>
-          </div>
-        </div>
-    </section> */}
+            {/*<RecommandPost allpost={pageContext.allPost} category={mdx.frontmatter.category}/>*/}
+            <section className="w-full mx-auto py-24 prose md:w-3/4 lg:w-1/2">
+                <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
+                    <div>
+                        <h1>{prev && <Link to={prev.fields.slug}
+                                           className="mb-6 text-md font-semibold text-black md:text-xl">{prev.frontmatter != null && prev.frontmatter.title}</Link>}</h1>
+                        <p className="mt-2 text-gray-600 text-sm text-gray-50"> {prev != null && prev.frontmatter != null && prev.frontmatter.excerpt}</p>
+                    </div>
+                    <div>
+                        <h1>{next && (
+                            <Link to={next.fields.slug} className="mb-6 text-md font-semibold text-black md:text-xl">
+                                <div>  {next.frontmatter != null && next.frontmatter.title}  </div>
+                            </Link>)}</h1>
+                        <p className="mt-2 text-gray-600 text-sm text-gray-50">{next != null && next.frontmatter != null && next.frontmatter.excerpt} </p>
+                    </div>
+                </div>
+            </section>
         </Layout>
     )
 }

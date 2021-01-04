@@ -4,19 +4,12 @@ module.exports = {
   theme: {
     fontFamily: {
         'sans': ['Inter','Roboto', 'ui-sans-serif', 'system-ui', ],
-        'serif': ['ui-serif', 'Georgia',],
-        'mono': ['ui-monospace', 'SFMono-Regular', ],
-        'display': ['Oswald', ],
-        'body': ['Inter','Open Sans', ],
+        'body': ['Inter','Open Sans', 'Karla'],
     },
     extend: {},
   },
   variants: {
     extend: {},
-  },
-  fontFamily: {
-    sans: ['Graphik', 'sans-serif'],
-    serif: ['Merriweather', 'serif'],
   },
   plugins: [],
 }

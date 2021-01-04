@@ -27,7 +27,7 @@ alt: ""
 有的只能创建一次，这类属性或方法称为静态的.
 有的只被类所拥有，这类属性与方法又是静态类方法与静态类属性.
 
-可被继承的方法与属性无外科两类:
+可被继承的方法与属性无外乎两类:
 1. 一类在构造函数中，这类属性与方法在对象实例化时被复制一遍.
 2. 另一类在原型对象中，这类属性与方法在对象实例化时被所有实例化对象所共用.  
 
@@ -157,13 +157,124 @@ function add () {
 #### 工厂模式
 
 
-```js
+```js:title=简单工厂模式
+var LoginAlert = function () { ... }
+var LoginConfirm = function () { ... }
+var LoginPrompt = function () { ... }
 
+var PopFactory = function (name) {
+    switch (name) {
+        case 'alert':
+            return new LoginAlert();
+        case 'confirm':
+            return new LoginConfirm();
+        case 'prompt':
+            return new LoginPrompt();
+    }
+}
+
+
+//改进
+function createPop (type, text) {
+    var o = new Object();
+    o.content = text;
+    o.show = function () {
+        //显示方法
+    }
+    if(type == 'alert') {
+        //Alert差异部分
+    }
+    if(type == 'prompt') {
+        //提示框差异部分
+    }
+    if(type == 'confirm') {
+        //确认框差异部分
+    }
+    return o;
+}
+
+var pop = new createPop('alert', ' 用户名只能中文!');
 ```
 
+> 安全模式类: 屏蔽使用这对类的错误使用造成的错误.
+
+```js:title=工厂方法模式
+// 安全模式创建的工厂类
+var Factory = function (type, content) {
+    if(!this instanceof Factory) {
+        var s = new this[type](content)
+        return s
+    } else {
+        return new Factory(type, content)
+    }
+}
 
 
+// 工厂原型中设置创建所有类型数据对象的基类
+Factory.prototype = {
+    Java: function (content) {
+        // ......
+    },
+    JavaScript: function (content) {
+        // ......
+    },
+    UI: function(content) {
+        this.content = content;
+        (function(content){
+            var div = document.createElement('div');
+            div.innerHTML = content;
+            div.style.border ='1px solid red';
+            document.getElementById('container').appendChild(div);
+        })(content)
+    },
+    php: function (content) {
+        // ......
+    }
+}
+```
 
+> **抽象工厂模式** - Abstract Factory  
+> 通过对类的工厂抽象使 其业务用于对产品类簇的创建，而不负责创建某一类产品的实例  
+> 抽象类中定义的方法只是显性地定义一些功能，但没具体实现. 一般用它作为父类创建一些子类
+
+```js:title=抽象工厂模式
+//
+var VehicleFactory = function(subType, superType){
+    if(typeof VehicleFactory[superType] === 'function') {       //判断是否有该抽象类
+        function F(){};                                         //缓存类
+        F.prototype = new VehicleFactory[superType]();          //继承父类的属性与方法
+        subType.constructor = subType;                          //将子类contructor指向子类
+        subType.prototype = new F();                            //子类原型继承"父类"
+    } else {
+        throw new Error('未创建该抽象类')                          //不存在该抽象类抛出错误
+    }
+}
+
+// Car
+VehicleFactory.Car = function () { this.type = 'car' }
+VehicleFactory.Car.prototype = {
+    getPrice: function () {
+        return new Error('抽象方法不能调用')
+    },
+    getSpeed: function () {
+        return new Error('抽象方法不能调用')
+    }
+};
+
+// Bus
+VehicleFactory.Bus = function () { this.type = 'bus' }
+VehicleFactory.Bus.prototype = {
+    getPrice: function () { ... },
+    getSpeed: function () { ... }
+}
+
+//Truck
+VehicleFactory.Truck = function () { this.type = 'truck' }
+VehicleFactory.Truck.prototype = {
+    getPrice: function () { ... },
+    getSpeed: function () { ... }        
+}
+```
 
 
 

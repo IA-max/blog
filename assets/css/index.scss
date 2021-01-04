@@ -10,6 +10,12 @@ a {
     @apply font-semibold
 }
 
+header {
+    a {
+        font-family: Karla;
+    }
+}
+
 /*---------------------------------------- Gatsby -----------------------------------*/
 .gatsby-remark-code-title {
     //margin-bottom: -1.6rem;
@@ -49,7 +55,13 @@ a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     pre {
-        padding: 2.6rem 1rem 1rem
+        padding: 2.6rem 1rem 1rem;
+    }
+}
+
+.gatsby-highlight {
+    pre {
+        overflow-x: auto;
     }
 }
 
@@ -275,4 +287,10 @@ a {
 .gatsby-highlight {
     position: relative;
     z-index: -1;
+}
+
+::selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
 }
