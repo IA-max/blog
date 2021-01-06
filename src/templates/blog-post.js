@@ -25,10 +25,10 @@ const BlogPost = ({data, pageContext}) => {
             3: 'text-lg pl-4',
             4: 'text-base pl-8',
             5: 'text-xs pl-16',
+            6: 'text-xs pl-24',
         };
     if (mdx.headings.length) {
         allHeadings = mdx.headings.map((h, i) => {
-
             return (<li key={i}><Link to={'#' + slugger.slug(h.value)}
                                       className={`${level[h.depth]} font-normal `}>{h.value}</Link></li>)
         })
@@ -53,9 +53,9 @@ const BlogPost = ({data, pageContext}) => {
     return (<Layout>
             <Seo title={mdx.frontmatter.title}/>
             <article className="px-4 py-6 mx-auto">
-                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b">
+                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b article-meta-data">
                     {(mdx.frontmatter.featuredimage != null && mdx.frontmatter.featuredimage.src != null) ? (
-                        < Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
+                        <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                               fluid={mdx.frontmatter.featuredimage.src.childImageSharp.fluid}
                               alt={mdx.frontmatter.featuredimage.alt}/>) : " "}
                     <p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
