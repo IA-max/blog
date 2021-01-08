@@ -1,25 +1,36 @@
-import React from 'react';
-import {Link, graphql} from 'gatsby';
+import React, {useState} from 'react';
+import {graphql} from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import formatDate from "../utils/formatDate"
+import List from "../components/list"
 
 const BlogIndex = ({data, location}) => {
     const siteTitle = data.site.siteMetadata.title || `Title`;
     const posts = data.allMdx.nodes;
-
-    const PostOfMv = posts.filter((p) => {
-        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("mv*")
+    const [pos, setPos] = useState(posts);
+    const categories = {}, cates = [];
+    categories.all = posts;
+    posts.forEach((ite, ind) => {
+        const name = ite.frontmatter.category[0];
+        if (!categories[name]) {
+            categories[name] = []
+        }
+        categories[name].push(ite);
     });
 
-    const PostOfJs = posts.filter((p) => {
-        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("js")
-    });
-
-    const PostOfCss = posts.filter((p) => {
-        return (p != null && p.frontmatter != null) && p.frontmatter.tag.includes("css")
-    });
-
+    for (let key in categories) {
+        cates.push(key)
+    }
+    cates.sort(function(a, b){
+        if(a < b) { return -1; }
+        if(a > b) { return 1; }
+        return 0;
+    })
+    const filteArr = (name) => {
+        const filterArray = categories[name];
+        setPos(filterArray);
+    }
+    console.log(categories)
 
     if (posts.length === 0) {
         return (
@@ -33,58 +44,21 @@ const BlogIndex = ({data, location}) => {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO title='All posts'/>
-            <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
-                <h1 className="text-4xl">MV框架</h1>
-                <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
-                    <div className="w-24 h-full bg-indigo-500"></div>
+            <section className="flex justify-between container mx-auto pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
+                <aside className="-mx-8 w-3/12 hidden lg:block">
+                    <div className="px-8">
+                        <ul className="text-right">
+                            {
+                                cates.map((ite, ind) => {
+                                    return (<li key={ind}><a className="catelink" onClick={() => filteArr(ite)}>{ite}</a></li>)
+                                })
+                            }
+                        </ul>
+                    </div>
+                </aside>
+                <div className="w-full lg:w-9/12">
+                    {pos.map(List)}
                 </div>
-                {PostOfMv.map((post, index) => {
-                    return (
-                        <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
-                            <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link
-                                to={post.fields.slug}
-                                className="text-gray-900 font-semibold hover:text-purple-700 hover:no-underline">{post.frontmatter.title}</Link>
-                            </h1>
-                            <h1 className="mb-2 text-xl font-light md:text-base text-right hidden md:block text-gray-400">{formatDate(post.frontmatter.date)}</h1>
-                        </div>
-                    );
-                })}
-            </section>
-
-            <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
-                <h1 className="text-4xl">JavaScript</h1>
-                <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
-                    <div className="w-24 h-full bg-indigo-500"></div>
-                </div>
-                {PostOfJs.map((post, index) => {
-                    return (
-                        <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
-                            <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link
-                                to={post.fields.slug}
-                                className="text-gray-900 font-semibold hover:text-purple-700 hover:no-underline">{post.frontmatter.title}</Link>
-                            </h1>
-                            <h1 className="mb-2 text-xl font-light md:text-base text-right hidden md:block text-gray-400">{formatDate(post.frontmatter.date)}</h1>
-                        </div>
-                    );
-                })}
-            </section>
-
-            <section className="container  pt-12 pb-12 mx-auto md:w-3/4 lg:w-2/4">
-                <h1 className="text-4xl">CSS</h1>
-                <div className="h-1 bg-gray-200 mb-12 mt-2 rounded overflow-hidden mx-6 md:mx-0">
-                    <div className="w-24 h-full bg-indigo-500"></div>
-                </div>
-                {PostOfCss.map((post, index) => {
-                    return (
-                        <div className="grid grid-cols-1 gap-12 md:grid-cols-2" key={index}>
-                            <h1 className="mb-2 text-base text-gray-900 md:text-xl px-6 md:px-0"><Link
-                                to={post.fields.slug}
-                                className="text-gray-900 font-semibold hover:text-purple-700 hover:no-underline">{post.frontmatter.title}</Link>
-                            </h1>
-                            <h1 className="mb-2 text-xl font-light md:text-base text-right hidden md:block text-gray-400">{formatDate(post.frontmatter.date)}</h1>
-                        </div>
-                    );
-                })}
             </section>
         </Layout>
     );

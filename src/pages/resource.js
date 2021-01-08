@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Acc from '../components/acc'
@@ -116,8 +116,16 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'sailsjs',
                 content: 'https://sailsjs.com/'
+            }, {
+                title: 'thinkjs',
+                content: 'https://thinkjs.org/'
+            }, {
+                title: 'eggjs',
+                content: 'https://eggjs.org/zh-cn/intro/'
             }]
         }
+
+
         const tableList6 = {
             title: 'js 运行环境',
             data: [{
@@ -168,6 +176,9 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: `react-basics`,
                 content: 'https://www.techview.dev/docs/react-basics'
+            }, {
+                title: `react-router 中文文档`,
+                content: 'https://github.com/react-guide/react-router-cn'
             }, {
                 title: `Full Stack Open`,
                 content: 'https://fullstackopen.com/zh/'
@@ -339,7 +350,20 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'rubygems',
                 content: 'https://rubygems.org/'
-            }]
+            }, {
+                title: 'TypeScript使用手册',
+                content: 'https://github.com/zhongsp/TypeScript'
+            }, {
+                title: 'TypeScript Bootcss 中文手册',
+                content: 'https://typescript.bootcss.com/tutorials/typescript-in-5-minutes.html'
+            }, {
+                title: 'TypeScript Handbook 中文 2.7',
+                content: 'https://www.bookstack.cn/read/typescript-handbook/preface.md'
+            }, {
+                title: 'Go Web Iris',
+                content: 'http://www.studyiris.com/doc/'
+            }
+            ]
         }
 
 
@@ -392,6 +416,9 @@ const ResourcePage = ({data, location}) => {
             data: [{
                 title: 'Google JS Guide',
                 content: 'https://google.github.io/styleguide/javascriptguide.xml',
+            }, {
+                title: 'airbnb react',
+                content: 'https://github.com/airbnb/javascript/tree/master/react',
             }]
         }
 

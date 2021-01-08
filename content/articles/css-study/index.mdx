@@ -1,0 +1,568 @@
+---
+title: CSS 笔记
+date: '2019-01-01'
+status: publish
+permalink: /note-about-css
+category: ["fe"]
+tag: ["css"]
+author: "rick"
+excerpt: "关于css的一些笔记"
+featured: false
+image:
+featuredimage:
+src: "cover-css.png"
+alt: ""
+---
+
+### CSS 选择器
+参考源
+- http://www.w3.org/TR/selectors/#selectors
+- http://www.w3.org/TR/selectors4/#overview
+
+
+#### 伪类选择符
+##### 结构型伪类选择符
+
+
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明 (
+    <span className="text-gray-600 font-bold"> CSS1  </span>  
+    <span className="text-yellow-600 font-bold"> CSS2  </span>  
+    <span className="text-blue-600 font-bold"> CSS3  </span>  
+    <span className="text-green-600 font-bold"> CSS4 </span>)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c3">E:root</td>
+            <td>文档根元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:nth-child(n)</td>
+            <td>在同一父级元素中的第N个元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:nth-last-child(n)</td>
+            <td>在同一父级元素中，从后往前计算的第N个元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:nth-of-type(n)</td>
+            <td>在同类型的兄弟元素中第N个元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:nth-last-of-type(n)</td>
+            <td>在同类型的兄弟元素中，从后往前计算的第N个元素</td>
+        </tr>
+        <tr>
+            <td className="c2">E:first-child</td>
+            <td>在同一个父级元素中的第一个子元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:last-child</td>
+            <td>在同一个父级元素中的最后一个子元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:first-of-type</td>
+            <td>在同类型的兄弟元素中的第一个元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:last-of-type</td>
+            <td>在同类型的兄弟元素中的最后一个元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:only-child</td>
+            <td>仅有一个子元素的父级元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:only-of-type</td>
+            <td>仅有同类型的兄弟元素</td>
+        </tr>
+        <tr>
+            <td className="c3">E:empty</td>
+            <td>没有任何子级的元素(包括文本结点)</td>
+        </tr>
+        <tr>
+            <td className="c4">E:nth-match(n of selector)</td>
+            <td>第N个兄弟元素中匹配 selector 的元素</td>
+        </tr>
+        <tr>
+            <td className="c4">E:nth-last-match(n of selector)</td>
+            <td>倒数第N个兄弟元素中匹配selector的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+##### 链接伪类选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E:link</td>
+            <td>一个没被点击或者访问过的超链接或锚点 </td>
+        </tr>
+        <tr>
+            <td className="c1">E:visited</td>
+            <td>一个被点击或访问过的超链接或锚点</td>
+        </tr>
+        <tr>
+            <td className="c4">E:any-link</td>
+            <td>一个超链接锚点</td>
+        </tr>
+        <tr>
+            <td className="c4">E:local-link</td>
+            <td>指向当前文档位置的链接</td>
+        </tr>
+        <tr>
+            <td className="c4">E:local-link(0)</td>
+            <td>指向当前域的链接</td>
+        </tr>
+    </tbody>
+</table>
+
+
+##### 用户行为伪类选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E:active</td>
+            <td>点击元素未松开时</td>
+        </tr>
+        <tr>
+            <td className="c1">E:hover</td>
+            <td>鼠标经过时</td>
+        </tr>
+        <tr>
+            <td className="c4">E:focus</td>
+            <td>元素获得焦点时</td>
+        </tr>
+    </tbody>
+</table>
+
+
+##### 目标伪类选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c3">E:target</td>
+            <td>当一个元素被指向URI的目标时</td>
+        </tr>
+        <tr>
+            <td className="c4">E:scope</td>
+            <td>被指定上下文参考的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+##### 语种伪类选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c2">E:lang(en)</td>
+            <td>元素的语种特定为"en"时</td>
+        </tr>
+        <tr>
+            <td className="c4">E:lang(ch, *-hant)</td>
+            <td>语种标记为中文(不区分书写方向), 或者繁体字</td>
+        </tr>
+    </tbody>
+</table>
+
+##### 元素状态伪类选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c3">E:enabled</td>
+            <td>元素可用时</td>
+        </tr>
+        <tr>
+            <td className="c3">E:disabled</td>
+            <td>界面元素不可用时</td>
+        </tr>
+        <tr>
+            <td className="c3">E:checked</td>
+            <td>元素被选中 (一般单选框或复选框)</td>
+        </tr>
+        <tr>
+            <td className="c4">E:indeterminate</td>
+            <td>界面元素复选框的中间状态(选中与没选中之间)</td>
+        </tr>
+        <tr>
+            <td className="c4">E:default</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:in-range</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:out-of-range</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:required</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:optional</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:read-only</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:read-write</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:vaild</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td className="c4">E:invaild</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+ 
+
+##### 逻辑性伪类选择符  
+###### 否定选择符  
+
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c3">E:not(s)</td>
+            <td>不匹配 s 选择符的元素</td>
+        </tr>
+        <tr>
+            <td className="c4">E:not(s1, s2)</td>
+            <td>不匹配复合选择符(s1) 或 (s2) 的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+###### 匹配选择符
+
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c4">E:matches(s1, s2)</td>
+            <td>匹配复合选择(s1) 和(或) (s2) 的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+##### E:dir(ltr) 
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c4">E:dir(ltr)</td>
+            <td>从左到右的文档书写顺序的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+##### 时间维度伪类选择符  
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c4">E:current</td>
+            <td>当前时间线时的元素在画布上的呈现效果</td>
+        </tr>
+        <tr>
+            <td className="c4">E:current(s)</td>
+            <td>相匹配:current元素中的选择符 S</td>
+        </tr>
+        <tr>
+            <td className="c4">E:past</td>
+            <td>描述即将开始的时间线元素在画布上的呈现效果</td>
+        </tr>
+        <tr>
+            <td className="c4">E:future</td>
+            <td>描述即将开始的时间线元素在画布上的呈现效果</td>
+        </tr>
+    </tbody>
+</table>
+
+
+##### 网格结构伪类选择符  
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c4">E:column(selector)</td>
+            <td>在网格/表格的列中有个相匹配selector的元素</td>
+        </tr>
+        <tr>
+            <td className="c4">E:nth-column(n)</td>
+            <td>在网格/表格中的第N列元素</td>
+        </tr>
+        <tr>
+            <td className="c4">E:nth-last-column(n)</td>
+            <td>在网格/表格中的倒数的第N列元素</td>
+        </tr>
+    </tbody>
+</table>
+
+#### 组合选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E F</td>
+            <td>E元素的后代选择符</td>
+        </tr>
+        <tr>
+            <td className="c2">E > F</td>
+            <td>E元素的子选择符F</td>
+        </tr>
+        <tr>
+            <td className="c2">E + F</td>
+            <td>相邻于E选择符的F选择符</td>
+        </tr>
+        <tr>
+            <td className="c3">E ~ F</td>
+            <td>与E元素同级的且在其之后的F选择符</td>
+        </tr>
+        <tr>
+            <td className="c4">E! > F</td>
+            <td>F元素的父级元素是 E 元素</td>
+        </tr>
+        <tr>
+            <td className="c4">E /foo/ F</td>
+            <td>F 元素的ID参考自 E 元素的foo属性</td>
+        </tr>
+    </tbody>
+</table>
+
+
+#### 伪元素选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E::first-line</td>
+            <td>格式化的元素中的第一行</td>
+        </tr>
+        <tr>
+            <td className="c1">E::first-letter</td>
+            <td>格式化的元素中第一个字符</td>
+        </tr>
+        <tr>
+            <td className="c2">E::after</td>
+            <td>在元素后生成一个内容</td>
+        </tr>
+        <tr>
+            <td className="c2">E::before</td>
+            <td>在元素前生成一个内容</td>
+        </tr>
+    </tbody>
+</table>
+
+
+#### 类名选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E.className</td>
+            <td>一个类名为 className的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+#### ID选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E#ID</td>
+            <td>一个id名为ID的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+#### 通用选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c2">*选择符</td>
+            <td>任何元素</td>
+        </tr>
+    </tbody>
+</table>
+
+    
+#### 类型选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c1">E</td>
+            <td>某个标签</td>
+        </tr>
+    </tbody>
+</table>
+
+
+#### 属性选择符
+<table className="custom_table">
+    <thead>
+        <tr>
+            <th>选择器</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td className="c2">E[foo]</td>
+            <td>拥有foo属性, 且属性值为bar的元素</td>
+        </tr>
+        <tr>
+            <td className="c2">E[foo="bar"]</td>
+            <td>拥有foo属性, 且属性值为bar的元素</td>
+        </tr>
+        <tr>
+            <td className="c4">E[foo="bar" i]</td>
+            <td>拥有foo属性， 且属性值为bar的元素 (区分大小写)</td>
+        </tr>
+        <tr>
+            <td className="c2">E[foo~="bar"]</td>
+            <td>拥有foo属性, 且属性值有空格隔开, 其中一个为bar的元素</td>
+        </tr>
+        <tr>
+            <td className="c2">E[foor^="bar"]</td>
+            <td>拥有foo属性,且属性值是以bar开始的元素</td>
+        </tr>
+        <tr>
+            <td className="c2">E[foo$="bar"] </td>
+            <td>拥有foo属性,且属性值是以bar结束的元素</td>
+        </tr>
+        <tr>
+            <td className="c2">E[foor*="bar"]</td>
+            <td>拥有foo属性, 且属性值中包含bar的元素</td>
+        </tr>
+        <tr>
+            <td className="c2">E[foo != "en"]</td>
+            <td>拥有foo属性, 且属性值是从左边以en开始, 并且是通过连字符衔接的元素</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+### SASS
+
+### Box Flex
+
+### Grid
+
+### CSS3新属性
+
+### 布局总结

@@ -1,18 +1,21 @@
 import React from "react"
 import {Link} from 'gatsby';
-import C from "../components/cat"
+import C from "../deprecated/cat"
 const pages = [
     {
       title: 'Index',
       url: '/'
     },
-    {
-        title: 'Article',
-        url: '/article'
-    },
+    // {
+    //     title: 'Article',
+    //     url: '/article'
+    // },
     {
         title: 'Resource',
         url: '/resource'
+    },{
+        title: 'Gtd',
+        url: '/gtd'
     },
     {
         title: 'About',

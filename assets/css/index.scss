@@ -305,7 +305,7 @@ header {
 
 .gatsby-highlight {
   position: relative;
-  z-index: -1;
+  //z-index: -1;
 }
 
 ::selection {
@@ -313,9 +313,6 @@ header {
   background: #D6EDFF;
   text-shadow: none;
 }
-
-
-
 
 .custom_table {
   border:2px dashed #eaeaea;
@@ -335,6 +332,15 @@ header {
     width: 40%;
   }
 }
+.custom_multi_col_table {
+  @apply custom_table;
+  thead tr th:first-of-type,
+  tbody tr td:first-of-type{
+    width: auto
+  }
+  table-layout: fixed;
+}
+
 .c1,.c2,.c3,.c4 {
   @apply font-semibold;
 }
@@ -353,4 +359,12 @@ header {
 
 .c4 {
   @apply text-green-600;
+}
+
+.catelink {
+  @apply text-2xl;
+  @apply capitalize;
+  &:hover{
+    @apply cursor-pointer
+  }
 }

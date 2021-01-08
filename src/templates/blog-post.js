@@ -58,31 +58,31 @@ const BlogPost = ({data, pageContext}) => {
                         <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                               fluid={mdx.frontmatter.featuredimage.src.childImageSharp.fluid}
                               alt={mdx.frontmatter.featuredimage.alt}/>) : " "}
-                    <p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">
-                        {
-                            mdx.frontmatter.category.map((cat, index, arr) => (
-                                <ConcatWords arrCount={arr.length} index={index} key={cat}>
-                                    <Link
-                                        className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-purple-700 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-purple-400"
-                                        to={`/category/${kebabCase(cat)}`}>{cat} </Link>
-                                </ConcatWords>
-                            ))
-                        }
-                    </p>
-                    <h1 className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
+                    {/*<p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">*/}
+                    {/*    {*/}
+                    {/*        mdx.frontmatter.category.map((cat, index, arr) => (*/}
+                    {/*            <ConcatWords arrCount={arr.length} index={index} key={cat}>*/}
+                    {/*                <Link*/}
+                    {/*                    className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-purple-700 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-purple-400"*/}
+                    {/*                    to={`/category/${kebabCase(cat)}`}>{cat} </Link>*/}
+                    {/*            </ConcatWords>*/}
+                    {/*        ))*/}
+                    {/*    }*/}
+                    {/*</p>*/}
+                    <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
                         <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                     </h1>
                     <div className="flex mb-2 space-x-2 text-gray-500">
-                        {formatDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text} /
-                        {
-                            mdx.frontmatter.tag.map((tag, index, arr) => (
-                                <ConcatWords arrCount={arr.length} index={index} key={index}>
-                                    <Link
-                                        className="ml-2 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-gray-500 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-gray-400"
-                                        to={`/tag/${kebabCase(tag)}`}># {tag} </Link>
-                                </ConcatWords>
-                            ))
-                        }
+                        {formatDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text}
+                        {/*{*/}
+                        {/*    mdx.frontmatter.tag.map((tag, index, arr) => (*/}
+                        {/*        <ConcatWords arrCount={arr.length} index={index} key={index}>*/}
+                        {/*            <Link*/}
+                        {/*                className="ml-2 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-gray-500 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-gray-400"*/}
+                        {/*                to={`/tag/${kebabCase(tag)}`}># {tag} </Link>*/}
+                        {/*        </ConcatWords>*/}
+                        {/*    ))*/}
+                        {/*}*/}
                     </div>
 
                     <Link className="flex items-center text-gray-700"
