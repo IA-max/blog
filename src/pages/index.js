@@ -22,6 +22,7 @@ const BlogIndex = ({data, location}) => {
         cates.push(key)
     }
     cates.sort(function(a, b){
+        if(b === 'all') { return 1; }
         if(a < b) { return -1; }
         if(a > b) { return 1; }
         return 0;
@@ -30,7 +31,6 @@ const BlogIndex = ({data, location}) => {
         const filterArray = categories[name];
         setPos(filterArray);
     }
-    console.log(categories)
 
     if (posts.length === 0) {
         return (
@@ -50,7 +50,7 @@ const BlogIndex = ({data, location}) => {
                         <ul className="text-right">
                             {
                                 cates.map((ite, ind) => {
-                                    return (<li key={ind}><a className="catelink" onClick={() => filteArr(ite)}>{ite}</a></li>)
+                                    return (<li key={ite}><a className="catelink" onClick={() => filteArr(ite)}>{ite}</a></li>)
                                 })
                             }
                         </ul>

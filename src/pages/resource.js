@@ -362,7 +362,14 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'Go Web Iris',
                 content: 'http://www.studyiris.com/doc/'
-            }
+            },{
+                title: 'Platform H5',
+                content: 'https://platform.html5.org/'
+            },
+                {
+                    title:'what Html',
+                    content: 'https://whatwg-cn.github.io/html/'
+                }
             ]
         }
 

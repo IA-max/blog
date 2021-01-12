@@ -31,6 +31,12 @@ module.exports = {
                 path: `${__dirname}/content/articles`,
                 name: `articles`,
             },
+        }, {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/content/pages`,
+                name: `pages`,
+            },
         },
         {
             resolve: `gatsby-source-filesystem`,
@@ -48,7 +54,7 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-code-titles',
                         options: {
-                          className: 'gatsby-remark-code-title',
+                            className: 'gatsby-remark-code-title',
                         },
                     },
                     {
@@ -116,13 +122,13 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-postcss`,
         {
-           resolve: `gatsby-plugin-sass`,
-               options: {
-                   postCssPlugins: [
-                       require("tailwindcss"),
-                       require("./tailwind.config.js"),
-                   ],
-               },
+            resolve: `gatsby-plugin-sass`,
+            options: {
+                postCssPlugins: [
+                    require("tailwindcss"),
+                    require("./tailwind.config.js"),
+                ],
+            },
         },
     ],
 };

@@ -7,10 +7,10 @@ import {graphql, Link} from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import ConcatWords from "../utils/ConcatWords"
 import formatDate from "../utils/formatDate"
 import Comment from "../components/comment"
 import Slugger from 'github-slugger'
+
 
 const BlogPost = ({data, pageContext}) => {
     const slugger = new Slugger()
@@ -18,21 +18,30 @@ const BlogPost = ({data, pageContext}) => {
     const {mdx} = data
     const commentBox = React.createRef()
     const {prev, next} = pageContext
+
+    const arr = mdx.headings.map((ind,ite)=>{
+        return ind.depth
+    });
+    const newArray = [...new Set(arr)];
+
+
     let allHeadings,
         level = {
-            1: 'text-2xl',
-            2: 'text-xl pl-2',
-            3: 'text-lg pl-4',
-            4: 'text-base pl-8',
-            5: 'text-xs pl-16',
-            6: 'text-xs pl-24',
+            0: 'text-xl',
+            1: 'text-lg pl-4',
+            2: 'text-base pl-8',
+            3: 'text-sm pl-16',
+            4: 'text-xs pl-32',
+            5: 'text-xs pl-64',
         };
     if (mdx.headings.length) {
         allHeadings = mdx.headings.map((h, i) => {
             return (<li key={i}><Link to={'#' + slugger.slug(h.value)}
-                                      className={`${level[h.depth]} font-normal `}>{h.value}</Link></li>)
+                                             className={`${level[newArray.indexOf(h.depth)]} font-normal `}><small>{h.value}</small></Link></li>)
         })
     }
+
+    // console.log(mdx.headings)
 
     useEffect(() => {
         const scriptEl = document.createElement('script')
@@ -102,6 +111,8 @@ const BlogPost = ({data, pageContext}) => {
                     <aside className="h-1/2 sticky top-0 ml-4 sm:hidden lg:block lg:w-1/5">
                         <h4 className='pl-4'>目录</h4>
                         <ul className='pl-4'>{allHeadings}</ul>
+                        <hr/>
+
                     </aside>
 
                 </div>

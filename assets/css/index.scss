@@ -8,7 +8,7 @@ html {
 }
 
 a {
-  @apply font-semibold
+  @apply font-normal;
 }
 
 header {
@@ -362,9 +362,12 @@ header {
 }
 
 .catelink {
-  @apply text-2xl;
-  @apply capitalize;
+  @apply mb-4;
+  @apply text-xl;
+  @apply uppercase;
   &:hover{
-    @apply cursor-pointer
+    @apply cursor-pointer;
+    @apply text-purple-700;
+    @apply hover:no-underline;
   }
 }
