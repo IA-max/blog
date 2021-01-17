@@ -3,7 +3,7 @@ title: 'React - 那些你应该知道的'
 date: '2019-12-03T18:44:58+08:00'
 status: private
 permalink: /react-interview
-category: ["js"] 
+category: ["react"] 
 tag: ["mv*"]
 author: "max"
 excerpt: "React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序"

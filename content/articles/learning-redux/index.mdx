@@ -1,0 +1,449 @@
+---
+title: Redux
+date: 2020-12-08
+description: 'Redux'
+category: ["react"]
+tag: ["js"]
+excerpt: "随着 JavaScript 单页应用开发日趋复杂，JavaScript 需要管理比任何时候都要多的 state （状态）"
+image: "re.jpg"
+featured: false
+author: "Rick"
+featuredimage:
+src: "re.jpg"
+alt: "Redux"
+---
+
+## 动机
+随着 JavaScript 单页应用开发日趋复杂，JavaScript 需要管理比任何时候都要多的 state (状态).  
+如：
+- 服务器响应
+- 缓存数据
+- 本地生成尚未持久化到服务器的数据
+
+也包括 UI 状态,如:
+- 激活的路由
+- 被选中的标签
+- 是否显示加载动效或者分页器
+
+管理不断变化的 state 非常困难. state 在什么时候，由于什么原因，如何变化已然不受控制.  
+这里的复杂性很大程度上来自于：我们总是将两个难以理清的概念混淆在一起：**变化和异步**.
+
+跟随 Flux、CQRS 和 Event Sourcing 的脚步，通过限制更新发生的时间和方式，**Redux 试图让 state 的变化变得可预测**。
+这些限制条件反映在 Redux 的三大原则中.
+
+## 核心概念
+
+举例一state:
+
+```json
+{
+  "todo": [
+    {
+      "text": "eat food",
+      "completed": true
+    },
+    {
+      "text": "Exercise",
+      "completed": false
+    }
+  ],
+  "visibiltyFilter": "SHOW_COMPLETED"
+}
+```
+
+想更新state中的数据，需要发起一个action.
+action就是一个普通JavaScript对象来描述发生了什么.
+示例:
+```js
+{ type:'ADD_TODO', text: 'Go To swimming pool' }
+
+{ type:'TOGGLE_TODO', index: 1 }
+
+{ type: 'SET_VISIBILITY_FILTER', filter: 'SHOW_ALL' }
+```
+
+为了把action与state串起来，开发一些函数， 就是 **reducer**.  
+**reducer** 只是一个接收state 与 action, 并返回新的state的函数.
+
+```js
+function visibilityFilter(state = 'SHOW_ALL', action) {
+    if (action.type === 'SET_VISIBILITY_FILTER') {
+        return action.filter
+    } else {
+        return state
+    }
+}
+
+function todos(state = [], action){
+    switch (action.type) {
+        case 'ADD_TODO': 
+            return state.concat([{text: action.text, complete: false}])
+        case 'TOGGLE_TODO':
+            return state.map((todo, index)=>{
+                return index === action.index 
+                    ? {text:todo.text, complete: !todo.complete}
+                    : todo;
+            });
+        default:
+            return state;
+    }
+}
+```
+
+再开发一个reducer调用这两个reducer, 进而管理整个应用State:
+
+```js
+function todoAPP (state= {}, action) {
+    return {
+        todos:todos(state.todos, action),
+        visibilityFilter: visibilityFilter(state.visibilityFilter, action)
+    }
+}
+```
+
+这差不多就是 Redux思想的全部.  
+Redux 里有一些工具来简化这种模式. 但主要 的想法是如何根据这些action对象来更新state, 且 90% 代码都是纯JavaScript.
+无Redux / Redux API 与其他魔法.
+
+## 三大原则
+Redux 可用这三个基本原则描述:  
+
+- 单一数据源
+- State 是只读
+- 使用纯函数来执行修改
+
+### 单一数据源
+整个应用State 储存一棵Object tree, 且只存在唯一一个 **store** 中.
+
+### State 是只读的
+唯一改变 state 的方法就是触发 **action**，action 是一个用于描述已发生事件的普通对象。  
+这样确保了视图和网络请求都不能直接修改 state，相反它们只能表达想要修改的意图. 因为所有的修改都被集中化处理，且严格按照一个接一个的顺序执行，因此不用担心竞态条件（race condition）的出现
+```js
+store.dispatch({
+    type: 'COMPLETE_TODO',
+    index: 1
+})
+
+store.dispatch({
+    type: 'VISIBILITY_FILTER',
+    filter: 'SHOW_COMPLETED'
+})
+```
+
+### 使用纯函数来执行修改
+为了描述 action 如何改变 state tree ，你需要编写 **reducers**  
+```js
+function visibilityFilter(state = 'SHOW_ALL', action) {
+    switch (action.type) {
+        case 'SET_VISIBILITY_FILTER':
+            return action.filter
+        default:
+            return state
+    }
+}
+
+function todos(state = [], action) {
+    switch (action.type) {
+        case 'ADD_TODO':
+            return [...state,{
+                text: action.text,
+                completed: false
+            }]
+        case 'VISIBILITY_FILTER':
+            return state.map((todo, index)=>{
+                return action.index === index 
+                    ? Object.assign({}, todo, {completed: true})
+                    : todo
+            })
+        default:
+            return state
+    }
+}
+
+import { combineReducers, createStore } from 'redux'
+const reducer = combineReducers({visibilityFilter, todos});
+const store = createStore(reducer)
+```
+就这样.
+
+
+## Action 
+
+Action 是把数据从应用传到 store的有效载荷(payload). 通常用store.dispatch() 将action 传到 store. 是store数据的唯一来源.
+
+```js
+const ADD_TODO = 'ADD_TODO'
+
+{
+    type: ADD_TODO,
+    text: 'Build my first redux app'
+}
+```
+
+约定好 Action内必须使用一个字符串类型的 `type` 字段来表示将要执行的动作.
+多数情况下, `type` 定义为常量.
+当应用规模越来越大时， 建议使用单独的模块或文件来存放action.
+```js
+import { ADD_TODO, REMOVE_TODO } from '../actionTypes'
+```
+除 `type` 字段, action对象结构完全取决于你.  
+因数据存放在数组中， 所以我们通过下标`index`, 实际项目中一般会在新建数据时 生成唯一ID作为数据引用标识.
+
+**应尽量减少在action中传递的数据**
+
+### Action创建函数
+
+**Action创建函数** 就是生成 action 的方法. 在Redux中的 action创建函数只是简单的返回一个 action:
+```js
+function addTodo(text) {
+    return {
+        type: ADD_TODO,
+        text
+    }
+}
+```
+store 里能通过 store.dispatch() 调用 `dispatch()` 方法, 但多数情况下会使用 `react-redux` 提供的 `connect()` 帮助器来调用.  
+`bindActionCreators()` 可以自动把多个 action 创建函数 绑定到 `dispatch()` 方法上.
+
+```js:title=action.js
+// action 类型
+export const ADD_TODO = 'ADD_TODO'
+export const TOGGLE_TODO = 'TOGGLE_TODO'
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
+
+// 其他常量
+export const VisibilityFilters = {
+    SHOW_ALL: 'SHOW_ALL',
+    SHOW_COMPLETED: 'SHOW_COMPLETED',
+    SHOW_ACTIVE: 'SHOW_ACTIVE'
+} 
+
+// action 创建函数
+export function addTodo(text) {
+    return { type: ADD_TODO, text }
+}
+export function toggleTodo (index) {
+    return { type: TOGGLE_TODO, index }
+}
+export function setVisibilityFilter (filter) {
+    return { type: SET_VISIBILITY_FILTER, filter }
+}
+```
+
+
+## Reducer  
+Reducers 指定了应用状态的变化 如何响应 actions 并发送到store.   
+而 actions 只是描述了有事情发生了这一事实.
+
+### 设计State结构  
+建议写代码前先想一下， 如何以最简的形式把应用的state用对象描述出来.  
+> 例如，实际开发中，在 state 里同时存放 `todosById: { id -> todo }` 和 `todos: array<id>` 是比较好的方式，本文中为了保持示例简单没有这样处理。
+
+
+### Action处理
+reducer 就一纯函数, 接收旧的 state & action, 返回新 state.
+
+```js
+;(previousState, action) => newState
+```
+之所以称为 reducer, 是因与被传入 `Array.prototype.reduce(reducer, ?initialValue)` 里回调函数属于相同类型.  
+**保持 reducer 纯净非常重要. 永远不要做这些**
+- 修改传入参数；
+- 执行有副作用的操作，如 API 请求和路由跳转；
+- 调用非纯函数，如 Date.now() 或 Math.random()
+
+**只要传入参数相同，返回计算得到的下一个 state 就一定相同。  
+没有特殊情况、没有副作用，没有 API 请求、没有变量修改，单纯执行计算。**
+
+```js
+import { VisibilityFilters } from './actions'
+
+const initialState = {
+    visibilityFilter: VisibilityFilters.SHOW_ALL,
+    todos: []
+}
+
+function todoApp(state, action) {
+    if (typeof state === 'undefined') {
+        return initialState
+    }
+    
+    //仅返回传入的state.
+    return state
+}
+
+// => 这里可以用 ES6 参数默认值语法 来精简代码
+function todoApp (state = initialState, action ) {
+    return state
+}
+
+// => 处理SET_VISIBILITY_FILTER. 
+function todoApp (state = initialState, action ) {
+    switch (action.type) {
+        case ('SET_VISIBILITY_FILTER'):
+            return Object.assign({}, state, {
+                visibilityFilter: action.filter
+            })
+        default:
+            return state
+    }
+}
+```
+
+要点:  
+**1.不要修改 `state`.**  
+使用 `object.assign()` 新建副本.  
+在开启ES7的 *对象展开运算符* 的支持, 使 `{...state, ...newState }` 达到相同目的.
+   
+**2.在`default` 情况下返回旧的 `state`.**   
+遇到未知 action时, 一定要返回旧的 `state`
+
+
+### 处理多个 action
+
+```js
+import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from './actions'
+
+function todoApp (state = initialState, action) {
+    switch (action.type) {
+        case SET_VISIBILITY_FILTER:
+            return Object.assign({}, state, {
+                visibilityFilter: action.filter
+            })
+        case ADD_TODO:
+            return Object.assign({}, state, {
+                todos: [
+                    ...state.todos,
+                    {
+                        text: action.text,
+                        completed: false
+                    }
+                ]}
+            )
+        default:
+            return state;
+    }
+}
+```
+
+
+这就是所谓的 reducer 合成，它是开发 Redux 应用最基础的模式。
+
+注意每个 reducer 只负责管理全局 state 中它负责的一部分。每个 reducer 的 state 参数都不同，分别对应它管理的那部分 state 数据。
+
+combineReducers() 所做的只是生成一个函数
+1. 这个函数来调用你的一系列 reducer，每个 reducer 根据它们的 key 来筛选出 state 中的一部分数据并处理 
+2. 然后这个生成的函数再将所有 reducer 的结果合并成一个大的对象。没有任何魔法。
+
+正如其他 reducers，如果 combineReducers() 中包含的所有 reducers 都没有更改 state，那么也就不会创建一个新的对象。
+   
+> combineReducers 接收一个对象，可以把所有顶级的 reducer 放到一个独立的文件中，通过 export 暴露出每个 reducer 函数，然后使用 import * as reducers 得到一个以它们名字作为 key 的 object：  
+>
+> import { combineReducers } from 'redux'  
+> import * as reducers from './reducers'
+> const todoApp = combineReducers(reducers)  
+> 
+> 由于 import * 还是比较新的语法，为了避免困惑，我们不会在本文档中使用它。但在一些社区示例中你可能会遇到它们。
+
+### 源码
+```js:title=reducers.js
+import { combineReducers } from 'redux'
+import {
+  ADD_TODO,
+  TOGGLE_TODO,
+  SET_VISIBILITY_FILTER,
+  VisibilityFilters
+} from './actions'
+const { SHOW_ALL } = VisibilityFilters
+
+function visibilityFilter(state = SHOW_ALL, action) {
+  switch (action.type) {
+    case SET_VISIBILITY_FILTER:
+      return action.filter
+    default:
+      return state
+  }
+}
+
+function todos(state = [], action) {
+  switch (action.type) {
+    case ADD_TODO:
+      return [
+        ...state,
+        {
+          text: action.text,
+          completed: false
+        }
+      ]
+    case TOGGLE_TODO:
+      return state.map((todo, index) => {
+        if (index === action.index) {
+          return Object.assign({}, todo, {
+            completed: !todo.completed
+          })
+        }
+        return todo
+      })
+    default:
+      return state
+  }
+}
+
+const todoApp = combineReducers({
+  visibilityFilter,
+  todos
+})
+
+export default todoApp
+```
+
+
+## Store
+Store 有以下职责:
+- 维持应用的 state；
+- 提供 getState() 方法获取 state；
+- 提供 dispatch(action) 方法更新 state；
+- 通过 subscribe(listener) 注册监听器;
+- 通过 subscribe(listener) 返回的函数注销监听器
+
+再次强调一下 **Redux 应用只有一个单一的 store**  
+
+```js
+import { createStore } from 'redux'
+import todoApp from './reducers'
+const store = createStore(todoApp)
+```
+`createStore()` 的**第二个参数是可选**的, 用于设置 state 初始状态.
+这对开发同构应用时非常有用，服务器端 redux 应用的 state 结构可以与客户端保持一致, 那么客户端可以将从网络接收到的服务端 state 直接用于本地数据初始化。
+
+```js
+let store = createStore(todoApp, window.STATE_FROM_SERVER)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import Acc from '../components/acc'
 import Table from '../components/table'
 
-
 const ResourcePage = ({data, location}) => {
         const siteTitle = data.site.siteMetadata.title;
         const tableList1 = {
@@ -25,7 +24,7 @@ const ResourcePage = ({data, location}) => {
             }]
         }
         const tableList2 = {
-            title: '自动化构建',
+            title: '编译构建',
             data: [{
                 title: 'grunt',
                 content: `https://gruntjs.com/`
@@ -41,6 +40,9 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: `babeljs`,
                 content: `https://www.babeljs.cn/`
+            }, {
+                title: 'parcel',
+                content: 'https://parceljs.docschina.org/'
             }]
         }
 
@@ -362,12 +364,12 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'Go Web Iris',
                 content: 'http://www.studyiris.com/doc/'
-            },{
+            }, {
                 title: 'Platform H5',
                 content: 'https://platform.html5.org/'
             },
                 {
-                    title:'what Html',
+                    title: 'what Html',
                     content: 'https://whatwg-cn.github.io/html/'
                 }
             ]
@@ -526,6 +528,28 @@ const ResourcePage = ({data, location}) => {
             }]
         }
 
+        const tableList26 = {
+            title: '状态管理',
+            data: [{
+                title: 'redux',
+                content: 'https://cn.redux.js.org/'
+            }, {
+                title: 'Vuex',
+                content: 'https://vuex.vuejs.org/zh/'
+            }, {
+                title: 'mobx',
+                content: 'https://cn.mobx.js.org/'
+            }, {
+                title: 'redux saga',
+                content: 'https://redux-saga-in-chinese.js.org/'
+            }, {
+                title: 'rematch',
+                content: 'https://rematch.gitbook.io/handbook/'
+            }, {
+                title: 'React - Redux',
+                content: 'https://react-redux.js.org/'
+            }, ]
+        }
 
         const tableList11 = {
             title: 'Js 组件 & 框架',
@@ -545,14 +569,8 @@ const ResourcePage = ({data, location}) => {
                 title: 'styled-components',
                 content: 'https://styled-components.com/'
             }, {
-                title: 'mobx',
-                content: 'https://cn.mobx.js.org/'
-            }, {
                 title: 'react native',
                 content: 'https://reactnative.dev/'
-            }, {
-                title: 'redux saga',
-                content: 'https://redux-saga-in-chinese.js.org/'
             }, {
                 title: 'storybook',
                 content: 'https://storybook.js.org/'
@@ -613,6 +631,15 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'apollo graphql',
                 content: 'https://www.apollographql.com/docs/'
+            }, {
+                title: 'dvajs',
+                content: 'https://dvajs.com/guide/'
+            }, {
+                title: 'Immutable JS',
+                content: 'https://immutable-js.github.io/immutable-js/'
+            }, {
+                title: 'RX JS',
+                content: 'https://cn.rx.js.org/'
             }]
         }
 
@@ -636,6 +663,25 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'devtools',
                 content: 'https://developer.chrome.com/devtools'
+            }]
+        }
+        const tableList27 = {
+            title: '小程序框架',
+            data: [{
+                title: 'remaxjs',
+                content: 'https://remaxjs.org/'
+            }, {
+                title: 'taro',
+                content: 'https://taro.jd.com/'
+            }, {
+                title: 'mpvue',
+                content: 'http://mpvue.com/'
+            }, {
+                title: 'omi',
+                content: 'https://tencent.github.io/omi/'
+            }, {
+                title: 'uniapp',
+                content: 'https://uniapp.dcloud.io/'
             }]
         }
 
@@ -684,6 +730,21 @@ const ResourcePage = ({data, location}) => {
             }, {
                 title: 'material angularjs',
                 content: 'https://material.angularjs.org/latest/'
+            }, {
+                title: 'Element UI',
+                content: 'https://element.eleme.cn/#/zh-CN'
+            }, {
+                title: 'View UI',
+                content: 'https://www.iviewui.com/'
+            }, {
+                title: 'Mint-ui',
+                content: 'http://mint-ui.github.io/#!/zh-cn'
+            },{
+                title:'weex',
+                content:'https://weex.apache.org/'
+            },{
+                title:'vant',
+                content:'https://youzan.github.io/vant/#/zh-CN/'
             }]
         }
 
@@ -771,6 +832,7 @@ const ResourcePage = ({data, location}) => {
                     <div className="mx-auto prose articleContent">
                         <h4>快捷链接</h4>
                         <Table props={tableList8}/>
+                        <Table props={tableList26}/>
                         <Table props={tableList11}/>
                         <Table props={tableList12}/>
                         <Table props={tableList1}/>
@@ -789,6 +851,7 @@ const ResourcePage = ({data, location}) => {
                         <Table props={tableList24}/>
                         <Table props={tableList23}/>
                         <Table props={tableList25}/>
+                        <Table props={tableList27}/>
 
 
                         <Table props={tableList9}/>

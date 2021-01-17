@@ -10,11 +10,11 @@ import Seo from "../components/seo"
 import formatDate from "../utils/formatDate"
 import Comment from "../components/comment"
 import Slugger from 'github-slugger'
-
+import Collapse from '../components/collapse'
 
 const BlogPost = ({data, pageContext}) => {
     const slugger = new Slugger()
-    const shortcodes = {Link, Gist}
+    const shortcodes = {Link, Gist, Collapse}
     const {mdx} = data
     const commentBox = React.createRef()
     const {prev, next} = pageContext
@@ -22,8 +22,19 @@ const BlogPost = ({data, pageContext}) => {
     const arr = mdx.headings.map((ind,ite)=>{
         return ind.depth
     });
-    const newArray = [...new Set(arr)];
-
+    const nArray = (arr) => {
+        const n = [...new Set(arr)];
+        return n.sort((a,b)=>{
+            if(a < b){
+                return -1;
+            }else if(b < a){
+                return 1;
+            }else {
+                return 0;
+            }
+        })
+    };
+    const newArray = nArray(arr);
 
     let allHeadings,
         level = {
@@ -41,7 +52,7 @@ const BlogPost = ({data, pageContext}) => {
         })
     }
 
-    // console.log(mdx.headings)
+    console.log(mdx)
 
     useEffect(() => {
         const scriptEl = document.createElement('script')
@@ -62,7 +73,7 @@ const BlogPost = ({data, pageContext}) => {
     return (<Layout>
             <Seo title={mdx.frontmatter.title}/>
             <article className="px-4 py-6 mx-auto">
-                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 border-b article-meta-data">
+                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 article-meta-data">
                     {(mdx.frontmatter.featuredimage != null && mdx.frontmatter.featuredimage.src != null) ? (
                         <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                               fluid={mdx.frontmatter.featuredimage.src.childImageSharp.fluid}
@@ -78,7 +89,7 @@ const BlogPost = ({data, pageContext}) => {
                     {/*        ))*/}
                     {/*    }*/}
                     {/*</p>*/}
-                    <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
+                    <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl border-b pb-2">
                         <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                     </h1>
                     <div className="flex mb-2 space-x-2 text-gray-500">
@@ -111,14 +122,12 @@ const BlogPost = ({data, pageContext}) => {
                     <aside className="h-1/2 sticky top-0 ml-4 sm:hidden lg:block lg:w-1/5">
                         <h4 className='pl-4'>目录</h4>
                         <ul className='pl-4'>{allHeadings}</ul>
-                        <hr/>
-
                     </aside>
 
                 </div>
             </article>
             <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
-                <Comment commentBox={commentBox}/>
+                {/*<Comment commentBox={commentBox}/>*/}
             </div>
             {/*<RecommandPost allpost={pageContext.allPost} category={mdx.frontmatter.category}/>*/}
             <section className="w-full mx-auto py-24 prose md:w-3/4 lg:w-1/2">
