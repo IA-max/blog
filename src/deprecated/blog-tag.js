@@ -1,7 +1,7 @@
 import React from "react"
 import kebabCase from "lodash.kebabcase"
 import {graphql, Link} from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../templates/layout"
 import Seo from "../components/seo"
 import Pagination from "../components/pagination"
 import renderTag from "../components/renderTag"

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {graphql} from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../templates/layout';
 import SEO from '../components/seo';
 import List from "../components/list"
 

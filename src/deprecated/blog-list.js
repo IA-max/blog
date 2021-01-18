@@ -1,7 +1,7 @@
 import React from "react"
 import {Link, graphql} from 'gatsby'
 import formatDate from "../utils/formatDate"
-import Layout from "../components/layout"
+import Layout from "../templates/layout"
 import Pagination from "../components/pagination"
 
 const BlogPostList = ({data, pageContext}) => {

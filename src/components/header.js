@@ -3,20 +3,20 @@ import {Link} from 'gatsby';
 import C from "../deprecated/cat"
 const pages = [
     {
-      title: 'Index',
+      title: 'Aritcles',
       url: '/'
     },
     // {
     //     title: 'Article',
     //     url: '/article'
     // },
-    {
-        title: 'Resource',
-        url: '/resource'
-    },{
-        title: 'Gtd',
-        url: '/gtd'
-    },
+    // {
+    //     title: 'Resource',
+    //     url: '/resource'
+    // },{
+    //     title: 'Gtd',
+    //     url: '/gtd'
+    // },
     {
         title: 'About',
         url: '/about'

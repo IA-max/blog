@@ -5,10 +5,10 @@ import Gist from 'react-gist'
 import kebabCase from "lodash.kebabcase"
 import {graphql, Link} from "gatsby"
 import Img from "gatsby-image"
-import Layout from "../components/layout"
+import Layout from "./layout"
 import Seo from "../components/seo"
-import formatDate from "../utils/formatDate"
-import Comment from "../components/comment"
+import { getDate } from "../utils/utils" 
+// import Comment from "../components/comment"
 import Slugger from 'github-slugger'
 import Collapse from '../components/collapse'
 
@@ -52,7 +52,7 @@ const BlogPost = ({data, pageContext}) => {
         })
     }
 
-    console.log(mdx)
+    //console.log(mdx)
 
     useEffect(() => {
         const scriptEl = document.createElement('script')
@@ -93,7 +93,7 @@ const BlogPost = ({data, pageContext}) => {
                         <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                     </h1>
                     <div className="flex mb-2 space-x-2 text-gray-500">
-                        {formatDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text}
+                        {getDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text}
                         {/*{*/}
                         {/*    mdx.frontmatter.tag.map((tag, index, arr) => (*/}
                         {/*        <ConcatWords arrCount={arr.length} index={index} key={index}>*/}

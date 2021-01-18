@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../templates/layout'
 import SEO from '../components/seo'
 
 const ResourcePage = ({data, location}) => {
