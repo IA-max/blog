@@ -3,7 +3,7 @@ title: 转载技能图谱
 date: '2020-01-07T15:08:08+08:00'
 status: publish
 permalink: /tech-mindmap
-category: ["other"] 
+category: ["uncate"] 
 tag: ["other"]
 author: "max"
 excerpt: "技能图谱"

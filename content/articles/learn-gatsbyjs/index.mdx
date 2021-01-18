@@ -2,7 +2,7 @@
 title: Gastby 入门
 date: 2020-12-08
 description: 'Gastby 入门'
-category: ["fe"] 
+category: ["js"] 
 tag: ["js","gastby"]
 excerpt: "Gatsby可用于构建静态网站，这些网站是渐进式Web应用程序，遵循最新的Web标准，并经过优化以实现高性能。它利用了最新和流行的技术，包括ReactJS，Webpack，GraphQL，现代的ES6 + JavaScript和CSS."
 image: ./cover.png
@@ -169,11 +169,11 @@ import "./styles.sass"
 ---
 
 #### 处理数据源
-Gatsby处理数据是基于插件.   插件从数据源中提取数据, 也可以自行处理数据源。
-`gatsby-source-filesystem` -> 从文件系统中提取数据 
-`gatsby-source-wordpress`  -> 从 WordPress API 提取数据
+Gatsby处理数据是基于插件.   插件从数据源中提取数据, 也可以自行处理数据源。  
+- `gatsby-source-filesystem` -> 从文件系统中提取数据 
+- `gatsby-source-wordpress`  -> 从 WordPress API 提取数据
 
-#### 向 GraphQL 添加数据
+#### GraphQL 添加数据
 ...
 
 ```jsx
@@ -189,7 +189,7 @@ export default AboutPage;
 
 
 
-#### 添加Mdx到Gatsby
+#### Gatsby 添加 MDX
 
 1. 安装插件, 删除无关插件
 ```bash
@@ -261,7 +261,7 @@ yarn remove gatsby-transformer-remark gatsby-plugin-feed
 
 ---
 
-#### 添加react-gist到Gatsby
+#### MDX 添加 react-gist
 1. 安装react-gist, 附上React-gist [NPM地址](https://github.com/tleunen/react-gist)
 ```bash
 yarn add react-gist
