@@ -1,17 +1,13 @@
 ---
-title: 'JS - 编写 Virtual DOM'
-date: '2018-09-09T14:15:53+08:00'
-status: publish
-permalink: /write-your-own-virtual-dom
-category: ["js"] 
-tag: ["mv*","vd","js"]
-author: "max"
-excerpt: "构建自己的Virtual DOM需要了解两件事。您甚至不需要深入了解React的来源。 或者是任何其他Virtual DOM实现的源代码。  它们是如此庞大和复杂 – 但实际上Virtual DOM的主要部分可以用少于50行的代码编写"
+title: "Virtual DOM 剖析"
+date: "2018-09-09"
 featured: false
-image: ./p1.png
-featuredimage:
-  src: "p1.png"
-  alt: ""
+category: "js"
+excerpt: "构建自己的Virtual DOM需要了解两件事。您甚至不需要深入了解React的来源。 或者是任何其他Virtual DOM实现的源代码。  它们是如此庞大和复杂 – 但实际上Virtual DOM的主要部分可以用少于50行的代码编写"
+tag: ["mv*","vd","js"]
+status: "publish"
+type: "post"
+cover: "./p1.png"
 ---
 
 构建自己的Virtual DOM需要了解两件事。您甚至不需要深入了解React的来源。  

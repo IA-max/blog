@@ -1,17 +1,13 @@
 ---
-title: Electron  入门
-date: '2019-11-23T17:54:25+08:00'
-status: publish
-permalink: /
-category: ["js"] 
-tag: ["js","electron"]
-author: "max"
-excerpt: ""
+title: "Electron"
+date: "2019-11-23"
 featured: false
-image: 
-featuredimage:
-  src: "cover-ele.png"
-  alt: ""
+category: "js"
+excerpt: ""
+tag: ["js","electron"]
+status: "publish"
+type: "post"
+cover: "./cover-ele.png"
 ---
 
 ##### npm 安装 electron 依赖时下载

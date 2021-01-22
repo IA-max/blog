@@ -1,16 +1,13 @@
 ---
-title: '数组与链表'
-date: '2020-02-16T04:32:57+08:00'
-category: ["algorithm"] 
-tag: ["algorithm"]
-author: "max"
-excerpt: "链表(linked list)这种数据结构既熟悉又陌生,熟悉是因为它确实是非常基础的数据结构,陌生的原因是我们在业务开发中用到它的几率的确不大.
-在很多情况下,我们用数组就能很好的完成工作,而且不会产生太多的差异,那么链表存在的意义是什么?链表相比于数组有什么优势或者不足吗"
+title: "数组与链表"
+date: "2020-02-16"
 featured: false
-image: ./p1.png
-featuredimage:
-  src: "p1.png"
-  alt: ""
+category: "algorithm"
+excerpt: "表(linked list)这种数据结构既熟悉又陌生,熟悉是因为它确实是非常基础的数据结构,陌生的原因是我们在业务开发中用到它的几率的确不大. 在很多情况下,我们用数组就能很好的完成工作,而且不会产生太多的差异,那么链表存在的意义是什么?链表相比于数组有什么优势或者不足吗"
+tag: ["algorithm"]
+status: "publish"
+type: "post"
+cover: "./p1.png"
 ---
 对于不少开发者而言,链表(linked list)这种数据结构既熟悉又陌生,熟悉是因为它确实是非常基础的数据结构,陌生的原因是我们在业务开发中用到它的几率的确不大.
 

@@ -1,17 +1,13 @@
 ---
-title: 无侵入脚本编程
-date: '2012-06-02T06:34:16+08:00'
-status: publish
-permalink: /unobtrusive-programming
-author: admin
-excerpt: '可通过将所有 JavaScript 放在单独文件中, 将内联事件处理程序代码与内容分离'
+title: "无侵入脚本编程"
+date: "2012-06-02"
 featured: false
-image: 
-category: ["js"]
+category: "js"
+excerpt: "可通过将所有 JavaScript 放在单独文件中, 将内联事件处理程序代码与内容分离"
 tag: ["js"]
-featuredimage:
-  alt: "unobtrusive-programming"
-  src: "cover-unobtrusive-js.png"
+status: "publish"
+type: "post"
+cover: "./cover-unobtrusive-js.png"
 ---
 
 #### Web 标准: 分离内容, 展示和脚本

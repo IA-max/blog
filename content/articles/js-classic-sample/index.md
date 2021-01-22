@@ -1,17 +1,13 @@
 ---
-title: 'JavaScript 经典实例收集'
-date: '2019-09-10T07:40:07+08:00'
-status: publish
-permalink: /javascript-%e7%bb%8f%e5%85%b8%e5%ae%9e%e4%be%8b%e6%94%b6%e9%9b%86
-category: ["js"] 
-tag: ["js"]
-author: "max"
-excerpt: "跨浏览器添加事件"
+title: "JavaScript 经典实例收集"
+date: "2019-09-10"
 featured: false
-image: 
-featuredimage:
-  src: "cover-js.png"
-  alt: ""
+category: "js"
+excerpt: "跨浏览器添加事件"
+tag: ["js"]
+status: "publish"
+type: "post"
+cover: "./cover-js.png"
 ---
 
 

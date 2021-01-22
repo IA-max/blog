@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {MDXRenderer} from "gatsby-plugin-mdx"
 import {MDXProvider} from "@mdx-js/react"
 import Gist from 'react-gist'
-import kebabCase from "lodash.kebabcase"
+// import kebabCase from "lodash.kebabcase"
 import {graphql, Link} from "gatsby"
 import Img from "gatsby-image"
 import Layout from "./layout"
@@ -11,10 +11,11 @@ import { getDate } from "../utils/utils"
 // import Comment from "../components/comment"
 import Slugger from 'github-slugger'
 import Collapse from '../components/collapse'
+import Tree from '../data/resources'
 
 const BlogPost = ({data, pageContext}) => {
     const slugger = new Slugger()
-    const shortcodes = {Link, Gist, Collapse}
+    const shortcodes = {Link, Gist, Collapse, Tree}
     const {mdx} = data
     const commentBox = React.createRef()
     const {prev, next} = pageContext
@@ -52,8 +53,6 @@ const BlogPost = ({data, pageContext}) => {
         })
     }
 
-    //console.log(mdx)
-
     useEffect(() => {
         const scriptEl = document.createElement('script')
         scriptEl.async = true
@@ -70,52 +69,29 @@ const BlogPost = ({data, pageContext}) => {
         }
     }, [commentBox])
 
-    return (<Layout>
+    return (<Layout isPost={true}>
             <Seo title={mdx.frontmatter.title}/>
             <article className="px-4 py-6 mx-auto">
-                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2 article-meta-data">
-                    {(mdx.frontmatter.featuredimage != null && mdx.frontmatter.featuredimage.src != null) ? (
-                        <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
-                              fluid={mdx.frontmatter.featuredimage.src.childImageSharp.fluid}
-                              alt={mdx.frontmatter.featuredimage.alt}/>) : " "}
-                    {/*<p className="mt-6 mb-2 text-xs font-semibold tracking-wider uppercase text-primary">*/}
-                    {/*    {*/}
-                    {/*        mdx.frontmatter.category.map((cat, index, arr) => (*/}
-                    {/*            <ConcatWords arrCount={arr.length} index={index} key={cat}>*/}
-                    {/*                <Link*/}
-                    {/*                    className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-purple-700 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-purple-400"*/}
-                    {/*                    to={`/category/${kebabCase(cat)}`}>{cat} </Link>*/}
-                    {/*            </ConcatWords>*/}
-                    {/*        ))*/}
-                    {/*    }*/}
-                    {/*</p>*/}
-                    <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl border-b pb-2">
-                        <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
-                    </h1>
-                    <div className="flex mb-2 space-x-2 text-gray-500">
-                        {getDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text}
-                        {/*{*/}
-                        {/*    mdx.frontmatter.tag.map((tag, index, arr) => (*/}
-                        {/*        <ConcatWords arrCount={arr.length} index={index} key={index}>*/}
-                        {/*            <Link*/}
-                        {/*                className="ml-2 text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-white bg-gray-500 uppercase last:mr-0 mr-1 hover:no-underline hover:text-white hover:bg-gray-400"*/}
-                        {/*                to={`/tag/${kebabCase(tag)}`}># {tag} </Link>*/}
-                        {/*        </ConcatWords>*/}
-                        {/*    ))*/}
-                        {/*}*/}
-                    </div>
+                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-2/3 article-meta-data">
+                    <div className="sm:w-full lg:w-4/5">
+                        {(mdx.frontmatter.cover != null) ? (
+                            <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
+                                 fluid={mdx.frontmatter.cover.childImageSharp.fluid}
+                                 alt={"封面"}/>) : " "}
 
-                    <Link className="flex items-center text-gray-700"
-                          to={`/blog/author/${kebabCase(mdx.frontmatter.author)}`}>
-                        {/*<B/>*/}
-                        {/*<div className="ml-2">*/}
-                        {/*    <p className="text-sm font-semibold text-gray-800">{mdx.frontmatter.author}</p>*/}
-                        {/*    <p className="text-sm text-gray-500">{formatDate(mdx.frontmatter.date)}</p>*/}
-                        {/*</div>*/}
-                    </Link>
-                    {/*<p className="text-sm text-gray-500">{formatDate(mdx.frontmatter.date)} - {mdx.fields.readingTime.text}</p>*/}
+                        <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl border-b pb-2">
+                            <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
+                        </h1>
+                        <div className="flex mb-2 space-x-2 text-gray-500">
+                            {getDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text}
+                        </div>
+
+                        {/* <Link className="flex items-center text-gray-700"
+                              to={`/blog/author/${kebabCase(mdx.frontmatter.author)}`}>
+                        </Link> */}
+                    </div>
                 </div>
-                <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2 articleContent flex">
+                <div className="w-full mx-auto prose md:w-3/4 lg:w-2/3 articleContent flex">
                     <div className="sm:w-full lg:w-4/5">
                         <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
                     </div>
@@ -129,7 +105,6 @@ const BlogPost = ({data, pageContext}) => {
             <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
                 {/*<Comment commentBox={commentBox}/>*/}
             </div>
-            {/*<RecommandPost allpost={pageContext.allPost} category={mdx.frontmatter.category}/>*/}
             <section className="w-full mx-auto py-24 prose md:w-3/4 lg:w-1/2">
                 <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
                     <div>
@@ -163,18 +138,14 @@ export const query = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
-                author
                 category
                 tag
-                featuredimage {
-                    src {
-                        childImageSharp {
-                            fluid(maxWidth: 1024) {
-                                ...GatsbyImageSharpFluid
-                            }
+                cover {
+                    childImageSharp {
+                        fluid(maxWidth: 1024) {
+                            ...GatsbyImageSharpFluid
                         }
-                    }
-                    alt
+                    }                    
                 }
             }
             fields {

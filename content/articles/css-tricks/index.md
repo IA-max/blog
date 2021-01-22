@@ -1,18 +1,15 @@
 ---
-title: 'CSS - 片段'
-date: '2019-11-24T15:47:50+08:00'
-status: publish
-permalink: /usefuly-css-snippet
-category: ["css"] 
-tag: ["css"]
-author: "max"
-excerpt: "常用到的css代码片段，包括了一些hacks技术"
+title: "片段收集"
+date: "2019-11-24"
 featured: false
-image: " "
-featuredimage:
-  src: "none.png"
-  alt: ""
+category: "css"
+excerpt: "常用到的css代码片段，包括了一些hacks技术"
+tag: ["css"]
+status: "publish"
+type: "post"
+cover: "./none.png"
 ---
+
 常用到的css代码片段，包括了一些hacks技术.
 
 ##### 浏览器兼容hacks

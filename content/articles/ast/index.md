@@ -1,17 +1,15 @@
 ---
-title: 'AST 抽象语法树'
-date: '2019-09-09T23:27:50+08:00'
-status: publish
-category: ["algorithm"] 
-tag: ["algorithm"]
-author: "max"
-excerpt: "抽象语法树（`abstract syntax tree` 或者缩写为 `AST`），或者语法树（`syntax tree`），是源代码的抽象语法结构的树状表现形式，这里特指编程语言的源代码。树上的每个节点都表示源代码中的一种结构"
+title: "AST 抽象语法树"
+date: "2019-09-09"
 featured: false
-image: ./p1.png
-featuredimage:
-  src: "p1.png"
-  alt: ""
+category: "algorithm"
+excerpt: "抽象语法树（`abstract syntax tree` 或者缩写为 `AST`），或者语法树（`syntax tree`），是源代码的抽象语法结构的树状表现形式，这里特指编程语言的源代码。树上的每个节点都表示源代码中的一种结构"
+tag: ["algorithm"]
+status: "publish"
+type: "post"
+cover: "./p1.png"
 ---
+
 提起 AST 抽象语法树，大家可能并不感冒。但是提到它的使用场景，也许会让你大吃一惊。  
 原来它一直在你左右与你相伴，而你却不知。
 

@@ -1,18 +1,15 @@
 ---
-title: CSS - 浮动清除
-date: '2016-11-24T15:28:00+08:00'
-status: publish
-permalink: /%e6%b5%ae%e5%8a%a8%e6%b8%85%e9%99%a4
-category: ["css"] 
-tag: ["css","float"]
-author: "max"
-excerpt: "清除浮动前我们要了解两个重要的定义"
+title: "浮动清除"
+date: "2016-11-24"
 featured: false
-image: 
-featuredimage:
-  src: "cover-c3.png"
-  alt: ""
+category: "css"
+excerpt: "清除浮动前我们要了解两个重要的定义"
+tag: ["css","float"]
+status: "publish"
+type: "post"
+cover: "./cover-c3.png"
 ---
+
 #### 清除浮动前我们要了解两个重要的定义
 
 ##### 浮动的定义

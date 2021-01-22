@@ -1,17 +1,13 @@
 ---
-title: '入门 - Expressjs'
-date: '2019-12-22T02:42:13+08:00'
-status: publish
-permalink: /expressjs-%e8%ae%b0%e5%bd%95
-category: ["node"] 
-tag: ["node","js", "full stack"]
-author: "max"
-excerpt: "get the full url in Express"
+title: "入门 - Expressjs"
+date: "2019-12-22"
 featured: false
-image: 
-featuredimage:
-  src: "cover-express.png"
-  alt: ""
+category: "node"
+excerpt: ""
+tag: ["node","js", "full stack"]
+status: "publish"
+type: "post"
+cover: "./cover-express.png"
 ---
 get the full url in Express?
 

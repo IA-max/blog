@@ -1,18 +1,15 @@
 ---
-title: 'React - 那些你应该知道的'
-date: '2019-12-03T18:44:58+08:00'
-status: private
-permalink: /react-interview
-category: ["react"] 
-tag: ["mv*"]
-author: "max"
-excerpt: "React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序"
+title: "React - 那些你应该知道的"
+date: "2019-12-03"
 featured: false
-image: 
-featuredimage:
-  src: "cover-all-react.png"
-  alt: ""
+category: "react"
+excerpt: "React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序"
+tag: ["mv*"]
+status: "publish"
+type: "post"
+cover: "./cover-all-react.png"
 ---
+
 ### 什么是React？
 
 React是一个**开放源代码的前端JavaScript库**，用于构建用户界面，尤其是单页应用程序。它用于处理Web和移动应用程序的视图层。React是由Facebook的软件工程师Jordan Walke创建的。React于2011年首次部署在Facebook的News Feed上，2012年首次部署在Instagram上。

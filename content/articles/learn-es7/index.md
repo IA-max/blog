@@ -1,18 +1,15 @@
 ---
-title: ES 7新特性 - (2016)
-date: '2019-11-26T17:55:40+08:00'
-status: publish
-permalink: /es7%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882016%ef%bc%89
-category: ["js"] 
-tag: ["js","es"]
-author: "max"
-excerpt: "ES2016添加了两个小的特性来说明标准化过程"
+title: "ES 7新特性 - (2016)"
+date: "2019-11-26"
 featured: false
-image: 
-featuredimage:
-  src: "cover-es.png"
-  alt: ""
+category: "js"
+excerpt: "ES2016添加了两个小的特性来说明标准化过程"
+tag: ["js","es"]
+status: "publish"
+type: "post"
+cover: "./cover-es.png"
 ---
+
 ES2016添加了两个小的特性来说明标准化过程：
 
 - 数组includes()方法，用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回true，否则返回false。

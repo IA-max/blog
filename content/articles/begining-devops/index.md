@@ -1,15 +1,13 @@
 ---
-title: DevOps on Windows
-date: 2020-12-10
-category: ["devops"] 
-tag: ["DevOps", "setup"]
-author: "max"
-excerpt: ""
+title: "DevOps on Win"
+date: "2020-12-10"
 featured: false
-image:
-featuredimage:
-  src: "devops.png"
-  alt: "Windows Dev Env"
+category: "ci/devops"
+excerpt: ""
+tag: ["devops"]
+status: "publish"
+type: "post"
+cover: "./devops.png"
 ---
 
 

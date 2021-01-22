@@ -1,16 +1,13 @@
 ---
-title: 代码风格
-date: '2017-03-28T18:16:01+08:00'
-status: publish
-category: ["js"]
-tag: ["code"]
-author: "max"
-excerpt: ""
+title: "代码风格"
+date: "2017-03-28"
 featured: false
-image:
-featuredimage:
-src: ""
-alt: ""
+category: "js"
+excerpt: ""
+tag: ["code style", "js"]
+status: "publish"
+type: "post"
+cover: "./cover.png"
 ---
 
 ## 为什么我们应该使用正确的代码样式  

@@ -58,7 +58,7 @@ const About = ({data, location}) => {
                     </div>
                 </div>
                 <div className="mx-auto prose articleContent">
-                    <p>I'm a Design-driven developer.born in 1987 and grew up in TS. </p>
+                    <p>I'm a Design-driven developer.born in 80's and grew up in TS. </p>
                     <p>I focused on crafting products in ReactJS, also write about new technologies on my blog
                         platforms<span role="img" aria-label={'rocket'}>🚀</span> .</p>
                     <p>Solved some problems, and bring out my side-projects.</p>

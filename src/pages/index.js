@@ -11,7 +11,7 @@ const BlogIndex = ({data, location}) => {
     const categories = {}, cates = [];
     categories.all = posts;
     posts.forEach((ite, ind) => {
-        const name = ite.frontmatter.category[0];
+        const name = ite.frontmatter.category;
         if (!categories[name]) {
             categories[name] = []
         }
@@ -83,20 +83,6 @@ export const pageQuery = graphql`
                     title
                     tag
                     category
-                    description
-                    featuredimage {
-                        src {
-                            childImageSharp {
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                                fixed(width: 200, height: 100) {
-                                    ...GatsbyImageSharpFixed
-                                }
-                            }
-                        }
-                        alt
-                    }
                 }
             }
         }

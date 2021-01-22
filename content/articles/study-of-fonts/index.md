@@ -1,17 +1,13 @@
 ---
-title: 'WebFont 研究'
-date: '2018-12-03'
-status: private
-permalink: /study-of-webfont
-category: ["css"] 
-tag: ["css"]
-author: "max"
-excerpt: ""
+title: "WebFont 研究"
+date: "2018-12-03"
 featured: false
-image: 
-featuredimage:
-  src: "cover-typography.png"
-  alt: ""
+category: "css"
+excerpt: ""
+tag: ["css"]
+status: "publish"
+type: "post"
+cover: "./cover-typography.png"
 ---
 
 ### Sans-serif 无衬线体

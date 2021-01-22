@@ -1,16 +1,13 @@
 ---
-title: ES 11新特性 - (2020)
-date: '2020-11-27T17:57:32+08:00'
-status: publish
-permalink: /es11
-category: ["js"] 
-tag: ["js","es"]
-author: "max"
-excerpt: ""
+title: "ES 11新特性 - (2020)"
+date: "2020-11-27"
 featured: false
-image: 
-featuredimage:
-  src: "cover-es.png"
-  alt: ""
+category: "js"
+excerpt: ""
+tag: ["js"]
+status: "publish"
+type: "post"
+cover: "./cover-es.png"
 ---
+
 ## es11

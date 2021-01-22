@@ -1,18 +1,15 @@
 ---
-title:  Docker 笔记
-date: '2020-03-01T04:31:21+08:00'
-status: publish
-permalink: /dockerNote
-category: ["devops"] 
-tag: ["DevOps","note"]
-author: "max"
-excerpt: "Docker 笔记 常用命令"
+title: "Docker 入门"
+date: "2020-03-01"
 featured: false
-image: " "
-featuredimage:
-  src: "cover.png"
-  alt: "Docker"
+category: "ci/devops"
+excerpt: "Docker 笔记 常用命令"
+tag: ["DevOps","note"]
+status: "publish"
+type: "post"
+cover: "./cover.png"
 ---
+
 ## 常用命令
 
 ##### 查看版本

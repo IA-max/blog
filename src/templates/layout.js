@@ -9,8 +9,11 @@ import Footer from '../components/footer'
 // const typography = new Typography(moragaTheme)
 // typography.injectStyles()
 
-const Layout = ({ children }) => (
-	<StaticQuery query={graphql`
+const Layout = (props) => {
+	const { children } = props;
+	console.log(props)
+	return (
+		<StaticQuery query={graphql`
     query SiteTitleQuery {
         site {
           siteMetadata {
@@ -19,14 +22,14 @@ const Layout = ({ children }) => (
         }
       }
     `}
-		render={(data) => (
-		   <>
-			<Header/>
-		     <main>{children}</main>
-		     <Footer/>
-		   </>
-		)}
-	/>
-);
+	render={(data) => (
+	 <>
+		 <Header isPost={props.isPost ? props.isPost : false}/>
+		 <main>{children}</main>
+		 <Footer/>
+	 </>
+	)} />
+	)
+}
 Layout.propTypes = { children: PropTypes.node.isRequired, }
 export default Layout

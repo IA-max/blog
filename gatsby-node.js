@@ -38,19 +38,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return
     }
     const posts = result.data.allMdx.nodes
-    // const postsPerPage = 6
-    // const postsWithoutFeatured = posts.filter((n) => {
-    //     return n.frontmatter.featured == null || !n.frontmatter.featured
-    // })
-    // const numPages = Math.ceil(postsWithoutFeatured.length / postsPerPage)
     const categories = [],
-             authors = [],
              tags = [];
     // ----------------------------------------------------------------------------------- Creating blog posts
     posts.forEach((post, index, arr) => {
-        post.frontmatter.category.forEach(cat => categories.push(cat))
+        categories.push(post.frontmatter.category)
         post.frontmatter.tag.forEach(tag => tags.push(tag))
-        authors.push(post.frontmatter.author)
         const prev = arr[index - 1]
         const next = arr[index + 1]
         createPage({
@@ -64,88 +57,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             },
         })
     })
-
-    // ----------------------------------------------------------------------------------- Creating blog list with pagination
-    // Array.from({ length: numPages }).forEach((_, i) => {
-    //     createPage({
-    //         path: i === 0 ? `/article` : `/article/page/${i + 1}`,
-    //         component: listLayout,
-    //         context: {
-    //             limit: postsPerPage,
-    //             skip: i * postsPerPage,
-    //             currentPage: i + 1,
-    //             numPages,
-    //         },
-    //     })
-    // })
-
-    // ----------------------------------------------------------------------------------- Creating category page
-    // const countCategories = categories.reduce((prev, curr) => {
-    //   prev[curr] = (prev[curr] || 0) + 1
-    //   return prev
-    // }, {})
-    // const allCategories = Object.keys(countCategories)
-    // allCategories.forEach((cat, i) => {
-    //   const link = `/category/${kebabCase(cat)}`
-    //   Array.from({
-    //     length: Math.ceil(countCategories[cat] / postsPerPage),
-    //   }).forEach((_, i) => {
-    //     createPage({
-    //       path: i === 0 ? link : `${link}/page/${i + 1}`,
-    //       component: categoryLayout,
-    //       context: {
-    //         allCategories: allCategories,
-    //         category: cat,
-    //         limit: postsPerPage,
-    //         skip: i * postsPerPage,
-    //         currentPage: i + 1,
-    //         numPages: Math.ceil(countCategories[cat] / postsPerPage),
-    //       },
-    //     })
-    //   })
-    // })
-
-    // ----------------------------------------------------------------------------------- Creating tag page
-    // const countTags = tags.reduce((prev, curr) => {
-    //   prev[curr] = (prev[curr] || 0) + 1
-    //   return prev
-    // }, {})
-    // const allTags = Object.keys(countTags)
-    // allTags.forEach((tag, i) => {
-    //   const link = `/tag/${kebabCase(tag)}`
-    //   Array.from({
-    //     length: Math.ceil(countTags[tag] / postsPerPage),
-    //   }).forEach((_, i) => {
-    //     createPage({
-    //       path: i === 0 ? link : `${link}/page/${i + 1}`,
-    //       component: tagLayout,
-    //       context: {
-    //         allTags: allTags,
-    //         tag: tag,
-    //         limit: postsPerPage,
-    //         skip: i * postsPerPage,
-    //         currentPage: i + 1,
-    //         numPages: Math.ceil(countTags[tag] / postsPerPage),
-    //       },
-    //     })
-    //   })
-    // })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
     if (node.internal.type === `Mdx`) {
         const value = createFilePath({ node, getNode })
-        // const [month, day, year] = new Date(node.frontmatter.date)
-        //     .toLocaleDateString('en-EN', {
-        //         year: 'numeric',
-        //         month: '2-digit',
-        //         day: '2-digit',
-        //     })
-        //     .split('/')
         const slug = value.replace('/articles/', '').replace(/\/$/, '')
-        // const url = `/${year}/${month}/${day}${slug}`
-
         createNodeField({
             name: `slug`,
             node,
@@ -178,14 +96,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
-      title: String
-      description: String
-      excerpt: String
+      title: String!
       date: Date @dateformat
       featured: Boolean!
-      category: [String]!
-      tag: [String]!
-      image: String
+      category: String!
+      tag: [String]
+      excerpt: String
+      
     }
 
     type Fields {

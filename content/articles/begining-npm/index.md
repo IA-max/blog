@@ -1,16 +1,13 @@
 ---
-title: NPM常用命令与配置
-date: '2019-09-10T07:35:01+08:00'
-status: publish
-category: ["node"] 
-tag: ["node","linux"]
-author: "max"
-excerpt: ""
+title: "NPM常用命令与配置"
+date: "2019-09-10"
 featured: false
-image: ''
-featuredimage:
-  src: "cover-npm.png"
-  alt: ""
+category: "node"
+excerpt: ""
+tag: ["node","linux"]
+status: "publish"
+type: "post"
+cover: "./cover-npm.png"
 ---
  可以使用定制的 [cnpm](https://github.com/cnpm/cnpm) (gzip 压缩支持) 命令行工具代替默认的 npm
 

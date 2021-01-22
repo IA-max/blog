@@ -1,7 +1,7 @@
 import React from "react"
 import {useStaticQuery, graphql} from "gatsby"
 import Image from "gatsby-image"
-const C = () => {
+const Logo = () => {
     const data = useStaticQuery(graphql`
         query CQuery {
             avatar: file(absolutePath: { regex: "/logo.png/" }) {
@@ -23,4 +23,4 @@ const C = () => {
     )
 }
 
-export default C
+export default Logo

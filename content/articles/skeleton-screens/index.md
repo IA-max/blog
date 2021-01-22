@@ -1,18 +1,14 @@
 ---
-title: 'Skeleton Screens'
-date: '2019-09-10T03:17:25+08:00'
-status: publish
-permalink: /skeleton-screens
-category: ["css"] 
-tag: ["css","skeleton screens","layout"]
-author: "max"
+title: "Skeleton Screens"
+date: "2019-09-10"
+featured: false
+category: "css"
 excerpt: "在网上设计加载状态经常被忽视或被视为事后的想法。性能不仅仅是开发人员的责任，建立一个与慢速连接一起工作的体验也可能是一项设计挑战。
 虽然开发人员需要关注缩小和缓存等问题，但设计人员必须考虑UI在处于“加载”或“离线”状态时的外观和行为方式"
-featured: false
-image: ./p1.png
-featuredimage:
-  src: "p1.png"
-  alt: ""
+tag: ["css","skeleton screens","layout"]
+status: "publish"
+type: "post"
+cover: "./p1.png"
 ---
 
 在网上设计加载状态经常被忽视或被视为事后的想法。性能不仅仅是开发人员的责任，建立一个与慢速连接一起工作的体验也可能是一项设计挑战。

@@ -1,19 +1,15 @@
 ---
-title: 'JavaScript 到 TypeScript'
-date: '2019-11-21T17:49:23+08:00'
-status: publish
-permalink: /javascript-%e5%88%b0-typescript
-category: ["js"] 
-tag: ["js","ts"]
-author: "max"
-excerpt: "TypeScript 简称 TS.  
-它是 JavaScript 的超集，在 JavaScript 上做了一层封装，封装出 TypeScript 的特性，最终代码可以编译为 JavaScript"
+title: "JavaScript 到 TypeScript"
+date: "2019-11-21"
 featured: false
-image: 
-featuredimage:
-  src: "cover-ts.png"
-  alt: ""
+category: "js"
+excerpt: "ypeScript 简称 TS.  它是 JavaScript 的超集，在 JavaScript 上做了一层封装，封装出 TypeScript 的特性，最终代码可以编译为 JavaScript"
+tag: ["js","ts"]
+status: "publish"
+type: "post"
+cover: "./cover-ts.png"
 ---
+
 #### 什么是 TypeScript
 
 TypeScript 简称 TS.  

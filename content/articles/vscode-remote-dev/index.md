@@ -1,15 +1,13 @@
 ---
-title: VSCode Linux 远程开发配置
-date: 2020-12-11
-category: ["linux"] 
-tag: ["software","vscode","linux"]
-author: "max"
-excerpt: "VSCode Linux 远程开发配置 搜索并安装插件"
+title: "VSCode Linux 远程开发配置"
+date: "2019-12-11"
 featured: false
-image: 
-featuredimage:
-  src: "Snipaste_2020-12-10_17-06-26.png"
-  alt: ""
+category: "linux"
+excerpt: "VSCode Linux 远程开发配置"
+tag: ["software","vscode","linux"]
+status: "publish"
+type: "post"
+cover: "./Snipaste_2020-12-10_17-06-26.png"
 ---
 
 #### 密码登录方式

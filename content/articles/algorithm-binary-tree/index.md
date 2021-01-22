@@ -1,15 +1,13 @@
 ---
-title: '算法 - 二叉树'
-date: '2019-09-09T23:23:42+08:00'
-status: publish
-category: ["algorithm"] 
-tag: ["algorithm"]
-author: "max"
-excerpt: "算法和数据结构是程序的基本功，而且语言都是想通的，只要是掌握了一门语言学习其他语言就如同顺水推舟。"
+title: "算法 - 二叉树"
+date: "2019-09-09"
 featured: false
-featuredimage:
-  src: "p1.png"
-  alt: ""
+category: "algorithm"
+excerpt: "算法和数据结构是程序的基本功，而且语言都是想通的，只要是掌握了一门语言学习其他语言就如同顺水推舟。"
+tag: ["algorithm"]
+status: "publish"
+type: "post"
+cover: "./p1.png"
 ---
 
 算法和数据结构是程序的基本功，而且语言都是想通的，只要是掌握了一门语言学习其他语言就如同顺水推舟。

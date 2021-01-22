@@ -1,16 +1,13 @@
 ---
-title: MV框架比较
-date: '2016-02-18T18:16:01+08:00'
-status: publish
-category: ["js"]
-tag: ["mv*"]
-author: "max"
-excerpt: "Web开发随着项目越大越复杂， 使用故障排除与维护变得困难。这时我们需要框架提供一种手段，基于设计模式，以实现开发过程."
+title: "MV框架比较"
+date: "2016-02-18"
 featured: false
-image: 
-featuredimage:
-src: ""
-alt: ""
+category: "js"
+excerpt: "Web开发随着项目越大越复杂， 使用故障排除与维护变得困难。这时我们需要框架提供一种手段，基于设计模式，以实现开发过程"
+tag: ["mv*"]
+status: "publish"
+type: "post"
+cover: "./cover.png"
 ---
 
 

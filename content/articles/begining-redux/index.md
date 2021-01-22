@@ -1,19 +1,15 @@
 ---
-title: '入门 - Redux'
-date: '2018-01-26T17:00:17+08:00'
-status: publish
-permalink: /redux-begining
-category: ["js"]
-tag: ["js"]
-author: "max"
-excerpt: "Redux"
+title: "Redux 入门"
+date: "2018-01-26"
 featured: false
-image:
-featuredimage:
-src: "none.png"
-alt: ""
-
+category: "js"
+excerpt: ""
+tag: ["js"]
+status: "publish"
+type: "post"
+cover: "./none.png"
 ---
+
 安装create-react-app
 ```bash
 npm install -g create-react-app

@@ -1,17 +1,13 @@
 ---
-title: 'Git 入门'
-date: '2019-09-10T07:02:02+08:00'
-status: publish
-permalink: /git-%e5%85%a5%e9%97%a8
-category: ["ci"] 
-tag: ["git","linux"]
-author: "max"
-excerpt: "Git是Linux的缔造者Linus Torvalds为了帮助管理Linux内核源码而开发的一款免费、开源的分布式版本控制系统"
+title: "Git 入门"
+date: "2019-09-10"
 featured: false
-image: ./trees.png
-featuredimage:
-  src: "trees.png"
-  alt: ""
+category: "ci/devops"
+excerpt: "Git是Linux的缔造者Linus Torvalds为了帮助管理Linux内核源码而开发的一款免费、开源的分布式版本控制系统"
+tag: ["git","linux"]
+status: "publish"
+type: "post"
+cover: "./trees.png"
 ---
 
 Git是Linux的缔造者Linus Torvalds为了帮助管理Linux内核源码而开发的一款免费、开源的分布式版本控制系统。  

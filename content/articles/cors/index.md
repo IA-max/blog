@@ -1,17 +1,13 @@
 ---
-title: 跨域实现的多种方式
-date: '2017-06-01T20:49:00+08:00'
-status: publish
-permalink: /cors
-category: ["js"] 
-tag: ["js"]
-author: "max"
-excerpt: "前后端数据交互经常会碰到请求跨域，什么是跨域，以及有哪几种跨域方式"
+title: "跨域实现的多种方式"
+date: "2017-06-01"
 featured: false
-image: ./p1.png
-featuredimage:
-  src: "p1.png"
-  alt: ""
+category: "js"
+excerpt: "前后端数据交互经常会碰到请求跨域，什么是跨域，以及有哪几种跨域方式"
+tag: ["js"]
+status: "publish"
+type: "post"
+cover: "./p1.png"
 ---
 ### 前言
 

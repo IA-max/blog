@@ -1,18 +1,15 @@
 ---
-title: ES 10新特性 - (2019)
-date: '2019-11-26T17:57:32+08:00'
-status: publish
-permalink: /es10%e6%96%b0%e7%89%b9%e6%80%a7%ef%bc%882019%ef%bc%89
-category: ["js"] 
-tag: ["js","es"]
-author: "max"
-excerpt: "如果输入 Unicode 格式但是超出范围的字符"
+title: "ES 10新特性 - (2019)"
+date: "2019-11-26"
 featured: false
-image: 
-featuredimage:
-  src: "cover-es.png"
-  alt: ""
+category: "js"
+excerpt: "如果输入 Unicode 格式但是超出范围的字符"
+tag: ["js"]
+status: "publish"
+type: "post"
+cover: "./cover-es.png"
 ---
+
 - 行分隔符（U + 2028）和段分隔符（U + 2029）符号现在允许在字符串文字中，与JSON匹配
 - 更加友好的 JSON.stringify
 - 新增了Array的`flat()`方法和`flatMap()`方法

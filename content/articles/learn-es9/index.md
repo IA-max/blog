@@ -1,18 +1,15 @@
 ---
-title: ES 9新特性 - (2018)
-date: '2019-11-26T17:56:55+08:00'
-status: publish
-permalink: /es9
-category: ["js"] 
-tag: ["js","es"]
-author: "max"
-excerpt: "ES2018引入异步迭代器"
+title: "ES 9新特性 - (2018)"
+date: "2019-11-26"
 featured: false
-image: 
-featuredimage:
-  src: "cover-es.png"
-  alt: ""
+category: "js"
+excerpt: "ES2018引入异步迭代器"
+tag: ["js"]
+status: "publish"
+type: "post"
+cover: "./cover-es.png"
 ---
+
 - 异步迭代
 - Promise.finally()
 - Rest/Spread 属性
