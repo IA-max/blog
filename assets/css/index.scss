@@ -143,6 +143,9 @@ header {
         @apply ml-12;
         list-style: square;
       }
+      p {
+        display: contents;
+      }
     }
   }
 
@@ -396,3 +399,4 @@ header {
     @apply hover:no-underline;
   }
 }
+
