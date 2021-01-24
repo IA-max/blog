@@ -1,14 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-//@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700");
-//@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   @apply font-body;
   font-size: 90%;
   color: #3b454e;
+}
+
+.max-w-8xl {
+  max-width: 90rem;
 }
 
 a {
@@ -20,6 +21,150 @@ header {
     font-family: Karla;
   }
 }
+
+.more-post {
+  & > div {
+    transition: all .2s ease;
+    &:hover {
+      @apply bg-indigo-50;
+      transform: translate3D(0,-1px,0);
+    }
+  }  
+}
+
+.lll {
+  font-weight: bold;
+  font-size: 32px;
+  font-family: antic slab;
+  span{
+    color: #1889bb;
+  }
+}
+
+.tagList li {
+  min-width: 20%;
+  a
+  {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 13px;
+    border-radius: 8px;
+    margin: 8px;
+    border: 2px solid transparent;
+  }
+  &:first-of-type,
+  &:nth-of-type(6)
+  {
+    a {
+      margin-left: 0;
+    }
+  }
+
+  &:last-of-type,
+  &:nth-of-type(5){
+    a {
+      margin-right: 0;
+    }
+  }
+}
+
+.type1{
+  background: rgba(82, 178, 135, 0.2);
+  color: rgb(82, 178, 135);
+  &:hover{
+    background: rgba(82, 178, 135, 0.3);
+    color: rgb(82, 178, 105);
+  }
+}
+
+.type2{
+  background: rgba(84, 139, 190, 0.2);
+  color: rgb(84, 139, 190);
+  &:hover{
+    background: rgba(84, 139, 190, 0.3);
+    color: rgb(84, 139, 160);
+  }
+}
+.type3{
+  background: rgba(96, 188, 94, 0.2);
+  color: rgb(96, 188, 94);
+  &:hover{
+    background: rgba(96, 188, 94, 0.3);
+    color: rgb(96, 188, 64);
+  }
+}
+.type4{
+  background: rgba(163, 159, 81, 0.2);
+  color: rgb(163, 159, 81);
+  &:hover {
+    background: rgba(163, 159, 81, 0.3);
+    color: rgb(163, 159, 51);
+  }
+}
+.type5{
+  background: rgba(130, 134, 217, 0.2);
+  color: rgb(130, 134, 217);
+  &:hover {
+    background: rgba(130, 134, 217, 0.3);
+    color: rgb(130, 134, 187);
+  }
+}
+.type6{
+  background: rgba(193, 102, 135, 0.2);
+  color: rgb(193, 102, 135);
+  &:hover {
+    background: rgba(193, 102, 135, 0.3);
+    color: rgb(193, 102, 105);
+  }
+}
+.type7{
+  background: rgba(199, 113, 113, 0.2);
+  color: rgb(199, 113, 113);
+  &:hover {
+    background: rgba(199, 113, 113, 0.3);
+    color: rgb(199, 113, 83);
+  }
+}
+.type8{
+  background: rgba(175, 102, 193, 0.2);
+  color: rgb(175, 102, 193);
+  &:hover {
+    background: rgba(175, 102, 193, 0.3);
+    color: rgb(175, 102, 163);
+  }
+}
+.type0{
+  background: rgba(190, 154, 84, 0.2);
+  color: rgb(190, 154, 84);
+  &:hover {
+    background: rgba(190, 154, 84, 0.3);
+    color: rgb(190, 154, 54);
+  }
+}
+.type9{
+  background: rgba(190, 154, 84, 0.2);
+  color: rgb(190, 154, 84);
+  &:hover {
+    background: rgba(190, 154, 84, 0.3);
+    color: rgb(190, 154, 54);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*---------------------------------------- Gatsby -----------------------------------*/
 .gatsby-remark-code-title {
@@ -77,12 +222,14 @@ header {
 
 /*---------------------------------------- Gatsby Article -----------------------------------*/
 .articleContent {
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
-    @apply font-extrabold;
-    @apply text-gray-900;
-    @apply mt-8;
-    @apply mb-4;
+  main {
+    h1, h2, h3, h4, h5, h6 {
+      @apply tracking-tight;
+      @apply font-extrabold;
+      @apply text-gray-900;
+        margin-top: 32px;
+        margin-bottom: 8px;
+    }
   }
 
   p strong,
@@ -121,7 +268,8 @@ header {
     @apply leading-6;
     @apply font-medium;
     //@apply py-2;
-    @apply my-2;
+    
+    margin: 0 0 16px 0;
   }
   //p + p {
   //  &:first-of-type {
@@ -149,8 +297,52 @@ header {
     }
   }
 
+  .scrollbar-track-gray-lighter::-webkit-scrollbar-track {
+    --tw-bg-opacity: 1!important;
+    background-color: rgba(209,213,219,var(--tw-bg-opacity))!important;
+}
+
+  .scrollbar-thumb-gray::-webkit-scrollbar-thumb {
+    --tw-bg-opacity: 1!important;
+    background-color: rgba(156,163,175,var(--tw-bg-opacity))!important;
+}
+
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: .25rem!important;
+}
+
+  .scrollbar-w-2::-webkit-scrollbar {
+    height: .5rem!important;
+    width: .5rem!important;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
 
   aside {
+    margin-left: 30rem;
+    max-width: 30rem;
+    min-width: 20rem;
+    width: min-content;
+
+    max-height: 80vh;
+    overflow-y: auto;
+
+    position: fixed;
+    left: 50%;
+    // background: #FDF5D9;
+    border-radius: 5px;
+
+    background: #f8f9fa;
+    // border: 2px solid #e9ecef;
+    .toc-title {
+      background: url('./toc.svg') no-repeat right center;
+      background-size: 10%;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
     ul,ol{
       border-radius: 0;
     }
@@ -212,7 +404,7 @@ header {
   aside {
     ul {
       min-width: 250px;
-      border-left: 1px solid #edf2f7;
+      // border-left: 1px solid #edf2f7;
 
       li {
         list-style: none;
@@ -298,6 +490,12 @@ header {
   animation: fadein 0.35s ease-in;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-indent: 0;
+  border-color: inherit;
+}
 
 .fixTable {
   @apply table-auto;
@@ -342,7 +540,9 @@ header {
   text-shadow: none;
 }
 
-.custom_table {
+.custom_table,
+table {
+  margin: 0 0 8px 0;
   border:2px dashed #eaeaea;
   border-radius: 6px;
   width: 100%;
@@ -354,6 +554,7 @@ header {
     @apply px-2;
     @apply py-2;
     text-align: left;
+    border:2px solid  #f7f5f5;
   }
   thead tr th:first-of-type,
   tbody tr td:first-of-type{
@@ -395,7 +596,7 @@ header {
   @apply uppercase;
   &:hover{
     @apply cursor-pointer;
-    @apply text-purple-700;
+    //@apply text-purple-700;
     @apply hover:no-underline;
   }
 }

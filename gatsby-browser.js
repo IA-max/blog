@@ -1,5 +1,7 @@
 import 'typeface-montserrat';
 import 'typeface-merriweather';
+import 'typeface-arvo';
+import 'typeface-antic-slab';
 import '@typefaces-pack/typeface-inter';
 import "./assets/css/index.scss"
 require('./assets/css/my-prism-theme.scss');

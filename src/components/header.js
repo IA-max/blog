@@ -23,44 +23,27 @@ const pages = [
     },
 ]
 const Header = (props) => {
-    console.log(props)
-    if(props.isPost) {
-        return (
-            <header className="mx-auto flex justify-center flex-col py-4 sm:px-6 md:px-0 lg:px-0 mx-auto md:w-3/4 lg:w-2/3">
-                <div className="sm:w-full lg:w-4/5 flex flex-wrap flex-col md:flex-row items-center">
-                    <div className="md:flex">
-                        <Logo/><Link className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline"
-                                  to="/"><h1 className="ml-3 text-xl">IMY Blog</h1></Link>
-                    </div>
-                    <div className="md:ml-auto flex flex-wrap items-center text-base justify-center my-5">
-                        {
-                            pages.map((page, index) => {
-                                return (<Link key={index}
-                                              className="font-medium text-gray-500 hover:text-gray-900 ml-5 hover:no-underline hover:text-blue-700"
-                                              to={`${page.url}`}> {page.title} </Link>)
-                            })
-                        }
-                    </div>
-                </div>
-            </header>
-        )
-    }
-    return (<header className="flex items-center justify-between py-4 sm:px-6 md:px-0 lg:px-0 mx-auto md:w-3/4 lg:w-2/4">
-        <div className="md:flex items-center">
+    // console.log(props)
+    return (<header className="items-center py-4 sm:px-6 md:px-0 lg:px-0 mx-auto md:w-3/4 lg:w-2/4 max-w-8xl">
+
+        <div className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
             <Logo />
-            <Link className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline"
-                  to="/"><span className="ml-3 text-xl">IMY Blog</span>
-            </Link>
+            <Link className="title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline" to="/"><span className="ml-3 text-xl lll">maxy<span>blog</span></span></Link>
+            {/*<svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">*/}
+            {/*    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>*/}
+            {/*</svg>*/}
         </div>
-        <div className="flex text-base">
+
+        <div className="md:ml-auto md:mr-auto pt-4 flex flex-wrap items-center text-base justify-center">
             {
                 pages.map((page, index) => {
                     return (<Link key={index}
-                                  className="font-medium text-gray-500 hover:text-gray-900 ml-5 hover:no-underline hover:text-blue-700"
+                                  className="font-medium text-xl text-gray-500 hover:text-gray-900 ml-5 hover:no-underline hover:text-blue-700"
                                   to={`${page.url}`}> {page.title} </Link>)
                 })
             }
         </div>
+
 
     </header>)
 

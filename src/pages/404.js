@@ -43,7 +43,7 @@ const NotFoundPage = () => {
                         <div className="text-lg mb-8">
                             You may have mistyped the address or the page may have moved.
                         </div>
-                        <Link to="/" className="border border-black rounded p-2">Go Home</Link>
+                        <Link to="/" className="border border-black rounded p-2">cGo Home</Link>
                     </div>
                 </div>
             </div>

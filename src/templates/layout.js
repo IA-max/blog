@@ -11,7 +11,7 @@ import Footer from '../components/footer'
 
 const Layout = (props) => {
 	const { children } = props;
-	console.log(props)
+	// console.log(props)
 	return (
 		<StaticQuery query={graphql`
     query SiteTitleQuery {

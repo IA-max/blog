@@ -8,7 +8,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: black;
   background: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family:  Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;
@@ -32,7 +32,9 @@ pre[class*="language-"] {
   position: relative;
   //border: 1px solid #eaecef;
   border: 1px solid #ededed;
-  background-color: #eef7ff5e;
+  // background-color: #eef7ff5e;
+  background-color: #f8f9fa;
+  border:none;
   //border: 1px solid #f6f8fa;
   //box-shadow: -1px 0 0 0 #358ccb, 0 0 0 1px #dfdfdf;
   //background-color: rgb(246, 248, 250);
@@ -40,9 +42,37 @@ pre[class*="language-"] {
   background-size: 3em 3em;
   background-origin: content-box;
   background-attachment: local;
-  margin: .5em 0;
+  margin: 0 0 16px 0;
   padding: 1em;
-  border-radius: 2px;
+  border-radius: 8px;
+
+
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+
+  &::-webkit-scrollbar {
+    height: .5rem!important;
+    width: .5rem!important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: .25rem!important;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    --tw-bg-opacity: 1!important;
+    background-color: rgba(156,163,175,0.9)!important;
+}
+
+  &::-webkit-scrollbar-track {
+    --tw-bg-opacity: 1!important;
+    background-color: rgba(209,213,219,0.4)!important;
+}
+
+
+
+
+
 }
 
 pre[class*="language-"] > code {

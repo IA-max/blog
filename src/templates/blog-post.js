@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 import Layout from "./layout"
 import Seo from "../components/seo"
 import { getDate } from "../utils/utils" 
-// import Comment from "../components/comment"
+import Comment from "../components/comment"
 import Slugger from 'github-slugger'
 import Collapse from '../components/collapse'
 import Tree from '../data/resources'
@@ -71,48 +71,65 @@ const BlogPost = ({data, pageContext}) => {
 
     return (<Layout isPost={true}>
             <Seo title={mdx.frontmatter.title}/>
+            
             <article className="px-4 py-6 mx-auto">
-                <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-2/3 article-meta-data">
-                    <div className="sm:w-full lg:w-4/5">
+                <div className="w-full mx-auto text-left md:w-3/4 lg:w-full article-meta-data max-w-4xl  mb-4">
+                    <div className="sm:w-full">
                         {(mdx.frontmatter.cover != null) ? (
                             <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                                  fluid={mdx.frontmatter.cover.childImageSharp.fluid}
                                  alt={"封面"}/>) : " "}
 
-                        <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl border-b pb-2">
+                        <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl border-b-2 pb-2">
                             <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                         </h1>
-                        <div className="flex mb-2 space-x-2 text-gray-500">
-                            {getDate(mdx.frontmatter.date)} / {mdx.fields.readingTime.text}
-                        </div>
 
+                        <div className="text-gray-600 body-font">
+                        <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+                            <div className="flex title-font font-medium items-center text-gray-400 mb-4 md:mb-0">
+                            <span>{mdx.fields.readingTime.text}</span>
+                            </div>
+                            <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                            <span className="text-gray-400 hover:text-gray-900">Post on { getDate(mdx.frontmatter.date) }</span>
+                            </nav>
+                        </div>
+                        </div>
+                 
                         {/* <Link className="flex items-center text-gray-700"
                               to={`/blog/author/${kebabCase(mdx.frontmatter.author)}`}>
                         </Link> */}
                     </div>
                 </div>
-                <div className="w-full mx-auto prose md:w-3/4 lg:w-2/3 articleContent flex">
-                    <div className="sm:w-full lg:w-4/5">
-                        <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
-                    </div>
-                    <aside className="h-1/2 sticky top-0 ml-4 sm:hidden lg:block lg:w-1/5">
-                        <h4 className='pl-4'>目录</h4>
-                        <ul className='pl-4'>{allHeadings}</ul>
-                    </aside>
 
+                <div className="w-full mx-auto prose articleContent  w-full max-w-4xl mx-auto">
+                    <div className="lg:flex">
+                        <div className="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible">
+                            <div className="w-full flex">
+                                <main className="min-w-0 flex-auto">
+                                    <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
+                                </main>
+                                <aside className="hidden xl:text-sm xl:block flex-none w-64 p-8 overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+                                    <h4 className='leading-4 toc-title'>目录</h4>
+                                    <ul>{allHeadings}</ul>
+                                </aside>
+
+                            </div>                            
+                        </div>
+                    </div>                   
                 </div>
+
             </article>
-            <div className="border-t-2 py-36 w-full mx-auto md:w-3/6 lg:w-1/2">
-                {/*<Comment commentBox={commentBox}/>*/}
+            <div className="py-6 w-full mx-auto md:w-3/4 max-w-4xl">
+                <Comment commentBox={commentBox}/>
             </div>
-            <section className="w-full mx-auto py-24 prose md:w-3/4 lg:w-1/2">
-                <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
-                    <div>
+            <section className="w-full mx-auto py-24 prose md:w-3/4 max-w-4xl">
+                <div className="grid grid-cols-1 gap-24 md:grid-cols-2 more-post">
+                    <div className="py-8 px-4 bg-blue-50 rounded">
                         <h1>{prev && <Link to={prev.fields.slug}
                                            className="mb-6 text-md font-semibold text-black md:text-xl">{prev.frontmatter != null && prev.frontmatter.title}</Link>}</h1>
                         <p className="mt-2 text-gray-600 text-sm text-gray-50"> {prev != null && prev.frontmatter != null && prev.frontmatter.excerpt}</p>
                     </div>
-                    <div>
+                    <div className="py-8 px-4 bg-blue-50 rounded">
                         <h1>{next && (
                             <Link to={next.fields.slug} className="mb-6 text-md font-semibold text-black md:text-xl">
                                 <div>  {next.frontmatter != null && next.frontmatter.title}  </div>
