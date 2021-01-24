@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {graphql} from 'gatsby';
+import {Link, graphql} from 'gatsby';
 import Layout from '../templates/layout';
 import SEO from '../components/seo';
 import List from "../components/list"
@@ -48,9 +48,9 @@ const BlogIndex = ({data, location}) => {
             <ul className="flex flex-wrap tagList mb-8">
                 {
                     cates.map((ite, ind) => {
-                        return (<li key={ite}><a className={`catelink type${ind}`} onClick={() => filteArr(ite)}>
+                        return (<li key={ite}><Link to={"#"} className={`catelink type${ind}`} onClick={() => filteArr(ite)}>
                             {ite !== 'js' ? ite : 'javascript' }
-                        </a></li>)
+                        </Link></li>)
                     })
                 }
             </ul>

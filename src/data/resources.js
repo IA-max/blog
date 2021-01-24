@@ -821,11 +821,13 @@ const List = ({props}) => {
     return (
         <ul>
             {
-                props.map((dt, di) => {
-                    if(dt.content === '') return;
-                    return (
-                        <li key={di}><a href={ dt.content }>{ dt.title }</a></li>
-                    )
+                props.map(function(dt, di){
+                    if(dt.content !== '') {
+                        return (
+                            <li key={di}><a href={ dt.content }>{ dt.title }</a></li>
+                        )
+                    }
+                    return true;
                 })
             }
         </ul>
