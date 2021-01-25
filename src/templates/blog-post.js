@@ -86,12 +86,12 @@ const BlogPost = ({data, pageContext}) => {
 
                         <div className="text-gray-600 body-font">
                         <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                            <div className="flex title-font font-medium items-center text-gray-400 mb-4 md:mb-0">
-                            <span>{mdx.fields.readingTime.text}</span>
-                            </div>
-                            <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                            <span className="text-gray-400 hover:text-gray-900">Post on { getDate(mdx.frontmatter.date) }</span>
+                            <nav className="flex flex-wrap items-center text-base justify-center">
+                                <span className="text-gray-400 hover:text-gray-900">Post on { getDate(mdx.frontmatter.date) }</span>
                             </nav>
+                            <div className="flex title-font items-center text-gray-400 mb-4 md:mb-0 md:ml-auto">
+                                <span>{mdx.fields.readingTime.text}</span>
+                            </div>
                         </div>
                         </div>
                  
@@ -122,7 +122,7 @@ const BlogPost = ({data, pageContext}) => {
             <div className="py-6 w-full mx-auto md:w-3/4 max-w-4xl">
                 <Comment commentBox={commentBox}/>
             </div>
-            <section className="w-full mx-auto py-24 prose md:w-3/4 max-w-4xl">
+            <section className="w-full mx-auto py-24 prose md:w-3/4 max-w-4xl sm:px-4">
                 <div className="grid grid-cols-1 gap-24 md:grid-cols-2 more-post">
                     <div className="py-8 px-4 bg-blue-50 rounded">
                         <h1>{prev && <Link to={prev.fields.slug}
