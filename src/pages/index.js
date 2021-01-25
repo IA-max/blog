@@ -44,16 +44,18 @@ const BlogIndex = ({data, location}) => {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO title='All posts'/>
-            <section className="justify-between container mx-auto pt-12 pb-12 w-full mx-auto mb-12 text-left md:w-3/4 lg:w-full max-w-4xl">
-            <ul className="flex flex-wrap tagList mb-8">
-                {
-                    cates.map((ite, ind) => {
-                        return (<li key={ite}><Link to={"#"} className={`catelink type${ind}`} onClick={() => filteArr(ite)}>
-                            {ite !== 'js' ? ite : 'javascript' }
-                        </Link></li>)
-                    })
-                }
-            </ul>
+            <section className="justify-between container mx-auto pt-4 pb-12 w-full mx-auto mb-12 text-left md:w-3/4 lg:w-full max-w-4xl">
+            <div className="list-wrapper px-6 md:px-0">
+                <ul className="flex flex-wrap tagList mb-8">
+                    {
+                        cates.map((ite, ind) => {
+                            return (<li key={ite}><Link to={"#"} className={`catelink type${ind}`} onClick={() => filteArr(ite)}>
+                                {ite !== 'js' ? ite : 'javascript' }
+                            </Link></li>)
+                        })
+                    }
+                </ul>
+            </div>
             <div className="w-full">
                 {pos.map(List)}
             </div>

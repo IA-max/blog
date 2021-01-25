@@ -24,7 +24,7 @@ const pages = [
 ]
 const Header = (props) => {
     // console.log(props)
-    return (<header className="items-center py-4 sm:px-6 md:px-0 lg:px-0 mx-auto md:w-3/4 lg:w-2/4 max-w-8xl">
+    return (<header className="items-center pt-4 sm:px-6 md:px-0 lg:px-0 mx-auto md:w-3/4 lg:w-2/4 max-w-8xl">
 
         <div className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
             <Logo />

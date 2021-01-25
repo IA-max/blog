@@ -41,6 +41,13 @@ header {
   }
 }
 
+.list-wrapper {
+  position: relative;
+  .tagList{
+    margin: 0 -13px 28px;
+  }
+}
+
 .tagList li {
   min-width: 20%;
   a
@@ -53,20 +60,20 @@ header {
     margin: 8px;
     border: 2px solid transparent;
   }
-  &:first-of-type,
-  &:nth-of-type(6)
-  {
-    a {
-      margin-left: 0;
-    }
-  }
+  // &:first-of-type,
+  // &:nth-of-type(6)
+  // {
+  //   a {
+  //     margin-left: 0;
+  //   }
+  // }
 
-  &:last-of-type,
-  &:nth-of-type(5){
-    a {
-      margin-right: 0;
-    }
-  }
+  // &:last-of-type,
+  // &:nth-of-type(5){
+  //   a {
+  //     margin-right: 0;
+  //   }
+  // }
 }
 
 .type1{
@@ -283,8 +290,9 @@ header {
 
   ul, ol {
     @apply list-inside;
-    @apply py-1;
+    // @apply py-1;
     @apply rounded-md;
+    margin: 0 0 16px 0;
     li {
       @apply my-0;
       ul, ol {
