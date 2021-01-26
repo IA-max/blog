@@ -14857,6 +14857,11 @@ typeface-arvo@^1.1.13:
   resolved "https://registry.yarnpkg.com/typeface-arvo/-/typeface-arvo-1.1.13.tgz#28be4abbd80f70d5871d185b9fc6a54b3096c9bb"
   integrity sha512-iDMriza7N1/e+qee4Qdn9ZdJrpAHfjwvU6pMr/O30lwsdk33v35IkDKVhDceBDe03eiw1HifdU4+P5RuO1UwTA==
 
+typeface-fira-code@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-fira-code/-/typeface-fira-code-1.1.13.tgz#0179d220382297a50ea29cabae5c4f61bf6208c3"
+  integrity sha512-8TRlYeIGAqwNajMHB3eSFs58VVfKsAsA0JRVu7z895s/FBl3nrh4PCvbH8tqxadU0UXEbCxNBvZtXn/Jpt7C3Q==
+
 typeface-merriweather@0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.72.tgz#2b990f5293252052d51d170c82d3892319ff0555"
@@ -14866,6 +14871,11 @@ typeface-montserrat@0.0.75:
   version "0.0.75"
   resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.75.tgz#b796d9c767ab8ed1343271985beb1e44b382b7b3"
   integrity sha512-8ski20t3hdwu2T85pVfjK4jsDbwW8yWzd+LAKxYEmu+JVLVlB7G2yfmdKZz06pUwYCLVFvHvup+NYYulHDpE+w==
+
+typeface-roboto-mono@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-roboto-mono/-/typeface-roboto-mono-1.1.13.tgz#2af8662db8f9119c00efd55d6ed8877d2a69ec94"
+  integrity sha512-pnzDc70b7ywJHin/BUFL7HZX8DyOTBLT2qxlJ92eH1UJOFcENIBXa9IZrxsJX/gEKjbEDKhW5vz/TKRBNk/ufQ==
 
 ua-parser-js@^0.7.18:
   version "0.7.23"

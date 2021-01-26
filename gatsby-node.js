@@ -20,10 +20,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             frontmatter {
                 title
                 date
+                featured
                 excerpt
                 category
                 tag
-                featured
             }
           }
         }
@@ -98,11 +98,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter {
       title: String!
       date: Date @dateformat
-      featured: Boolean!
+      featured: Boolean
       category: String!
       tag: [String]
       excerpt: String
-      
     }
 
     type Fields {

@@ -4,7 +4,7 @@ export const getDate =  (date) => {
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
     const now = new Date(date)
-    return `${monthNames[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`
+    return `${monthNames[now.getMonth()]} ${now.getDate()}`
 }
 
 

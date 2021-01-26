@@ -2,12 +2,18 @@ import React, {useState} from 'react';
 import {Link, graphql} from 'gatsby';
 import Layout from '../templates/layout';
 import SEO from '../components/seo';
-import List from "../components/list"
+import ListByYear from '../components/listByYear'
 
 const BlogIndex = ({data, location}) => {
+
+
     const siteTitle = data.site.siteMetadata.title || `Title`;
     const posts = data.allMdx.nodes;
-    const [pos, setPos] = useState(posts);
+    const hash = location.hash.replace(/#/,'');
+    const resultPosts = (!hash || hash === 'all') 
+    ? [].concat(posts)
+    : posts.filter( (iit,iin) => iit.frontmatter.category === hash) ; 
+    const [pos, setPos] = useState(resultPosts);
     const categories = {}, cates = [];
     categories.all = posts;
     posts.forEach((ite, ind) => {
@@ -49,7 +55,9 @@ const BlogIndex = ({data, location}) => {
                 <ul className="flex flex-wrap tagList mb-8">
                     {
                         cates.map((ite, ind) => {
-                            return (<li key={ite}><Link to={"#"} className={`catelink type${ind}`} onClick={() => filteArr(ite)}>
+                            return (<li key={ite}><Link to={
+                                ite === 'all' ? '/' : `#${ite}`
+                                } className={`catelink type${ind}`} onClick={() => filteArr(ite)}>
                                 {ite !== 'js' ? ite : 'javascript' }
                             </Link></li>)
                         })
@@ -57,7 +65,7 @@ const BlogIndex = ({data, location}) => {
                 </ul>
             </div>
             <div className="w-full">
-                {pos.map(List)}
+                <ListByYear props={pos}/>
             </div>
             </section>
         </Layout>
@@ -83,6 +91,7 @@ export const pageQuery = graphql`
                     title
                     tag
                     category
+                    featured
                 }
             }
         }

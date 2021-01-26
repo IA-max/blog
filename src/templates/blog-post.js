@@ -36,7 +36,6 @@ const BlogPost = ({data, pageContext}) => {
         })
     };
     const newArray = nArray(arr);
-
     let allHeadings,
         level = {
             0: 'text-xl',
@@ -109,10 +108,10 @@ const BlogPost = ({data, pageContext}) => {
                                     <MDXProvider components={shortcodes}><MDXRenderer>{mdx.body}</MDXRenderer></MDXProvider>
                                 </main>
                                 <aside className="hidden xl:text-sm xl:block flex-none w-64 p-8 overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+                                {/* <aside className="hidden xl:text-sm flex-none w-64 p-8 overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch"> */}
                                     <h4 className='leading-4 toc-title'>目录</h4>
                                     <ul>{allHeadings}</ul>
                                 </aside>
-
                             </div>                            
                         </div>
                     </div>                   

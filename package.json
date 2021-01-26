@@ -52,8 +52,10 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typeface-antic-slab": "^1.1.13",
     "typeface-arvo": "^1.1.13",
+    "typeface-fira-code": "^1.1.13",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "0.0.75",
+    "typeface-roboto-mono": "^1.1.13"
   },
   "devDependencies": {
     "eslint-config-prettier": "^7.0.0",

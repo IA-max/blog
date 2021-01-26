@@ -18,8 +18,20 @@ a {
 
 header {
   a {
-    font-family: Karla;
+    font-family: Inter;
+    @apply text-base;
   }
+}
+
+.groupByYear {
+  li{
+    &:hover {
+      @apply bg-indigo-50;
+      padding: 0.5rem 1rem;
+      margin: 0 -1rem;
+    }
+  }
+
 }
 
 .more-post {
@@ -44,7 +56,7 @@ header {
 .list-wrapper {
   position: relative;
   .tagList{
-    margin: 0 -13px 28px;
+    margin: 0 -8px 28px;
   }
 }
 
