@@ -10,9 +10,12 @@ const ListByYear = ({props}) => {
     });
     arr.forEach((item, index)=> {
         const fp = props.filter(ite=> getYear(ite.frontmatter.date) === item)
+        const array = [...fp].sort(function compareFunction(item1, item2) {
+            return item1.frontmatter.title.localeCompare(item2.frontmatter.title, 'zh');
+        });
         table.push({
             year: item,
-            data: fp
+            data: array
         });
     });
     return (

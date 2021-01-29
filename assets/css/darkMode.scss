@@ -1,0 +1,116 @@
+body {
+    --bg: white;
+    --textNormal: #222;
+    --textTitle: #222;
+    --textLink: blue;
+    --hr: hsla(0, 0%, 0%, 0.2);
+  
+    background-color: var(--bg);
+  }
+  
+  body.dark {
+    -webkit-font-smoothing: antialiased;
+    --bg: #000000;
+    --textNormal: rgba(255, 255, 255, 0.88);
+    --textTitle: white;
+    --textLink: yellow;
+    --hr: hsla(0, 0%, 100%, 0.2);
+
+    header {
+        .lll {
+            color: #fff;
+            span {
+                color: #FBE600;
+            }
+        }
+    }
+    color: #FFFFFF;
+    a {
+        color: #FFFFFF;
+    }
+
+    
+    .type1{
+        background: rgba(82, 178, 135, 0.6);
+        color: rgb(82, 178, 135);
+        &:hover{
+        background: rgba(82, 178, 135, 0.8);
+        color: rgb(82, 178, 105);
+        }
+    }
+    
+    .type2{
+        background: rgba(84, 139, 190, 0.6);
+        color: rgb(84, 139, 190);
+        &:hover{
+        background: rgba(84, 139, 190, 0.8);
+        color: rgb(84, 139, 160);
+        }
+    }
+    .type3{
+        background: rgba(96, 188, 94, 0.6);
+        color: rgb(96, 188, 94);
+        &:hover{
+        background: rgba(96, 188, 94, 0.8);
+        color: rgb(96, 188, 64);
+        }
+    }
+    .type4{
+        background: rgba(163, 159, 81, 0.6);
+        color: rgb(163, 159, 81);
+        &:hover {
+        background: rgba(163, 159, 81, 0.8);
+        color: rgb(163, 159, 51);
+        }
+    }
+    .type5{
+        background: rgba(130, 134, 217, 0.6);
+        color: rgb(130, 134, 217);
+        &:hover {
+        background: rgba(130, 134, 217, 0.8);
+        color: rgb(130, 134, 187);
+        }
+    }
+    .type6{
+        background: rgba(193, 102, 135, 0.6);
+        color: rgb(193, 102, 135);
+        &:hover {
+        background: rgba(193, 102, 135, 0.8);
+        color: rgb(193, 102, 105);
+        }
+    }
+    .type7{
+        background: rgba(199, 113, 113, 0.6);
+        color: rgb(199, 113, 113);
+        &:hover {
+        background: rgba(199, 113, 113, 0.8);
+        color: rgb(199, 113, 83);
+        }
+    }
+    .type8{
+        background: rgba(175, 102, 193, 0.6);
+        color: rgb(175, 102, 193);
+        &:hover {
+        background: rgba(175, 102, 193, 0.8);
+        color: rgb(175, 102, 163);
+        }
+    }
+    .type0{
+        background: rgba(190, 154, 84, 0.6);
+        color: rgb(190, 154, 84);
+        &:hover {
+        background: rgba(190, 154, 84, 0.8);
+        color: rgb(190, 154, 54);
+        }
+    }
+    .type9{
+        background: rgba(190, 154, 84, 0.6);
+        color: rgb(190, 154, 84);
+        &:hover {
+        background: rgba(190, 154, 84, 0.8);
+        color: rgb(190, 154, 54);
+        }
+    }
+
+  
+  }

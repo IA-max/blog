@@ -1,6 +1,8 @@
 import React from "react"
 import {Link} from 'gatsby';
 import Logo from './logo'
+import ThemeToggle from '../components/themeToggle'
+
 const pages = [
     {
       title: 'Aritcles',
@@ -29,9 +31,6 @@ const Header = (props) => {
     <div className="md:mr-auto flex flex-wrap items-center text-base justify-center">
         <Logo />
         <Link className="title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:no-underline" to="/"><span className="ml-3 text-xl lll">maxy<span>blog</span></span></Link>
-        {/*<svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">*/}
-        {/*    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>*/}
-        {/*</svg>*/}
     </div>
     <div className="md:ml-auto flex flex-wrap items-center text-base justify-center">
         {
@@ -41,6 +40,7 @@ const Header = (props) => {
                               to={`${page.url}`}> {page.title} </Link>)
             })
         }
+        <ThemeToggle />
     </div>
 </header>)
 };

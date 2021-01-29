@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
 html {
   @apply font-body;
   font-size: 90%;
@@ -26,13 +27,12 @@ header {
 .groupByYear {
   li{
     &:hover {
-      @apply bg-indigo-50;
       padding: 0.5rem 1rem;
       margin: 0 -1rem;
     }
   }
-
 }
+
 
 .more-post {
   & > div {
@@ -253,8 +253,15 @@ header {
 
   p strong,
   li strong {
-    color: #c34b4b;
-    @apply font-normal;
+    @apply block;
+    @apply font-bold;
+    color: #7c3004;
+  }
+
+  em{
+    font-style:normal;
+    // text-decoration: underline;
+    @apply font-semibold;
   }
 
   h1 {
@@ -359,7 +366,7 @@ header {
     // border: 2px solid #e9ecef;
     .toc-title {
       background: url('./toc.svg') no-repeat right center;
-      background-size: 10%;
+      background-size: contain;
       color: #1a1a1a;
       font-weight: 500;
     }
@@ -517,7 +524,9 @@ table {
   border-color: inherit;
 }
 
-.fixTable {
+.fixTable ,
+.fixTable table
+{
   @apply table-auto;
   @apply w-full;
   @apply text-left;
@@ -560,8 +569,7 @@ table {
   text-shadow: none;
 }
 
-.custom_table,
-table {
+.custom_table {
   margin: 0 0 8px 0;
   border:2px dashed #eaeaea;
   border-radius: 6px;
@@ -581,6 +589,28 @@ table {
     width: 40%;
   }
 }
+
+
+table {
+  margin: 0 0 8px 0;
+  border:2px dashed #eaeaea;
+  border-radius: 6px;
+  width: 100%;
+  & tbody> tr:nth-of-type(odd) {
+    //background-color: #f8f9fa;
+    @apply bg-gray-50;
+  }
+  th,td {
+    @apply px-2;
+    @apply py-2;
+    text-align: left;
+    border:2px solid  #f7f5f5;
+  }
+}
+
+
+
+
 .custom_multi_col_table {
   @apply custom_table;
   thead tr th:first-of-type,
@@ -617,7 +647,10 @@ table {
   &:hover{
     @apply cursor-pointer;
     //@apply text-purple-700;
-    @apply hover:no-underline;
+    @apply no-underline;
   }
 }
 
+
+@import "./lightMode.scss";
+@import "./darkMode.scss";

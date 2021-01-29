@@ -1,9 +1,3 @@
-/**
- * Coy without shadows
- * Based on Tim Shedor's Coy theme for prism.js
- * Author: RunDevelopment
- */
-
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
@@ -84,14 +78,18 @@ pre[class*="language-"] > code {
   position: relative;
   padding: .2em;
   border-radius: 0.3em;
-  color: #c92c2c;
+  // color: #c92c2c;
+  color: #175199;
   //border: 1px solid rgba(0, 0, 0, 0.1);
   display: inline;
   white-space: normal;
-  background-color: #ffffe6;
+  // background-color: #ffffe6;
+  background: rgba(0,132,255,.08);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  @apply text-base;
+  @apply mx-2;
 }
 
 .token.comment,

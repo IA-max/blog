@@ -578,6 +578,9 @@ const tree = [
             title: 'react native',
             content: 'https://reactnative.dev/'
         }, {
+            title: 'React Native 中文',
+            content: 'https://reactnative.cn/'
+        },{
             title: 'storybook',
             content: 'https://storybook.js.org/'
         }, {

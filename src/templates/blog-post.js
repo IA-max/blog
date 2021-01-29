@@ -72,8 +72,8 @@ const BlogPost = ({data, pageContext}) => {
             <Seo title={mdx.frontmatter.title}/>
             
             <article className="px-4 py-6 mx-auto">
-                <div className="w-full mx-auto text-left md:w-3/4 lg:w-full article-meta-data max-w-4xl  mb-4">
-                    <div className="sm:w-full">
+                <div className="w-full mx-auto text-left w-full article-meta-data max-w-4xl mb-4">
+                    <div>
                         {(mdx.frontmatter.cover != null) ? (
                             <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                                  fluid={mdx.frontmatter.cover.childImageSharp.fluid}
@@ -118,9 +118,9 @@ const BlogPost = ({data, pageContext}) => {
                 </div>
 
             </article>
-            <div className="py-6 w-full mx-auto md:w-3/4 max-w-4xl">
+            {/* <div className="py-6 w-full mx-auto md:w-3/4 max-w-4xl">
                 <Comment commentBox={commentBox}/>
-            </div>
+            </div> */}
             <section className="w-full mx-auto py-24 prose md:w-3/4 max-w-4xl sm:px-4">
                 <div className="grid grid-cols-1 gap-24 md:grid-cols-2 more-post">
                     <div className="py-8 px-4 bg-blue-50 rounded">

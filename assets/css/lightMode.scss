@@ -1,0 +1,15 @@
+body.light {
+    .groupByYear {
+      li{
+        &:hover {
+          @apply bg-indigo-50;
+        }
+      }
+    }
+  
+    footer {
+      & > div {
+        @apply bg-gray-50
+      }
+    }
+  }

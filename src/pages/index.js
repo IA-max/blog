@@ -5,8 +5,6 @@ import SEO from '../components/seo';
 import ListByYear from '../components/listByYear'
 
 const BlogIndex = ({data, location}) => {
-
-
     const siteTitle = data.site.siteMetadata.title || `Title`;
     const posts = data.allMdx.nodes;
     const hash = location.hash.replace(/#/,'');
