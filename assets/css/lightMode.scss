@@ -1,6 +1,10 @@
 body.light {
     .groupByYear {
+      hr {
+        @apply bg-indigo-50;
+      }
       li{
+        @apply bg-white;
         &:hover {
           @apply bg-indigo-50;
         }
@@ -13,3 +17,5 @@ body.light {
       }
     }
   }
+
+  @import './prism-light-theme.scss'

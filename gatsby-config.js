@@ -51,6 +51,10 @@ module.exports = {
             options: {
                 extensions: [`.mdx`, `.md`],
                 remarkPlugins: [require('remark-slug')],
+                plugins: [
+                  `gatsby-remark-images`,
+                  `gatsby-remark-images-medium-zoom` // Important!
+                ],
                 gatsbyRemarkPlugins: [
                     {
                         resolve: 'gatsby-remark-code-titles',
@@ -92,7 +96,12 @@ module.exports = {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 630,
+                            linkImagesToOriginal: false // Important!
                         },
+                    },
+                    {
+                      resolve: `gatsby-remark-images-medium-zoom`, // Important!
+                      options: {}
                     },
                     {
                         resolve: `gatsby-remark-responsive-iframe`,
@@ -102,10 +111,10 @@ module.exports = {
                     },
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
-
                 ],
             },
         },
+        'gatsby-plugin-dark-mode',
         'gatsby-remark-reading-time',
         // `gatsby-plugin-feed-mdx`,
         {
@@ -126,9 +135,6 @@ module.exports = {
               feeds: [
                 {
                   serialize: ({ query: { site, allMdx } }) => {
-                      // console.log('--------------------------------------------');
-                      // console.log(allMdx);
-                      // console.log('--------------------------------------------');
                     return allMdx.edges.map(edge => {
                       return Object.assign({}, edge.node.frontmatter, {
                         description: edge.node.excerpt,

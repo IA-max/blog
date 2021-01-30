@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import ListByYear from '../components/listByYear'
 
 const BlogIndex = ({data, location}) => {
+    console.log(data)
     const siteTitle = data.site.siteMetadata.title || `Title`;
     const posts = data.allMdx.nodes;
     const hash = location.hash.replace(/#/,'');
@@ -85,7 +86,7 @@ export const pageQuery = graphql`
                 }
                 frontmatter {
                     excerpt
-                    date(formatString: "MM-DD YYYY")
+                    date(formatString: "YYYY-MM-DD")
                     title
                     tag
                     category

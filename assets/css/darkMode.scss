@@ -11,6 +11,7 @@ body {
   body.dark {
     -webkit-font-smoothing: antialiased;
     --bg: #000000;
+    --bg2: #333333;
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
     --textLink: yellow;
@@ -18,18 +19,62 @@ body {
 
     header {
         .lll {
-            color: #fff;
+            color: var(--textTitle);
             span {
-                color: #FBE600;
+                color: #fc0;
             }
         }
     }
-    color: #FFFFFF;
+    .groupByYear {
+        hr {
+            @apply bg-gray-50;
+          }
+        li{
+          &:hover {
+            background: #2D2D31;
+          }
+        }
+      }
+
+    color: var(--textTitle);
     a {
-        color: #FFFFFF;
+        color: var(--textTitle);
+    }
+    h1,h2,h3,h4,h5,h6 {
+        color: var(--textTitle);
     }
 
+    .articleContent {
+        h1,h2,h3,h4,h5,h6 {
+            color: #ffd479;
+        }
+        aside {
+            color: var(--textTitle);
+            border: 2px solid #fc0;
+            background:  var(--bg);
+            .toc-title {
+                color: var(--textTitle);
+            }
+        }
+
+        blockquote {
+            border-color: #fc0;
+            background: var(--bg2);
+            p {
+                color: var(--textTitle);
+            }
+        }
+    }
     
+    .more-post {
+        & > div {
+            background: var(--bg);
+            p {
+                color: #999;
+            }
+        }
+    }
+
     .type1{
         background: rgba(82, 178, 135, 0.6);
         color: rgb(82, 178, 135);
@@ -114,3 +159,5 @@ body {
 
   
   }
+
+  @import "./prism-dark-theme.scss"

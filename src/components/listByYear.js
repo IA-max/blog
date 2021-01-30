@@ -24,7 +24,8 @@ const ListByYear = ({props}) => {
                 table.map((item, index) => {
                     return (
                         <div className="groupByYear" key={index}>
-                            <h2 className="py-2 border-b-4 mt-4 mb-8 rounded text-3xl font-bold border-indigo-50">{item.year}</h2>
+                            <h2 className="py-2 mt-4 text-3xl font-bold border-indigo-50">{item.year}</h2>
+                            <hr/>
                             <ul>
                                 {item.data.map(List)}
                             </ul>

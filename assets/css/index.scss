@@ -25,7 +25,15 @@ header {
 }
 
 .groupByYear {
+  hr {
+    @apply h-1;
+    @apply rounded;
+    @apply mb-8;
+    border: none;
+  }
   li{
+    @apply rounded;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     &:hover {
       padding: 0.5rem 1rem;
       margin: 0 -1rem;
@@ -235,9 +243,6 @@ header {
   }
 }
 
-.article-meta-data {
-  //font-family: Karla;
-}
 
 /*---------------------------------------- Gatsby Article -----------------------------------*/
 .articleContent {
@@ -291,7 +296,7 @@ header {
   p {
     @apply max-w-screen-lg;
     @apply text-lg;
-    @apply leading-6;
+    @apply leading-8;
     @apply font-medium;
     //@apply py-2;
     
@@ -350,6 +355,7 @@ header {
 
   aside {
     margin-left: 30rem;
+    margin-top: -50px;
     max-width: 30rem;
     min-width: 20rem;
     width: min-content;
