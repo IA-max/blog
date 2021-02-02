@@ -3,6 +3,7 @@ body.dark {
     --bg: #000000;
     --bg2: #333333;
     --bg3: #ecc781;
+    --bg4: #121212;
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
     --textLink: yellow;
@@ -15,7 +16,11 @@ body.dark {
         color: #fff;
     }
     main{ 
-        background: #121212;
+        background: var(--bg4);
+    }
+
+    .heading-meta-data {
+        color: var(--bg3)
     }
 
     header {
@@ -43,6 +48,11 @@ body.dark {
     }
     h1,h2,h3,h4,h5,h6 {
         color: var(--textTitle);
+    }
+    table {
+        td, th {
+            background: var(--bg4);
+        }
     }
 
     .articleContent {

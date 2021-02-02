@@ -4,10 +4,11 @@ body.light {
   --textTitle: #222;
   --textLink: blue;
   --hr: hsla(0, 0%, 0%, 0.2);
+  --textColor: #0a2458;
 
   background: var(--bg);
 
-  color: #0a2458;
+  color: var(--textColor);
 
   .articleContent main {
     a {
@@ -52,6 +53,17 @@ body.light {
         @apply bg-gray-50
       }
     }
+
+    blockquote {
+      border-left: 4px solid #AA604F;
+      background: #fffbec;
+      color: var(--textColor);
+    }
+
+    .heading-meta-data {
+      color: #0064bc
+    }
+
   }
 
   @import './prism-light-theme.scss'

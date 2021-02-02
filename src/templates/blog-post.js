@@ -79,17 +79,16 @@ const BlogPost = ({data, pageContext}) => {
                                  fluid={mdx.frontmatter.cover.childImageSharp.fluid}
                                  alt={"封面"}/>) : " "}
 
-                        <h1 className="mt-6 mb-2 text-2xl font-bold leading-tight text-gray-900 md:text-5xl pb-4 text-center">
+                        <h1 className="mt-6 mb-2 text-2xl font-bold leading-tight text-gray-900 md:text-6xl pb-4 text-center">
                             <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                         </h1>
 
-                        <div className="text-gray-600 body-font text-center">
+                        <div className="text-gray-600 body-font text-center heading-meta-data">
                             <span>Post on { getDate(mdx.frontmatter.date) }</span>
                             <span className="separator">•</span>
                             <span>{mdx.fields.readingTime.text}</span>
                         </div>
 
-                        
                         {/* <div className="text-gray-600 body-font">
                             <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
                                 <nav className="flex flex-wrap items-center text-base justify-center">
