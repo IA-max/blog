@@ -5,8 +5,9 @@
 
 html {
   @apply font-body;
-  font-size: 90%;
+  // font-size: 90%;
   color: #3b454e;
+  @apply text-xs;
 }
 
 body {
@@ -274,27 +275,27 @@ header {
   }
 
   h1 {
-    @apply text-4xl;
-  }
-
-  h2 {
     @apply text-3xl;
   }
 
-  h3 {
+  h2 {
     @apply text-2xl;
   }
 
-  h4 {
+  h3 {
     @apply text-xl;
   }
 
-  h5 {
+  h4 {
     @apply text-lg;
   }
 
-  h6 {
+  h5 {
     @apply text-base;
+  }
+
+  h6 {
+    @apply text-sm;
   }
 
   p {
@@ -318,7 +319,7 @@ header {
 
   ul, ol {
     @apply list-inside;
-    // @apply py-1;
+     @apply leading-6;
     @apply rounded-md;
     margin: 0 0 16px 0;
     li {
@@ -421,7 +422,7 @@ header {
   blockquote {
     @apply my-6;
     @apply py-3;
-    @apply pl-4;
+    @apply px-4;
     p {
       @apply my-0;
       @apply leading-3;
@@ -659,6 +660,10 @@ table {
     //@apply text-purple-700;
     @apply no-underline;
   }
+}
+
+.separator {
+  @apply mx-6;
 }
 
 

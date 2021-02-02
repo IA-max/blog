@@ -73,26 +73,33 @@ const BlogPost = ({data, pageContext}) => {
             
             <article className="px-4 py-6 mx-auto">
                 <div className="w-full mx-auto text-left w-full article-meta-data max-w-4xl mb-4">
-                    <div>
+                    <div className="md:mb-4 lg:mb-20">
                         {(mdx.frontmatter.cover != null) ? (
                             <Img classNameName="object-cover w-full h-64 bg-center rounded-lg"
                                  fluid={mdx.frontmatter.cover.childImageSharp.fluid}
                                  alt={"封面"}/>) : " "}
 
-                        <h1 className="mt-6 mb-2 text-3xl font-bold leading-tight text-gray-900 md:text-4xl border-b-2 pb-2">
+                        <h1 className="mt-6 mb-2 text-2xl font-bold leading-tight text-gray-900 md:text-5xl pb-4 text-center">
                             <Link to={mdx.fields.slug}>  {mdx.frontmatter.title} </Link>
                         </h1>
 
-                        <div className="text-gray-600 body-font">
-                        <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                            <nav className="flex flex-wrap items-center text-base justify-center">
-                                <span className="text-gray-400 hover:text-gray-900">Post on { getDate(mdx.frontmatter.date) }</span>
-                            </nav>
-                            <div className="flex title-font items-center text-gray-400 mb-4 md:mb-0 md:ml-auto">
-                                <span>{mdx.fields.readingTime.text}</span>
+                        <div className="text-gray-600 body-font text-center">
+                            <span>Post on { getDate(mdx.frontmatter.date) }</span>
+                            <span className="separator">•</span>
+                            <span>{mdx.fields.readingTime.text}</span>
+                        </div>
+
+                        
+                        {/* <div className="text-gray-600 body-font">
+                            <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+                                <nav className="flex flex-wrap items-center text-base justify-center">
+                                    <span className="text-gray-400 hover:text-gray-900">Post on { getDate(mdx.frontmatter.date) }</span>
+                                </nav>
+                                <div className="flex title-font items-center text-gray-400 mb-4 md:mb-0 md:ml-auto">
+                                    <span>{mdx.fields.readingTime.text}</span>
+                                </div>
                             </div>
-                        </div>
-                        </div>
+                        </div> */}
                  
                         {/* <Link className="flex items-center text-gray-700"
                               to={`/blog/author/${kebabCase(mdx.frontmatter.author)}`}>
@@ -116,13 +123,13 @@ const BlogPost = ({data, pageContext}) => {
                         </div>
                     </div>                   
                 </div>
-
+                <div className="text-center py-4"># # #</div>
             </article>
             {/* <div className="py-6 w-full mx-auto md:w-3/4 max-w-4xl">
                 <Comment commentBox={commentBox}/>
             </div> */}
-            <section className="w-full mx-auto py-24 prose md:w-3/4 max-w-4xl sm:px-4">
-                <div className="grid grid-cols-1 gap-24 md:grid-cols-2 more-post">
+            <section className="w-full mx-auto py-24 prose md:w-3/4 max-w-4xl">
+                <div className="grid grid-cols-1 gap-12 md:grid-cols-2 more-post">
                     <div className="py-8 px-4 bg-blue-50 rounded">
                         <h1>{prev && <Link to={prev.fields.slug}
                                            className="mb-6 text-md font-semibold text-black md:text-xl">{prev.frontmatter != null && prev.frontmatter.title}</Link>}</h1>
@@ -137,6 +144,8 @@ const BlogPost = ({data, pageContext}) => {
                     </div>
                 </div>
             </section>
+
+            
         </Layout>
     )
 }
