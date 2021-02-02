@@ -7,6 +7,34 @@ body.light {
 
   background: var(--bg);
 
+  color: #0a2458;
+
+  .articleContent main {
+    a {
+      color: #0064bc;
+      &:after {
+        content: "";
+        position: relative;
+        right: 0;
+        vertical-align: middle;
+        top: -1px;
+        display: inline-block;
+        margin-left: 8px;
+        width: 10px;
+        height: 10px;
+        transition: .2s;
+        background-image: url('data:image/svg+xml;utf8,<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.2418 0H10.1727V5.75816H40.2111L0 45.9693L4.03071 50L44.2418 9.78887V39.8273H50V5.75816V0H44.2418Z" fill="%230064bc"/></svg>');
+        background-size: 8px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+      }
+      &:hover {
+        color: #9c1919;
+        text-decoration: underline;
+      }
+    }
+  }
+
     .groupByYear {
       hr {
         @apply bg-indigo-50;
