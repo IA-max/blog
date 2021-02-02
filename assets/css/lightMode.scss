@@ -1,4 +1,12 @@
 body.light {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: blue;
+  --hr: hsla(0, 0%, 0%, 0.2);
+
+  background: var(--bg);
+
     .groupByYear {
       hr {
         @apply bg-indigo-50;

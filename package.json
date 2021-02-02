@@ -81,6 +81,7 @@
     "develop": "gatsby develop  -H 0.0.0.0 -p 8000",
     "format": "prettier --write 'src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|md|mdx)'",
     "start": "npm run develop",
+    "nobinddev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "clean and start": "npm run clean && npm run start",
