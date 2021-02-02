@@ -1,0 +1,2644 @@
+---
+title: "资源推荐 - 第一本书"
+date: "2021-02-01"
+featured: false
+category: "resource"
+excerpt: ""
+tag: ["iv"]
+status: "publish"
+type: "post"
+cover: "./cover.png"
+---
+
+# 我的第一本书
+
+https://github.com/azl397985856/automate-everything
+
+
+为了获得更好的阅读体验，您可以访问[在线版本](https://lucifer.ren/automate-everything/)
+
+## 关于我
+
+我是一个对技术充满兴趣的程序员, 擅长前端工程化，前端性能优化，前端标准化等。
+
+做过.net， 搞过Java，现在是一名前端工程师。
+
+除了我的本职工作外，我会在开源社区进行一些输出和分享，比较受欢迎的有[leetcode题解](https://github.com/azl397985856/leetcode)
+和[前端面试宝典 - 图解前端](https://github.com/azl397985856/fe-interview)
+
+如果大家需要内推的可以找我，我这里有包括阿里，腾讯，头条，网易等很多公司的朋友。
+有需要可以直接群里联系我，或者发送到我的个人邮箱 [azl397985856@gmail.com]。
+
+## 我为什么要写这本书（序）
+
+写这本书的目的很简单，就是审视自己。我喜欢用写作来总结自己的生活，因为花在这上面的时间是复时间，就像复利一样。我喜欢一个人散步，因为散步可以将思维释放，我认为做太多重复没有创造性的东西对我来说没有什么价值，我更喜欢将散步当做身心的一种放松，而且我很多好的想法都是在散步中得到的，它不仅能使你身体得到放松，而且可以让你工作效率翻倍。如果读书是知识的输入的话，那么写书就是对知识的输出。通过读书掌握的通常很少，据研究表面通常不到书内容的 10%。但是通过合适的输出，可以将这一比例上升到 32%。输出的方式不仅仅有写作，还有复述，讲给别人等等。
+
+> 编程是一种技艺，一种需要用心学习的技艺
+
+同时我想借这个机会认识一些志同道合的人，就是打算在这一行干点事，留下点东西的人。与人交流其实也是一种复利，通过思维的碰撞，可以将彼此的能量和创新得到有效的释放，同时也是审视自己的绝佳时机。
+
+## 前言
+
+这是我准备写的第一本书，其实早些时候已经打算开始写书了，只是苦于没有写书经验，无从下手。写书不同于博客，写书需要将知识，经验等系统化地讲述出来，而我现在恰巧缺乏这种表现能力。因此我决定在这里将项目中零散的东西记录下来，然后后期润色一下，写成一本书。
+
+软件工程之所以叫工程是因为其中运用了很多工程化的方法。软件的构造应该是工程学科，早期的各种瀑布模型，UML 建模语言，以及近期的 SCRUM，他们中充斥着各种工程化的工具和方法。 知乎是这么描述软件工程的：软件工程 \(Software Engineering\) 是一门研究和应用如何以系统性的、规范化的、可定量的过程化方法去开发和维护软件，以及如何把经过时间考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来的学科。 想一想中世纪的大教堂，每一座都跨越数千人数年的努力，它们相信个人的力量支撑了整个项目：
+
+> 我们，采集的只是石头，却必须时刻展望未来的大教堂。
+
+本书主要分为四个部分来讲述软件开发的工程化。
+
+- 第一部分讲述前后端如何分离，旨在通过任务分工，拆解，提高单个成员的开发效率，并通过减少前后端沟通进而提高项目整体成员的开发效率。这一章主要讲述为什么要前后端分离的历史，为什么要前后端分离，如何做到前后端分离，以及前后端分离能够带来哪些好处。
+- 第二部分讲述模块化与组件化。高级语言有很多模块化的思想。比如高级语言中的类和实例，各种第三方库，前端的 web-components 等等。可以说模块化和组件化无处不在，那为什么还要花时间去讲述这些东西呢？记得大学时候学习 C\#的时候老师讲过面向对象的四个基本特性是抽象，继承，封装和多态。其实面向对象正是软件开发早期对模块化和组件化的一种探索，是人类智慧的结晶。其实模块化和组件化是一种**将复杂系统分解为更好的可管理模块**的方式。这一章主要讲述模块化的发展，模块化在不同领域的表现，模块化给我们带来了什么，以及如何实现模块化。
+- 第三部分讲流程自动化。自动化的流程无疑可以减少人力成本，可以提高效率，降低失误率。自动化可以将人们从繁琐的无味的重复劳动中解脱出来。有人说程序员是懒惰的，因为它们经常编写一些可以减少日常工作的工具，从而达到”偷懒“ 的目的。这一章主要讲述流程自动化是一种什么样的感受，如何实现自动化，这一章主要分享我在实际工作中遇到的问题，以及自己在自动化方面作出的思考。
+- 第四部门主要讲述页面加载性能优化。 性能优化一直是一个非常古老，并且非常深奥的问题。说他古老是因为，我们的产品是让用户使用的，良好的用户体验是抓住用户内心的根本，因此性能优化方面，业界做了非常多的探索。说他非常深奥是因为没有任何一种优化手段可以 cover 全部， 这就需要你能够靠你的经验和眼界分辨现实情况，采取合适的优化方法和时机（不要过早优化）。这部分主要讲述 web 性能优化，从用户输入 URL 到页面加载出来，用户进行交互着手分析可以优化的点，并讲述如何发现**系统性能的短板。** 建立性能监控平台也是非常重要的一环，本章也会带你一步步拆解，讲述如何设计并开发一个性能监控平台。
+
+[第一章 前后端分离](https://github.com/azl397985856/automate-everything/blob/master/docs/chapter1.md)
+
+[第二章 模块化与组件化](https://github.com/azl397985856/automate-everything/blob/master/docs/chapter2.md)
+
+[第三章 流程自动化](https://github.com/azl397985856/automate-everything/blob/master/docs/chapter3.md)
+
+[第四章 页面加载性能优化](https://github.com/azl397985856/automate-everything/blob/master/docs/chapter4.md)
+
+[第五章 前端调试](https://github.com/azl397985856/automate-everything/blob/master/docs/chapter5.md)
+
+[第六章 到处都是测试](https://github.com/azl397985856/automate-everything/blob/master/docs/chapter6.md)
+
+[附录一 自动化小脚本](https://github.com/azl397985856/automate-everything/blob/master/docs/appendix1.md)
+
+[附录二 参考文献](https://github.com/azl397985856/automate-everything/blob/master/docs/appendix2.md)
+
+
+
+
+
+# 1. 前后端分离
+
+## 前后端分离的历史
+
+软件开发早期是没有前后端分离的概念的，为什么呢？因为当时压根儿就没有前端工程师，专门的前端工程师大约是在 2005 年。在此之前前端是不受重视的。这其实和软件的发展有关。说到这里又不得不提到 js 的发展历史。JavaScript 诞生于 1995 年。起初它的主要目的是处理以前由服务器端负责的一些表单验证。后来大家对页面的要求越来越高，js 又给 web 多了一些动态功能。大家对前端的需求就是展示静态内容或者简单的动态内容（比如 CGI 返回数据拼接输出“动态”内容）。不过这种直接通过 CGI 或者 servlet 输出 HTML 的方法会使得前后端严重耦合，修改 HTML 需要改后端代码。为了将数据和模板分离，出现了很多动态拼接的技术，ASP，JSP，ASP.net 就是那个时期的产物。但是这种方式还是有问题，因此这种方式数据严重依赖于请求流，它是将请求流解析，然后将响应流输出到模板作为模板数据解析出 HTML 返回到后端，另外后端需要懂得前端的知识，HTML 语法，JS 语法，甚至要自己写 CSS，这个时期也是 MVC 盛行的时期，这个时期的 View 是放在后端的。
+
+1998 年 ajax 技术的出现，允许客户端脚本发送 HTTP 请求（XMLHTTP），并且局部刷新页面，这种突破性的创新使得 web 高速发展，推动了 web 的发展。随着 HTML5，CSS3，ES6（简称 356）的出现，web 正以前所未有的速度前进，web 工程师从无到有，再到现在 web 工程师被赋予了很多花环，机遇和挑战。也因此前后端不得不逐渐的分离。
+
+这只后又出现了将数据和模板完全分离的技术如 velocity 等，写法上完全改变了。 下面是一个 velocity 的 demo：
+
+```java
+import java.io.StringWriter;
+import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+public class  Velocity {
+    public static void main( String[] args )  throws Exception   {
+
+    VelocityEngine ve = new VelocityEngine();
+    ve.init();
+
+    Template t = ve.getTemplate( "hellosite.vm" );
+
+    VelocityContext context = new VelocityContext();
+    context.put("name", "Eiffel Qiu");
+    context.put("site", "http://www.eiffelqiu.com");
+
+    StringWriter writer = new StringWriter();
+    t.merge( context, writer );
+
+    System.out.println( writer.toString() );
+    }
+}
+```
+
+> 这种思想是一大创新，包括 react 的渲染都是这样的思路，react 的渲染方式是 render,本质上开发者写的 jsx 就是 template，app 的 state 和 props 就是 context，然后根据纯函数的特性，生成 view。
+
+虽然这是一个重大创新，不过它是严重依赖语言实现的，我们从上面的例子就可以看出来。那么如何使用一种通用的模板引擎？答案就是将模板放到前端，将模板这部分工作交给前端，这个时候逐渐又了前后端分离的概念。说到这里，不得不提到 2010 年 facebook 工程师提出的 bigpipe。他将页面渲染分为八个关键阶段，每一个阶段叫做 pagelet。先输出页面主体到前端，也就是前面提到的 Template，然后前端 ajax 请求数据，将请求的数据在前端进行拼接，这种方式比后端拼接，优点就是用户可以看到一个渐进式的过程，这在当时是一个巨大创新。缺点就是浪费若干 RTT（多了若干请求）。但是经过测试，在大多数浏览器中，BigPipe 都能将用户感受到的延迟时间降低一半，除了 Firefox 3.6，BigPipe 可以将 Firefox 3.6 的延迟时间降低 50ms 左右，大约降低了 22%左右。
+
+然后开发者将模板引擎放到了前端，后端只是放一个 HTML 的空壳，代表作是 react。这个时候模板解析的任务是前端，后端完全从模板的地狱中逃了出来。但是还是有问题，就是用户看到的页面会是一个空壳，并不是一个 app shell。因此出现了 ssr 等技术，本质上就是回到之前的渲染方式，区别在于目前不是将所有的逻辑都交给后端，而是后端只处理首屏内容。
+
+## 前后端合并
+
+正所谓合久必分，分久必合。 前几年被热炒的全栈工程师，以及前后端同构技术都反映了前后端在分离之后又逐渐合并的迹象。为什么会这样呢？前后端分离虽然减少了后端开发的工作（最初前端都是后端写的，比如.net 的 aspx java 的 jsp 等）。但前后端分离地不干净导致一些沟通问题反而不如一个人来做。为了解决这个问题，主要又两种方式：
+
+- 全栈工程师。 将所有工作交给一个人，或者有着前后端知识的一群人，这样沟通起来成本比较低。
+
+- 稍后讲。
+
+  **那还又必要分离吗？**
+
+  上面讲述了前后端合并，那么还有必要分离吗？ 非常有必要！！！
+
+刚才说为了解决前后端沟通问题主要又两种方式，下面说下第二种。
+
+- 建立中间层。 前后端问题产生的原因主要是两个，一个是知识背景，技术栈不同，难以互相理解。二是 前后端是一个依赖的关系，前端需要依赖后端的数据接口，因此存在工作上的先后关系。 建立中间层可以有效减少上述的问题。 目前淘宝，挖财，51，有赞，二维火都在尝试这种方式。这也是我将会在后面重点描述的方式。
+
+最近出现的 docker 容器技术等有效地减少了后端的工作量，让后端更加专注业务逻辑的编写。我觉得 node 的出现也大概如此吧，它的出现不是用来替代 apache 成为下一个 web 容器，我觉得他更是扩展了前端的领域，使得可以将一部分后端无法做（比如 ssr）或者不好做（不愿意做）的东西（比如接口聚合），移交给前端。
+
+> 我不喜欢被冠以前端工程师，后端工程师的帽子。 我喜欢工程师这个称呼，我觉得我是以工程化的方式解决问题的角色，而不应该限定于某一部分职责。这个我主张前后端分离不矛盾，每个角色都自己的分工，都有自己精细化的一面。我们不试图取代后端，我们只是专注做好自己罢了。
+
+## 前后端耦合
+
+我有幸在我的职业生涯中经历了前后端耦合，前后端开发分离，部署分离的“分离阶段”， 以及大厂（alibaba）在这些方面的解决方案，所以非常荣幸能够将自己的经验和心得与大家分享。
+
+最初在百世做前端的时候，我经历了前后端极度耦合的方式前后端虽然由不同的人来书写，那恰好也是我的领导首次尝试前后端分离模式，在此之前前后端通常都是一名后端人员来写的。这种模式虽然将前后端工作进行了切分，但是其耦合的成分还是非常大。
+
+首先我们来看下我们的具体做法。 1. 前后端约定接口。 2. 前端根据后端接口进行开发。 3. 后端进行开发。（2 与 3 基本并行） 4. 前端打包代码，并将代码发送给后端。后端放到 war 包下。
+
+tomcat/conf/web.xml 配置如下：
+
+```markup
+<welcome-file-list>
+<welcome-file>index.html</welcome-file>
+<welcome-file>index.htm</welcome-file>
+<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+```
+
+将 war 文件直接复制到 tomcat/webapps 下
+
+我们后端使用的是 java，具体做法：
+
+- 如果是 Intellij Idea,在导入前端项目之后，右键项目 add framework support --&gt; web application，这时将会把前端项目转换为一个 javaweb 项目，然后将静态资源放在生成的 web 目录下即可。
+
+- 如果是 eclipse，可以新建一个 javaweb 项目然后将静态资源放入 web 或者 webcontent 目录下，或者直接先导入前端项目，然后通过 project facts 将项目转换为 dynamic web 项目并勾选 js 等相关配置。
+
+  然后，运行项目时把后端的 war 包和前端的 war 包一同添加到 deployment 中运行即可
+
+这一阶段我们实现了初步的前后端分离。 但是上述做法有两个问题。 1. 由于上述的做法存在严重的问题在于前端对于发布控制力明显不足，比如版本控制不好做。 另外由于发布通常需要两个编译环境，即 jdk 编译后端代码，node 环境编译前端代码。前端通常需要安装后端环境如 jdk，后端也需要安装前端环境如 node。不管是学习成本还是沟通成本都是一个问题。
+
+1. 前端通常需要等待后端给出测试数据后才能开工。所以我上面说“基本并行”
+
+由于存在上面的两个问题，我们进一步探索出了下面的前后端”分离“模式。
+
+## 前后端“分离”
+
+这一阶段我们通过 nginx 将前后端部署分离，通过 mock 服务器将前后端时间上的耦合给减少了。 下面是我们的具体做法： 1. 前后端约定接口 2. 前端开发 3. 后端开发（2 和 3 完全并行） 4. 前端打包，并将代码通过 ftp 上传到文件服务器。 5. 配置 nginx 将静态请求代理到上面发布文件的文件服务器，后台接口代理到 apache web server。
+
+和上面不同的地方，我们只需要将代码上传到文件服务器或者 CDN 上。 通过 nginx 转发控制即可。 避免了上面必须同时安装后端和前端编译环境的繁琐。
+
+nginx 配置 通常是这样的：
+
+```markup
+server {
+        listen       80;
+        server_name  example.com;
+
+        charset utf-8;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+              proxy_pass http://tomcat_pool;
+              proxy_redirect off;
+              proxy_set_header HOST $host;
+              proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              client_max_body_size 10m;
+              client_body_buffer_size 128k;
+              proxy_connect_timeout 90;
+              proxy_send_timeout 90;
+              proxy_read_timeout 90;
+              proxy_buffer_size 4k;
+              proxy_buffers 4 32k;
+              proxy_busy_buffers_size 64k;
+              proxy_temp_file_write_size 64k;
+        }
+
+        location ~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|txt|js|css|woff|woff2|ttf|eot|map)$  {
+             root D:\Workspaces\front-end;
+             index index.html;
+        }
+```
+
+## 大厂的方案
+
+这里主要介绍下阿里巴巴-钉钉的前后端分离解决方案。阿里这样的大厂通常有着自己内部的成熟系统支撑业务，比如阿里的持续集成系统 aone，配置服务 diamond，分布式服务系统 hsf 等等。 小公司通常没有经济实力去搭建自己的内部系统，我有幸接触到了这些业界较为顶级的系统，对它们的运作方式有了一定的了解。这里简单介绍下阿里巴巴-钉钉的前后端分离解决方案。 钉钉的具体做法如下：
+
+1. 前后端约定接口
+
+2. 约定接口上 dip（一个 mock 服务器）
+
+3. 前端开发
+
+4. 后端开发（2 和 3 完全并行）
+
+5. 前端打包，push 触发测试环境和预发环境的云构建，
+
+   打 tag 触发线上环境云构建自动发布静态资源到 cdn。
+
+6. 需要发布只需要负责人修改 diamond 配置即可，版本控制变得简单。
+
+可以发现这种方式其实就是比上面多了两个点，一是云构建自动化，二是 diamond 配置。 云构建其实属于自动化，我将在流程自动化里面详细描述，云构建本身和 前后端分离没有关系。 其实两者的区别在于 diamond 配置。那么为什么配置 diamond 是前后端分离的工作呢？作为一个配置服务，diamond 将专业性比较强的东西抽离出来，将包括但不限于版本管理的内容可以交给没有任何前端背景的人来做。
+
+## 前后端分离的理想方式
+
+上面的这种方法是非常高效的一种方式，但仍然不是我认为的理想的前后端分离方式。 我认为理想的前后端分离方式是**职能上**，后端提供纯粹的接口，**只需要提供数据**-系统的数据或者根据根据二方库获取数据返回前端，剩下的逻辑前端做。**时间上**，前后端可以并行开发，就像下面这张图一样。
+
+![图4.04](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.04.png)
+
+前后端的约定就像 HTML 一样，是前置资源，是前提。当这个前置资源定了之后，前端（就像上图的 CSS）和后端（就像上图的 JS）可以并行加载，它们中全部完成了，页面就可以加载完毕（这里不考虑其他外部资源）。
+
+职能上由于后端提供元数据，前端只需要组合，前后端在逻辑和时间上没有了耦合。先来一张图来描述下： ![图1.1](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图1.1.png)
+
+如图，后端只是提供原子数据，保证数据稳定输出就可以了，事实上保证系统稳定很多已经是运维再做的事了。前端需要根据需要进行接口整合，服务端渲染，mock 数据等工作。 那么整个流程具体是怎么工作的呢？ 可以下面这张图： ![图1.2](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图1.2.png)
+
+可以看出请求首先留到 ngxin（反向代理），nginx 判断是否是静态请求（html），如果是则转发到 node 服务器，node 服务器会判断是否需要进行 ssr，如果需要则调用后台接口拼装 html，将**html 和应用状态**一起返回给前端。 如果不需要 ssr，则直接返回静态资源，并设置缓存信息。 如果不是静态资源，判断头部信息（比如有一个自定义字段 reselect: 'node' \| ''），是否需要请求合并，如果需要则请求到 node 端，如果不需要直接转发给后端服务器。 ngxin 配置大概是这样：
+
+```markup
+map $reselect/node $reselect {
+  default "";
+  "node" "reselect/node";
+}
+
+server {
+  listen                    80;
+  server_name               demo.io;
+
+  charset                   utf-8;
+  autoindex                 off;
+
+  location / {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Port $server_port;
+    proxy_set_header X-Forwarded-Ssl on;
+
+    if ($reselect="reselect/node"){
+      proxy_pass      http://node-demo.io;
+      break;
+    }
+
+    proxy_pass      http://java-demo.io;
+  }
+  location ~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|txt|js|css|woff|woff2|ttf|eot|map)$  {
+       root D:\Workspaces\front-end;
+       index index.html;
+  }
+}
+```
+
+中间层可以做的事情非常多，除了我刚才说的服务端渲染，接口组合，mock 数据，还可以做很多别的事。我在这里不会讲述 ssr，接口组合，mock 如何具体做，因为这不是本章的重点，而且也有很多最佳实践，我要说的是如何将这些“最佳实践“ 组合起来，如何在我们工作中将其应用起来，并且具有良好的扩展性。 那么中间层拿到请求具体流程上面已经讲过了，现在我们以实战的角度，讲下代码该怎么组织。 但是为了方便大家理解，我简单介绍下。 首先是服务端渲染，我以 react+redux 做服务端渲染讲解，为了简单起见，没有引入 react-router，大家直接看代码理解：
+
+服务端：
+
+```markup
+<body>
+    <div id="container"><%- html %></div>
+    <script>
+        window.__INITIAL_STATE__ = <%- JSON.stringify(initState) %>
+    </script>
+</body>
+```
+
+```javascript
+const store = buildStore(rootReducer, {});
+Promise.all([
+  store.dispatch(fetchUserInfo()),
+  store.dispatch(fetchPosts())
+]).then(() => {
+  const html = renderToString(
+    <Provider store={store}>
+      <RouterContext {...renderProps} />
+    </Provider>
+  );
+  const initState = store.getState();
+  res.render("index", html, initState);
+});
+```
+
+客户端：
+
+```javascript
+const initState = window.__INITIAL_STATE__;
+const store = storeApp(initState);
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={browserHistory}>{routesApp}</Router>
+  </Provider>,
+  document.getElementById("container")
+);
+```
+
+上面这是对服务端渲染的一个极简实现，那么接口聚合呢？mock 呢？ 加入其他功能呢？ 是不是对我们 express 本身侵入性太大。 在这里我借鉴了微服务的理念，同时利用第二章节要讲模块化的思想，组织了中间层。 那么究竟我是怎么设计的呢，请继续往下看。
+
+![图1.3](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图1.3.png)
+
+我们的关注点就是服务集群，如果需要增加集群就直接修改配置即可。 下面基于 docker + docker-compose + node + nginx 做一个**中间层系统**。
+
+docker-compose.yml
+
+```text
+version: '2'
+
+services:
+
+
+    nginx:
+        build: ./nginx
+        container_name: ms_nginx
+        links:
+            - posts
+            - users
+        ports:
+            - "80:80"
+
+    api:
+        build: ./api
+        container_name: ms_posts
+        environment:
+            - loglevel=none
+
+        volumes:
+            - "./posts:/src/app"
+        working_dir: "/src/app"
+        ports:
+            - "8080:8080"
+            - "5858:5858"
+        # command: npm run start
+        command: npm run start:dev
+
+    sever-render:
+        build: ./sever-render
+        container_name: ms_sever-render
+
+        volumes:
+            - "./users:/src/app"
+        working_dir: "/src/app"
+        command: npm start
+```
+
+nginx 的配置
+
+```markup
+worker_processes 4;
+
+events { worker_connections 1024; }
+
+http {
+
+    server {
+          listen 80;
+          charset utf-8;
+
+          location / {
+            proxy_pass http://server-render:8080;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+          }
+
+          location ~ ^/api {
+            rewrite ^/api/(.*) /$1 break;
+            proxy_pass http://users:8080;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+          }
+    }
+}
+```
+
+这样我们实现了不同的系统分流，并且彼此之间接触耦合，通过 nginx 去 分发。这样还存在一个问题就是样板代码比较多， 有没有一种方法，让我们只关注业务本身，而不需要样板代码呢？大家可以关注下 [faas](https://github.com/openfaas/faas), 这里不在赘述。 当我们的业务逐渐复杂，系统逐渐增多，域名逐渐增多，会发现很多东西都在 nginx 中，这时候需要将配置分开，每一个子业务一个配置文件。
+
+1. 在 nginx 安装目前下 新建 vhost 文件夹
+
+2. 在文件夹下创建 \*.conf 的文件 ，如 a.example.com.conf ，命名规则大多以域名的方法来命名文件。
+
+3. 辑 conf 文件，把我们平常放在 nginx.conf 里的 server{...} 段复制过来直接粘贴到 conf 里。
+
+   在 nginx.conf 的 http{...} 段中加入 include E:/nginx-1.8.1/vhosts/.conf;
+
+> 注：这里 include 需要用到全路径，且文件后缀是用 conf\*\*
+
+这里介绍一个淘宝开源软件 tengine，他是 nginx 的超集。有很多强大的功能，我之前的公司百世就是用的[tengine](http://tengine.taobao.org/)。
+
+## 前后端分离的好处
+
+前后端分离的一个好处就是将人员分工更加明确，前端只关注界面，后端只负责数据，从而使效率显著提高。 再有就是前后端分离可以使得后端接口复用性更强（前端的复用通常可以采取组件的方式），如果公司需要针对 同一产品开发多套 UI（原生，手机端，PC 端等），理论上如果后端接口设计地足够好，是不需要改变的。 前端只需要根据不同的 UI 设备的呈现能力（手机屏幕小，因此元素更加紧凑，简约），实现不同的交互方式。
+
+前后端分离从技术角度上讲是后端技术和前端技术的解耦，从业务角度上讲，是业务逻辑和用户体验的解耦。
+
+## 前后端分离的挑战
+
+要实行前后端分离，不得不面对的一个问题就是前后端沟通问题。前面提到前后端分离，本质上是基于契约式的开发， 如果契约发生改变，那么就需要前后端再次进行沟通。不要小看沟通问题，沟通是软件开发环节中最难控制的一环。 如果是跨部门甚至跨公司沟通，沟通成本会显著上升。
+
+在有一个问题就是接口设计，前面提到前后端分离的核心是契约式开发。契约本质上就是 API 接口，因此 API 接口的 设计直接影响了前后端分离的实现。目前 facebook 提出的 graphql 也非常火热，其本质上是应用层查询语言。解决的 问题就是 restfull 接口的数据，接口冗余的问题。而目前绝大多数的前后端分离 API 设计都是基于 restfull 或者类 restfull 的设计。如果感兴趣，可以自行查阅 graphql 的参考资料。
+
+前后端分离之前，路由是放到后台的。如果做前后端分离，前端负责页面的路由，后端暴漏若干接口。这种方式相比 后台直出页面有一个问题就是，我们的接口是暴漏的，这就对安全问题提出了更高的要求。这部分不是本文的讨论重点， 不再赘述。
+
+前后端分离之后，文档的重要性显得更加重要。这就要求有一个明确的文档化的产品落地，而不是存在于人的头脑之中。
+
+## 总结
+
+本章介绍了四种前后端分离的方式和阶段，这里需要强调的是并不是越往后的方式越好，问题的关键点还是选择合适的 方式，根据当前所处阶段选择合适的分离方式，提高单体和整体作战效率才是明智之举。
+
+
+
+---
+
+# 2. 模块化和组件化
+
+当你进行用户需求调研后，往往收集到的都是一个个的用户需求点，而一个软件需求分析员要做的是最终将这些需求实现为一个完整的业务系统。这里面就涉 及到业务模块的划分，模块间的分析，需求层面的复用能力分析，各种性能，可靠性，安全等非功能性需求。这些更加已经是一个完全的系统分析方面的内容，或者 说软件需求已经会兼顾部分软件架构设计的内容，因此作为一个软件需求人员更加需要去了解业务组件化，服务化，软件模块集成，复用等方面的技术内容。也需要 去了解涉及到交互设计方面的内容，这些都是形成一个高质量的软件业务系统的重要输入。
+
+## 什么是模块化
+
+![&#x56FE;2.1](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图2.1.png)
+
+模块化是个一般概念，这一概念也适用于软件开发，可以让软件按模块单独开发，各模块通常都用一个标准化的接口来进行通信。除了规模大小有区别外，面向对象语言中对象之间的关注点分离与模块化的概念基本一致。通常，把系统划分外多个模块有助于将耦合减至最低，让代码维护更加简单。任何一个类库实际上都是一个模块，无论其是Log4J、React还是Node。通常，开源和非开源的应用都会依赖于一个或多个外部类库，而这种依赖关系又有可能传递到其他类库上。 任何语言都有模块化的思想，比如java的 package， es6的 import/export 等，而js恰好经历了从无到有，而且js模块化规范比较多，AMD，CMD，UMD，以及es6官方的import/export，所以我以js为切入点，讲解模块化是什么。
+
+js诞生的时候是没有模块化规范的，所有的代码都是在一个个script中，依赖管理也完全是全局变量+顺序加载的模式。 那时候代码大概是这样的：
+
+```markup
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+```
+
+最初js就是靠这种浏览器从上到下加载执行的这种特性完成依赖管理和模块化的。可以看出，如果项目依赖非常多，维护这种依赖关系将会非常痛苦。而且全局变量 增多也经常会碰到冲突。
+
+随后各种模块化规范出现，比如commonjs，amd，umd。 又出现了很多包管理工具，比如bower，npm，browserify。前端模块化眼花缭乱， 随后tc39组织提出的ecma推出了模块化标准import/export， 至此js正式有了模块化官方规范。
+
+有了模块化，我们通常会这样组织代码：
+
+![&#x56FE;2.2](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图2.2.png)
+
+我们上层模块总是复用一些小的模块，小的模块依赖更小的模块。构成了一个精妙的层级网络，这很美妙。让我们享受模块的好处吧。
+
+## SOA和微服务
+
+面向服务架构（Service-Oriented Architecture，SOA）又称“面向服务的体系结构”，是Gartner于2O世纪9O年代中期提出的面向服务架构的概念。 面向服务架构，从语义上说，它与面向过程、面向对象、面向组件一样，是一种软件组建及开发的方式。与以往的软件开发、架构模式一样，SOA只是一种体系、一种思想，而不是某种具体的软件产品。包括最近流行的micro service其实也是一种面向组件化和模块化的思想。
+
+SOA和micro service 的基本理念是将应用程序的不同功能单元（称为服务）通过这些服务之间定义良好的接口和契约联系起来。接口是采用中立的方式进行定义的，它应该独立于实现服务的硬件平台、操作系统和编程语言。微服务通过将服务拆分成原子性，并通过服务治理完成系统的功能。它有很多好处，比如不限定语言和实现，大家可以选择合适的技术栈。比如简单性，通过这种拆解，系统从一个复杂系统，编程了若干简单的子系统，无疑降低了系统的复杂度。但是同样有很多缺点，但这并不是本篇文章的重点。 一个典型的微服务系统大概是这样的：
+
+![&#x56FE;2.3](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图2.3.png)
+
+## 什么是组件化
+
+组件的概念在前端用的比较大多。组件和模块表达的意思比较相近。 我这里讲的组件，是比较狭隘的组件，专指前端中构建页面的基本组成单位。组件是对业务逻辑的封装，一个页面由多个组件组成，组件又可以由其他组件组成。 因此对组件进行分类很有必要。一般而言，组件分为下面四种类型：
+
+1. 展示型组件
+
+   给定的输入，输出一定。没有交互逻辑
+
+2. 容器型组件
+
+   通常是作为数据容器，并将数据分发到子组件。
+
+3. 交互性组件
+
+   大多数组件都是交互组件，满足用户的交互需求。 比如输入框，下拉框等。
+
+4. 功能性组件
+
+   不在页面中展示，不与用户直接接触。 通常以高阶组件的形式存在，给现有的组件注入功能。比如我需要实现一个可以拖动的功能，这个东西是抽象的，不是具体的组件。 大概是这样的用法:
+
+```jsx
+<Drag >
+<Modal />
+</Drag>
+```
+
+一个典型的系统是这样的：
+
+![&#x56FE;2.4](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图2.4.png)
+
+组件化就是基于可重用的目的，将一个大的软件系统按照分离关注点的形式，拆分成多个独立的组件，主要目的就是减少耦合。一个独立的组件可以是一个软件包、web服务、web资源或者是封装了一些函数的模块。这样，独立出来的组件可以单独维护和升级而不会影响到其他的组件。 提到组件化，不得不提web-component。有了web-component代码就可以这么写：
+
+```markup
+<link rel="import" href="banner.html">
+<link rel="import" href="body.html">
+<link rel="import" href="footer.html">
+<template name="t-list">
+    <t-banner></t-banner>
+    <t-body></t-body>
+    <t-footer></t-footer>
+</template>
+```
+
+这样就可以通过分工提高开发效率，同时可以复用代码。代码也非常清爽。但是web-component 是一个新的标准，目前还没有很好的实现，浏览器支持性并不是很好。 然后像react和 vue 这种 组件化思想的库可以实现类似web-compoennt的效果，尤其是vuejs。
+
+组件化的开发方式可以给我们**显著减少**开发时间，我们可以根据自己的业务场景沉淀一些基础组件和业务组件。使用者不必关心组件内部的实现，只需要关心组件对外暴露的接口即可，可以说将开发者的关注点集中在业务逻辑本身。这也就是像ant-design，elementUI等组件库火爆的原因。同时公司内部应该沉淀一些业务组件，供各个子系统使用。这样如果组件需要修改，只需要修改一处，其他系统只需要更改依赖版本即可。在这里要感谢各大公司提供的开源组件库，比如阿里的antd，滴滴的魔方，有赞的zent，饿了么的elementUI，它们提供了数十种的基础组件，几乎覆盖了所有的非复杂业务场景，不仅如此，它们还提供了诸多行业解决方案，帮助大家更快更好的搭建系统。同时它们也有很多业务组件，比如滴滴会有呼叫车辆的组件，有赞有sku组件等等，这些都是项目业务场景沉淀下来的，虽然不具有广泛适用性，但是其独特的业务特点，导致其稀缺性。如果小公司自己开发一套这样的系统的化，可以说是难度非常大。因为一套被广泛的系统不仅要组件丰富，文档清晰，还要质量高（就是要经过充分测试，并且有足够高的单元测试覆盖率），同时各大公司的组件库通常都是和设计师反复沟通产出的，其设计质量也是蛮高的。
+
+我们已经知道了模块化的概念和模块的好处，那么如何划分模块层次就是一个很重要的问题。毫不夸张的说，如果组件划分不得当， 模块之间职责重叠或者覆盖不均匀会给使用者带来不便，给系统带啦额外负担，甚至会误导使用者，造成潜在的问题。 那么如何划分模块和组件系统呢？下一节为大家揭晓。
+
+## 怎么合理划分模块和组件
+
+模块和组件的划分小到目录结构大到数据流动，状态管理，大大小小，内容繁杂。
+
+> 什么叫架构？揭开架构神秘的面纱，无非就是：分层+模块化。任意复杂的架构，你也会发现架构师也就做了这两件事。
+
+### 前端架构演变
+
+前端的工作其实就是和DOM打交道的工作，只不过是直接和间接的关系。为什么这么说呢？我们先来看下前端架构的发展。
+
+就前端架构发展角度来看，前端发展大概经历了四个阶段。
+
+1. 直接操作DOM年代。
+
+在这个年代，也就是原生操作DOM和Jquery等DOM操作封装库的时代，所有的效果都是直接操作DOM（前端直接操作或者框架封装了操作DOM的过程）。 这个时代，业务逻辑通常比较简单，对于比较复杂的逻辑通常都是落地到后端。
+
+1. MVC模式
+
+这个时代，并没有本质的差别，只不过将操作DOM的代码换了位置而已。
+
+1. MV\*
+
+这个年代可以说是真正的将前端从直接和DOM打交道中解脱了出来。MV\* 包括 react + 类flux架构， 都将DOM做了一层抽象，并不是简单的封装。 它们的理念是数据驱动DOM，同时借助一定的手段（可以是虚拟DOM）将DOM操作最小化（DOM操作非常昂贵）。
+
+> 为什么DOM操作比较昂贵？ 一方面DOM API 比较多，大家可以看下DOM的API就知道了，非常的多。另一方面，DOM操作通常伴随这浏览器的重排和重绘。大家可以这么理解，操作DOM就好像计算机操作硬盘。 执行JS就好像计算机操作内存。
+
+拿react来举例，react的核心思路可以用下面的伪代码表示：
+
+```jsx
+    const oldTree = render(oldState, oldProps);
+    const newTree = render(newState, newProps);
+
+    const patches = diff(oldTree, newTree) // 比较两棵树，计算patches
+
+    doPatch(patches) // 根据patches应用补丁，将dom以”最小化“更新
+```
+
+可以看出react 封装了 dom操作， 将dom 创建（render）和 dom修改（doPactches）封装了起来，对开发者来说是透明的。 react 的思想是给定的state 和 props 渲染出相同或者相似的dom。 所以react 开发者的核心关注点从DOM 移到了 状态， 也因此诞生了很多状态管理框架， 比如官方的flux，以及类flux 框架， reflux 和redux。 以及vuejs 配套的vuex。这也是众多数据管理框架越来越火爆的原因，比如mobx（MobX 是一个经过战火洗礼的库，它通过透明的函数响应式编程\(transparently applying functional reactive programming - TFRP\)使得状态管理变得简单和可扩展）和 rxjs（RxJS 是使用 Observables 的响应式编程的库，它使编写异步或基于回调的代码更容易）
+
+> jquery 将 开发者从DOM 复杂的API 和浏览器兼容性泥潭中拉了出来。 而数据管理框架将开发者彻底从DOM 关注 点中解放出来了。
+
+1. MNV\*
+
+前面说了，前端的工作就是和DOM打交道。 这一说法在MNV _面前显得不是那么确切。MNV_真正将开发者脱离DOM，从令人诟病的DOM操作中完全解脱，并且不借助DOM实现原生的体验。目前很多大公司的核心APP 都是基于这种混合式开发完成，比如支付宝，微信，钉钉等等。这种开发方式的好处结合了H5开发的速度和原生开发的性能的优势。 这种开发模式的原理很简单，在原生APP中嵌入webview并基于一定的协议，完成客户端和H5页面的双向通信。做过flex的人可能知道，flex可以将flex内部应用通过接口暴漏给window对象，js通过window对象访问flex中的方法。同时flex可以调用window上的方法，从而实现flex和js的双向绑定。而MVN\*的交互模式有点类似，H5和Native直接的交互基于的是名字叫JSBridge的东西。
+
+记得在15年本科没毕业的时候，我的讲师跟我们介绍过一个名字叫PhoneGap的东西，其实它就是在web基础上包了一层Native，然后通过Bridge技术使得js可以调用视频，音频，GPS，拍照等原生的功能。要进一步了解JSBridge，需要大家懂一点IOS和Android的相关知识。我给大家普及一点基础的IOS和Android的知识。
+
+IOS有一个叫UIWebView的东西，这个东西就像是一个浏览器一样，有浏览器的基本功能，同时还可以调用一些原生的API，比如GPS定位。需要特别注意的是Safari浏览器使用的浏览器的控件和UIwebView并不是同一个，两者在性能上有一定的差距。IOS调用webviewjs代码是通过这样实现的：
+
+```javascript
+webview.stringByEvaluatingJavaScriptFromString
+```
+
+可以看出它和flex如出一辙，都是通过暴漏在window上的方法操作webview。 实际项目中通常将window上挂在一个对象专门存在此类操作，比如window.webview
+
+上面讲了Native调用js，那么js如何调用Native呢？其实js调用Native是基于一个事件代理。 webview中所有的请求都会经过native中一个代理类，代理类进行拦截，如果是约定的格式（如调用原生方法）就解析，并调用原生方法。如果是其他的请求则放行。通常是下面的格式：
+
+```javascript
+jsbridge://class?callback/method?param1=value1&param2=value2
+```
+
+比如H5要实现一个原生的toast功能，可以这么去写：
+
+```text
+var url = 'jsbridge://feedback?onSuccess=xxx&onFail=xxxx/doToast?icon=图标&title=文字';  
+var iframe = document.createElement('iframe');  
+iframe.style.width = '0px';  
+iframe.style.height = '0px';  
+iframe.style.display = 'none';  
+iframe.src = url;  
+document.body.appendChild(iframe);  
+setTimeout(function() {  
+    iframe.remove();
+}, 0);
+```
+
+安卓的交互模式大同小异。知道了交互的具体原理，那么对于不同端（IOS，Android）需要不同的方法。那么这时候去建立一个中间层做统一，通常是前端的js-api形式存在。比如钉钉的做法是引入 dingtalk-promise-lwp.js 将native 调用方法封装成一个简单的类库，并且屏蔽了不同端的差异。
+
+还是以toast为例,代码如下：
+
+```javascript
+dd.device.notification.toast({
+    type: "information", //toast的类型 alert, success, error, warning, information, confirm
+    text: '这里是个toast', //提示信息
+    duration: 3, //显示持续时间，单位秒，最短2秒，最长5秒
+    delay: 0, //延迟显示，单位秒，默认0, 最大限制为10
+    onSuccess : function(result) {
+        /*{}*/
+    },
+    onFail : function(err) {}
+})
+```
+
+1. Native
+
+上面讲述了hybrid app实现了js调用原生模块的功能。本质上H5应用还是运行在webview中，通常一些模块还是基于DOM的，即使是原生模块也是基于代理的方式将js和 native联系在一起。 而Native 的方式则大又不同，它本质上就是Native，因此性能上又比hybrid好很多。比如广为人知的react native（以下简称RN） 和 weex，RN本质上是以React的方式书写代码，然后通过RN这一个中间层，将React转化并调用为原生Native代码，反之亦然。当然RN也可以退化到hybrid的实现方式，即以webview作为桥接层，很多为了兼容性都是这么做的。
+
+RN 将原生模块通过导出供React使用,以下是RN官网示例代码：
+
+```java
+@Override
+  public List<NativeModule> createNativeModules(
+                              ReactApplicationContext reactContext) {
+    List<NativeModule> modules = new ArrayList<>();
+
+    modules.add(new ToastModule(reactContext));
+
+    return modules;
+  }
+```
+
+```javascript
+import { NativeModules } from 'react-native';
+module.exports = NativeModules.ToastExample;
+```
+
+```text
+import ToastExample from './ToastExample';
+
+ToastExample.show('Awesome', ToastExample.SHORT);
+```
+
+### 技术架构演进给我们的启示
+
+技术架构在不断的演进，我们的目录结构，代码层次，公共逻辑抽离都不一样，我们看待问题的方式就要不断演进，架构也要不断演进。 那么架构发展中不变量是什么？如何根据不变量来规划软件架构？要回答这个问题，首先要明白软件开发的核心关注点，这个问题比较宽泛。那么 我以前端开发的角度来描述下，作为前端开发的核心关注点有哪些。
+
+1. 页面结构
+
+如何划分结构，如何组织页面。前端发展前期，页面结构划分的方式就是div，”前端“将一个个组件通过div构建出来，复用性几乎不存在。 随着技术进一步发展，组件的思想深入人心，人们通过组件描述应用的结构，将程序看作是一个个组件组成，进而有了一大批关于组件化开发的best pratice。 web-components就是组件化思想的官方表现。
+
+1. 页面样式
+
+如何实现设计稿的效果。 早期大家通过css2实现基本的网站布局。随着网站发展，交互越来越复杂，动画的要求越来越高。诸如css3， canvas动画技术浮出水面，这些技术都是为了更好的实现网站的样式。为了提高书写效率有了一批css预处理和后处理引擎，这些东西的出现都是为了提高样式产出的效率。为了解决css全局覆盖的问题，又出现了css module的方案。 为了使组件和样式更加复用，又出现了style compoent技术等等，不胜枚举。
+
+1. 页面行为交互
+
+如何完成产品的交互需求。网站早期页面的交互就是简单的登陆和提交留言等最基础的功能。现在网页做的越来越像一个app。复杂性可想而至，同一时刻，存在十几种状态更是家常便饭（已经请求了A资源，已经做了实名认证，已经通过了测验，已经提交了留言等等等，如果我愿意，我可以一直说下去）。那么如何维持越来越复杂的状态呢？由于状态之间不是独立存在的，某些状态可以依赖于别的状态，各种状态交织在一起，令人头疼。 因此为了解决这个问题，出现了诸如redux， vuex， mobx等数据管理软件，它们的目标就是做状态管理。
+
+除此之外，还有很多关注点，但是最基本的就是这三个。这三点也是大多数前端必须要关注的事情。大家往往需要根据自己项目的实际情况对三者进行某种程度的取舍。对于其他的岗位，比如后端工程师，一样需要将后端的核心关注点找到，然后根据自己项目实际情况对关注点的实践进行一定的取舍。
+
+### 模块和组件的划分依据
+
+#### 根据业务划分
+
+首先要明白，技术是服务业务的，业务依托于技术而存在。 任何脱离业务的技术都是意淫。 所以模块和组件的划分首先要站在业务角度划分，其次才是技术角度。 复杂的系统，最好先按业务领域横向拆分成可独立部署的子系统，每个子系统内部再按技术（主要是业务层和Web层）纵向拆分成不同的模块。
+
+举个简单电商的例子, 可能这样划分模块：订单、会员、商品、优惠、支付。 每个模块都只负责自己的一块业务，同时对其他模块开放必要的接口。 这种情况下，哪个模块有变动，只要接口不变完全不影响其他应用。而商品上架就不适合划分为模块， 因为其本身属于不基础服务，不是给系统使用的，而是面向用户的，面向用户的就会有频繁的变动，就会不停匹配用户的需求。 因此一个原则就是根据业务划分出模块， 是**面向系统的，还是面向用户**的。
+
+#### 根据技术划分
+
+我们已经根据业务划分了模块，这时候需要将这些模块组合起来，对外提供服务。 因为最终产出的是产品，是面向用户的。如果组织模块，又落地到了技术问题。一个好的思路是分层，将基础服务下沉，将业务服务上浮。 实现了分层，但是模块间通信又是问题，目前业界比较好的解决方案是通过MQ 和 配置中心解耦。 模块之间 并不知道自己依赖的系统或者被谁依赖，所有需要的东西动过MQ注册，并通过配置中心管理，解决了模块之间的通信问题。因此模块划分的另一个原则是单一职能原则。
+
+#### 总结
+
+其他的划分原则还有高内聚低偶合，模块大小规模适当，模块的依赖关系适当等。又一个物理学名词熵，是一种测量在动力学方面不能做功的能量总数，也就是当总体的熵增加，其做功能力也下降，熵的量度正是能量退化的指标。熵亦被用于计算一个系统中的失序现象，也就是计算该系统混乱的程度。 软件开发本质上是处理复杂度的过程，软件总是趋向无序混乱发展。 但是架构得当，模块划分合适，可以将软件腐败速度降低。
+
+### 模块和组件编写的技巧
+
+前面讲述了模块和组件划分的依据。 假设我们已经正确合理地划分了模块。 是否就认为我们的代码结构就足够好，足够复用，足够方便调试呢？也不一定！ 原因在于组件内部通常也是有很多细小的逻辑的，由于这些逻辑没有必要（或者我们认为没有必要）抽离出来，在加上模块和组件内部状态复杂多变，各自牵扯就会造成模块内部代码难以复用和修改。
+
+#### 抽象
+
+[为什么我们的代码难以维护](https://my.oschina.net/wanjubang/blog/1580050)这边文章讲述了为什么我们的代码难以维护，其中讲了一个重要原因就是 系统抽象级别不够。那么如何编写抽象级别合适的代码呢？其中一个原则就是我们的代码描述的应该是一般逻辑，而将硬编码和分支策略做成可配置。其中硬编码部分和分支策略可以称之为程序的元数据。
+
+> 为一般逻辑编码，为特殊逻辑配置。
+
+我们平时工作中会使用一些设计模式，这些设计模式就是对具体业务逻辑进行抽象和提炼的结果。比如我们经常碰到同一时刻，同类型的Modal只能出现一个的需求。我们对这样的需求进行提炼，发现还有很多类似的逻辑。虽然它们本身所处的环境各不相同，但是我们可以将其中共性提炼出来，这就形成了单例模式。再比如我们现在要做 一个社保计算的功能，每一个省份的计算方式都不同，我们如何设计这个系统 ？ 先看下一般的写法：
+
+```javascript
+function getHenanSocialInsurance(salary){
+    return salary * .4;
+}
+
+function getHebeiSocialInsurance(salary){
+     return salary * .2;
+}
+const calSocialInsurance = (province, salary) => {
+   let socialInsurance = 0;
+   if (province === 'henan') {
+    socialInsurance = getHenanSocialInsurance(salary);
+   } else if (province === 'hebei') {
+    // do something
+    socialInsurance = getHebeiSocialInsurance(salary);
+   }
+   // ....
+
+   return socialInsurance;
+}
+```
+
+再来看下策略模式：
+
+```javascript
+// 封装的策略类
+var strategies={
+    "henan":function (salary) {
+        return salary * .4;
+    },
+    "hebei":function (salary) {
+        return salary * .2;
+    },
+};
+
+
+// 调用方
+var calSocialInsurance= (province, salary) => {
+    return strategies[province](salary);
+};
+```
+
+其实生活中还有很多类似的场景，我们对这样的场景进一步抽象，提炼出策略模式。为通用过程先编码，具体算法设计不同的实现，由调用方决定使用哪种策略（算法）。还有很多设计模式就不列举了，大家可以私底下自己去看。其实抽象是很重要的一个概念，linux操作系统将一切都抽象为文件，而文件又是对字节流的抽象。
+
+> cat /dev/urandom &gt; /dev/dsp
+
+包括很多的程序设计方法，比如面向对象编程，是将生活中的物体抽象成拥有属性和方法的对象，并通过封装继承等完成复杂的逻辑。 函数式编程是对代码逻辑运用数学的方法进行抽象，进而可以将数学中的定律（结合律，交换律，集合论等）运用到代码中。正是因为抽象，我们才能一步步构建出坚实的上层系统。
+
+#### 保持模块和组件的纯粹性
+
+**纯函数**
+
+提到纯粹性，不提到另一个重要的概念-纯函数。 纯函数其实就是数学中的函数。
+
+> 函数是不同数值之间的特殊关系：每一个输入值返回且只返回一个输出值。
+
+它有一个重要的特征就是给定输入，输出是一定的。前面这句话可以从两方面理解，一是给定输入，输出一定，一对一。 另一点是没有副作用（side effect），副作用指的是函数经过运算不会对外界产生影响，当然也不依赖外界。 其实上面的两点是一点，没有副作用正是给定输入输出一定的前提。
+
+换句话说，函数只是两种数值之间的关系：输入和输出。尽管每个输入都只会有一个输出，但不同的输入却可以有相同的输出。下图展示了一个合法的从 x 到 y 的函数关系；
+
+![&#x56FE;2.5](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图2.5.png)
+
+（[http://www.mathsisfun.com/sets/function.html）](http://www.mathsisfun.com/sets/function.html）)
+
+这也就要求我们的代码不依赖外部环境且不会对外界有影响，并且给定输入，输出一定（比如不可以是Math.random 这样的逻辑）。
+
+**单一职责**
+
+纯粹性除了上面的特征之外，还有一个重要特征是单一职责。 即一个功能函数只完成原子性功能，不要让函数做非常多的事情，保证其功能的纯粹。软件设计原则中有一个单一职责原则，描述的是如果一个模块承担的职责过多，就等于把这些职责耦合在一起了。一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力。这种耦合会导致脆弱的设计，当发生变化时，设计会遭受到意想不到的破坏。而如果想要避免这种现象的发生，就要尽可能的遵守单一职责原则。此原则的核心就是解耦和增强内聚性。只有模块和组件满足单一职责原则，我们的代码才能够更好地被修改，扩展，才能真正地拥抱变化。
+
+**总结**
+
+通过上面方法，我们将模块和组件代码切分成满足单一职责的单元，并且每一个单元都尽可能地纯粹。通过这样的模块和组件构建出来的系统才能保证稳定性和健壮性
+
+> 底层基础决定上层建筑
+
+
+
+---
+
+# 3. 流程自动化
+
+前端从诞生依赖可以说经历了一个从不规范到规范，再到自动化的一系列过程。最开始的时候没有前端这个领域，所有的前端职责都是由服务端来代替完成，当时的状况是非常混乱的，派别丛生，浏览器厂商规范不统一，模块机制混乱，代码风格写法各自为派，真有点群雄逐鹿的感觉。从HTML5，CSS3，ES6（536）的发布开始，前端已经趋于规范化。浏览器的规范趋向一致，微软的浏览器也逐渐跟上了步伐，浏览器兼容性问题向前迈进了一大步。如今前端开发的过程也越来越规范，越来越有规律可循。因此大家在想这些有规律的东西能不能够实现自动化（程序员最喜欢偷懒），能不能将枯燥无味的工作交给电脑来做，减少重复的工作，提高工作效率。 答案当然是可以的，而且目前业内已经有非常多的成功案例。从facebook的Waitir，google的自动化流程系统，到国内阿里的def，再到小公司使用的gitlab ci，发现很多公司都已经开始了流程自动化的探索。本章我会先讲述前端的工作流程是怎样的，然后对前端工作流程进行分析，分析哪些任务可以自动化，实现自动化的思路是什么，最后我会讲述如何搭建一个自动化的小平台。
+
+## 前端工作流程
+
+让我们开始之前，先来看下我们目前前端的工作流程是怎么样的，我分享的只是我个人的工作流程，不同公司和个人可能略有不同，但总的思路应该是差不多的，请不要太介意。
+
+### 阶段一 需求产生 - 准备开发
+
+这个阶段又可以分为如下三个小阶段：
+
+#### 需求评审
+
+正常情况下，从需求产生到准备开发，应该有一个需求评审会，这时候相关开发和产品经理会聚集在一起，商讨需求是如何产生的（敏捷开发的需求通常是从客户的反馈中产生的），我们做的功能有没有解决客户的问题，我们对需求的理解有没有偏差和需求的优先级等。经过彻底充分的讨论之后，如果需求理解没有问题，并且需求确实可以解决客户的问题，我们会为工作安排时间和优先级，将task列到看板（同时列到系统和白板上），并每天追踪更新。
+
+> 理解产品经理的真正意图，明白需求产生的背景
+
+#### 拆分组件和模块
+
+前端目前比较推荐的工作方法是组件式开发，即将页面拆分成足够粒度的小组件和模块。由单独的人负责相关独立模块和组件的开发，做到组件和模块的复用，这个已经在第二章讲过了，不在此赘述。
+
+#### 建立分支
+
+目前大多数互联网公司的版本管理工具都是使用git，包括我们的公司，而且公司内部通常也有自己的git flow，我们做新功能的时候通常会建立一个feature分支，开发完毕后合并到release分支等待测试和发布。当然就算你是SVN思路也是一样的。
+
+### 阶段二 开始开发 - 提交测试
+
+#### 写单元测试
+
+这里通常有两个比较常见的问题。问题一是能不能不写单元测试，或者说不写单元测试有什么不好的影响？第二个问题是为什么要先写单元测试而不是先写代码？我们对这两个问题一一进行解答。先说第一个问题，其实不写单元测试是很容易做到的，就好像我们不努力锻炼身体一样简单，但是当我们面对自己的一大块腹肌的时候，是不是有那么一丁点儿后悔呢？单元测试也是一样，当你开始写的时候，没有任何收效，据统计写单元测试的时间要高于写代码的时间，那么我们为什么还要“白”花那么多时间写测试用例呢？那是因为当随着应用规模逐渐扩大，复杂度逐渐上升的时候，完善的测试用例，给你修改代码的勇气。当单元测试显示all pass的时候，仿佛有人跟你说“干吧，哥们，没毛病。”。你不会因为怕改坏了代码而蹑手蹑脚。但这里要强调一点的是，覆盖率低的单元测试不但不能够起作用，反而会给人一种“干吧，哥们，没毛病。”的假象。这也是为什么我后面强调使单元测试覆盖率足够高的原因。我们再来看下第二个问题，这个问题涉及到一个概念叫测试驱动开发（TDD）。TDD的理念就是先写测试用例，然后写具体实现。TDD的一个重大优点就是你将具体实现放到后面，这样你就不会深陷细节的泥潭，你就拥有更清晰的视野，你会对业务或者逻辑理解更佳深刻。这就好像你看过很多高手写代码，它们会先将思路写下来，然后再写代码是一个道理。
+
+回答了关于测试的常见问题，我们来看下单元测试究竟怎么写。其实也简单，单元测试通常来自于测试人员整理的测试用例，当然一些特殊的算法逻辑需要自己整理啦。一个原则就是能用测试同学就用测试同学，不用白不用，对吧？但是前端写单元测试的时候，总会感觉很困难，我一开始也是这么觉得的。后来我接触了函数式编程，整个人就感觉豁然开朗。传统的面向对象编程，命令式编程有一个非常大的弊端，引用Joe Armstrong（Erlang语言的创造者\)的一句话就是：
+
+> 你想要一个香蕉，但得到的却是一个拿着香蕉的大猩猩
+
+没错，当我回顾我很久之前的代码，的确如此。这也不能完全怪我们，我们已经习惯了各种假设，各种外部依赖。我们将这些变成理所当然，我们不断地改变状态的状态，导致状态难以追踪。因此我们写单元测试非常困难。当你开始以函数式编程理念写代码的时候，你会发现代码非常好测试。比如目前比较流行的react的展示组件，就是一个纯函数，对这样的组件进行测试就很简单。当你研究redux的代码的时候，你会发现redux的reducer设计的精妙，他将reduce在空间上的抽象变成reducer在时间上的抽象，并且reducer纯函数的理念也让代码更容易测试，具体可以看我的[这篇博文](https://my.oschina.net/wanjubang/blog/1580050)
+
+#### 防御性编码
+
+写代码之前要先想有没有轮子可用。如果没有在开始造轮子。我喜欢将逻辑划分为多个函数，然后在函数开头对入参进行校验，并对每一步可能出错的地方进行校验，典型的是npe（null pointer exception）。这就是典型的防御性编程。
+
+```javascript
+// String a -> Number b -> Boolean
+function testA(a, b) {
+   if (!a) return false;
+   if (!isString(a)) return false;
+   if (!b) return false;
+   if(!isNumber(b)) return false
+   return !!a.concat(b);
+}
+```
+
+这种方法在前端尤其有效，因为js是动态语言，如果你不使用typescript等增加静态检测的功能的话，代码会变得脆弱不堪。一个简单的做法就是，假设每一行代码都会遇到异常情况，都会报错。
+
+#### 使单元测试覆盖率足够高
+
+前面讲了单元测试的重要性，以及单元测试的写法思路。这里强调一下单元测试的覆盖问题，低的单元测试覆盖率毫无用处，甚至会起反作用，因此保持足够高的单元测试覆盖率显得非常重要，业界普遍认可单元测试覆盖率在95%以上是比较合适的。
+
+### 阶段三 测试完毕 - 可发布状态
+
+这个阶段我们的代码已经经过了自测和测试人员的回归，我们认为可以发布上线了。通常我们还会让产品经理进行验收，看看是不是他们想要的效果。
+
+#### 编译
+
+目前写的代码是在多个文件的，我们的代码使用了很多浏览器不支持的特性，我们需要将css从js中提取出来等等。这些工作都需要通过编译来完成。
+
+#### 包分析
+
+我们的项目的代码是由许许多多的依赖构成的，我们会依赖一些框架如react，vue，我们会使用一些工具库如lodash，ramdajs，mostjs等。这些都构成了项目的不稳定和不确定。这也就是为什么大公司如阿里，会对外部依赖有着很强的执念。npm也察觉到了这一点，以至于现在的npm在安装过后都是锁定版本的。但这依旧无法保证依赖包的质量。 一个查看包质量的原则就是文档足够丰富，单元测试覆盖率足够高，受欢迎（start足够多），虽然上述条件不是一个库质量良好的充分条件，但却是必要条件，我们可以通过它筛选一大批不合格的库。
+
+#### 代码检查
+
+我们会对代码进行检查，有没有语法错误等。这一步可以通过eslint检查，也可以通过flow或者typescript这样的静态检查工具检查。总之，这一步是检查有没有错误代码或者不符合规范的代码。
+
+#### 代码优化
+
+代码已经通过了检查，这个时候我们需要对代码进行优化，比如压缩，合并，去空格去console等，或者提取公共依赖，再或者删除僵尸代码（tree shaking）。
+
+#### CodeReview
+
+我们会组织相关人员进行代码评审，确保代码质量。这部分是人工完成，是对前面工作的最后把关。
+
+### 阶段四 准备发布 - 发布完成
+
+#### 发布静态资源到CDN
+
+我们资源发布到CDN等待最终的发布，保证版本发布之后，用户可以直接获得最新的CDN资源。
+
+#### 打tag
+
+我们将代码打tag，一个个tag就像是一个个里程碑。 当我们需要对某一个版本代码进行修复的时候，tag的作用就显示出来了。
+
+#### 修改线上版本号
+
+我们的功能已经达到了可以发布的状态，然后我们会对版本进行发布。修改线上的版本号，这样我们的用户就可以访问到我们最新写的代码了。
+
+### 阶段五 发布上线 - 线上验证
+
+我们已经将代码发布上线了，通常我们需要验证下代码是否正确发布，有没有影响线上其他功能。
+
+上面的过程可能是大多数互联网公司的工作流程了。那么下一节我会对每一个阶段进行分析，找出可以自动化的点，并讲述自动化的技术思路是怎样的。
+
+## 实现流程自动化的思路是什么
+
+上面讲述了常规的需求产生到功能发布的完整过程，通过上面的分析，我们发现阶段三和阶段四是可以高度自动化的，阶段三和阶段四进行做了什么事，为了方便大家的理解，我整理了一个图：
+
+![&#x56FE;3.1](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.1.png)
+
+图中的虚线表示自动完成，无需人工。实线表示需要人工操作。图的中心点是dev，可以看出dev的操作有三个，分别是提交（commit）打tag，以及提交pr（pull request）。不同的操作会触发不同的钩子，完成不同的操作。我们一个节点一个节点进行分析，它们分别做了什么事，以及设计实现的思路。图中需要实现的系统有三个，第一个是包分析引擎（package analyser），第二个是CI中心，第三个是CD中心，我们分别来看。
+
+### package analyser
+
+包分析工具这里可以是前端的npm包分析，也可以是后端的比如maven包分析。这里以npm包分析为例，maven等其他包分析同理，只是具体技术实现细节不同，npm包分析和maven包分析只是具体策略不同，我们可以通过策略模式将具体的分析算法封装起来。首先看下包分析引擎实现的功能，其实包分析引擎就是分析应用依赖的包，并逐个递归分析其依赖包，找到其中有风险的依赖，并通知给使用者（项目拥有者）。具体功能包括但不限于分析有安全风险的包，提示有补丁更新，有了这些依赖数据，我们甚至可以统计公司范围内包的使用情况（包括各个版本），这些数据是很有用的。后面一节我们会具体分析包分析引擎的实现细节，使读者可以自行搭建一个npm包分析引擎。
+
+### CI
+
+CI（Continuous Integration）是持续将新功能集成到现有系统的一种做法，极限编程也借鉴了CI的基本思想。那么我们是怎样使用CI的呢？我刚才在图中也体现了，开发者的提交会触发CI，CI会做一些单元测试，代码检测等工作，如果不通过则反馈给相关人员，否则将通过的代码合并到库中。也就是说CI并不是一项技术，二是一种最佳实践，更多可以参考[wikipedia](https://en.wikipedia.org/wiki/Continuous_integration)。后面我会介绍实现一个CI的基本思路。
+
+### CD
+
+CD\(Continuous Delivery\)同样也是一种最佳实践，并不是一项技术。它的基本思想是保证代码随时可发布，它保证了代码发布的可信赖性，同时持续集成减少了开发人员的工作量。更多可以参考[wikipedia](https://en.wikipedia.org/wiki/Continuous_delivery)。后面我会介绍实现一个CD的基本思路。
+
+当然我们的系统还比较不完善，我们还可以增加配置中心，方便对版本进行管理，还可以增加监测平台（第四章有讲），大家可以发挥自己的聪明才智。
+
+## 我们还漏了什么
+
+上面讲述了一个需求产生到功能上线的过程，我们也分析了如果进行自动化。我们还忽略了一个项目初期的一个过程，就是搭建脚手架的过程。如何将搭建脚手架的过程也自动化，配置化，最好还能在公司范围内保持一致性。
+
+### 脚手架做了什么
+
+当我们开始一个新项目的时候，要先进行技术调研和选型，当确定了技术方向的时候，我们需要一个架子，项目成员可以根据这个架子写代码。这个架子可以手工生成，很早之前我就是这么干的，但是手工生成的有很多缺点。第一就是效率低，第二就是不利于统一。为了解决这个问题，我们引入了云脚手架的概念。要明白云脚手架我们需要先知道脚手架。我们先来看下脚手架做了什么事，简单来说脚手架就是生成项目的初始代码。我们通过目前比较火的react的配套脚手架工具create-react-app\(以下简称cra\)来认识一下脚手架的工作原理。我们先来看下cra的使用方法：
+
+```bash
+npm install -g create-react-app
+
+create-react-app my-app
+cd my-app/
+npm start
+```
+
+这样我们就有了下面的项目结构：
+
+![&#x56FE;3.2](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.2.png)
+
+如果要实现以上功能，一个最简单的方法就是执行create-react-app xxx 之后去远端下载文件到本地。其实cra的思路就是这样的，我用一张图来表示cra的基本过程：
+
+![&#x56FE;3.3](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.3.png)
+
+每一步的实现也比较简单，大家可以直接[查看源码](https://github.com/facebookincubator/create-react-app/master/packages/create-react-app/createReactApp.js)
+
+### 中心化，可配置的脚手架服务
+
+上面介绍了脚手架的作用和实现原理。但是上述的脚手架无法实现中心化，也就是说不同团队无法形成相互感知，具体来说就是不同项目的脚手架是不同的或者不能够实现高度定制化，因此我们需要构建一个中心化，可配置的脚手架服务，我称之为云脚手架。脚手架采用CS架构。客户端可以是一个CLI，服务端则是一个配置中心，模块发现中心。如下图是一个云脚手架的架构图：
+
+![&#x56FE;3.4](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.4.png)
+
+客户端通过命令告诉服务端想要初始化的模版信息，服务端会从模板库中查找对应模板，如果有则返回，没有则请求npm registry，如果有则返回并将其同步到模板库中，供下一次使用。如果没有返回失败。 这样对不同团队来说，脚手架是透明的，团队可以定制适合自己的脚手架，上传到模板库，供其他团队使用，这就形成了一个闭环。
+
+## 如何搭建一个自动化平台
+
+### 搭建package analyser
+
+我将包分析引擎的工作过程分为以下三个阶段
+
+#### 建立黑白名单
+
+我们需要对包分析，分析的结果当然需要数据支撑。因此黑白名单是不可少的，我们可以自己补充黑白名单，我们甚至可以建立自己的黑白名单系统，当然也可以接入第三方的数据源。不管怎样，第一步我们需要有数据源，这是第一步也是最重要的一步。为了简单起见，我以JSON来描述一下我们的数据源:
+
+```javascript
+// 所有的key都是npm包的包名
+{
+ "whiteList": ["react", "redux", "ant-design"],
+ "blackList": {
+   "kid": ["insecure dependencies 'ssh-go'"]
+ }
+}
+```
+
+#### 递归分析包并匹配黑白名单
+
+这一步需要递归分析包。 我们的输入只是一个配置文件，npm来说的话就是一个package.json文件。我们需要提取package.json的两个字段dependencies和devDependencies，两者就是项目的依赖包，区别在于后者是开发依赖。这个时候我们可以获得项目的一个依赖数组。形如：
+
+```javascript
+ const dependencies = [{
+   name: "react",
+   version: "15.4.2"
+ }, {
+   name: "react-redux",
+   version: "5.0.3"
+ }]
+```
+
+然后我们需要遍历数组，从npm registry（可以是官方的registry， 也可以是私有的镜像源）获取包的具体内容，并递归获取依赖。这个时候我们获取了项目所有的依赖的和深层依赖的包。最后我们需要根据包名去匹配黑白名单。我们还有一步需要做，就是获取包的更新日志，将有意义的日志（这里可以自己封装算法，究竟什么样的更新日志是有意义的，留给大家思考）输出给项目拥有者。
+
+#### 结果输出
+
+我们已经将所有的依赖包进行匹配，这个时候已经知道了系统依赖的白名单包，黑名单包和unknown包，我们有了匹配之后的数据源。
+
+```javascript
+ const result = {
+    projectName: "demo"
+    whiteList: ["react", "redux"],
+    blackList: [{name: "kid", ["insecure dependencies 'ssh-go'"]}]，
+    changeLog: [{name: ""react-redux, logs: {url: '', content: ''}}]
+ }
+```
+
+我们要做到数据和显示分离。这个时候我们将数据单独存起来，然后采用友好的信息展示出来，这部分应该比较简单，不多说了。
+
+### 搭建持续集成平台
+
+如果想要搭建持续平台的话，最基础的三个服务是要有的，lint，test以及report。其实lint，test和report的具体实现已经超出了CI的范畴，这里就大致讲以下。对于lint来说，本质上是对js文本的检查，然后匹配一些规则，业界比较有名的是红宝书的作者nzakas的eslint，关于eslint的整体架构可以查阅[这里](https://github.com/eslint/eslint/master/docs/developer-guide/architecture.md)zakas的初衷不是重复造一个轮子，而是在实际需求得不到JSHint团队响应的情况下，自己开发并开源了eslint：一个支持可扩展、每条规则独立、不内置编码风格为理念编写一个js lint工具。对于test，其实就是运行开发人员写的测试用例，并保证运行正确且覆盖率足够高。如果上述步骤出错，则会向相关人员告警。下面是CI的架构图：
+
+![&#x56FE;3.5](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.5.png)
+
+代码会经过lint，途中会从配置中心拉取项目的presets和plugins，通过后进入下一个流水线test，test会将代码分发到浏览器云中进行单元测试和集成测试，并将结果发给相关人员，上述两个步骤如果出错也都会通过report service发送信息给相关人员。
+
+### 搭建持续部署平台
+
+持续部署在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「类生产环境」（production-like environments）中。比如，我们完成单元测试后，可以把代码部署到连接数据库的 Staging 环境中更多的测试。如果代码没有问题，可以继续手动部署到生产环境中。因此持续部署最小的单元就是将代码划分为一个个可以发布的状态。下面是一个经典的企业级持续部署实现:
+
+![&#x56FE;3.6](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.6.png)
+
+[https://continuousdelivery.com/implementing/architecture/](https://continuousdelivery.com/implementing/architecture/)
+
+可以看出持续集成，其实是将新模块融合到系统里面，形成一个可发布单元,它本身不涉及到发布的流程。真正将代码发布到线上，还是需要人工来操作。
+
+> 可以通过配置中心实现代码发布
+
+要想实现持续部署的架构，是需要代码和系统架构的配合，这是和前面我讲述的其他系统不一样。持续部署要求代码的耦合度要足够低，尽量少地影响其他模块。每当发布一个新功能的时候，不需要将全部代码测试回归，而是采用mock，stub等方式模拟外部依赖。目前比较流行的微服务，也是一种将代码解耦合的一种实践，它将系统划分为若干独立运行的服务，服务之间不知道彼此的存在，甚至服务之间的语言，技术架构都不相同。前面的章节讲述了组件化和模块化，在这里又可以看出组件化和模块化的重要性。
+
+更多关于[持续部署实现](https://continuousdelivery.com/implementing/architecture/)的介绍
+
+### 搭建通知服务等其他可接入的第三方服务
+
+前面反复提到了反馈系统feedback。可能我们还需要其他第三方系统，比如数据可视化系统等。这里以接入通知服务为例，讲解如何接入一个通用的第三方系统。在谈通知服务具体细节之前，我们先来讲下接入一个第三方服务需要做什么。本质上接入不同的服务是服务治理的范畴，而目前服务治理当属微服务占据上风。这种通过不断接入“第三方”服务的方式使得业务和应用分离。在微服务之前，大家普遍的做法是将不同的系统做成不同的应用，然后通过某些手段进行通信。这种方式有一个显著的缺点就是应用有很多重复冗余的逻辑和代码。而微服务则不同，微服务将系统拆分成足够小的块，这样能够显著减少冗余。服务化有以下特点：
+
+* 应用按业务拆分成服务
+* 服务可独立部署
+* 服务可被多个应用共享
+* 服务之间可以通信
+
+这里并不打算讨论服务治理的具体实施细节，但是需要明白的是通过这种微服务的思想。我们需要通知服务，只需要发送一个信号，告诉通知服务，通知服务返回一个信号，表示输出的结果。比如我需要接入邮件服务这个通知服务。代码大概是这样的:
+
+```javascript
+'use strict';
+const nodemailer = require('nodemailer');
+const promisify = require('promisify')
+
+// Generate test SMTP service account from ethereal.email
+// Only needed if you don't have a real mail account for testing
+exports default mailer = async context => {
+
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: account.user, // generated ethereal user
+            pass: account.pass  // generated ethereal password
+        }
+    });
+
+    // setup email data with unicode symbols
+    let mailOptions = {
+        from: '"Fred Foo 👻" <foo@blurdybloop.com>', // sender address
+        to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers
+        subject: 'Hello ✔', // Subject line
+        text: 'Hello world?', // plain text body
+        html: '<b>Hello world?</b>' // html body
+    };
+
+    // send mail with defined transport object
+    await promisify(transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);
+        // Preview only available when sending through an Ethereal account
+        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
+        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+
+    }));
+
+    return {
+           status: 200,
+           body: 'send sucessfully',
+           headers: {
+               'Foo': 'Bar'
+           }
+      }
+};
+```
+
+如果每一个应用需要使用邮件服务，就需要写这样的一堆代码，如果公司的系统不同导致语言不同，还需要在不同语言都实现一遍，很麻烦，而如果将发送邮件抽象成通知服务的具体实现，就可以减少冗余代码，甚至java也可以调用我们上面用js写的邮件服务了。
+
+> 小提示。当我们需要使用邮件服务的时候，最好不要在代码中直接向邮件服务发送消息，而是向通知服务这种抽象层次更高的服务发送。
+
+有一个流行的概念是faas\(function as a service\)。它往往和无服务一起被谈起，无服务不是说没有服务器，而是将服务架构透明，对于普通开发者来说就好像没有服务器一样，这样就可以将我们从服务器环境中解放出来，专注于逻辑本身。fission\(Fast Serverless Functions for Kubernetes\)是一个基于k8s的无服务框架。通过它开发者可以只关注逻辑本身，我们可以直接将上面的mail方法作为部署单元。下面是一个例子：
+
+```bash
+  $ fission env create --name nodejs --image fission/node-env
+
+  $ curl https://notification.severless.com/mailer.js > mailer.js
+
+  # Upload your function code to fission
+  $ fission function create --name mailer --env nodejs --code mailer.js
+
+  # Map GET /mailer to your new function
+  $ fission route create --method GET --url /mailer --function mailer
+
+  # Run the function.  This takes about 100msec the first time.
+
+  $ curl -H "Content-Type: application/json" -X POST -d '{"user":"user", "pass": "pass"}' http://$FISSION_ROUTER/mailer
+```
+
+这样如果有一个系统需要将mailer服务切换成sms服务就很简单了：
+
+```javascript
+  $ fission env create --name nodejs --image fission/node-env
+
+  $ curl https://notification.severless.com/sms.js > sms.js
+
+  # Upload your function code to fission
+  $ fission function create --name sms --env nodejs --code sms.js
+
+  # Map GET /mailer to your new function
+  $ fission route create --method GET --url /sms --function sms
+
+  # Run the function.  This takes about 100msec the first time.
+
+  $ curl -H "Content-Type: application/json" -X POST -d '{"user":"user", "pass": "pass"}' http://$FISSION_ROUTER/sms
+```
+
+服务的实现也足够简单，只需要关心具体逻辑就OK了。
+
+## 自动化脚本
+
+### 哪些地方应该自动化
+
+上面讲述了软件开发的过程，以及我们可以将哪些过程自动化。这一节，我们讲述自动化的第二部分自动化脚本。刨除软件开发本身，计算机中其实也充满了重复性工作，同样也充满了解决这些重复工作的自动化解决方案，这些解决方案可以是一个脚本，可以是一个软件或者插件等，总之它将人们从重复性的工作中解脱了出来。举个例子，我们都有过下载视频的经历，我们看上了某个网上的一个视频，我们想下载下来，但是在下载的时候，发现只有VIP可以下载。我们就去网上查找解决方案。我们按照教程历经千辛万苦终于将视频下载了下来。下次我们又要下载视频了，我们还要经历了上面的步骤（我们甚至还要再看一遍教程）。于是自动下载在线网站视频的自动化解决方法出现了，人们只需要简单的操作就可以将自己心爱的视频下载下来，多么省心！类似的还有很多，比如批量处理工具，一键重装系统工作等等，根本数不过来。
+
+本质上，任何应该自动化的都应该被自动化。只要是重复性工作，都应该将其自动化。为什么电脑可以处理的东西，非要人工来处理呢？开发者应该将精力花费在更值得花费的地方，一些有创造性的工作上。上面介绍了普通用户的例子，现在我举一个工作中的例子。比如之前我的公司的发布，就是一个简单的流程，每次发布都要按照流程执行，这就很适合去自动化。我们当时的发布流程是这样的
+
+```bash
+git tag publish/版本号 
+git push origin publish/版本号
+```
+
+然后去cdn（[https://g.alicdn.com/dingding/react-hrm-h5/version/index.js）](https://g.alicdn.com/dingding/react-hrm-h5/version/index.js）) 上查看是否发布成功。 我觉得这已经花费我一定的时间了，而且新来的同学不得不学习这种繁琐的东西。 为什么不能自动化呢？ 借用墨菲定律下， 该自动化的终将实现自动化。 自动化真的不止是减少时间，更重要的是减少出错的可能。 软件工程领域有这么一句话，减少bug有两种方式，一种是少写代码以至于没有明显bug。 二是写很多代码以至于没有明显bug。
+
+> 少写代码，少做重复的事，这是我的信条。
+
+如果你认真观察的话，你会发现可以自动化的东西实在是太多了。当你真正将自动化贯彻到实际编码生活中去的时候，你会发现你花费在重复工作上的时间在缩少，并且你的幸福感会提升，你会很有成就感。之前看过一个文章，文章里面说它会将任何可以自动化的东西自动化（不仅限于工作），它会编码控制如果在晚上下班的时候，自己的session还在的话（还没下班），就发自动给老婆发短信，短信内容是从预先设置好的短语中随机选取的。
+
+> 之前我在微博上看到一个研究，它通过分析女朋友的微博，来分析女朋友的情绪。我觉得上面发送短信的时候，如果可以根据老婆的情绪对应智能回复不同内容会更棒。
+
+### 运维
+
+如果大家有运维经验的话，会知道运维经常需要开启，停止，重启服务。这些工作有很强的规律性，很适合做自动化。幸运的是，我们借助shell，可以与操作系统深度对话，轻松实现上面提到的运维需求。下面是一个shell脚本实现服务启动，停止和重启的例子。
+
+```bash
+#! /bin/sh
+DIR= `pwd`;
+NODE= `which node`
+
+// 第一个参数是action，是start，stop和restart中的一个。
+ACTION=$1
+
+# utils
+get_pid() {
+   echo `ps x|grep my-server-name  |awk '{print $1}'`
+}
+
+# 启动
+start() {
+ pid= `get_pid`;
+
+ if [ -z $pid ]; then
+   echo 'server is already running';
+ else
+   $NODE $DIR/server.js 2>&1 &
+   echo 'server is running now'
+ fi
+}
+// stop和restart代码省略
+case "$ACTION" in
+   start)
+      start
+   ;;
+   stop)
+      stop
+   ;;
+ esac
+```
+
+借助shell强大的编程能力，还有将数据抽象成流，并通过组合流完成复杂任务的能力，我们可以构建非常复杂的脚本。我们甚至可以将检测三方库潜在风险信息功能做成脚本，然后集成到CI中，只有想不到，没做做不到。这里只是给大家提供思路，希望大家可以根据这个思路进行延伸，从而将一切应该被自动化的东西全部自动化。
+
+### 开发流程自动化
+
+上面讲述了哪些地方应该被自动化。大家看了后很可能是拿了锤子的疯子，你会发现所有的东西都是钉子，是不是任何东西都可以自动化？当然不是！ 可以自动化的应该是有着极强规律的枯燥活动，而充满创新的任务还是要让开发者自己享受。因此当你觉得某项工作枯燥无味，并且有着很强的规律和判别指标的时候就是你拿起手里锤子的时候。比如我每天都要回报我的工作，将自己的进度同步给组里其他人，虽然很枯燥乏味（希望我的领导不会看到），但是并没有规律性。因此不应该被自动化。
+
+这里再举一个例子。我将开发过程中需要处理的事情进行了分类，我称为元脚本（meta-script），分别有如下内容：
+
+1. concat-readme \(将项目中所有的readme组合起来，形成一个完整的readme\)
+2. generate-changelog （根据commit msg 生成 changelog）
+3. serve-markdown （根据markdown生成静态网站）
+4. lint （代码质量检测）
+5. start server （开启开发服务器）
+6. stop server （停止运行开发服务器）
+7. restart server （重启开发服务器）
+8. start-attach （attach到浏览器，以在编辑器中进行调试）
+
+每一个meta-script都是一个小的脚本或者一个外部库（external library），由于我使用的是npm作为包管理工具，因此我将meta-script放到了package.json文件中的script里面。这样我就可以通过运行`npm run xxx` 执行对应的脚本或者外部库了。但是别忘了，有时候我们需要做一些复杂的任务，比如我需要在浏览器中查看项目中所有的readme。那么我需要先把项目中的readme全部concat起来，然后将concat的内容作为数据源，传给serve-markdown，然后serve-markdown传给start-server。代码大概是这样的:
+
+```bash
+npm run concat-readme > npm run serve-markdown > npm run start-server --port 1089
+```
+
+我称上面的代码task，然后我们把上面的代码也放到package.json的script中，似乎这种做法很好地解决了问题。但是它有几个缺点。
+
+* meta-script 和 task 混杂在一起，这样本身并不可怕，但是此时并不是所有的script都可以很好重用，我们的task并不是为了重用。
+* package.json是作为版本控制的一部分存在，如果某个开发者希望根据自己的情况定制一个task，就不应该放到这里了。
+
+因此我的做法是将meta-script放到版本库（这个例子我们放到了package.json中），然后将task放到编辑器中控制。我使用的编辑器是VSCODE，它有一个task manager功能，也可以下载第三方插件进行扩展。然后我们可以自己定义task，比如上面的我们可以作为个人配置保存起来，命名为start doc-site。
+
+我们可以继续组合：
+
+```bash
+npm run changelog > npm run serve-markdown > npm run start-server --port 1089
+```
+
+我们通过meta-script又增加了一个很好用的task，我们可以命名为start changelog-site。
+
+还有更多：
+
+```bash
+npm run stop > npm run start-attach
+```
+
+我们又实现了一个“放弃”浏览器调试，而用editor调试的task，我们称之为editor-debug。
+
+我们可以增加更多的meta-script，我们可以根据meta-script组合更多task。然后我们只需要one-key就可以实现任意中组合的功能，是不是很棒？自己动手试试把！
+
+### 无处不在的自动化
+
+上面举的例子是一个典型的开发流程，那么其他日常的自动化怎么去做呢？比如我要控制电脑发送邮件，比如我要控制电脑睡眠，我要调整电脑的音量等。虽然我们也可以按照上面的思路，写一个元脚本，然后将元脚本组合。但是这里的元脚本似乎并不能通过node的cli程序或者shell脚本实现。但是这恰好是自动化必不可少的一环。因此我们面临一个GUI的自动化运行过程，将我们繁琐重复的UI工作中解脱出来。这里介绍在mac下自动化的例子。
+
+#### JXA
+
+说到mac中自动化，jxa是一种使用javaScript与mac中的app进行通讯的技术。通过它开发者可以通过js获取到app的实例，以及实例的属性和方法。通过jxa我们可以轻松通过JavaScript来自动化脚本完成诸如给某人发送邮件，打开特定软件，获取iTunes的播放信息等功能。下面举个发送邮件的例子：
+
+```javascript
+const Mail = Application("Mail");
+
+const body = "body";
+
+let message = Mail.OutgoingMessage().make();
+message.visible = true;
+message.content = body;
+message.subject = "Hello World";
+message.visible = true;
+
+message.toRecipients.push(Mail.Recipient({address: "a@duiba.com.cn", name: "zhangsan"}));
+message.toRecipients.push(Mail.Recipient({address: "b@duiba.com.cn", name: "lisi"}));
+
+message.attachments.push(Mail.Attachment({ fileName: "/Users/lucifer/Downloads/sample.txt"}));
+
+Mail.outgoingMessages.push(message);
+Mail.activate();
+```
+
+有两种方式运行上面的例子，一种是命令行方式，另一种是直接作为脚本运行。
+
+1. 命令行方式运行
+
+```bash
+osascript -l JavaScript -e 'Application("iTunes").isrunning()'
+```
+
+1. 作为脚本运行
+
+一种方式是保存为文件之后运行
+
+```bash
+osascript /Users/luxiaopeng/jxa/hello.js
+```
+
+另一种是用苹果自带的脚本编辑器：
+
+![&#x56FE;3.8](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.8.png)
+
+运行之后效果是这样的：
+
+![&#x56FE;3.7](https://raw.github.com/azl397985856/automate-everything/master/illustrations/%20图3.7.png)
+
+jxa提供了丰富的api供我们使用。详细可以查看脚本编辑器-文件-字典：
+
+![&#x56FE;3.9](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.9.png)
+
+比如我要查看dash的api：
+
+![&#x56FE;3.10](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.10.png)
+
+但是遗憾的是并不是所有的app都提供了很多有用的api，比如钉钉，也并不是所有的程序都有字典，比如qq，微信。好消息是mac自带的程序接口还是比较丰富的。但是我们发现尽管如此，我们想要实现某些功能，还是会比较复杂。对于不想太深入了解并且想要自动化的开发者来说一款简单的工具是有必要的，下面我介绍一款在mac下的神器。
+
+#### Alfred
+
+JXA的功能非常强大，但是其功能比较繁琐。如果你只是想简单地写一个自动化脚本，做一些简单的了解。介绍大家一个更加简单却不失强大的工具-alfred- workflow。 你可以自定义自己的工作流，支持GUI，shell脚本甚至前面提到的jxa写工作流。其简单易用性，以及其独特的流式处理，各种组合特性使得它功能非常强大。下面是我的alfred-workflow：
+
+![&#x56FE;3.11](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.11.png)
+
+你可以像我拆分开发流程一样将你的工作流拆解，每一部分实现自己的功能，设置语言可以不一样。比如处理用户输入用bash，然后bash将输入流重定向到perl脚本等都是可以的。 alfred-workflow可以允许你简单地添加文件操作，web操作，剪贴板等，设置不用写任何代码。
+
+![&#x56FE;3.12](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图3.12.png)
+
+## 总结
+
+本章通过前端工作流程入手，讲解了前端开发中的工作，并且试图将其中可以自动化的步骤进行自动化集成。然后讲述了完善的一个自动化平台系统是怎样的，以及各个子系统实现的具体思路是怎样的，通过我的讲解，我相信大家应该已经理解了自动化的工作内容，甚至可以自己动手搭建一个简单的自动化平台了。但是程序员中的自动化远不止将实现需求的流程自动化，我们还会搞一些提高效率的小工具，本质上它们也是自动化。只不过他不属于工程化，在本书的附录部分，我也会提供一些自动化小脚本。
+
+
+
+---
+
+# 4. 页面加载性能优化
+
+在互联网网站百花齐放的今天，网站响应速度是用户体验的第一要素，其重要性不言而喻，这里有几个关于响应时间的重要条件：
+
+用户在浏览网页时，不会注意到少于0.1秒的延迟；
+
+少于1秒的延迟不会中断用户的正常思维， 但是一些延迟会被用户注意到；
+
+延迟时间少于10秒，用户会继续等待响应；
+
+延迟时间超过10秒后，用户将会放弃并开始其他操作；
+
+因此大家都开始注重性能优化，很多厂商都开始做一些性能优化。比较有名的是雅虎军规，不过随着浏览器和协议等的发展，有一些已经逐渐被淘汰了。因此建议大家以历史的目光看待它。比如.尽量减少HTTP请求数这一条，在HTTP2协议下就不管用了，因为HTTP2实现了HTTP复用，HTTP请求变少，反而降低性能。因此一定要结合历史环境看待具体的优化原则和手段，否则会适得其反。
+
+> 雅虎军规中文版： [http://www.cnblogs.com/xianyulaodi/p/5755079.html](http://www.cnblogs.com/xianyulaodi/p/5755079.html)
+
+随着移动互联网的高速发展，移动终端的数量正在以指数级增长，很多厂商对于移动端体验都开始重视起来了。比如Google Chrome 的工程师 Alex就提出了Progressive Web App（以下简称PWA），用来提高移动端web的性能。PWA的核心是Service Worker， 通过它可以使得在JS主线程之外，程序员通过编程的方式控制网络请求，结合浏览器本身的缓存，往往可以达到非常棒的用户体验。PWA提出了许多类似Native的“功能”- 比如离线加载和桌面快捷方式，使得移动端web体验更加友好。另外加上web端本身的特性-比如快速迭代，可索引（你可以通过搜索引擎搜索，而native app 则不行）等，使得更多的人投入到给web端用户提供更佳的用户体验的PWA中去。Google在更早的时候，提出了AMP。 2017年Google dev上海站就宣传了PWA 和 AMP，并且通过一张动图形象地展示了两者（PWA的P和A翻过来，然后W上下翻转就是AMP，反之亦然）。AMP是一种面向手机端的轻量级的web展现，通过将重量级元素重新实现等方式提高了手机端性能。 另外诸如使用[asm.js](https://github.com/dherman/asm.js) 使得代码更容易编译成机器指令，也是性能优化的一环。如果你仔细查看应用执行的profile的时候，你会发现js代码compile的时间会很久，尤其你写了很多无用js代码，或者没必要第一时间执行的代码的时候，这种影响更加大。js代码最终也是编译成二进制给机器执行，而js是动态语言，也就是说js代码是执行到哪编译到哪，这是和java这样的静态语言的一个很大的差别。V8已经对这部分做了相当大的优化，一般情况下我们不必担心，通常来讲这也不会成为性能瓶颈，因为这些时间和网络IO的时间根本不是一个数量级。但是在特定场合，提前编译成更容易解释执行的代码，可能就会派上用场。
+
+## 过早优化是万恶之源
+
+在我刚刚接触前端的时候，经常看到这样的性能优化例子：
+
+```javascript
+// bad
+for(var i = 0;i < data.length;i++){
+  // do something...
+}
+// good
+for(var i = 0,len = data.length;i < len;i++){
+  // do something...
+}
+```
+
+理由是上面的会每次去计算data.length。个人上面的优化非常可笑，且不说实际运行情况怎样。就算下面的性能比上面的好，我觉得这样的性能优化应该交给编译器来做，不应该交给上层业务去做，这样做反而丧失了可理解性，大家很明显的看出上面的更容易理解，不是吗？
+
+> 过早的优化，会让人陷入心理误区。这种心理误区就是典型的手中有锤子，处处都是钉子。
+
+还有一点就是如果过早优化，往往会一叶障目。性能优化要遵守木桶原理，即影响系统性能的永远是系统的性能短板。如果过早优化，往往会头痛医脚，忙手忙脚却毫无收效。
+
+## 一个经典问题
+
+让我们回忆一下浏览器从加载url开始到页面展示出来，经过了哪些步骤：
+
+1. 浏览器调用loadUrl解析url
+
+2. 浏览器调用DNS模块，如果浏览器有dns缓存则直接返回IP。 否则查询本地机器的DNS，并逐层往上查找。
+
+   最终返回IP，然后将其存到DNS缓存并设置过期时间。
+
+> tips: 在chrome浏览器中， 可以输入 chrome://dns/ 查看chrome缓存的dns记录
+
+1. 浏览器调用网络模块。 网络模块和目标IP 建立TCP连接，途中经过三次握手。
+2. 浏览器发送http请求，请求格式如下：
+
+```javascript
+header
+(空行)
+body
+```
+
+1. 请求到达目标机器，并通过端口与目标web server 建立连接。
+2. web server 获取到请求流，对请求流进行解析，然后经过一些列处理，可能会查询数据库等， 最终返回响应流到前端。
+3. 浏览器下载文档（content download），并对文档进行解析。解析的过程如下所示：
+
+![&#x56FE;4.1](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.1.png)
+
+知道了浏览器加载网页的步骤，我们就可以从上面每一个环节采取”相对合适“的策略优化加载速度。 比如上面第二步骤会进行dns查找，那么dns查找是需要时间的，如果提前将dns解析并进行缓存，就可以减少这部分性能损失。在比如建立TCP连接之后，保持长连接的情况下可以**串行**发送请求。熟悉异步的朋友肯定知道串行的损耗是很大的，它的加载时间取决于资源加载时间的和。而采取**并行**的方式是所有加载时间中最长的。这个时候我们可以考虑减少http 请求或者使用支持并行方式的协议（比如HTT2协议）。如果大家熟悉浏览器的原理或者仔细观察网络加载图的化，会发现同时加载的资源有一个上限（根据浏览器不同而不同），这是浏览器对于单个域名最大建立连接个数的限制，所以可以考虑增加多个domain来进行优化。类似的还有很多，留给大家思考。但是总结下来只有两点，一是加载优化，即提高资源加载的速度。第二个是渲染优化，即资源拿到之后到解析完成的阶段的优化。
+
+经过上面简单的讲解，我想大家对浏览器加载HTML开始到页面呈现出来，有了一个大概的认识，后面我会更详细地讲解这个过程。有一个名词叫关键路径（Critical Path），它指的是从浏览器收到 HTML、CSS 和 JavaScript 字节到对其进行必需的处理，从而将它们转变成渲染的像素。这一过程中有一些中间步骤，优化性能其实就是了解这些步骤中发生了什么。记住关键路径上的资源有HTML，CSS，JavaScript，其中并不包括图片，虽然图片在我们的应用中非常普遍，但是图片并不会阻止用户的交互，因此不计算到关键路径，关于图片的优化我会在下面的小节中重点介绍。
+
+为了让大家有更清晰地认识，我将上面浏览器加载网站步骤中的第七步中的CSSOM和DOM以及render tree的构建过程，更详细地讲解一下。
+
+浏览器请求服务端的HTML文件，服务端响应字节流给浏览器。浏览器接受到HTML然后根据指定的编码格式进行解码。完成之后会分析HTML内容，将HTML分成一个个token，然后根据不同token生成不同的DOM，最后根据HTML中的层级结构生成DOM树。
+
+![&#x56FE;4.02](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.02.png)
+
+其中要注意的是，如果碰到CSS标签和JavaScript标签（不是async或者defer的js脚本）会暂停渲染，等到资源加载完毕，继续渲染。如果加载了CSS文件（内敛样式同理），会在加载完成CSS之后生成CSSOM。CSSOM的生成过程类似，也是将CSS分成一个个token，然后根据不同token生成CSSOM，CSSOM是用来控制DOM的样式的。最后将DOM和CSSOM合成render tree。
+
+> CSS 是阻塞渲染的资源。需要将它尽早、尽快地下载到客户端，以便缩短首次渲染的时间。
+
+为弄清每个对象在网页上的确切大小和位置，浏览器从渲染树的根节点开始进行遍历，根据盒模型和CSS计算规则生成计算样式（chrome中叫computed style），最后调用绘制线程将DOM绘制到页面上。因此优化上面每一个步骤都非常重要。现在我们有了清晰的认识，关键资源HTML是一切的起点，没有HTML后面就没有意义。CSS应该尽快下载并解析，通常我们将css放在head里面优先加载执行，就像app shell的概念一样。我们应该优先给用户呈现最小子集，然后慢慢显示其他的内容，就好像PJPEG（progressive jpeg）一样。如下图是一个渐进式渲染的一个例子（图片来自developers.google.com）：
+
+![&#x56FE;4.03](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.03.png)
+
+我们还没有讨论JavaScript，理论上JavaScript既可以操作CSS，也可以直接修改DOM。浏览器不知道JavaScript的具体内容，因此默认情况下JavaScript会阻止渲染引擎的执行，转而去执行JS线程，如果是外部 JavaScript 文件，浏览器必须停下来，等待从磁盘、缓存或远程服务器获取脚本，这就可能给关键渲染路径增加数十至数千毫秒的延迟，除非遇到带有async或者defer的标签。向script标记添加异步关键字可以指示浏览器在等待脚本可用期间不阻止DOM构建，这样可以显著提升性能。
+
+经过上面的分析，我们知道了关键路径。我们可以借助chrome开发工具查看瀑布图，分析网站的关键路径，分析加载缓慢，影响网站速度的瓶颈点。
+
+![&#x56FE;4.04](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.04.png)
+
+也可以使用一些工具检测，比如前面提到的web performance test，也可以尝试下Lighthouse。
+
+![&#x56FE;4.05](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.05.png)
+
+在后面的小节，我会介绍performance api，大家可以在前端埋点，然后分析网站的性能指标，这也是对其他分析手法的一个重要补充。
+
+## 性能优化系统论
+
+性能优化属于一个整体内容，它应该是一个软件的特性。我将性能优化分为如下几个步骤：
+
+### 1. 测量
+
+其中测量分为手动测量和自动测量。
+
+* 自动测量
+
+通过浏览器自身的事件和指标，我们将这些数据收集起来。 这些和业务无关的，我们可以做到自动化。 有名的比如lighthouse这种产品， 自动化测量部分的最佳实践是将自动化测量加入到CI中，通常会伴随着评分等信息用于辅助开发者判断。 开发者推送合并新的代码到主分支的时候触发执行，并且可以设置一个阀值，低于这个阀值不允许合并等。
+
+* 手动测量 
+
+通过脚本检测指标。 比如 performanceObserver， 比如FID，Long task 等。基本上就是我们关心的指标且不能自动化检测的就需要手动
+
+### 2. 收集用户真实数据，并提供可视化展现
+
+将上面这一步检测的结果放到一个dashboard中，可以直观感受到。 这部分可以参考lighthouse的UI。 我会在后面介绍朱雀的时候详细介绍。
+
+### 3. 分析瓶颈点， 分析代码，并优化代码
+
+可以通过一些工具分析，比如`webpack-bunlde-analysis`, `code coverafe` of chrome dev tool 等。 这部分的最佳实践非常多， 通常来讲随着时间的推移，技术的更替，这部分内容也会不断更新。 因此这部分我不打算深入讲解，但是这部分很重要，这部分是真正落地的部分，更加偏实践的部分。
+
+> 一个重要的原则就是只传输给用户所需要的代码。
+
+### 4. 重复上述步骤
+
+可以看出性能优化是一个不断反馈和优化的闭环，每一个环节都至关重要。下面我们一一分析各个环节。
+
+## 浏览器性能指标
+
+性能优化的第一步就是测量，没有测量就没有优化。我们不能为了优化而优化， 而是看到了某些点需要优化才去优化的。 而发现这个点一个重要的方式就是要靠测量。
+
+说到测量，普遍接受的方式是，在浏览器中进行打点，将浏览器打开网页的过程看作是一个旅行。 那么我们每到一个地方就拍张带有时间的照片（事件），最后我们对这些照片按照时间进行排列， 然后分析哪部分是我们的瓶颈点等。
+
+### 几个关键的指标
+
+#### 白屏时间
+
+用户从打开页面开始到有页面开始呈现为止。白屏时间长是无法忍受的，因此有了很多的缩短白屏时间的方法。 比如减少首屏加载内容，首屏内容渐出等。白屏的测量方法最古老的方法是这样的：
+
+```markup
+<head>
+<script>
+var t = new Date().getTime();
+</script>
+<link src="">
+<link src="">
+<link src="">
+
+<script>
+tNow = new Date().getTime() - t;
+</script>
+</head>
+```
+
+> 但是上面这种只能测量首屏有html内容的情况，比如像react这样客户端渲染的方式就不行了。如果采用客户端渲染的方式，就需要在首屏接口返回， 并渲染页面的地方打点记录。
+
+通过类似的方法我们还可以查看图片等其他资源的加载时间，以图片为例：
+
+```javascript
+<img src="xx" id="test" />
+<script>
+var startLoad = new Date().getTime()
+document.getElementById('test').addEventListener('load', function(){
+var duration = new Date().getTime() - startLoad();
+}, false)
+</script>
+```
+
+通过这种方法未免太麻烦，还在浏览器performance api 提供了很多有用的接口，方便大家计算各种性能指标。下面performance api 会详细讲解。
+
+#### 首屏加载时间
+
+我们所说的首屏时间，就是指用户在没有滚动时候看到的内容渲染完成并且可以交互的时间。至于加载时间，则是整个页面滚动到底部，所有内容加载完毕并可交互的时间。用户可以进行正常的事件输入交互操作。
+
+```javascript
+firstscreenready - navigationStart
+```
+
+这个时间就是用户实际感知的网站快慢的时间。firstscreenready 没有这个 performance api， 而且不同的渲染手段（服务端渲染和客户端渲染计算方式也不同），不能一概而论。具体计算方案，这边文章写得挺详细的。[首屏时间计算](http://www.alloyteam.com/2016/01/points-about-resource-loading/)
+
+#### 完全加载时间
+
+通常网页以两个事件的触发时间来确定页面的加载时间.
+
+1. DOMContentLoaded 事件，表示直接书写在HTML页面中的内容但不包括外部资源被加载完成的时间，其中外部资源指的是css、js、图片、flash等需要产生额外HTTP请求的内容。
+2. onload 事件，表示连同外部资源被加载完成的时间。
+
+```text
+domComplete - domLoading
+```
+
+### Performance API
+
+上面介绍了古老的方法测量关键指标，主要原理就是基于浏览器从上到下加载的原理。只是上面的方法比较麻烦，不适合实际项目中使用。 实际项目中还是采用打点的方式。 即在关键的地方埋点，然后根据需要将打点信息进行计算得到我们希望看到的各项指标，performance api 就是这样一个东西。
+
+> The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.  
+> ------ 摘自MDN
+
+在浏览器console中输入performance.timing
+
+![&#x56FE;4.2](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.2.png)
+
+返回的各字节跟下面的performance流程的各状态一一对应，并返回时间。这个和js中直接new Date\(\).getTime\(\)的时间是不一样的。 这个时间和真实时间没有关系，而且perfermance api精确度更高。
+
+![&#x56FE;4.3](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.3.png)
+
+有了这个performance api 我们可以很方便的计算各项性能指标。如果performamce api ”埋的点“不够我们用，我们还可以自定义一些我们关心的指标，比如请求时间（成功和失败分开统计），较长js操作时间，或者比较重要的功能等。总之，只要我们想要统计的，我们都可以借助performance api 轻松实现。
+
+> performance api 更多介绍请查看 [https://developer.mozilla.org/en-US/docs/Web/API/Performance](https://developer.mozilla.org/en-US/docs/Web/API/Performance)
+
+## 性能监测的手段
+
+### 日志
+
+> 监控是基于日志的
+
+一个格式良好，内容全面的日志是实现监控的重要条件，可以说基础决定上层建筑。 良好的的日志系统通常有以下几个部分构成：
+
+1. 接入层
+
+日志由产生到进入日志系统的过程。 比如rsyslog生成的日志，通过logstash（transport and process your logs, events, or other data）接入到日志系统。这种比较简单，由于是基于原生linux的日志系统，学习使用成本也比较低。公司不同系统如果需要介入日志系统，只需要将日志写入log目录，通过logstash等采集就可以了。
+
+1. 日志    处理层
+
+这部分是日志系统的核心，处理层可以将接入层产生的日志进行分析。过滤日志发送到监控中心（监控系统状态）和存储中心（数据汇总，查询等）
+
+1. 日志存储层
+
+将日志入库，根据业务情况，建立索引。这部分通常还可以接入像elastic search这样的库，提供日志的查询，上面的logstash 就是elastic家族的。
+
+除了上面核心的几层，通常还有其他层完成更为细化的工作。
+
+通常来说，一个公司的日志有以下几个方面
+
+1. 性能日志
+
+记录一些关键指标，具体的关键指标可以参阅“浏览器性能指标”一节。
+
+1. 错误日志
+
+记录后端的服务器错误（500，502等），前端的脚本错误（script error）。
+
+1. 硬件资源日志
+
+记录硬件资源的使用率，比如内存，网络带宽和硬盘等。
+
+1. 业务日志
+
+记录业务方比较关心的用户的操作。方便根据用户报的异常，定位问题。
+
+1. 统计日志 
+
+统计日志通常是基于存储日志的内容进行统计。统计日志有点像数据库视图的感觉，通过视图屏蔽了数据库的结构信息，将数据库一部分内容透出到用户。用户行为分析等通常都是基于统计日志分析的。有的公司甚至介入了可视化的日志统计系统（比如Kibana）。随着人工智能的崛起，人工智能+日志是一个方向。
+
+### 性能日志
+
+#### 性能日志的产出
+
+除了上面介绍的关键指标记录。我们通常还比较关心接口的响应速度。这时候我们可以通过打点的方式记录。
+
+#### 性能日志的消费
+
+我们已经产出了日志，有了日志数据源。那么如何消费数据呢？ 现在普遍的做法是服务端将收集的日志进行转储，并通过可视化手段（图标等）展示给管理员。还有一种是用户自己消费，即自产自销。用户产生数据，同时自己消费，提供更加的用户体验。 详情查阅 [locus](https://github.com/azl397985856/locus) 但是性能日志明显不能自产自销，我们暂时只考虑第一种。
+
+### 性能监测平台
+
+监控平台大公司基本都有自己的系统。比如有赞的Hawk，阿里的SunFire。小公司通常都是使用开源的监控系统或者干脆没有。 我之前的公司就没有什么监控平台，最多只是阿里云提供的监控数据而已。所以我在这一方面做了一定的探索。并开始开发[朱雀平台](https://github.com/azl397985856/zhuque)，但是限于精力有限，该计划最后没有最终投入使用，还是蛮可惜的。性能监测的本质是基于监测的数据，提供方便的查询和可视化的统计。并对超过临界值（通常还有持续时长限制）发出警告。 上一节介绍了性能监控平台，提到了性能监控平台的两个组成部分，一个是生产者一个是消费者。 这节介绍如何搭建一个监控平台。那么我先来看下整体的架构
+
+![&#x56FE;4.4](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.4.png)
+
+为了方便讲解，这里只实现一个最简化的模型，读者可以在此基础上进一步划分子系统，比如接入SSO，存储展示分离等。
+
+#### 客户端
+
+客户端一方面上报埋点信息，另一方面上报轨迹信息。
+
+**上报埋点信息**
+
+这一部分主要借助一些手段，比如performance api 将网页相关加载时间信息上报到后端。
+
+```javascript
+performance.getEntriesByType("resource").forEach(function(r) {
+    console.log(r.name + ": " + r.duration)
+})
+```
+
+另一方面对特定的异步请求接口，打点。对用户所有的交互操作打点（点击，hover等）
+
+```javascript
+const startTime = new Date().getTime();
+
+fetch(url)
+.then(res => {
+   const endTime = new Date().getTime();
+   report(url , 'success', endTime - startTime);
+})
+.catch(err => {
+    const endTime = new Date().getTime();
+    report(url, 'failure', endTime - startTime);
+})
+```
+
+**上报轨迹信息**
+
+上传轨迹信息就简单了。如果是页面粒度，直接在页面上报就可以了。如果使用了前端路由，还可以在路由的钩子函数中进行上报。
+
+```javascript
+pageA.js
+
+// 上报轨迹
+report('pageA',{userId: '876521', meta: {}})
+```
+
+这样我们就有了数据源了。
+
+#### 服务端
+
+服务端已经有了数据，后端需要将数据进行格式化，并输出。
+
+**locus server**
+
+客户端将自己的信息上报到server，由server进行统计汇总，并在合适的时候将处理后的数据下发到客户端，指导客户端的行为（如预加载）。
+
+前面说了客户端上传的信息大概是
+
+```javascript
+{
+ userId: 876521,
+ page: "index",
+ area: "",
+ age: "",
+ // 其他群体特征
+}
+```
+
+我们称地域，年龄等为群体特征，群体特征对于分析统计有非常重要的意义。
+
+我们可以对单用户进行汇总，也可以对群体特征进行汇总从而预测客户的行为。
+
+我们汇总的数据可能是:
+
+```javascript
+{
+  userId: '876521',
+  pages: {
+      "index": {
+          "detail": 0.5,
+          "return": 0.4,
+          "personnal-center": 0.1
+      }
+  }
+}
+```
+
+如上是以用户为纬度进行分析。上面的数据代表，如果用户876521在首页（index），那么ta下一步访问详情页（detail）的概率是50%，访问个人中心（personal-center）的概率为10%，退出页面概率为40%。
+
+我们就可以在可能的情况下，用户停留在首页的时候预加载详情页。
+
+我们还可以对群体特征进行汇总，
+
+汇总的结果可能是：
+
+```javascript
+{
+  age: 'teen',
+  pages: {
+      "index": {
+          "detail": 0.5,
+          "return": 0.4,
+          "personnal-center": 0.1
+      }
+  }
+}
+```
+
+其实和上面差不多，不过这里并不是只是用来指导某一个用户，而是可以指导同一个群体特征（这里指同一年龄段）的用户。
+
+**zhuque server**
+
+客户端会上传性能信息给zhuque server。
+
+zhuque server 在这里主要有两个职责：
+
+1. 将用户上报的数据可视化输出出来，供不同的人查看。
+
+这部分通常做起来简单，做好难。 我在这方面经验不够多，就不误导大家了。
+
+1. 提供警报服务，如页面超长时间无响应，打不开，关键资源404等问题。
+
+警报种类有很多，比如邮件，电话，短信，钉钉等。 我们只要设置好触发条件，然后写一个定时任务或者在请求级别进行检查，如果满足就触发警报即可。逻辑非常简单。
+
+定时任务对系统的压力较小，但是及时性较低，适合对实时性要求不强的业务。 请求级别检查謉系统压力较大，但是及时性有保障，适合对实时性要求非常高的业务。
+
+## 性能优化的手段
+
+要做性能优化，首先要对系统运行的过程有一个完整的理解，然后从各个环节分析，找到系统瓶颈，从而进行优化。在这里我不罗列性能优化的各种手段，而是从前端三层角度逐个描述下性能优化的常见优化方向和手段。如果大家希望有一个完整的优化清单， 这里有一份比较完整的[Front-End-Checklist](https://github.com/thedaviddias/Front-End-Checklist)，对于性能优化，有一定的借鉴意义。另外你也可以访问[webpagetest](https://www.webpagetest.org/)测试你的网站的性能，并针对网站提供的反馈一步步优化你的网站加载速度，这些内容不在本文论述范围。 性能优化一个最重要的原则是：**永远呈现必要的内容**，我们可以通过懒加载非首屏资源，或者采用分页的方式将数据”按需加载“。下面讲述一些具体的优化手段。 很多人都知道，前端将应用分为三层，分别是结构层，表现层和行为层。我们就从三层角度讲一下性能优化的方向。
+
+> 这部分的优化手段指的是在给定传输文件大小的情况下去优化，也就是说不考虑传输层面的优化
+
+### 结构层
+
+结构层指的是DOM结构，而DOM结构**通常**是由HTML结构决定的,因此我们主要分析下HTML结构的性能优化点。 我们知道DOM操作是非常昂贵的，这在前面讲述前端发展历史的时候也提到了。如何减少DOM数量，减少DOM操作是优化需要 重点关注的地方。
+
+#### AMP HTML
+
+说到HTML优化，不得不提AMP HTML。 AMP的核心思想是提供移动端更佳的用户体验，。由AMP HTML， AMP JS 和 AMP Cache 三个核心部分组成。
+
+> AMP HTML is HTML with some restrictions for reliable performance.
+
+下面是典型的AMP HTML
+
+```markup
+<!doctype html>
+<html ⚡>
+ <head>
+   <meta charset="utf-8">
+   <link rel="canonical" href="hello-world.html">
+   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+   <script async src="https://cdn.ampproject.org/v0.js"></script>
+ </head>
+ <body>Hello World!</body>
+</html>
+```
+
+可以看出AMP HTML由普通的HTML标签和amp标签组成。amp标签是做什么呢？且听我跟你说，DOM虽然操作比较昂贵，但是不同的DOM效率也是不意义的。比如渲染一个a标签和渲染一个img或者table时间肯定不是一样的。我们称a标签这样渲染较快的元素为轻元素。称table，img这样的元素为重元素。那么我们就应该尽量避免重元素的出现，比如table 可以采用ul li 实现。 img之所以比较慢的原因是图片下载虽然是异步的，但是会占用网络线程，同时会多发一个请求（浏览器并发请求数是有限制的），因此可以进一步封装称轻元素（比如x-image，组件内部可以延迟发送图片请求，等待主结构渲染完毕再发图片请求）。 可以考虑将其封装为web-component或者其他组件形式（如react组件）
+
+回到刚才AMP HTML， 其实在amp 中 有一个amp-image这样的接口，大概可以根据需要自己实现，上面我们说的x-image 其实就是实现了amp接口规范的组件。
+
+#### 减少没有必要的嵌套
+
+前面说到了尽可能使用轻元素。那么除了使用轻元素，还有一点也很重要，就是减少DOM数量。减少DOM数量的一个重要的途径就是减少冗余标签。比如我们通过新增加一个元素清除浮动。
+
+```markup
+<div class="clear"></div>
+```
+
+不过目前都是采用伪元素实现了。另一个途径是减少嵌套层次。很多人都会在`<form>`或者`<ul>`外边包上`<div>`标签，为什么加上一个你根本不需要的`<div>`标签呢？实际上你完全可以用CSS selector，实现同样的效果。 重要的是，这种代码我见过很多。
+
+```markup
+<div class="form">
+    <form>
+    ...
+    </form>
+</div>
+```
+
+完全可以这样写:
+
+```markup
+<form class="form">
+    ...
+</form>
+```
+
+### 表现层
+
+表现层就是我们通常使用的CSS。CSS经过浏览器的解析会生成CSS TREE，进而和DOM TREE合成 RENDER TREE。有时候一些功能完全可以通过CSS去实现，没有必要使用javaScript，尤其是动画方面，CSS3增加了transition 和 transform 用来实现动画，开发者甚至可以通过3D加速功能来充分发挥GPU的性能。因此熟练使用CSS，并掌握CSS的优化技巧是必不可少的。CSS 的性能优化通常集中在两方面：
+
+#### 提高CSS的加载性能
+
+提高加载性能就是减少加载所消耗的时间。简单说就是减小CSS文件的大小，提高页面的加载速度，尽可以的利用http缓存等。代码层面我们要避免引入不需要的样式，合理运用继承减少代码。
+
+```markup
+<body>
+    <div class="list" />
+</body>
+```
+
+```css
+body { color: #999 }
+.list {color: #999} // color 其实可以继承body，因此这一行没必要
+```
+
+其他可以继承的属性有color，font-size，font-family等。
+
+通常来说这部分和JS等静态资源的优化道理是一样的。只不过目前网站有一个理念是框架优先，即先加载网站的主题框架，这部分通常是静态部分，然后动态加载数据，这样给用户的感觉是网站”很快“。而这部分的静态内容，通常可以简单的HTML结构（Nav + footer），加上CSS样式来完成。 这就要求主题框架的CSS优先加载，我们设置可以将这部分框架样式写到内敛样式中去，但是有的人觉得这样不利于代码的维护。
+
+#### 提高CSS代码性能
+
+浏览器对不同的代码执行效率是不同的，复杂的样式（多层嵌套）也会降低css解析效率，因此可以将复杂的嵌套样式进行转化。
+
+```css
+.wrapper .list .item .success {}
+// 可以写成如下：
+.wrapper .list .item-success {}
+```
+
+还有一部分是网站的动画，动画通常来说要做到16ms以内，以让用户感觉到非常流畅。另外我们还可以通过3D加速来充分应用GPU的性能。 这里引用于江水的一句话：
+
+> 只有在非常复杂的页面，样式非常多的时候，CSS 的性能瓶颈才会凸显出来，这时候更多要考虑的应该是有没有必要做这么复杂的页面。
+
+### 行为层
+
+行为层指的是用户交互方面的内容，在前端主要通过JavaScript实现。目前JavaScript 规范已经到es2017。 前端印象较为深刻的是 ES6（也就是ES2015），因为ES5是2009年发布的，之后过了6年，也就是2015年ES6才正式发布，其中增加了许多激动人心的新特性， 被广大前端所熟悉。甚至曾一度称目前前端状态是536（HTML5，CSS3，ES6），可见其影响力。 JS或许是前端最昂贵的资源了，其相对于css，fonts，images的处理，需要更多的资源。这里有一篇很棒的文章[the-cost-of-javascript-in-2018](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)，详细阐述了为什么js这么昂贵，以及如何改进。
+
+毫不夸张的说，目前前端项目绝大多数代码都是javascript。既然js用的这么多，为什么很少有人谈js性能优化呢？ 一是因为现在工业技术的发展，硬件设备的性能提升，导致前端计算性能通常不认为是一个系统的性能瓶颈。二是随着V8引擎的发布，js执行速度得到了很大的提升。三是因为计算性能是本地CPU和内存的工作，其相对于网路IO根本不是一个数量级，因此人们更多关注的是IO方面的优化。那么为什么还要将js性能优化呢？一方面是目前前端会通过node做一些中间层，甚至是后端，因此需要重点关注内存使用情况，这和浏览器是大相径庭的。另一方面是因为前端有时候也会写一个复杂计算，也会有性能问题。 最后一点是我们是否可以通过JS去优化网络IO的性能呢，比如使用JS API 操作 webWorker 或者使用localStorage缓存。
+
+#### 计算缓存
+
+前端偶尔也会有一些数据比较大的计算。 对于一些复杂运算，通常我们会将计算结果进行缓存，以供下次使用。前面提到了纯函数的概念，要想使用计算缓存，就要求函数要是纯函数。一个简单的缓存函数代码如下：
+
+```javascript
+// 定义
+function memoize(func) {
+  var cache = {};
+  var slice = Array.prototype.slice;
+
+  return function() {
+    var args = slice.call(arguments);
+
+    if (args in cache)
+      return cache[args];
+    else
+      return (cache[args] = func.apply(this, args));
+
+  }
+}
+// 使用
+function cal() {}
+const memoizeCal = memoize(cal);
+
+memoizeCal(1) // 计算，并将结果缓存
+memoizeCal(1) // 直接返回
+```
+
+#### 网络IO缓存
+
+前面讲了计算方面的优化，它的优化范围是比较小的。因为并不是所有系统都会有复杂计算。但是网络IO是所有系统都存在的，而且网络IO是不稳定的。网络IO的 速度和本地计算根本不是一个数量级，好在我们的浏览器处理网络请求是异步的（当然可以代码控制成同步的）。一种方式就是通过本地缓存，将网络请求结果存放到本地，在下次请求的时候直接读取，不需要重复发送请求。一个简单的实现方法是：
+
+```javascript
+function cachedFetch(url, options) {
+  const cache = {};
+  if (cache[url]) return cache[url];
+  else {
+   return fetch(url, options).then(res) {
+      cache[url] = res
+      return res;
+   }
+  }
+}
+```
+
+当然上面的粗暴实现有很多问题，比如没有缓存失效策略（比如可以采用LRU策略或者通过TTL），但是基本思想是这样的。 这种方式的优点很明显，就是**显著**减少了系统反馈时间，当然缺点也同样明显。由于使用了缓存，当数据更新的时候，就要考虑缓存更新同步的问题，否则会造成数据不一致，造成不好的用户体验。
+
+#### 数据结构，算法优化
+
+数据结构和算法的优化是前端接触比较少的。但是如果碰到计算量比较大的运算，除了运用缓存之外，还要借助一定的数据结构优化和算法优化。 比如现在有50，000条订单数据。
+
+```javascript
+const orders = [{name: 'john', price: 20}, {name: 'john', price: 10}, ....]
+```
+
+我需要频繁地查找其中某个人某天的订单信息。 我们可以采取如下的数据结构：
+
+```javascript
+ const mapper = {
+   'john|2015-09-12': []
+ }
+```
+
+这样我们查找某个人某天的订单信息速度就会变成O\(1\)，也就是常数时间。你可以理解为索引，因为索引是一种数据结构，那么我们也可以使用其他数据结构和算法适用我们各自独特的项目。对于算法优化，首先就要求我们能够识别复杂度，常见的复杂度有O\(n\) O\(logn\) O\(nlogn\) O\(n2\)。而对于前端，最基本的要识别糟糕的复杂度的代码，比如n三次方或者n阶乘的代码。虽然我们不需要写出性能非常好的代码，但是也尽量不要写一些复杂度很高的代码。
+
+#### 多线程计算
+
+通过HTML5的新API webworker，使得开发者可以将计算转交给worker进程，然后通过进程通信将计算结果回传给主进程。毫无疑问，这种方法对于需要大量计算有着非常明显的优势。
+
+代码摘自[Google performance](https://developers.google.com/web/fundamentals/performance/rail)：
+
+```javascript
+var dataSortWorker = new Worker("sort-worker.js");
+dataSortWorker.postMesssage(dataToSort);
+
+// The main thread is now free to continue working on other things...
+
+dataSortWorker.addEventListener('message', function(evt) {
+   var sortedData = evt.data;
+   // Update data on screen...
+});
+```
+
+由于WebWorker 被做了很多限制，使得它不能访问诸如window，document这样的对象，因此如果你需要使用的话，就不得不寻找别的方法。
+
+一种使用web worker的思路就是分而治之，将大任务切分为若干个小任务，然后将计算结果汇总，我们通常会借助数组这种数据结构来完成，下面是一个例子：
+
+```javascript
+// 很多小任务组成的数组
+var taskList = breakBigTaskIntoMicroTasks(monsterTaskList);
+// 使用更新的api requestAnimationFrame而不是setTimeout可以提高性能
+requestAnimationFrame(processTaskList);
+
+function processTaskList(taskStartTime) {
+  var taskFinishTime;
+
+  do {
+    // Assume the next task is pushed onto a stack.
+    var nextTask = taskList.pop();
+
+    // Process nextTask.
+    processTask(nextTask);
+
+    // Go again if there’s enough time to do the next task.
+    taskFinishTime = window.performance.now();
+  } while (taskFinishTime - taskStartTime < 3);
+
+  if (taskList.length > 0)
+    requestAnimationFrame(processTaskList);
+
+}
+```
+
+> 线程安全问题都是由全局变量及静态变量引起的。 若每个线程中对全局变量、静态变量只有读操作，而无写操作，一般来说，这个全局变量是线程安全的；若有多个线程同时执行写操作，就需要考虑线程同步，就可能产生线程安全问题。
+
+大家可以不必太担心，web worker已经在这方面做了很多努力，例如你没有办法去访问非线程安全的组件或者是 DOM，此外你还需要通过序列化对象来与线程交互特定的数据。因此大家如果想写出线程不安全的代码，还真不是那么容易的。
+
+#### V8引擎下的代码优化
+
+V8是由Google提出的，它通过将js代码编译成机器码，而非元组码或者解释它们，进而提高性能。V8内部还封装了很多高效的算法，很多开发者都会研究V8的源码来提升自己。 这里有些js优化的实践，详情可看下[这篇文章](http://benediktmeurer.de/2017/06/20/javascript-optimization-patterns-part1/) 还有很多其他[有趣的研究](http://benediktmeurer.de/2017/08/14/investigating-performance-object-prototype-to-string-es2015/)。
+
+> Benedikt Meurer\(Tech Lead of JavaScript Execution Optimization in Chrome/V8\)本人致力于V8的性能研究，写了很多有深度的文章，并且开源了很多[有趣的项目](https://github.com/bmeurer?tab=repositories)，有兴趣的可以关注一下。
+
+#### 内存泄漏
+
+前端中的内存泄漏不是很常见，但是还是有必要知道一下，最起码能够在出现问题的时候去解决问题。更为低级的语言如C语言，有申请内存malloc和销毁内存free的操作。而在高级语言比如java和js，屏蔽了内存分配和销毁的细节，然后通过GC（垃圾回收器）去清除不需要使用的内存。
+
+> 只有开发人员自己知道什么时候应该销毁内存。
+
+好在内存销毁还是有一定规律可循，目前GC的垃圾回收策略主要有两种，一种是引用计数，另一种是不可达检测。目前主流浏览器都实现了上述两种算法，并且都会综合使用两种算法对内存进行优化。但是确实还存在上述算法无法覆盖的点，比如闭包。因此还是依赖于开发者本身的意识，因此了解下内存泄漏的原理和解决方案还是非常有用的。下面讲述容易造成内存泄漏的几种情况。
+
+**尾调用**
+
+函数调用是有一定的开销的，具体为需要为函数分配栈空间。如果递归调用的话，有可能造成爆栈。
+
+```javascript
+function factorial(n) {
+  if (n === 1) return 1;
+  return n * factorial(n - 1);
+}
+factorial(100) // 一切正常
+factorial(1000) // 有可能爆栈，但是现在浏览器做了优化，通常会输出Infinite
+}
+```
+
+如果在这里你使用了比较复杂的运算情况就会变糟，如果再加上闭包就更糟糕了。
+
+**闭包**
+
+由于js没有私有属性，js如果要实现私有属性的功能，就要借助闭包实现。
+
+```javascript
+ function closure() {
+   var privateKey = 1;
+   return function() {
+     return privateKey
+   }
+ }
+```
+
+但是由于js的垃圾回收机制，js会定期将没有引用的内存释放，如果使用闭包，函数会保持变量的引用，导致垃圾回收周期内不能将其销毁，滥用闭包则可能产生内存泄漏。
+
+### 图片优化
+
+上面从前端三层角度分析了性能优化的手段，但是还有一个，而且是占比非常大的资源没有提到，那就是图片。俗话说，一图胜千言，图片在目前的网站中占据了网站中大部分的流量。虽然图片不会阻止用户的交互，不影响关键路径，但是图片加载的速度对于用户体验来说非常重要。尤其是移动互联网如此发达的今天，为用户节省流量也是非常重要的。因此图片优化主要有两点，一点是在必要的时候使用图片，不必要的时候换用其他方式。另一种就是压缩图片的体积。
+
+#### 明确是否需要图片
+
+首先要问问自己，要实现所需的效果，是否确实需要图像。好的设计应该简单，而且始终可以提供最佳性能。如果您可以消除图像资源（与 HTML、CSS、JavaScript 以及网页上的其他资源相比，需要的字节数通常更大），这种优化策略就始终是最佳策略。不过，如果使用得当，图像传达的信息也可能胜过千言万语，因此需要由您来找到平衡点。
+
+#### 压缩图片体积
+
+首先来看下图片体积的决定因素。这里可能需要一些图像学的相关知识。图片分为位图和矢量图。位图是用比特位来表示像素，然后由像素组成图片。位图有一个概念是位深，是指存储每个像素所用的位数。那么对于位图计算大小有一个公式就是图片像素数 \* 位深 bits。 注意单位是bits，也可以换算成方便查看的kb或者mb。
+
+> 图片像素数 = 图片水平像素数 \* 图片垂直像素数
+
+而矢量图由数学向量组成，文件容量较小，在进行放大、缩小或旋转等操作时图象不会失真，缺点是不易制作色彩变化太多的图象。那么矢量图是电脑经过数据计算得到的，因此占据空间小。通常矢量图和位图也会相互转化，比如矢量图要打印就会点阵化成位图。
+
+下面讲的图片优化指的是位图。知道了图片大小的决定因素，那么减少图片大小的方式就是减少分辨率或者采用位深较低的图片格式。
+
+**减少分辨率**
+
+我们平时开发的时候，设计师会给我们1x2x3x的图片，这些图片的像素数是不同的。2x的像素数是1x的 2x2=4倍，而3x的像素数高达3x3=9倍。图片直接大了9倍。因此前端使用图片的时候最好不要直接使用3倍图，然后在不同设备上平铺，这种做法会需要依赖浏览器对其进行重新缩放（这还会占用额外的 CPU 资源）并以较低分辨率显示，从而降低性能。 下面的表格数据来自Google Developers
+
+![&#x56FE;4.004](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图4.004.png)
+
+请注意，在上述所有情况下，显示尺寸只比各屏幕分辨率所需资源“小 10 个 CSS 像素”。不过，多余像素数及其相关开销会随图像显示尺寸的增加而迅速上升！因此，尽管您可能无法保证以精确的显示尺寸提供每一个资源，但您应该确保多余像素数最少，并确保特别是较大资源以尽可能接近其显示尺寸的尺寸提供。
+
+我们可以使用媒体查询或者srcset等针对不同屏幕加载不同资源。但是9倍这样的大小我们还是很难接受。因此有了下面的方法。
+
+**减少位深**
+
+位深是用来表示一个颜色的字节数。位深是24位，表达的是使用256（2的24/3次方）位表示一个颜色。因此位深越深，图片越精细。如果可能的话，减少位深可以减少体积。
+
+**压缩**
+
+前面说了`图片大小 = 图片像素数 * 位深`, 其实更严格的是`图片大小 = 图片像素数 * 位深 * 图片质量`, 因此图片质量\(q\)越低，图片会越小。 影响图片压缩质量的因素有很多，比如图片的颜色种类数量，相邻像素颜色相同的个数等等。对应着有很多的图片压缩算法，目前比较流行的图片压缩是webp格式。因此条件允许的话，尽量使用webp格式。
+
+#### 图片优化的具体实践
+
+有了上面的理论之后，我们需要将理论具体运用在实践上。 我们平时开发的时候会有缩略图的需求，如果你将原始图片加载过来通过css控制显示的话，你会发现你会加载一个非常大的图片，然而本身应该很小才对。那么如果我们可以控制只下载我们需要缩略显示的部分就好了。我们希望可以通过`https://test.imgix.net/some_file?w=395&h=96&crop=faces`的方式指定图片的大小，从而减少传输字节的浪费。已经有图片服务商提供了这样的功能。比如imgix。
+
+> imgix有一个优势就是能够找到图片中有趣的区域并做裁剪。而不是仅仅裁剪出图片的中心
+
+上面提到的webp最好也可以通过CDN厂商支持，即我们上传图片的时候，CDN厂商对应存储一份webp的。比如我们上传一个png图片`https://img.alicdn.com/test/TB1XFdma5qAXuNjy1XdXXaYcVXa-29-32.png`。然后我们可以通过`https://img.alicdn.com/test/TB1XFdma5qAXuNjy1XdXXaYcVXa-29-32.webp`访问其对应的webp资源。我们就可以根据浏览器的支持情况加载webp或者png图片了。
+
+第二个有效的方式是懒加载，一个重要的思想就是只加载应该在此时展示的图片。假如你正在使用react，那么你可以通过react-lazyload使用图片懒加载。其他框架可以自行搜索。
+
+```javascript
+import LazyLoad from 'react-lazyload';
+
+
+<LazyLoad once height={200} offset={50}>
+  <img
+    srcSet={xxx}
+    sizes={xxxxx}
+  />
+</LazyLoad>
+```
+
+## 一个实例
+
+前面说了性能优化更像是软件的一个指标，是一种被全体人员（包括非技术人员）普遍认同的一个特性。 因此它需要各方面的人员通力合作，虽然从表现上来看，性能优化最终是开发人员（可以是前端，也可以是后端，DBA等），但是它一定要是全体员工的认同。
+
+假设公司给出计划，计划在下一个季度将首次访问移动端商城首页的首屏时间优化到5s以内。 接下来访问白屏时间在2s以内。 我们现在被要求来做这件事情，我们应该怎么做呢？
+
+首先这个目标需要被更清晰的描述。 3s是一个具体的数字，本身没有问题，但是这个目标本身缺乏限定条件。比如什么样的手机，什么样的网络情况，什么样的地址位置。
+
+因此我们需要与决策者进行沟通，将限定条件搞清楚。假设我们搞清楚了限定条件， 是1000块的中端机以及苹果6s，在3g条件下，地理位置就在本省行政区域内。 接下来我们需要实际的测量数据，以便我们分析数据以及和优化后的数据做对比。
+
+### 首次渲染
+
+假设DNS查询和TLS握手需要花费1.6s. 那么我们只剩下5s - 1.6s = 3.4s
+
+> 1.6s 是根据实际测量结果给出的
+
+国内三大运营商的3G网络数据理论上是350kb/s ， 由于地地形和周边设施等因素，实际测试平均大约在100kb/s左右。 这里以100kb/s计算。
+
+那么我们可以传输的文件大小理论上**最大** 为 100kb/s \* 3.4s = 340kb. 因此我们需要将我们的网站的首屏加载的文件大小总和控制在340kb. 通常来说，控制在170kb以内比较理想。 我们按照170kb计算。
+
+> 前面已经探讨了网页加载的原理，那么文件传输只是其中一部分， 但是由于其所占比例非常大，我们这里注明是理论上的最大值。
+
+前面说过的170kb是gzip之后的文件大小，通常来说gzip对文件大小的压缩比率为5x - 7x.
+
+> 压缩比率取决于算法本身，文件重复率等
+
+那么压缩前文件的大小为850kb - 1M 左右。
+
+如今，我们的项目大都会引用一些UI框架如reactjs, vuejs，会用状态管理库，比如redux，vuex等，为了兼容低版本的浏览器会有polyfill，会有UI组件库等等. 他们都会给我们的应用增加体积， 因此引入一个库的时候一定要知道它给我们带来了什么，我们是否需要它的全部功能。 比如momentjs，我们是否一定要引入这样一个库，是否可以使用更精简的库来代替，或者将locales去除等。
+
+如上所说其实是项目的依赖，项目的依赖要比我们的代码多得多。因此管理依赖要比管理我们的代码本身更具有复杂性和挑战性。
+
+如下一个实际项目的业务代码和依赖的代码分布情况。
+
+```bash
+du -s src
+# 6
+du -s node_modules
+# 257
+```
+
+可以看出依赖的大小为业务代码的40多倍。而且我的这个项目本身来说还属于比较简单的， 更复杂的项目通常这个比例会更大。你也可以试试你自己的项目。
+
+明白了这些基本点，并且我们已经拿到了一组测量的数据。 通过这组数据，我们大可以分析出占用时间较长的环节。 然后我们就需要一些知识和工具帮助我们正确地找到真正的问题。 比如我们可以通过light house来测量数据，然后通过chrome dev tool来分析单次的访问记录。 比如我们可以找出耗时较长的任务是什么， 是重排还是JS执行等。 然后找到影响的相关代码进行优化，最后别忘了验证。 然后拿出前后的对比数据来给自己和大家看。
+
+强烈建议大家将性能检测加入到CI中，然后给项目进行打分。 低于一定分数的项目当成是构建失败对待。
+只有将性能的重要性提到这个高度，我们才能够真正的不断精进，而不是一时之快。 市面上这样的工具很多，比如light-house-ci。
+
+加入到CI另一个好处，项目的性能是透明可视化的，这对于管理层了解项目的情况尤为重要。不要小看这一点，很多管理层对于你的各种理论无动于衷，
+但是他们对于数字（分数，性能指标）有着很高的兴趣和敏感性。 如果你这么做了，那么你更会体会到性能优化远不止技术上的优化，
+它伴随着很多其他过程和各方面的取舍。
+
+### 非首次渲染
+
+关于非首次渲染，我们可以通过网络缓存的形式减少静态资源的下载时间。这部分时间是相当可观的，它占据了网页访问的大部分时间。
+
+那么非首次访问就不需要考虑网络因素，那么影响非首次访问速度的因素大概会有：
+
+1. 加载webview以及webview的启动时间
+2. 从磁盘读取缓存的时间
+3. 渲染的时间（执行代码，layout，paint等）
+
+明白了优化点之后，就需要对症下药。 首先还是要测量各个部分实际的时间，然后利用工具诊断，发现问题。由于每一个部分都有可能拖慢整体的速度，并且引起各个部分变慢的因素理论上说是无限的。因此不可能在这里涵盖，希望大家可以利用之前讲过的技巧来分析并找到问题。
+
+## 总结
+
+如果你已经采取了非常多的优化手段，用户还是觉得非常慢，怎么办呢？要知道，性能好不好不是数据测量出来的，而是用户的直观感觉，就像我开篇讲述的那样。有一个方法可以在速度不变的情况下，让用户感觉更快，那就是合理使用动画。如一个写着当前90%进度的进度条，一个奔跑的小熊？但是一定要慎用，因为不合理的动画设计，反而让用户反感，试想一下，当你看到一个期待已久的确定按钮，但是它被一个奔跑的小熊挡在了身后，根本点不到，你内心会是怎样的？
+
+另外我在这里只是提供了性能优化的思路，并没有覆盖性能优化的所有点，比如google的protobuffer可以减少前后端传输数据的体积，进而提升性能。但是我们 有了上面的优化理论和思想，我相信这些东西都是可以看到并做到的
+
+## 参考文献
+
+* [async & performance](https://github.com/getify/You-Dont-Know-JS/master/async%20&%20performance/ch6.md)
+* [google performance](https://developers.google.com/web/fundamentals/performance/why-performance-matters/)
+* [the-cost-of-javascript-in-2018](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)
+
+
+
+---
+
+# 5. 前端调试
+
+编写代码其实只是开发者的一小部分工作，调试在软件开发中所占的时间可能比你想象的时间要长。为了让工作更有效率，我们必须精通软件调试技巧。花一些时间学习新的调试技巧，往往能让我们能更快地完成工作，对我们的团队做出更大的贡献。我将从一些核心概念开始讲解，然后深入探讨一些具体的例子。
+
+## 指导思想和原则
+
+开始讲解具体的调试内容之前呢，我们先来看下调试问题的指导思想和原则。 它能让我们事半功倍。
+
+### 问题隔离
+
+隔离问题恐怕是调试中最重要的概念和技巧了。 我们的代码库是由不同的类库、框架组成的，它们有着许多的贡献者，甚至还有一些不再参与项目的人，因此我们的代码库是杂乱无章的。隔离问题可以帮助我们逐步剥离与问题无关的部分以便我们可以把注意力放在解决方案上。
+
+前端的依赖管理目前来看大都是基于node\_modules去管理。 如果你细心观察的话，你会发现项目的业务代码通常只占整体的代码的很小一部分。
+
+如下一个实际项目的业务代码和依赖的代码分布情况。
+
+```bash
+du -s src
+# output: 6
+du -s node_modules
+# output: 257
+```
+
+可以看出依赖的大小为业务代码的40多倍。而且我的这个项目本身来说还属于比较简单的， 更复杂的项目通常这个比例会更大。你也可以试试你自己的项目。 因此管理依赖要比想象中复杂，如何挑选高质量的依赖，以及做好依赖管理，依赖出现问题怎么办等变得非常重要，这在一些大型项目中尤为明显。
+
+有时候业务代码本身也很复杂，可能有上百个模块。 出现问题，我们需要定位到尽可能小的模块，以便我们更快找到和解决问题。
+
+在实际操作中，我有许多种方法对问题进行隔离。其中一种是在本地创建一个精简的测试用例，当然你也可以在 CodePen 创建一个私人测试用例，或者在 JSBin 创建你的用例。另一种是在代码中创建断点，这样可以让我详细地观察代码的执行情况。
+
+### 保护现场
+
+当你发现一个问题的时候或者正在解决一个BUG的时候，请尽量不要安装任何东西或者添加新的依赖。这其实和刚才讲的问题隔离有点关系的，因为一旦添加了新的依赖或者安装了新的软件，意味着BUG重现的环境发生了改变，甚至有可能影响了整体代码走向，因此你之前为了找到问题所作的努力都白费了。
+
+### 全局思维
+
+全局思维是一个很抽象的概念。 怎么才是足够全面很难有一个明确的定义。
+
+但是假如我们发现软件的现实行为和预期不一致的时候，我们能够清晰的在大脑中呈现这个问题出现的流程或者步骤，甚至可以直接在脑中隔离问题，大概定位问题的点。 那么我们剩下的工作就是将已经缩小的范围进一步验证和缩小，从而慢慢接近答案。 毫不夸张的说，我所解决的大部分问题都是通过这种方法。
+
+倘若不经过这一步，我们就需要茫然地大海捞针般的去隔离，定位问题，这无疑会大大增加调试时间。 更可怕的是，我们这样缺乏条理性的调试，会在问题逐渐复杂化的过程中使问题越来越难以理解。 这就好像实现需求不经思考直接写和充分思考规划的区别一样。
+
+## 调试的类型
+
+调试从通信形式上分为`本地调试`和`远程调试`。 本地调试就是debug host 和 debug target都是当前浏览器实例的这种情况。 平常大家直接打开开发者工具调试当前页面就属于这种情况。
+
+远程调试指的是debug host 和 debug target不是同一个实例的情况。
+
+### 本地调试
+
+远程调试是相对于本地调试来讲的，那么理解本地调试对于理解远程调试是很重要的。 常见的就是调试本地PC（很简单）。 比如我在本地运行了一个webpack-dev-server，端口号为8080. 那么访问8080，并且打开浏览器的开发者工具，就可以在本地进行调试了。再比如我要调试google的官网，那么我只需要 访问www.google.com， 同样打开开发者工具就可以进行本地调试了。
+
+### 远程调试
+
+那么远程调试就是调试运行在远程的APP。比如手机上访问google，我需要在PC上调试手机上运行的google APP。 这是远程调试的一个典型例子。
+
+> 其实本地打开一个浏览器， 用另外一个浏览器的开发者工具调试也属于远程调试。
+
+远程调试大概有三种类型：
+
+调试远程PC（本质上是一个debug server 和 一个debug target，其实下面两种也是这种模型，ios中间会多一个协议转化而已） 这种类型下的debug target就是pc, debug server 也是pc。
+
+调试android webpage/webview（很多方式，但安卓4.4以后本质都是Chrome DevTools Protocol的扩展） 这种类型下的debug target就是android webview，debug server 是pc。
+
+调试ios webpag/webview（可以使用iOS WebKit Debug Proxy代理，然后问题便退化成上述两种场景） 这种类型下的debug target就是 代理ios webview的代理层， debug server 是pc。
+
+但是由于android端使用的是chrome内核或者基于chrome内核的封装。 而IOS则是safari内核或者基于其的封装。因此这里也可以将其非为普通内核调试和移动端APP的webview调试（本质上是对普通内核的封装）。
+
+#### 普通内核调试
+
+这里以chrome为例
+
+**chrome远程调试**
+
+提到chrome的远程调试，就不得不提[chrome remote debug protocol](https://developer.chrome.com/devtools/docs/debugger-protocol)。 它采用websocket来与页面建立通信通道，由发送给页面的command和data组成。chrome的开发者工具是这个协议主要的使用者，第三方开发者也可以调用这个协议来与页面交互调试。简而言之，有了它我们就可以和chrome中的页面进行双向通信。
+
+chrome 启动的时候，默认是关闭了调试端口的，如果要对一个chrome PC 浏览器进行调试，那么启动的时候，可以通过传递参数来开启 Chrome 的调试开关：
+
+```text
+sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+```
+
+这个时候就可以通过[http://127.0.0.1:9222](http://127.0.0.1:9222) 查看所有远程调试目标
+
+[http://127.0.0.1:9222/json](http://127.0.0.1:9222/json) 可以查看特定的远程调试目标信息，类型为json数组。
+
+```javascript
+[
+  {
+    "description": "",
+    "devtoolsFrontendUrl": "/devtools/inspector.html?ws=127.0.0.1:9222/devtools/page/fefa.....-ffa",
+    "id": "fefa.....-ffa",
+    "title": "test",
+    "type": "page",
+    "url": "http://127.0.0.1:51004/view/:id",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:9222/devtools/page/fefa.....-ffa"
+  }
+]
+```
+
+其中id是一个唯一的标示，[chrome dev protocol](https://chromedevtools.github.io/devtools-protocol/)基本都依赖这个id。
+
+比如关闭一个页面：
+
+```javascript
+http://localhost:9222/json/close/477810FF-323E-44C5-997C-89B7FAC7B158
+```
+
+再比如激活一个页面：
+
+```javascript
+http://localhost:9222/json/activate/477810FF-323E-44C5-997C-89B7FAC7B158
+```
+
+具体可以查看官方信息。
+
+webSocketDebuggerUrl是调试页面需要用到的WebSocket连接的地址。
+
+比如我需要清空浏览器缓存，就用websocket连接到该页面之后调用send方法
+
+```javascript
+const ws = new WebSocket('ws://127.0.0.1:9222/devtools/page/fefa.....-ffa')
+ws.send('{"id": 1, "method": "Network.clearBrowserCache", "params": {}}')
+```
+
+还有很多类似的api，因此就可以构造复杂的[扩展](https://developer.chrome.com/extensions/samples)
+
+#### 移动端APP的webview调试
+
+移动端APP的webview通常不能直接进行远程调试。 因为webview并没有开启一个调试的端口进行调试。 一般的移动端APP会单独打包一个开发版本， 在开发版本中设置webview可以进行调试，这样我们才能够调试。
+
+因此如果你能够搞到开发版的APP（本质上就是webview打开了调试端口）就可以直接调试。 如果搞不到，可以采取下面的 方式间接调试。
+
+**安卓端APP封装的webview调试方法**
+
+刚才说了移动端APP的webview只是对标准内核的封装，安卓使用的chrome的内核。 因此我们可以先收集浏览器内核版本，然后在该版本浏览器中重现问题，从而去调试。 具体方法如下：
+
+1. 收集内核信息
+
+navigator.userAgent可以获取浏览器内核版本信息。 然后可以使用[https://ie.icoa.cn/](https://ie.icoa.cn/) 这个工具快速检测内核信息
+
+1. 根据内核信息下载安装对应的chrome版本浏览器。
+
+可以去apkmirror下载 [https://www.apkmirror.com/apk/google-inc/chrome/chrome-40-0-2214-109-7-release/chrome-40-0-2214-109-android-apk-download/](https://www.apkmirror.com/apk/google-inc/chrome/chrome-40-0-2214-109-7-release/chrome-40-0-2214-109-android-apk-download/) 对应的chrome版本浏览器。
+
+1. adb连接手机进行调试（优点是可以调试云端设备，无需连线）
+2. 需要手机和电脑同一个子网
+3. 需要知道手机ip
+4. 需要手机点击允许调试
+
+但是这个方式并一定能够百分百重现问题。 比如某一个APP将alert方法进行了重写。 你如果在你的代码中用alert就有问题。 但这个并不能通过围魏救赵的方式去解决。 但是事实证明它可以解决很多绝大多数问题。 实在不行的可能就需要求助于该APP的开发者中心去帮助你们调试了。
+
+**IOS端APP封装的webview调试方法**
+
+和前面类似：
+
+1. 收集内核信息
+
+navigator.userAgent获取浏览器内核版本信息
+
+1. 根据内核信息启动不同的模拟器调试
+
+苹果有自带的模拟器可以使用，很方便。
+
+1. 打开PC上的safari进行调试
+
+> 注意：通过 UA 探测判断内核方法的准确性有待讨论，因为 APP 可以任意修改 UA，简单的测试，不同平台下差距较大。
+
+## 调试服务
+
+明白了远程调试的类型，那么对于不同的类型应该采取什么样的手段是我们最为关心的问题。 在回答这个问题之前，我们先来看下市面上的远程调试框架，他们做了什么事情，解决了什么问题。
+
+如下是我对比较常见的远程调试框架的简单对比。
+
+![remote-debug](https://user-gold-cdn.xitu.io/2018/2/25/161cab2a2b8cc4cf?w=878&h=569&f=png&s=93455)
+
+后面虚线里面的是除了抓包功能之外调试框架，可以看出灰色部分是他们不支持的。 这时候就需要专门的抓包工具来代替。通常来说专门的抓包工具功能包括但不限于请求拦截和修改，https支持，重放和构造请求，\(web\)socket。
+
+抓包工具的原理非常简单，本质上它就是一个正向代理，所有的请求经过它，就可以将其记录下来，甚至可以重放构造请求等。
+
+对于抓包工具，步骤基本就是三部曲。
+
+第一步：手机和PC保持在同一网络下（比如同时连到一个Wi-Fi下）
+
+第二步：设置手机的HTTP代理，代理IP地址设置为PC的IP地址，端口为代理的启动端口。
+
+Android设置代理步骤：设置 - WLAN - 长按选中网络 - 修改网络 - 高级 - 代理设置 - 手动 iOS设置代理步骤：设置 - 无线局域网 - 选中网络 - HTTP代理手动
+
+对于https请求需要多一步：
+
+第三步：手机安装证书。
+
+> 对于第二步，我们可以通过连接USB的方式，然后设置端口转发和虚拟主机映射，建立tcp连接，这样就ip就可以设置为localhost，以后ip变动，代理设置也不必变动，但是却需要连接USB，可谓各有千秋。
+>
+> ## 远程调试服务
+>
+> 通过使用上面提到的框架\(或者是自己写的拥有上面基本功能的框架\), 我们已经可以很方便地进行调试了。 但是事实上大多数公司都是开发者在本地进行调试。这就造成了很多问题，比如
+>
+> * 如果手机在不同的开发者电脑调试，就需要在一个手机安装多个证书。
+>
+> * 开发者需要自己配置代理配置文件，共享需要手动导出导入相对麻烦。
+>
+> * 如果开发者本地的ip发生变动，那么就需要修改手机的代理ip\(不使用usb走虚拟主机映射的情况\)
+>
+>   ......
+
+针对以上等问题，如果搭建一个远程的调试服务（产品），那么问题就可以很好的解决。
+
+理想的状况是，手机仅仅需要配置一次（安装证书，设置代理等），以后调试的时候就可以直接查看该手机的请求以及控制台，元素等等，并且直接指定映射到任何电脑 进行pc端调试。不同开发者之间可以方便的共享配置（比如有一个集团或公司的共有配置）。
+
+拿搭建一个whistle的服务为例。
+
+### 下载项目并启动:
+
+```text
+npm install whistle -g --registry=https://registry.npm.taobao.org
+```
+
+```text
+ w2 start
+```
+
+### 设置代理：
+
+比如设置手机的代理为x.x.x.x:8899
+
+> x.x.x.x 为部署服务的ip地址，8899为默认端口，若修改了，则对应修改为修改后的端口号
+
+### dashboard
+
+访问[http://x.x.x.x:8899/,会看到如下的页面：](http://x.x.x.x:8899/,会看到如下的页面：)
+
+![whistle dashboard](http://yun.duiba.com.cn/tuia/test/fXuTX1519699845215.png)
+
+我们可以在network查看远程的网络请求，可以通过其内置的weinre查看元素，控制台等
+
+可以看到我们配置了三套配置，分别为默认配置，项目一和项目二。
+
+简单介绍下配置做了什么。
+
+前两个就是简单地将请求映射到本地。
+
+第三条配置会拦截www.duiba.com.cn 的请求，并在html中注入一端weinre脚本。拦截成功就可以通过访问[http://x.x.x.x:8899/weinre/client/\#sword](http://x.x.x.x:8899/weinre/client/#sword) 访问对应的开发者工具进行调试。 ![weinre-client](http://yun.duiba.com.cn/tuia/test/r2bh21519700224081.png)
+
+其他功能：
+
+Network：主要用来查看请求信息，构造请求，页面 console 打印的日志及抛出的js错误等
+
+Rules：配置操作规则
+
+Plugins：安装的插件信息，及启用或禁用插件
+
+Weinre：设置的weinre列表
+
+HTTPS：设置是否拦截HTTPS请求，及下载whistle根证书
+
+我们可以进一步安装证书支持https拦截，配置账号系统，日志映射等等, 部署一个其他的远程调试框架的基本思想和步骤基本是一样的。
+
+经过上面的步骤我们已经得到了一个集中式的调试服务器，我们不需要在本地配置复杂的环境和配置了， 并且足够灵活，我们可以查看所有请求，随意更改请求，并且直接代理到本地尽心调试。
+
+> 实际情况我们还会遇到很多其他问题，通过扩展框架的功能丰富功能是非常有必要的，这个时候框架的扩展性就很重要了。
+>
+> ## 结合前端监控
+>
+> 有了[前端监控](https://github.com/azl397985856/zhuque/)，理论上我们已经能够收集用户的信息，包括报错信息，性能信息，心跳信息。 这就为我们发现问题，定位问题，解决问题提供了铺垫。
+
+[前端远程调试](https://github.com/azl397985856/remote-debug)可以帮助我们调试远程的设备。 我们可以在远程服务器上还原案发现场，然后通过调试拥有案发现场的云端设备来定位并解决问题。这里有两个条件，分别是 远程服务器和云端设备。
+
+远程服务器指的是部署有远程调试框架的服务器。
+
+云端设备指的是用于还原用户设备的真实设备或虚拟设备，比如PC和各种型号的手机。
+
+### 一个例子
+
+用户a线上出现了一个问题，我们通过监控系统发现了这个问题，问题属于优先级比较高的，已经邮件通知了相关人员。
+
+前端小k收到通知后打开监控系统-朱雀，通过检索用户找到了问题，点击debug按钮。这个时候 朱雀会根据用户的硬件信息自动去云端匹配最合适的设备，然后将该设备的使用权交给开发者小k。
+
+云端设备打开网页，并还原案发现场。 这时候小k看到连接成功。
+
+小k又打开了远程调试服务器-天道，这个时候它看到了云端设备发送的请求，已经通过内置的weirne查看了dom信息和其他信息。
+
+但是并没有解决问题，小k想修改下代码，看下效果。 这时候小k熟练地切换了配置，将请求转发到本地，修改代码，刷新页面。发现问题解决了。
+
+### 总结
+
+通过刚才的例子，我们已经大概知道如何结合了。这里详细讲述一下。
+
+首先天道需要**足够的信息**才能还原现场，这是单独做监控系统和远程调试系统不会过多涉及的。 这个我在[前端远程调试](https://github.com/azl397985856/remote-debug)里面提到过， 包括以下信息：用户轨迹，应用数据，其他调试信息。这就需要监控系统足够灵活去增加这些信息。 收集到信息，我们需要将信息应用到网页上，还原用户的操作。
+
+其次朱雀需要管理**云端设备**，这部分是**增加**的独立功能。 这部分是增加的独立功能，具体涉及到的有查看所有设备及类型，控制设备打开app\(可以是内置的浏览器，也可以是app内部的webview\)加载网页， 设备使用分配（即分配给谁，时间多久后回收，调试端口号等）
+
+对于第一点，其实是两部分工作。
+
+第一个是[前端监控系统](https://github.com/azl397985856/zhuque-client)的客户端需要将用户的信息 收集过来，这部分相对比较容易，我在前端远程调试部分也讲过思路，这里不再赘述。
+
+第二个是[前端监控系统](https://github.com/azl397985856/zhuque-client)的服务端需要将收集的信息应用到网页上。 这部分相对比较麻烦，思路有很多。比如对于纯数据驱动的应用，我们只需要将store 应用到app就可以了。 遗憾的是这对应用要求很高，基本不现实，这可以用来做辅助调试。 前面还提到了用户轨迹，我们是否可以通过重现用户轨迹重现问题呢？ 理论上收集的用户轨迹足够细，是可以做到的，具体的收集思路有很多。 最常用的就是在各个地方手动埋点记录。
+
+对于第二部分，其实就是对设备的管理。我们可以使用虚拟设备，也可以使用真实设备。其实这部分有很多成熟的技术可以参考的。
+
+## 调试的辅助手段
+
+通过上面的方式我们已经建立了调试的准备环境。但是真正调试应用，发现问题，解决问题。还需要 其他信息来辅助。下面来讲解一些调试的辅助手段。
+
+### 用户轨迹
+
+有时候我们需要知道用户的浏览轨迹，从而方便定位问题。 浏览轨迹的粒度可以自己决定，可以是组件级，也可以是页面级。
+
+### 应用数据
+
+获取足够的信息对于调试是非常重要的。尤其是数据驱动（data driven）的应用， 知道了数据，基本上就可以还原现场，定位问题。
+
+比如我们使用vuex或者redux这样的状态管理框架，一种方式是将中央的store挂载到window上。 这样我们就可以通过访问window的属性获取到全局的store。 如果使用其他的状态管理框架或者自制的状态管理，也可以采取类似的方式。
+
+然而我们也可以使用现成的工具，比如使用react-dev-tools调试react应用。 比如使用redux-dev-tools调试使用redux的应用等等。
+
+### 其他调试信息
+
+比如用户的id，客户端数据，登陆的session信息等等对于调试有所帮助的，都可以将其收集起来。
+
+
+---
+
+# 6. 到处都是测试
+
+测试在软件开发中的位置可谓举足轻重。几乎所有讲软件工程的书都会提到并且强调其重要性。测试在构建软件的作用非常明显，尤其是当你构建大型应用的时候。
+
+本篇文章主要由四部分组成：
+
+- 什么是测试
+- 为什么要测试
+- 测试的方法
+- 自动化测试
+
+## 什么是测试
+
+> 测试就是保证你的代码按照预期运行的代码。
+
+测试就是代码，和普通代码除了功能之外没有区别。 测试的功能就是确保被测试的代码按照预期运行。
+
+如何`确保`呢？ 通过`断言`。 怎么才能`按照预期`呢？ 这就需要你充分考虑业务场景了。 `高的测试覆盖率`是优秀代码的特征。 如果你实现不知道怎么测试，那就先提高你的测试覆盖率吧。
+
+### 什么是测试覆盖率
+
+> 高的测试覆盖率并不能反应代码质量高
+
+高的测试覆盖率是好的代码的必要条件，因此想写好代码，先把你的测试覆盖率提高再说吧。
+
+`测试用例`会收集包括软件哪一部分，哪一个分支甚至哪一条语句执行的信息。
+
+> 测试覆盖率是一个技术指标，用来衡量被测试代码占所有代码的比例。
+
+如下是我写的一个 sample 的测试覆盖率报告：
+
+![测试报告](https://raw.github.com/azl397985856/automate-everything/master/illustrations/图6.1.png)
+
+这里测试覆盖率有了更多的精细化的技术指标： 比如语句覆盖率（Stmts），分支覆盖率（Branch），函数覆盖率（Funcs），行数覆盖率（Lines），未被覆盖的行（Uncovered Line）等。这些指标通过名字就大概能看出含义。
+
+### 什么是断言
+
+> 断言是编程术语，表示为一些布尔表达式，程序员相信在程序中的某个特定点该表达式值为真，可以在任何时候启用和禁用断言验证，
+> 因此可以在测试时启用断言而在部署时禁用断言。同样，程序投入运行后，最终用户在遇到问题时可以重新启用断言。
+> 使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 FALSE 时中断当前操作的话，可以使用断言。
+> 单元测试必须使用断言（Junit/JunitX）。 - 百度百科
+
+断言实际上不仅仅在是测试中才会用到，很多其他地方也会用到。
+只是有测试就会有断言，因此我们一个误区就是断言只有在测试中才有。
+
+比如如下是 vue 的部分源码:
+
+```js
+// assertProp 的定义省略了
+if (
+  process.env.NODE_ENV !== "production" &&
+  // skip validation for weex recycle-list child component props
+  !(__WEEX__ && isObject(value) && "@binding" in value)
+) {
+  assertProp(prop, key, value, vm, absent);
+}
+```
+
+react 也有类似的代码：
+
+```js
+//  assertValidProps 的定义省略了
+assertValidProps(tag, props);
+```
+
+assert 的目的就是为了断言 props 是否是有效的。
+
+我们可以自定义断言，上面的 assertProp 就是。
+我们可以非常轻松的写一个简单断言。 比如：
+
+```js
+function assertValidArray(arr) {
+  return Array.isArray(arr) ? "valid" : "invalid";
+}
+```
+
+## 为什么要测试
+
+### 让自己安心
+
+测试可以让你安心，它给你自信，它告诉你“嗯！你的代码没有问题”，它给了你 自信，这样的信息在构建大型项目是很重要的。
+
+我的编程习惯是文档驱动，测试驱动，也就是说在做一个需求之前，先写下文档然后写测试用例，再写下实现的步骤（TODO），最终填充代码实现。这个模式可能和大家的编程习惯不太一样，甚至是完全相反的。 不过从我的经验来看，这个习惯给我带来了很多好处，我希望你也可以尝试一下。
+
+### 让别人安心
+
+程序员最不愿意做的事情除了临时需求变更之外恐怕就是改别人的代码了。 改别人的代码需要充分了解当时的场景，包括业务，基本假设是什么，除此之外还要看懂别人的每一行代码，我们才有信息去更改别人的代码。这是一个非常痛苦的过程。有了测试了用例情况就有所不同了。
+
+在测试用例写的足够完善的情况下，他们只要保证改了代码测试用例可以通过了， 他们就有信息去修改你的代码了。
+
+### 安心发布
+
+如果没有测试用例，发布新的功能和修复一个线上 bug 是非常痛苦的。 毕竟修复一个 bug，引入两个 bug 的梗不止一次地出现在我们的真实生活之中。 你如果非常了解这个项目倒还好，如果不呢？ 这会让你举步维艰，仿佛陷入了一个无尽的沼泽。 因此完善的测试确实可以让你放心的按下确认发布按钮。
+
+尤其是在敏捷团队中，发布和修复线上 bug 是一个非常频繁的操作，你如果不希望天天提心吊胆修改代码，那么从现在开始完善你的测试用例吧！
+
+### 帮助别人快速了解系统
+
+如果你不想从头到尾把代码看一遍。那么直接去看测试用例往往是一个快速的方式。 从测试用例我们不仅可以看到代码有哪些功能，我们设置可以看到代码能够处理的和不能处理的东西。 这些东西都是一目了然的。 我甚至在接手一个项目之前会优先看他的 package.json 和 test 文件夹。
+
+> 前者可以看出项目的依赖组成，有哪些脚本。 后者可以看出项目具体的功能点
+
+## 测试的方法
+
+测试的类型有很多，不同维度去划分也会产生不同的类型。 这里讲以最常见的划分方法划分的测试种类。 枯燥的术语往往是比较难以理解的，希望你不会被这些术语给吓到。
+
+我们先来看下最最基础的测试类型-单元测试。
+
+### 单元测试
+
+单元测试或许是最简单最常见的测试类型了。
+
+> 单元测试就是测试一小块代码的测试，这一小块代码可以是一个函数， 一个模块或者一个类等
+
+单元测试同时也是最容易编写的，最容易被理解的测试类型。 单元测试总是设定一个环境，然后给定一个输入，检测程序的输出。
+
+> 输入也可以是一个函数
+
+如果你写过单元测试的话，你会发现有些东西非常容易写单元测试，而有些却非常难以书写。 更进一步我们发现那些难以书写单元测试的代码大都是依赖别的模块或者被别的模块依赖，换句话说是有副作用的，是不纯粹的。
+
+非常容易写单元测试的代码是那些于 IO/UI 等无关的代码。
+
+> IO/UI 相关的可以是 ajax，localStorage，dom 等等
+
+如果你确实依赖于外界（比如 IO/UI），你需要在进行单元测试的时候去 mock 他们。 因此，尽量限制代码的副作用在可控的范围是一件非常重要的事情
+
+> 试试函数式编程吧。
+
+如下是一个纯函数，没有副作用，很方便测试。
+
+```js
+// math.js
+function sum(x, y) {
+  return x + y;
+}
+// math.test.js
+
+assert(sum(1, 2) === 3);
+// ... 其他边界值测试
+```
+
+我们再来看一个有副作用的例子：
+
+```js
+// math.hs
+function sumByLocalStorage(x) {
+  return x + window.localStorage.getItem("y");
+}
+// maths.test.js
+
+function setup() {
+  window.localStorage.setItem("y", 2);
+}
+assert(sumByLocalStorage(1) === 3);
+```
+
+可以看出你多了 mock 的步骤，你需要去 node(我们假设你使用 node 环境运行测试)中 mock 一个 localStorage 这个浏览器的 API。
+这当然不是重点，重点是你改变了外界的环境，这会带来安全隐患。
+当然你可以选择每次单个测试用例运行之后执行 teardown 将你的副作用清除，如上的例子是
+`window.localStorage.removeItem('y')`.
+当然这依赖于开发者本身，因此还是有隐患。 如果不清除，对于我们调试问题会带来很大的障碍，尤其是开发大型项目的时候，这种
+感受会更加深刻。
+
+### 集成测试
+
+在我们讲解集成测试之前呢，我们来看下为什么我们需要集成测试。
+
+> 单元测试确保了软件的每一个部件运转正常，而集成测试确保了它们在一起的时候运行正常。
+
+独立运行正常并不意味着集成起来就正常，否则也就不会有集成测试了。
+
+那么为什么独立运行正常，集成起来就有可能不正常了呢？
+
+原因就在于我们的应用是有副作用的。 数学和计算机学友一个概念叫幂等（idempotent、idempotence）。这个概念在 后端会比较常见，前端很少会用到这个概念。后端幂等指的是用户对于同一操作发起的一次请求或者多次请求的结果是一致的，不会因为多次点击而产生了副作用。
+
+那么对于前端也是类似的，如果我们的系统完全幂等。那么集成测试就显得不重要了。当然这个是不可能的。另外一个原因在于你各个部分正常运行，但是将各个部分组合到一起的部分，有异常（这部分是无法被单元测试覆盖到的）。因此集成测试是很有必要的。
+
+集成测试关注的是各个部分的交互和相互作用。
+
+> 集成测试就是将单元代码放到一起，看它们是否正确运行。
+
+### 端到端测试
+
+端到端测试相对来说比较昂贵，测试的代价会比较大，并且这部分占所有测试的比重也是比较低的。 但是不意味着不重要。
+
+这部分主要关注的是真正的用户行为是否正确。前面两种测试更侧重于技术性，这部分则是完全站在产品角度，站在应用功能角度去测试。
+
+---
+
+# 附录1
+
+## 删除不在远程分支的分支
+
+```bash
+ git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+```
+
+## 其他分支清理脚本
+
+https://gist.github.com/StuPig/06736fbdeede11001aff
+
+## 复制文件
+
+功能比cp强大
+
+```bash
+rsync -av --progress sourcefolder /destinationfolder --exclude thefoldertoexclude
+```
+
+## discard all changes【Git】
+
+```bash
+git checkout . && git clean -xdf
+```
+
+
+
+---
+
+# 附录2
+
+* [google performance](https://developers.google.com/web/fundamentals/performance/rail)
+
